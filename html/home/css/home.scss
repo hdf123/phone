@@ -1,0 +1,335 @@
+@charset "UTF-8";
+@import "../../../css/styles.scss";
+@import "../../../icon/iconfont.css";
+.headers{
+    width:10rem;
+    height:1.153rem;
+    padding:0.16rem 0.48rem;
+    background-color:$backgrounda;
+    &>input{
+        width: 9.04rem;
+        height: 0.853rem;
+        padding:0 0.16rem;
+        background-color: #ffffff;
+        border-radius: 0.107rem;
+    }
+}
+.search::-webkit-input-placeholder{
+    text-align: center;
+    font-size:$fontsc;
+}
+.search:-moz-placeholder{
+    text-align: center;
+    font-size:$fontsc;
+}
+.search::-moz-placeholder{
+    text-align: center;
+    font-size:$fontsc;
+}
+.search:-ms-input-placeholder{
+    text-align: center;
+    font-size:$fontsc;
+}
+
+
+//内容
+.content{
+    box-sizing: border-box;
+    width:100%;
+    height:100%;
+    overflow: auto;
+    padding-bottom:2rem;
+    
+}
+.swiper1{
+    width:10rem;
+    .swiper-slide{
+        height: 4.333rem;
+        background:rgba(0,0,0,0.3);
+        >img{
+            width:100%;
+            height:100%;
+            background:rgba(0,0,0,0.3);
+        }
+    }
+}
+.menu{
+    width:100%;
+    height: 4.693rem;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top:0.48rem;
+    box-shadow: 0rem 0.04rem 0.187rem 0rem rgba(153, 153, 153, 0.3);
+    >a{
+        width:25%;
+        padding-bottom:0.467rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        >img{
+            width: 1.293rem;
+            height: 1.293rem;
+            border-radius:50%;
+            background:rgba(0,0,0,0.1);
+        }
+        >span{
+            margin-top:0.187rem;
+            color:$colora;
+            font-size:$fontsc;
+        }
+    }
+}
+.nows{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding:0.533rem 0 0 0;
+    >div{
+        box-sizing:border-box;
+        width: 4.467rem;
+        height: 1.813rem;
+        background-color: $colore;
+        border-radius: 0.053rem;
+        margin-bottom:0.213rem;
+        padding:0.307rem 0.387rem;
+        display: flex;
+        justify-content: space-between;
+        >div{
+            margin-top:0.08rem;
+            >p:nth-child(1){
+                font-size:$fontsb;
+            }
+            >p:nth-child(2){
+                color:$colorb;
+                font-size:$fontsc;
+                margin-top:0.14rem;
+            }
+        }
+        >img{
+            width: 1.2rem;
+            height: 1.2rem;
+            border-radius:50%;
+            background:rgba(0,0,0,0.1);
+        }
+    }
+}
+.preferential{
+    width: 9.2rem;
+    height: 2.4rem;
+    margin:0 auto;
+    >img{
+        width:100%;
+        height:100%;
+    }
+}
+.tabBar,.tabBars{
+    width: 8.88rem;
+    height: 0.8rem;
+    list-style:none;
+    margin:0.947rem auto 0.24rem;
+    display: flex;
+    justify-content: space-between;
+    >li{
+        width:100%;
+        height:100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        >p{
+            font-size:$fontsa;
+            text-align: center;
+        }
+    }
+}
+.selecteds{
+    >p{
+        color:$colorc;
+    }
+    >div{
+        width:35%;
+        height: 0.053rem;
+        background-color:$colorc;
+        border-radius: 0.027rem;
+        margin:0 auto;
+    }
+}
+.swiper2{
+    width:9.173rem;
+}
+.information{
+    height: 2.88rem;
+    padding:0.48rem 0;
+    display: flex;
+    justify-content: space-between;
+    border-bottom:1px solid #e5e5e5;
+    >div{
+        >div{
+            width: 6.053rem;
+            font-size:$fontsb;
+        }
+        >p{
+            color:$colorb;
+            font-size:$fontsd;
+            margin-top:0.153rem;
+        }
+    }
+    >img{
+        width: 2.52rem;
+        height: 1.92rem;
+        border-radius: 0.053rem;
+    }
+}
+//更新
+.updates{
+    width: 9.2rem;
+    height: 1.2rem;
+//  background:#55A532;
+    background-color: $colore;
+    border-radius: 0.053rem;
+    display: flex;
+    margin:0.267rem auto 0;
+    >div{
+        width:50%;
+        height:100%;
+        color:$colorc;
+        font-size:$fontsb;
+        @extend .flexs;
+    }
+    >div:nth-child(1){
+        >i{
+            color:$colorc;
+            font-size:0.3rem;
+            padding-top:0.1rem;
+            margin-left:0.1rem;
+        }
+    }
+    >div:nth-child(2){
+        >i{
+            color:$colorc;
+            font-size:0.4rem;
+            padding-top:0.05rem;
+        }
+    }
+}
+
+//嵌套
+.swiper3{
+    width:9.173rem;
+    .swiper-slide{
+        background:rgba(0,0,0,0.3);
+    }
+}
+.swiper4{
+    
+    .swiper-slide{
+        width: 3.653rem;
+        height:2.583rem;
+        background:aqua;
+        >img{
+            width:100%;
+            height:1.467rem;
+            border-radius: 0.053rem;
+        }
+        >p:nth-child(2){
+            font-size:$fontsb;
+            margin:0.187rem 0 0 0.32rem;
+        }
+        >p:nth-child(3){
+            color:$colorb;
+            font-size:$fontse;
+            line-height:0.5rem;
+            margin:0 0 0 0.32rem;
+        }
+    }
+}
+//楼盘
+.building_box{
+    margin-top:0.64rem;
+}
+.buildings{
+    display: flex;
+    padding:0.48rem 0 0.347rem 0;
+    border-bottom:1px solid #e5e5e5;
+    >img{
+        width: 2.533rem;
+        height: 1.92rem;
+        background:red;
+        border-radius: 0.053rem;
+    }
+    >div{
+        margin-left:0.453rem;
+        >div:nth-child(1){
+            font-size:$fontsb;
+        }
+        >div:nth-child(4){
+            color: #f9351a;
+            font-size:$fontsb;
+            margin-top:0.05rem;
+        }
+    }
+}
+.region{
+    height:0.773rem;
+    display: flex;
+    align-items: center;
+    >div{
+        color: #666666;
+        font-size: 0.293rem;
+    }
+    >div:nth-child(2){
+        height:0.213rem;
+        display: flex;
+        align-items: center;
+        margin-left:0.133rem;
+        padding-left:0.133rem;
+        border-left:0.027rem solid #e5e5e5;
+    }
+}
+.features{
+    display: flex;
+    div{
+        color: #999999;
+        font-size: 0.267rem;
+        padding:0.04rem 0.12rem; 
+        margin-right:0.133rem;
+        background:rgba(245,245,245,0.3);
+        border-radius: 0.053rem;
+    }
+    .statea{
+        color: #0099ff;
+        background:rgba(178,224,255,0.5);
+    }
+    .stateb{
+        color: #ffb956;
+        background:rgba(255,234,204,0.5);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//页脚
+.footers{
+    width:100%;
+    height:1rem;
+    background:lime;
+    position:absolute;
+    left:0;
+    bottom:0;
+    z-index:999;
+}

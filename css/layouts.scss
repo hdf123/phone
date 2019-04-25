@@ -1,0 +1,12 @@
+@charset "UTF-8";
+//基础布局
+
+html,body{
+    height: 100%;
+    margin:0 auto;
+    overflow: hidden;
+    position: relative;
+}
+body{
+    max-width:10rem;
+}
