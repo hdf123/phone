@@ -1,6 +1,5 @@
 @charset "UTF-8";
 @import "../../../css/styles.scss";
-@import "../../../icon/iconfont.css";
 .headers{
     width:10rem;
     height:1.153rem;
@@ -37,9 +36,15 @@
     box-sizing: border-box;
     width:100%;
     height:100%;
-    overflow: auto;
-    padding-bottom:2rem;
-    
+    position:relative;
+}
+#main{
+    position:absolute;
+    top:0;
+    left:0;
+    bottom:1.5rem;
+//  bottom:1.153rem;头部+页脚
+    overflow:auto;
 }
 .swiper1{
     width:10rem;
@@ -215,16 +220,12 @@
 //嵌套
 .swiper3{
     width:9.173rem;
-    .swiper-slide{
-        background:rgba(0,0,0,0.3);
-    }
 }
-.swiper4{
-    
+.swiper4,.swiper5{
     .swiper-slide{
         width: 3.653rem;
-        height:2.583rem;
-        background:aqua;
+        padding-bottom:0.187rem;
+        background:$colore;
         >img{
             width:100%;
             height:1.467rem;
@@ -244,7 +245,7 @@
 }
 //楼盘
 .building_box{
-    margin-top:0.64rem;
+    margin-top:0.18rem;
 }
 .buildings{
     display: flex;
@@ -253,7 +254,6 @@
     >img{
         width: 2.533rem;
         height: 1.92rem;
-        background:red;
         border-radius: 0.053rem;
     }
     >div{
@@ -267,6 +267,9 @@
             margin-top:0.05rem;
         }
     }
+}
+.buildings:last-child{
+    border:none;
 }
 .region{
     height:0.773rem;
@@ -324,12 +327,12 @@
 
 
 //页脚
-.footers{
-    width:100%;
-    height:1rem;
-    background:lime;
-    position:absolute;
-    left:0;
-    bottom:0;
-    z-index:999;
-}
+//.footers{
+//  width:100%;
+//  height:1rem;
+//  background:lime;
+//  position:absolute;
+//  left:0;
+//  bottom:0;
+//  z-index:999;
+//}

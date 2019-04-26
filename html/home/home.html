@@ -284,29 +284,11 @@
 	   }
 	})
 	$(".tabBars>li").click(function(){
-		console.log(mySwiper3.realIndex);
 	    var zuobiao=$(this).index();
 	    $(".tabBars>li").eq(zuobiao).addClass("selecteds");
 	    $(".tabBars>li").eq(zuobiao).siblings().removeClass("selecteds");
 	    mySwiper3.slideTo(zuobiao+1,500,false);
 	})
-
-//	var data=[{
-//		img:'',
-//		name:'绿都澜湾1',
-//		region:['住宅','管城回族区'],
-//		mianji:'建面72-143㎡',
-//		features:["在售",'小户型','绿化率高','车位充足','近地铁'],
-//		price:'14000元/㎡'
-//	},{
-//		img:'',
-//		name:'绿都澜湾2',
-//		region:['住宅','管城回族区'],
-//		mianji:'建面72-143㎡',
-//		state:"在售",
-//		features:['小户型','绿化率高','车位充足','近地铁'],
-//		price:'14000元/㎡'
-//	}]
 	for(i in data){
 		var aa='',as='',region=data[i].region;
 		for(j in region){
@@ -340,13 +322,6 @@
 								</div>
 							</div>`);
 	}
-	
-	
-	
-	
-//	$(".features").click(function(){
-//		$(this).find(".state").removeClass("statea").addClass("stateb");
-//	})
 </script>
 	</body>
 </html>
