@@ -7,7 +7,7 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 		<meta name="format-detection" content="telephone=yes"/>
 		<title>中原楼市</title>
-		<link rel="stylesheet" type="text/css" href="css/home.css"/>
+		<link rel="stylesheet" type="text/css" href="css/aa.css"/>
 		<script src="../../js/js.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 <style>
@@ -197,7 +197,6 @@
 						
 <!--上拉后加载区域-->
 						<div class="building_box box1"></div>
-						
 					</div>
 					<div class="swiper-slide mainb">
 						<div class="swiper-container swiper5">
@@ -231,7 +230,6 @@
 						</div>
 						
 						<div class="building_box box2"></div>
-						
 					</div>
 					<div class="swiper-slide">slider3</div>
 					<div class="swiper-slide">slider4</div>
@@ -240,12 +238,12 @@
 				<div class="swiper-pagination"></div>
 			</div>
 		</section>
-		<!--<footer class="footers">
-			首页
-		</footer>-->
 <script src="home.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">
 	$(function(){
+		for(var i=0;i<30;i++){
+			$(".box2").append(`<div>${i+1}</div>`);
+		}
 		var mySwiper1 = new Swiper('.swiper1', {
 			loop : true,
 			autoplay: 2000,//可选选项，自动滑动
@@ -302,48 +300,22 @@
 	    off_on = false; //分页开关
 		//加载数据
 		var LoadingDataFn = function(box) {
-			var aa=(page-1)*6;
-			var bb=page*6;
+			var menu=12;
+			var aa=(page-1)*menu;
+			var bb=page*menu;
 		    var dom = '';
-		    for (var i =aa; i <bb; i++) {
-		    	if(data[i]==undefined){
-		    		console.log(666);
-		    		alert("没有数据了");
-		    		return ;
-		    	}
-				var aa='',as='',region=data[i].region;
-				for(j in region){
-					if(j==region.length-1){
-						aa+=`${region[j]}`;
-					}else{
-						aa+=`${region[j]}&nbsp;`;
-					}
-				}
-				if(data[i].state=="在售"){
-					as=`<div class="state statea">${data[i].state}</div>`;
-				}else if(data[i].state=="待售"){
-					as=`<div class="state stateb">${data[i].state}</div>`;
-				}else{
-					as=`<div class="state">${data[i].state}</div>`;
-				}
-				dom+=`<div class="buildings">
-										<img src=${data[i].img} alt="" />
-										<div>
-											<div>${data[i].name}</div>
-											<div class="region">
-												<div>${aa}</div>
-												<div>${data[i].mianji}</div>
-											</div>
-											<div class="features">
-												${as}
-												<div>南北通透</div>
-												<div>配套成熟</div>
-											</div>
-											<div>售价待定</div>
-										</div>
-									</div>`;
+		    for (var i =aa; i <bb; i++){
+		    	var k=i+1;
+				dom+='<div><img src="http://www.jq22.com/img/cs/500x500a.png"/>'+k+'<span>上滑列加载表内容上滑列加载表内容上滑列加载表内容上滑列加载表内容</span></div>';
 		    }
 		    $(".box1").append(dom);
+//		    if(box==undefined){
+//		    	$(".box1").append(dom);
+//		    	$(".box2").append(dom);
+//		    }else{
+//		    	box.append(dom);
+//		    }
+//		    console.log(box);
 		    off_on = true; //[重要]off_on 在这里不设 true的话， 下次就没法加载了哦！]
 		};
 		
@@ -352,7 +324,6 @@
 		    LoadingDataFn();
 		});
 		$('.maina').scroll(function() {
-			console.log(1111);
 		    //当时滚动条离底部60px时开始加载下一页的内容
 		    if (($(this)[0].scrollTop + $(this).height() + 60) >= $(this)[0].scrollHeight) {
 		        //这里用 [ off_on ] 来控制是否加载 （这样就解决了 当上页的条件满足时，一下子加载多次的问题啦）
@@ -366,15 +337,14 @@
 		    }
 		});
 		$('.mainb').scroll(function() {
-			console.log(222);
 		    //当时滚动条离底部60px时开始加载下一页的内容
 		    if (($(this)[0].scrollTop + $(this).height() + 60) >= $(this)[0].scrollHeight) {
 		        //这里用 [ off_on ] 来控制是否加载 （这样就解决了 当上页的条件满足时，一下子加载多次的问题啦）
 		        if (off_on) {
-		              off_on = false;
-		              page++;
-		              console.log("第"+page+"页");
-		              LoadingDataFn($('.box2'));  //调用执行上面的加载方法
+	              	off_on = false;
+	              	page++;
+	              	console.log("第"+page+"页");
+	              	LoadingDataFn($('.box2'));  //调用执行上面的加载方法
 		        }
 		    }
 		});
@@ -384,6 +354,10 @@
 		var mains=$(".tabBars").offset().top;
 		var heights=mains-headers;
 		function fixed(num) {
+			var ss=$(document.body).outerHeight(true);
+			var asdf=$('.maina').outerHeight(true);
+			console.log(asdf);
+			
 	        var nys= navigator.userAgent;
 	        var isAndroid = nys.indexOf('Android') > -1 || nys.indexOf('Adr') > -1; 
 	        var isIOS = !!nys.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); 
@@ -392,12 +366,20 @@
 	                var scrollT = document.body.scrollTop;
 	                if (scrollT > num) {
 	                    $('.tabBars').addClass('fixed-top');
+	                    $('.swiper3 .maina').css({"height":ss+"px","overflow":"auto"});
+	                    $(".swiper3").css({"margin-top":"2.153rem"});
 	                }else {
 	                    $('.tabBars').removeClass('fixed-top');
+	                    $('.swiper3 .maina').css({"height":"auto","overflow":"hidden","margin-top":"0"});
+	                    $(".swiper3").css({"margin-top":"0"});
 	                }
 	            };
 	        }else if(isIOS) {
 	            $('.tabBars').addClass('sticky');
+//	            $(".swiper3").addClass('tt');
+	            $('.swiper3 .maina').css({"height":ss+"px","overflow":"auto"});
+//	            
+	            $(".swiper3").css({"margin-top":"2.153rem"});
 	        }
 	    }
 	    fixed(heights);	
@@ -405,21 +387,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-//jquery---吸顶导航效果（移动端）
-//移动端可查看效果，pc没有效果
 
 
 	//当有ajsx请求的时候引用
