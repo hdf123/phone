@@ -163,75 +163,76 @@
 			</ul>
 			<div class="swiper-container swiper3">
 				<div class="swiper-wrapper">
-					<div class="swiper-slide maina">
-						
-						<div class="swiper-container swiper4">
-							<div class="swiper-wrapper">
-								<div class="swiper-slide">
-									<img src="" alt="" />
-									<p>高绿化率</p>
-									<p>绿化覆盖 空气清晰</p>
-								</div>
-								<div class="swiper-slide">
-									<img src="" alt="" />
-									<p>高绿化率</p>
-									<p>享有更多优惠</p>
-								</div>
-								<div class="swiper-slide">
-									<img src="" alt="" />
-									<p>高绿化率</p>
-									<p>紧邻CBD</p>
-								</div>
-								<div class="swiper-slide">
-									<img src="" alt="" />
-									<p>高绿化率</p>
-									<p>南北通透</p>
-								</div>
-								<div class="swiper-slide">
-									<img src="" alt="" />
-									<p>高绿化率</p>
-									<p>配套成熟</p>
+					<div class="swiper-slide">
+						<div class="maina">
+							<div class="swiper-container swiper4">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<img src="" alt="" />
+										<p>高绿化率</p>
+										<p>绿化覆盖 空气清晰</p>
+									</div>
+									<div class="swiper-slide">
+										<img src="" alt="" />
+										<p>高绿化率</p>
+										<p>享有更多优惠</p>
+									</div>
+									<div class="swiper-slide">
+										<img src="" alt="" />
+										<p>高绿化率</p>
+										<p>紧邻CBD</p>
+									</div>
+									<div class="swiper-slide">
+										<img src="" alt="" />
+										<p>高绿化率</p>
+										<p>南北通透</p>
+									</div>
+									<div class="swiper-slide">
+										<img src="" alt="" />
+										<p>高绿化率</p>
+										<p>配套成熟</p>
+									</div>
 								</div>
 							</div>
+							
+	<!--上拉后加载区域-->
+							<div class="building_box box1"></div>
 						</div>
-						
-<!--上拉后加载区域-->
-						<div class="building_box box1"></div>
-						
 					</div>
-					<div class="swiper-slide mainb">
-						<div class="swiper-container swiper5">
-							<div class="swiper-wrapper">
-								<div class="swiper-slide">
-									<img src="" alt="" />
-									<p>新房</p>
-									<p>绿化覆盖 空气清晰</p>
-								</div>
-								<div class="swiper-slide">
-									<img src="" alt="" />
-									<p>新房</p>
-									<p>享有更多优惠</p>
-								</div>
-								<div class="swiper-slide">
-									<img src="" alt="" />
-									<p>新房</p>
-									<p>紧邻CBD</p>
-								</div>
-								<div class="swiper-slide">
-									<img src="" alt="" />
-									<p>高绿化率</p>
-									<p>南北通透</p>
-								</div>
-								<div class="swiper-slide">
-									<img src="" alt="" />
-									<p>高绿化率</p>
-									<p>配套成熟</p>
+					<div class="swiper-slide">
+						<div class="mainb">
+							<div class="swiper-container swiper5">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<img src="" alt="" />
+										<p>新房</p>
+										<p>绿化覆盖 空气清晰</p>
+									</div>
+									<div class="swiper-slide">
+										<img src="" alt="" />
+										<p>新房</p>
+										<p>享有更多优惠</p>
+									</div>
+									<div class="swiper-slide">
+										<img src="" alt="" />
+										<p>新房</p>
+										<p>紧邻CBD</p>
+									</div>
+									<div class="swiper-slide">
+										<img src="" alt="" />
+										<p>高绿化率</p>
+										<p>南北通透</p>
+									</div>
+									<div class="swiper-slide">
+										<img src="" alt="" />
+										<p>高绿化率</p>
+										<p>配套成熟</p>
+									</div>
 								</div>
 							</div>
+							
+							<div class="building_box box2"></div>
 						</div>
-						
-						<div class="building_box box2"></div>
-						
 					</div>
 					<div class="swiper-slide">slider3</div>
 					<div class="swiper-slide">slider4</div>
@@ -384,6 +385,10 @@
 		var mains=$(".tabBars").offset().top;
 		var heights=mains-headers;
 		function fixed(num) {
+			var ss=$(document.body).outerHeight(true);
+			var asdf=$('.maina').outerHeight(true);
+			console.log(asdf);
+			
 	        var nys= navigator.userAgent;
 	        var isAndroid = nys.indexOf('Android') > -1 || nys.indexOf('Adr') > -1; 
 	        var isIOS = !!nys.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); 
@@ -392,12 +397,19 @@
 	                var scrollT = document.body.scrollTop;
 	                if (scrollT > num) {
 	                    $('.tabBars').addClass('fixed-top');
+	                    $('.swiper3 .maina').addClass('maina1');
+	                    $('.swiper3 .mainb').addClass('maina1');
 	                }else {
+	                	$('.maina').scrollTop(0);//滚动条回到顶部
 	                    $('.tabBars').removeClass('fixed-top');
+	                    $('.swiper3 .maina').removeClass('maina1');
+	                    $('.swiper3 .mainb').removeClass('maina1');
 	                }
 	            };
 	        }else if(isIOS) {
 	            $('.tabBars').addClass('sticky');
+	            $('.swiper3 .maina').addClass('maina1');
+	            $('.swiper3 .mainb').addClass('maina1');
 	        }
 	    }
 	    fixed(heights);	

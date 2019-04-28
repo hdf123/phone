@@ -348,18 +348,15 @@
 }
 
 
-.kk{
-    width:9.173rem;
-    position: fixed;
-    top:0;
-    left:auto;
+.maina{
+    height:20rem;
 }
-.tt{
-    position: -webkit-sticky;/*滚过初始位置时自动吸顶*/
-    position: sticky;/*吸顶时的定位*/
-    top:0;
-    left:auto;
-    z-index: 999;/*z-index比下方所有层级要高*/
+.maina1{
+    overflow: auto;
+    margin-top:1.953rem;
+}
+.mainb{
+    height:20rem;
 }
 
 

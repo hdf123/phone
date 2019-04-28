@@ -109,6 +109,7 @@ a {
   z-index: 99;
 }
 .headers > input {
+  box-sizing: border-box;
   width: 9.04rem;
   height: 0.853rem;
   padding: 0 0.16rem;
@@ -136,10 +137,9 @@ a {
   font-size: 0.32rem;
 }
 
-.content {
+.contents {
   box-sizing: border-box;
   width: 100%;
-  height: 100%;
   padding-top: 1.153rem;
   overflow: auto;
 }
@@ -229,11 +229,16 @@ a {
   height: 100%;
 }
 
+.tabBars_box {
+  width: 10rem;
+  height: 0.8rem;
+  margin: 0.847rem auto 0.24rem;
+}
+
 .tabBar, .tabBars {
   width: 10rem;
   height: 0.8rem;
   list-style: none;
-  margin: 0.847rem auto 0.24rem;
   padding-top: 0.1rem;
   display: flex;
   justify-content: space-between;
@@ -315,8 +320,25 @@ a {
   padding-top: 0.05rem;
 }
 
-.swiper3 {
-  width: 9.173rem;
+.tabs {
+  width: 100%;
+  display: flex;
+}
+.tabs > div {
+  width: 100%;
+  display: none;
+}
+.tabs > div:nth-child(1) {
+  background: lawngreen;
+}
+.tabs > div:nth-child(2) {
+  background: gold;
+}
+.tabs > div:nth-child(3) {
+  background: darkcyan;
+}
+.tabs > .active {
+  display: block;
 }
 
 .swiper4 .swiper-slide, .swiper5 .swiper-slide {
@@ -338,29 +360,6 @@ a {
   font-size: 0.267rem;
   line-height: 0.5rem;
   margin: 0 0 0 0.32rem;
-}
-
-.building_box {
-  margin-top: 0.18rem;
-}
-.building_box > div {
-  display: flex;
-  margin-bottom: 10px;
-  padding: 10px;
-  border-bottom: 1px solid gray;
-  border-radius: 4px;
-  background: #EEE;
-}
-.building_box > div img {
-  flex: 50px 0 0;
-  width: 50px;
-  height: 50px;
-  padding: 4px;
-  border: 1px solid green;
-}
-.building_box > div span {
-  padding-left: 4px;
-  line-height: 24px;
 }
 
 .buildings {
@@ -430,29 +429,11 @@ a {
 .fixed-top {
   position: fixed;
   width: 100%;
-  top: 0;
+  top: 1.153rem;
   left: auto;
 }
 
 .sticky {
-  position: -webkit-sticky;
-  /*滚过初始位置时自动吸顶*/
-  position: sticky;
-  /*吸顶时的定位*/
-  top: 0;
-  left: auto;
-  z-index: 999;
-  /*z-index比下方所有层级要高*/
-}
-
-.kk {
-  width: 9.173rem;
-  position: fixed;
-  top: 0;
-  left: auto;
-}
-
-.tt {
   position: -webkit-sticky;
   /*滚过初始位置时自动吸顶*/
   position: sticky;
