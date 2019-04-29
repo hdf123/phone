@@ -263,9 +263,7 @@
 			var bb=page*menu;
 		    var dom = '';
 		    for (var i =aa; i <bb; i++) {
-		    	console.log(data[i]);
 		    	if(data[i]==undefined){
-		    		console.log(666);
 		    		alert("没有数据了");
 		    		$("body").mLoading("hide");
 		    		return ;
@@ -313,8 +311,8 @@
 		$(document).ready(function() {
 		    LoadingDataFn();
 		});
-		    var headers=$(".headers")[0].getBoundingClientRect().height;
-		    var tabBars=$(".tabBars").offset().top;
+	    var headers=$(".headers")[0].getBoundingClientRect().height;
+	    var tabBars=$(".tabBars").offset().top;
 		$('.contents').scroll(function() {
 		    //当时滚动条离底部60px时开始加载下一页的内容
 		    if (($(this)[0].scrollTop + $(this).height() + 60) >= $(this)[0].scrollHeight) {
@@ -340,8 +338,8 @@
 
 
 //		var headers=$(".headers")[0].getBoundingClientRect().height;
-//		var mains=$(".tabBars").offset().top;
-//		var heights=mains-headers;
+//		var tabBars=$(".tabBars").offset().top;
+//		var heights=tabBars-headers;
 //		console.log(heights);
 //		function fixed(num) {
 //	        var nys= navigator.userAgent;

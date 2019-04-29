@@ -39,7 +39,8 @@
 .contents{
     box-sizing: border-box;
     width:100%;
-//  padding-top:1.153rem;
+    padding-top:1.153rem;
+    overflow:auto;
 }
 .swiper1{
     width:10rem;
@@ -122,18 +123,16 @@
         height:100%;
     }
 }
-.tabBars_box{
-    width:10rem;
-    height:1rem;
-    margin:0.847rem auto 0.24rem;
-}
 .tabBar,.tabBars{
     width:10rem;
-    height:1rem;
+//  width: 8.88rem;
+    height: 0.8rem;
     list-style:none;
-    padding:0.2rem 0 0.1rem 0;
+    margin:0.847rem auto 0.24rem;
+    padding-top:0.1rem;
     display: flex;
     justify-content: space-between;
+    background:lime;
     z-index:999;
     >li{
         width:100%;
@@ -245,6 +244,28 @@
     }
 }
 //楼盘
+.building_box{
+    margin-top:0.18rem;
+    >div{
+        display:flex;
+        margin-bottom:10px;
+        padding:10px;
+        border-bottom:1px solid gray;
+        border-radius:4px;
+        background:#EEE;
+        img{
+            flex:50px 0 0;
+            width:50px;
+            height:50px;
+            padding:4px;
+            border:1px solid green;
+        }
+        span{
+            padding-left:4px;
+            line-height:24px;
+        }
+    }
+}
 .buildings{
     display: flex;
     padding:0.48rem 0 0.347rem 0;
@@ -305,33 +326,16 @@
         background:rgba(255,234,204,0.5);
     }
 }
-.swiper3>.swiper-wrapper>.swiper-slide{
-    width:100%;
-    padding-bottom:2.5rem;
-}
 
-.ma{
-    width:100%;
-    height:100%;
-    overflow: auto;
-}
-.ksk{
-    width:100%;
-    height:100%;
-    overflow: auto;
-    >div{
-        height:1rem;
-        font-size:0.7rem;
-        line-height:1rem;
-        border-bottom:1px solid lime;
-    }
-}
+
+
+
 
 
 .fixed-top {
     position: fixed;
     width: 100%;
-    top:1.153rem;
+    top:0;
     left:auto;
 }
 .sticky {
@@ -342,6 +346,17 @@
     z-index: 999;/*z-index比下方所有层级要高*/
 }
 
+
+.maina{
+    height:20rem;
+}
+.maina1{
+    overflow: auto;
+    margin-top:1.953rem;
+}
+.mainb{
+    height:20rem;
+}
 
 
 
