@@ -2,17 +2,12 @@
 @import "../../../css/base.scss";
 @import "../../../css/styles.scss";
 .headers{
-    box-sizing:border-box;
-    width:10rem;
     height:1.153rem;
     padding:0.16rem 0.48rem;
     background-color:$backgrounda;
-    position:fixed;
-    top:0;
-    left:auto;
     z-index:99;
     &>input{
-        width: 9.04rem;
+        width:100%;
         height: 0.853rem;
         padding:0 0.16rem;
         background-color: #ffffff;
@@ -37,12 +32,10 @@
 }
 //内容
 .contents{
-    box-sizing: border-box;
-    width:100%;
-//  padding-top:1.153rem;
+    padding-top:1.153rem;
 }
 .swiper1{
-    width:10rem;
+//  width:10rem;
     .swiper-slide{
         height: 4.333rem;
         background:rgba(0,0,0,0.3);
@@ -53,16 +46,16 @@
         }
     }
 }
+
 .menu{
     width:100%;
-    height: 4.693rem;
     display: flex;
     flex-wrap: wrap;
-    margin-top:0.48rem;
+    padding:0.48rem 0 0.027rem 0;
     box-shadow: 0rem 0.04rem 0.187rem 0rem rgba(153, 153, 153, 0.3);
     >a{
         width:25%;
-        padding-bottom:0.467rem;
+        padding-bottom:0.453rem;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -80,13 +73,14 @@
     }
 }
 .nows{
+    width:100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    padding:0.533rem 0 0 0;
+    justify-content: space-between;
+    padding:0.533rem 0.4rem;
     >div{
         box-sizing:border-box;
-        width: 4.467rem;
+        width:44.67%;
         height: 1.813rem;
         background-color: $colore;
         border-radius: 0.053rem;
@@ -114,8 +108,9 @@
     }
 }
 .preferential{
-    width: 9.2rem;
-    height: 2.4rem;
+    width:92%;
+    border-radius: 0.053rem;
+    overflow: hidden;
     margin:0 auto;
     >img{
         width:100%;
@@ -123,12 +118,12 @@
     }
 }
 .tabBars_box{
-    width:10rem;
+    width:100%;
     height:1rem;
-    margin:0.847rem auto 0.24rem;
+    margin:0.547rem auto 0.24rem;
 }
 .tabBar,.tabBars{
-    width:10rem;
+    width:100%;
     height:1rem;
     list-style:none;
     padding:0.2rem 0 0.1rem 0;
@@ -160,7 +155,7 @@
     }
 }
 .swiper2{
-    width:9.173rem;
+    width:91.73%;
 }
 .information{
     height: 2.88rem;
@@ -187,13 +182,12 @@
 }
 //更新
 .updates{
-    width: 9.2rem;
+    width: 92%;
     height: 1.2rem;
-//  background:#55A532;
     background-color: $colore;
     border-radius: 0.053rem;
     display: flex;
-    margin:0.267rem auto 0;
+    margin:0.5rem auto 0;
     >div{
         width:50%;
         height:100%;
@@ -220,7 +214,7 @@
 
 //嵌套
 .swiper3{
-    width:9.173rem;
+    width:91.73%;
 }
 .swiper4,.swiper5{
     .swiper-slide{
@@ -229,7 +223,6 @@
         background:$colore;
         >img{
             width:100%;
-            height:1.467rem;
             border-radius: 0.053rem;
         }
         >p:nth-child(2){
@@ -333,6 +326,7 @@
     width: 100%;
     top:1.153rem;
     left:auto;
+    box-shadow: 0rem 0.04rem 0.3rem 0rem rgba(69, 69, 69, 0.3);
 }
 .sticky {
     position: -webkit-sticky;/*滚过初始位置时自动吸顶*/

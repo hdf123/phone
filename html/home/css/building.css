@@ -1,0 +1,241 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  color: #333333;
+  list-style: none;
+  /*把此元素放置在父元素的中部。*/
+  vertical-align: middle;
+  box-sizing: border-box;
+  /*去除移动端特有的点击高亮效果*/
+  -webkit-tap-highlight-color: transparent;
+}
+
+img {
+  display: inline-block;
+}
+
+input {
+  /*1.清除文本框获取焦点时默认的边框阴影*/
+  outline: none;
+  /*2.去除边框*/
+  border: none;
+  /*3.添加边框*/
+  border: 1px solid #ccc;
+}
+
+/* 让链接默认不显示下划线， */
+a {
+  color: #333;
+  /*指针样式*/
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+  display: inline-block;
+  /*导致鼠标在页面活动时视频延迟变卡问题解决.*/
+  blr: expression(this.onFocus=this.blur());
+}
+
+/* 清理浮动 */
+.clearfix:before, .clearfix:after {
+  display: block;
+  content: " ";
+  clear: both;
+}
+
+/*单行隐藏*/
+.yincang, .wdows > div, #wdows > div {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/*多行隐藏*/
+.yincangs {
+  overflow: hidden;
+  /*超出隐藏*/
+  display: -webkit-box;
+  /*将对象作为弹性伸缩盒子模型显示。*/
+  -webkit-box-orient: vertical;
+  /*从上到下垂直排列子元素（设置伸缩盒子的子元素排列方式）*/
+  -webkit-line-clamp: 2;
+  /*超出2行用省略号表示*/
+}
+
+/*换行*/
+.newline {
+  word-break: break-all;
+  /* 只对英文起作用，以字母作为换行依据。*/
+  word-wrap: break-word;
+  /*只对英文起作用，以单词作为换行依据。*/
+  white-space: pre-wrap;
+  /*只对中文起作用，强制换行。*/
+}
+
+/*禁止换行*/
+.ban_newline {
+  white-space: nowrap;
+}
+
+/*placeholder样式*/
+.input::-webkit-input-placeholder {
+  text-align: center;
+}
+
+/*隐藏滚动条*/
+.scroll_bar::-webkit-scrollbar {
+  width: 0 !important;
+  /*height:0 !important;*/
+  /*display: none;*/
+}
+
+/*上下左右居中*/
+.flexs, .choose > div:nth-child(1) > div, .choose > div:nth-child(2) > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imgks {
+  background: #eeeeee;
+}
+
+.headers {
+  height: 3.066rem;
+  background: white;
+  z-index: 999;
+}
+
+.search {
+  height: 1.173rem;
+  padding: 0.213rem 0;
+}
+.search > i {
+  display: inline-block;
+  font-size: 0.5rem;
+  text-align: center;
+}
+.search > i:nth-child(1) {
+  width: 1.173rem;
+  color: #a1a1a1;
+}
+.search > i:nth-child(3) {
+  width: 1.333rem;
+  color: #a1a1a1;
+}
+.search > input {
+  width: 7.304rem;
+  height: 0.747rem;
+  padding: 0 0.32rem;
+  font-size: 0.32rem;
+  background-color: #f5f5f5;
+  border-radius: 0.053rem;
+  border: none;
+}
+
+.choose > div:nth-child(1) {
+  display: flex;
+  padding: 0.32rem 0;
+}
+.choose > div:nth-child(1) > div {
+  width: 100%;
+}
+.choose > div:nth-child(1) > div > i {
+  color: #a1a1a1;
+}
+.choose > div:nth-child(2) {
+  padding: 0.08rem 0.4rem 0.16rem 0.4rem;
+  display: flex;
+  justify-content: space-between;
+}
+.choose > div:nth-child(2) > div {
+  width: 2.133rem;
+  height: 0.667rem;
+  color: #999999;
+  font-size: 0.32rem;
+  background-color: #f5f5f5;
+  border-radius: 0.027rem;
+}
+
+.contents {
+  position: absolute;
+  top: 3.066rem;
+  left: 0;
+  bottom: 0;
+  overflow: auto;
+}
+
+.building_box {
+  padding: 0.48rem 0.4rem 0.2rem 0.4rem;
+  display: flex;
+  border-bottom: 1px solid #E5E5E5;
+}
+.building_box > img {
+  width: 2.533rem;
+  height: 1.92rem;
+  border-radius: 0.053rem;
+}
+.building_box > div {
+  margin-left: 0.467rem;
+}
+.building_box > div > h3 {
+  font-size: 0.373rem;
+}
+.building_box > div > p {
+  color: #666666;
+  font-size: 0.267rem;
+  line-height: 0.5rem;
+}
+.building_box > div > div:last-child {
+  color: #f9351a;
+  font-size: 0.373rem;
+}
+
+.building_box:last-child {
+  border: none;
+}
+
+.environment {
+  display: flex;
+  align-items: center;
+}
+.environment > div:nth-child(1) {
+  display: flex;
+  align-items: center;
+  height: 0.25rem;
+  border-right: 2px solid #E5E5E5;
+}
+.environment > div:nth-child(1) > div {
+  color: #999999;
+  font-size: 0.267rem;
+  margin-right: 0.12rem;
+}
+.environment > div:nth-child(2) {
+  display: flex;
+  color: #999999;
+  font-size: 0.267rem;
+  margin-left: 0.12rem;
+}
+
+.situation {
+  display: flex;
+  margin: 0.06rem 0;
+}
+.situation > div {
+  color: #999999;
+  font-size: 0.267rem;
+  padding: 0.05rem 0.133rem;
+  background-color: #f5f5f5;
+  border-radius: 0.027rem;
+  margin-right: 0.133rem;
+}
+.situation > .sell {
+  color: #ffffff;
+  background-color: #0099ff;
+}
+.situation > .waiting {
+  color: #ffffff;
+  background-color: #ffb956;
+}
+
+/*# sourceMappingURL=building.css.map */

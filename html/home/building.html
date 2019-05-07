@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=yes"/>
+		<title>中原楼市</title>
+		<link rel="stylesheet" type="text/css" href="css/building.css"/>
+		<script src="../../js/js.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<header class="headers">
+			<div class="search">
+				<i class="iconfont ">&#xe632;</i>
+				<input type="text" class="iconfont" placeholder="&#xe647; 输入楼盘名/区域" value=""/>
+				<i class="iconfont icon-location"></i>
+			</div>
+			<div class="choose">
+				<div>
+					<div>
+						区域<i class="iconfont">&#xe627;</i>
+					</div>
+					<div>
+						价格<i class="iconfont">&#xe627;</i>
+					</div>
+					<div>
+						户型<i class="iconfont">&#xe627;</i>
+					</div>
+					<div>
+						筛选<i class="iconfont">&#xe627;</i>
+					</div>
+				</div>
+				<div>
+					<div>在售</div>
+					<div>品质楼盘</div>
+					<div>热门楼盘</div>
+					<div>优质楼盘</div>
+				</div>
+			</div>
+		</header>
+		<section class="contents">
+			<div class="building_box">
+				<img src="" class="imgks" alt="" />
+				<div>
+					<h3>中岳俪景湾</h3>
+					<p>金岱产业园区临近在建地铁4号线</p>
+					<div class="environment">
+						<div>
+							<div>住宅</div>
+							<div>管城回族区</div>
+							<div>管南区域</div>
+						</div>
+						<div>建面73-124㎡</div>
+					</div>
+					<div class="situation">
+						<div class="waiting">待售</div>
+						<div>小户型</div>
+						<div>车位充足</div>
+						<div>绿化率高</div>
+					</div>
+					<div>14000元/平</div>
+				</div>
+			</div>
+			<div class="building_box">
+				<img src="" class="imgks" alt="" />
+				<div>
+					<h3>中岳俪景湾</h3>
+					<p>金岱产业园区临近在建地铁4号线</p>
+					<div class="environment">
+						<div>
+							<div>住宅</div>
+							<div>管城回族区</div>
+							<div>管南区域</div>
+						</div>
+						<div>建面73-124㎡</div>
+					</div>
+					<div class="situation">
+						<div class="sell">在售</div>
+						<div>小户型</div>
+						<div>车位充足</div>
+						<div>绿化率高</div>
+					</div>
+					<div>14000元/平</div>
+				</div>
+			</div>
+			<div class="building_box">
+				<img src="" class="imgks" alt="" />
+				<div>
+					<h3>中岳俪景湾</h3>
+					<p>金岱产业园区临近在建地铁4号线</p>
+					<div class="environment">
+						<div>
+							<div>住宅</div>
+							<div>管城回族区</div>
+							<div>管南区域</div>
+						</div>
+						<div>建面73-124㎡</div>
+					</div>
+					<div class="situation">
+						<div class="">售罄</div>
+						<div>小户型</div>
+						<div>车位充足</div>
+						<div>绿化率高</div>
+					</div>
+					<div>14000元/平</div>
+				</div>
+			</div>
+		</section>
+		
+		<div class="conditions_box">
+			<div>
+				
+			</div>
+			<div>
+				
+			</div>
+		</div>
+		
+		
+<script type="text/javascript">
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+var page = 1, //分页码
+    off_on = false;
+
+//加载数据
+var LoadingDataFn = function() {
+    var dom = '';
+    for (var i = 0; i < 20; i++) {
+        dom += '<div><img src="../../img/clooking.png"/><span>'+i+'上滑列加载表内容上滑列加载表内容上滑列加载表内容上滑列加载表内容</span></div>';
+    }
+//  $('.contents').append(dom);
+    off_on = true;
+};
+//初始化， 第一次加载
+$(document).ready(function() {
+    LoadingDataFn();
+});
+$('.contents').scroll(function() {
+    //当时滚动条离底部60px时开始加载下一页的内容
+    if (($(this)[0].scrollTop + $(this).height() + 60) >= $(this)[0].scrollHeight) {
+        //这里用 [ off_on ] 来控制是否加载 （这样就解决了 当上页的条件满足时，一下子加载多次的问题啦）
+        if (off_on) {
+              off_on = false;
+              page++;
+              console.log("第"+page+"页");
+              LoadingDataFn();  //调用执行上面的加载方法
+        }
+    }
+});
+</script>
+	</body>
+</html>

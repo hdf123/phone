@@ -13,7 +13,6 @@
 
 img {
   display: inline-block;
-  background: #eeeeee;
 }
 
 input {
@@ -98,18 +97,13 @@ a {
 }
 
 .headers {
-  box-sizing: border-box;
-  width: 10rem;
   height: 1.153rem;
   padding: 0.16rem 0.48rem;
   background-color: #0099ff;
-  position: fixed;
-  top: 0;
-  left: auto;
   z-index: 99;
 }
 .headers > input {
-  width: 9.04rem;
+  width: 100%;
   height: 0.853rem;
   padding: 0 0.16rem;
   background-color: #ffffff;
@@ -137,13 +131,9 @@ a {
 }
 
 .contents {
-  box-sizing: border-box;
-  width: 100%;
+  padding-top: 1.153rem;
 }
 
-.swiper1 {
-  width: 10rem;
-}
 .swiper1 .swiper-slide {
   height: 4.333rem;
   background: rgba(0, 0, 0, 0.3);
@@ -156,15 +146,14 @@ a {
 
 .menu {
   width: 100%;
-  height: 4.693rem;
   display: flex;
   flex-wrap: wrap;
-  margin-top: 0.48rem;
+  padding: 0.48rem 0 0.027rem 0;
   box-shadow: 0rem 0.04rem 0.187rem 0rem rgba(153, 153, 153, 0.3);
 }
 .menu > a {
   width: 25%;
-  padding-bottom: 0.467rem;
+  padding-bottom: 0.453rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -182,14 +171,15 @@ a {
 }
 
 .nows {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 0.533rem 0 0 0;
+  justify-content: space-between;
+  padding: 0.533rem 0.4rem;
 }
 .nows > div {
   box-sizing: border-box;
-  width: 4.467rem;
+  width: 44.67%;
   height: 1.813rem;
   background-color: #f5f5f5;
   border-radius: 0.053rem;
@@ -217,8 +207,9 @@ a {
 }
 
 .preferential {
-  width: 9.2rem;
-  height: 2.4rem;
+  width: 92%;
+  border-radius: 0.053rem;
+  overflow: hidden;
   margin: 0 auto;
 }
 .preferential > img {
@@ -227,13 +218,13 @@ a {
 }
 
 .tabBars_box {
-  width: 10rem;
+  width: 100%;
   height: 1rem;
-  margin: 0.847rem auto 0.24rem;
+  margin: 0.547rem auto 0.24rem;
 }
 
 .tabBar, .tabBars {
-  width: 10rem;
+  width: 100%;
   height: 1rem;
   list-style: none;
   padding: 0.2rem 0 0.1rem 0;
@@ -265,7 +256,7 @@ a {
 }
 
 .swiper2 {
-  width: 9.173rem;
+  width: 91.73%;
 }
 
 .information {
@@ -291,12 +282,12 @@ a {
 }
 
 .updates {
-  width: 9.2rem;
+  width: 92%;
   height: 1.2rem;
   background-color: #f5f5f5;
   border-radius: 0.053rem;
   display: flex;
-  margin: 0.267rem auto 0;
+  margin: 0.5rem auto 0;
 }
 .updates > div {
   width: 50%;
@@ -317,7 +308,7 @@ a {
 }
 
 .swiper3 {
-  width: 9.173rem;
+  width: 91.73%;
 }
 
 .swiper4 .swiper-slide, .swiper5 .swiper-slide {
@@ -327,7 +318,6 @@ a {
 }
 .swiper4 .swiper-slide > img, .swiper5 .swiper-slide > img {
   width: 100%;
-  height: 1.467rem;
   border-radius: 0.053rem;
 }
 .swiper4 .swiper-slide > p:nth-child(2), .swiper5 .swiper-slide > p:nth-child(2) {
@@ -433,6 +423,7 @@ a {
   width: 100%;
   top: 1.153rem;
   left: auto;
+  box-shadow: 0rem 0.04rem 0.3rem 0rem rgba(69, 69, 69, 0.3);
 }
 
 .sticky {
