@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		
+		<title>test001</title>
+		<script src="../../js/js.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+<style>
+	.ch{
+		width:100%;
+		height:200px;
+		overflow-y:auto;
+	}
+	.ch>label{
+		height:50px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding:0 10px;
+		border:1px solid red;
+	}
+	.test{
+		width:100%;
+		height:100px;
+		display: flex;
+		background:yellow;
+	}
+	.test>div:nth-child(1){
+		width:calc(100% - 50px);
+		width:-moz-calc(100% - 50px);
+		height:100%;
+		background:red;
+	}
+	.test>div:nth-child(2){
+		width:50px;
+		height:100%;
+		background:lime;
+	}
+</style>
+	<body>
+		<div class="ch">
+			<label>不限</label>
+			<label><span>苹果</span><input type="checkbox" name="tt" value="001" /></label>
+			<label><span>雪梨</span><input type="checkbox" name="tt" value="002" /></label>
+			<label><span>芒果</span><input type="checkbox" name="tt" value="003" /></label>
+			<label><span>菠萝</span><input type="checkbox" name="tt" value="004" /></label>
+			<label><span>香蕉</span><input type="checkbox" name="tt" value="005" /></label>
+			<label><span>葡萄</span><input type="checkbox" name="tt" value="006" /></label>
+		</div>
+
+		<div class="test">
+			<div>111</div>
+			<div>222</div>
+		</div>
+<script type="text/javascript">
+$(".ch>label").bind("click",function(e){
+    if(e.target.tagName!="INPUT") return;
+    var aa=$(this).find("span").text();
+    console.log(aa);  
+}); 
+</script>
+	</body>
+</html>

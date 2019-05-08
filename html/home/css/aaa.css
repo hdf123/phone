@@ -90,7 +90,7 @@ a {
 }
 
 /*上下左右居中*/
-.flexs, .choose > div:nth-child(1) > div, .choose > div:nth-child(2) > div {
+.flexs, .choose > div:nth-child(1) > div, .choose > div:nth-child(2) > div, .kkk > div > div {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -142,6 +142,12 @@ a {
 }
 .choose > div:nth-child(1) > div > i {
   color: #a1a1a1;
+}
+.choose > div:nth-child(1) .act {
+  color: #0099ff;
+}
+.choose > div:nth-child(1) .act > i {
+  color: #0099ff;
 }
 .choose > div:nth-child(2) {
   padding: 0.08rem 0.4rem 0.16rem 0.4rem;
@@ -238,36 +244,40 @@ a {
   background-color: #ffb956;
 }
 
-.conditions_box {
+.swiper1 {
   width: 10rem;
-  height: 80vh;
+  height: 82.8vh;
   position: fixed;
   top: 3.066rem;
   left: auto;
   background: rgba(99, 99, 99, 0.6);
-}
-
-.conditions_box > div {
   display: none;
 }
 
-.conditions_box > div:nth-child(1) {
+.swiper1 .tab_con1, .swiper1 .tab_con2, .swiper1 .tab_con3 {
   height: 9.347rem;
   background: white;
 }
 
-.conditions_box > div:nth-child(2) {
-  height: 9.347rem;
-  background: lime;
+.swiper1 .tab_con4 {
+  height: 100%;
+  background: white;
 }
 
-.ch {
+.ch4 {
+  width: 100%;
+  height: calc(100% - 1.547rem);
+  padding: 0 0.2rem;
+  overflow-x: auto;
+}
+
+.ch1, .ch2, .ch3 {
   width: 100%;
   height: 7.7rem;
   padding-left: 0.387rem;
   overflow-x: auto;
 }
-.ch > label {
+.ch1 > label, .ch2 > label, .ch3 > label {
   width: 100%;
   height: 1.2rem;
   padding-right: 0.4rem;
@@ -276,8 +286,11 @@ a {
   justify-content: space-between;
   border-bottom: 1px solid #eeeeee;
 }
+.ch1 > label > .act, .ch2 > label > .act, .ch3 > label > .act {
+  color: #0099ff;
+}
 
-.btn1 {
+.btn1, .btn2, .btn3 {
   width: 100%;
   height: 1.547rem;
   display: flex;
@@ -285,7 +298,7 @@ a {
   justify-content: center;
   border-top: 1px solid #eeeeee;
 }
-.btn1 > input {
+.btn1 > input, .btn2 > input, .btn3 > input {
   width: 9.2rem;
   height: 0.96rem;
   background-color: #0099ff;
@@ -294,4 +307,56 @@ a {
   border: none;
 }
 
-/*# sourceMappingURL=building.css.map */
+.btn4 {
+  height: 1.547rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-top: 1px solid #eeeeee;
+}
+.btn4 > input {
+  width: 4.467rem;
+  height: 0.96rem;
+  font-size: 0.4rem;
+  border-radius: 0.053rem;
+}
+.btn4 > input:nth-child(1) {
+  color: #999999;
+  background: white;
+}
+.btn4 > input:nth-child(2) {
+  color: #ffffff;
+  background-color: #0099ff;
+}
+
+.asd > div:nth-child(1) {
+  margin: 0.533rem 0 0.387rem 0;
+  padding: 0 0.2rem;
+  font-size: 0.427rem;
+}
+
+.kkk {
+  display: flex;
+  flex-wrap: wrap;
+}
+.kkk > div {
+  width: calc(100% / 4);
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.4rem;
+}
+.kkk > div > div {
+  width: 1.973rem;
+  height: 0.613rem;
+  color: #999999;
+  font-size: 0.32rem;
+  background-color: #f5f5f5;
+  border-radius: 0.053rem;
+}
+.kkk > p {
+  width: calc(100% - 0.4rem);
+  margin: 0.093rem auto 0;
+  border-bottom: 1px solid #eeeeee;
+}
+
+/*# sourceMappingURL=aaa.css.map */

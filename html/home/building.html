@@ -107,14 +107,104 @@
 					<div>14000元/平</div>
 				</div>
 			</div>
+			<div class="building_box">
+				<img src="" class="imgks" alt="" />
+				<div>
+					<h3>中岳俪景湾</h3>
+					<p>金岱产业园区临近在建地铁4号线</p>
+					<div class="environment">
+						<div>
+							<div>住宅</div>
+							<div>管城回族区</div>
+							<div>管南区域</div>
+						</div>
+						<div>建面73-124㎡</div>
+					</div>
+					<div class="situation">
+						<div class="">售罄</div>
+						<div>小户型</div>
+						<div>车位充足</div>
+						<div>绿化率高</div>
+					</div>
+					<div>14000元/平</div>
+				</div>
+			</div>
+			<div class="building_box">
+				<img src="" class="imgks" alt="" />
+				<div>
+					<h3>中岳俪景湾</h3>
+					<p>金岱产业园区临近在建地铁4号线</p>
+					<div class="environment">
+						<div>
+							<div>住宅</div>
+							<div>管城回族区</div>
+							<div>管南区域</div>
+						</div>
+						<div>建面73-124㎡</div>
+					</div>
+					<div class="situation">
+						<div class="">售罄</div>
+						<div>小户型</div>
+						<div>车位充足</div>
+						<div>绿化率高</div>
+					</div>
+					<div>14000元/平</div>
+				</div>
+			</div>
+			<div class="building_box">
+				<img src="" class="imgks" alt="" />
+				<div>
+					<h3>中岳俪景湾</h3>
+					<p>金岱产业园区临近在建地铁4号线</p>
+					<div class="environment">
+						<div>
+							<div>住宅</div>
+							<div>管城回族区</div>
+							<div>管南区域</div>
+						</div>
+						<div>建面73-124㎡</div>
+					</div>
+					<div class="situation">
+						<div class="">售罄</div>
+						<div>小户型</div>
+						<div>车位充足</div>
+						<div>绿化率高</div>
+					</div>
+					<div>14000元/平</div>
+				</div>
+			</div>
 		</section>
 		
 		<div class="conditions_box">
 			<div>
-				
+				<div class="ch">
+					<label class="as"><span>不限</span></label>
+					<label><span>苹果</span><input type="checkbox" name="tt" value="001" /></label>
+					<label><span>雪梨</span><input type="checkbox" name="tt" value="002" /></label>
+					<label><span>芒果</span><input type="checkbox" name="tt" value="003" /></label>
+					<label><span>菠萝</span><input type="checkbox" name="tt" value="004" /></label>
+					<label><span>香蕉</span><input type="checkbox" name="tt" value="005" /></label>
+					<label><span>葡萄</span><input type="checkbox" name="tt" value="006" /></label>
+					<label><span>荔枝</span><input type="checkbox" name="tt" value="007" /></label>
+				</div>
+				<div class="btn1">
+					<input type="button" value="确定" />
+				</div>
 			</div>
 			<div>
-				
+				<div class="ch">
+					<label class="as"><span>不限</span></label>
+					<label><span>苹果</span><input type="checkbox" name="tt" value="001" /></label>
+					<label><span>雪梨</span><input type="checkbox" name="tt" value="002" /></label>
+					<label><span>芒果</span><input type="checkbox" name="tt" value="003" /></label>
+					<label><span>菠萝</span><input type="checkbox" name="tt" value="004" /></label>
+					<label><span>香蕉</span><input type="checkbox" name="tt" value="005" /></label>
+					<label><span>葡萄</span><input type="checkbox" name="tt" value="006" /></label>
+					<label><span>荔枝</span><input type="checkbox" name="tt" value="007" /></label>
+				</div>
+				<div class="btn1">
+					<input type="button" value="确定" />
+				</div>
 			</div>
 		</div>
 		
@@ -122,10 +212,21 @@
 <script type="text/javascript">
 	
 	
-	
-	
-	
-	
+	$(".conditions_box>div:eq(0)").css({"display":"block"});
+	$(".btn1>input").click(function(){
+		$(".conditions_box").css({"display":"none"});
+	})
+	$(".ch>label").bind("click",function(e){
+	    if(e.target.tagName!="INPUT") return;
+	    var aa=$(this).find("span").text();
+	    console.log(aa);  
+	}); 
+		
+	$(".as").bind("click",function(e){
+		var aa=$(this).find("span").text();
+		console.log(aa);  
+		$("[name=tt]:checkbox").prop("checked", false);
+	})
 	
 	
 	
