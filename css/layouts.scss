@@ -12,8 +12,15 @@ body{
     position:fixed;
     top:0;
     left:auto;
-    right:auto;
+    z-index:999;
 }
 .contents{
     width:100%;
+}
+.footers{
+    width:10rem;
+    position:fixed;
+    left:auto;
+    bottom:0;
+    z-index:999;
 }

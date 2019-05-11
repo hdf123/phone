@@ -2,64 +2,88 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-		
-		<title>test001</title>
-		<script src="../../js/js.js" type="text/javascript" charset="utf-8"></script>
+		<title></title>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
 	</head>
 <style>
-	.ch{
-		width:100%;
-		height:200px;
-		overflow-y:auto;
+	#a{
+		width:100px;
+		height:30px;
+		border:solid 1px; 
+		text-overflow:ellipsis;
+		overflow:hidden;
+        white-space:nowrap;
 	}
-	.ch>label{
-		height:50px;
+	.gg{
+		list-style:none;
+	}
+	.gg>.li{
+		width:100px;
+		height:30px;
+		border:solid 1px; 
+		text-overflow:ellipsis;
+		overflow:hidden;
+        white-space:nowrap;
+	}
+	#kkk{
+		display:none
+	}
+	.flexs{
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
-		padding:0 10px;
-		border:1px solid red;
-	}
-	.test{
-		width:100%;
-		height:100px;
-		display: flex;
-		background:yellow;
-	}
-	.test>div:nth-child(1){
-		width:calc(100% - 50px);
-		width:-moz-calc(100% - 50px);
-		height:100%;
-		background:red;
-	}
-	.test>div:nth-child(2){
-		width:50px;
-		height:100%;
-		background:lime;
 	}
 </style>
 	<body>
-		<div class="ch">
-			<label>不限</label>
-			<label><span>苹果</span><input type="checkbox" name="tt" value="001" /></label>
-			<label><span>雪梨</span><input type="checkbox" name="tt" value="002" /></label>
-			<label><span>芒果</span><input type="checkbox" name="tt" value="003" /></label>
-			<label><span>菠萝</span><input type="checkbox" name="tt" value="004" /></label>
-			<label><span>香蕉</span><input type="checkbox" name="tt" value="005" /></label>
-			<label><span>葡萄</span><input type="checkbox" name="tt" value="006" /></label>
-		</div>
-
-		<div class="test">
-			<div>111</div>
-			<div>222</div>
-		</div>
+		<div id="a">枯在在枯</div>
+		<ul class="ul1">
+			<li>dfadfadfadf</li>
+			<li>22222222222222222</li>
+			<li>3333333333333333</li>
+		</ul>
+		<div class="beyond"></div>
+ 		<div id="kkk"></div>
 <script type="text/javascript">
-$(".ch>label").bind("click",function(e){
-    if(e.target.tagName!="INPUT") return;
-    var aa=$(this).find("span").text();
-    console.log(aa);  
-}); 
+  window.onload = function () {
+	
+	    for(var i=0;i<$(".ul1>li").length;i++){
+	    	$(".beyond").text($(".ul1>li").eq(i).text());
+	    	if($(".beyond").width() >= $(".ul1>li").eq(i).width()){
+	    		console.log(111);
+	    	}else{
+	    		console.log(222);
+	    	}
+	    }
+	
+	
+	
+	
+	
+//        $("#a").width();
+        $("#kkk").text($("#a").text());
+        if ($("#kkk").width() >= $("#a").width()) {
+            console.log(111);
+			
+        }else{
+			console.log(222);
+			$("#a").addClass("flexs");
+		}
+
+//        if ($("#kkk").width() >= $("#a").width()) {
+//            $("#a").toggle( function () {
+//                $(this).css("color", "red");
+//            }, function () {
+//				$(this).css("color", "lime");
+//            });
+//        }
+
+//        if ($("#kkk").width() >= $("#a").width()) {
+//            $("#a").toggle( function () {
+//                $(this).css("white-space", "normal");
+//            }, function () {
+//                $(this).css("white-space", "nowrap");
+//            });
+//        }
+    }
 </script>
 	</body>
 </html>
