@@ -10,7 +10,7 @@ $(function(){
 	    mySwiper1.slideTo(zuobiao,500,false);
 	})
 	var mySwiper1= new Swiper('.swiper1', {
-//		initialSlide :3,
+//		initialSlide :3,//初始显示
 		observer:true,//修改swiper自己或子元素时，自动初始化swiper
     	observeParents:true,//修改swiper的父元素时，自动初始化swiper
 		onSlideChangeStart:function(swiper){
@@ -140,6 +140,12 @@ $(function(){
 			}
 		}
 	}
+	/**
+	 * 清空筛选选项
+	 */
+	$(".btn4>input:eq(0)").click(function(){
+		$(".ch4").find(".act").removeClass("act");
+	})
 	$(".btn4>input:eq(1)").click(function(){
 		results();
 	})

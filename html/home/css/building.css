@@ -103,7 +103,7 @@ a {
 .headers {
   height: 3.066rem;
   background: white;
-  z-index: 999;
+  z-index: 96;
 }
 
 .search {
@@ -136,6 +136,7 @@ a {
 .choose > div:nth-child(1) {
   display: flex;
   padding: 0.32rem 0;
+  border-bottom: 1px solid #eeeeee;
 }
 .choose > div:nth-child(1) > div {
   width: 100%;
@@ -248,12 +249,13 @@ a {
   background-color: #ffb956;
 }
 
-.swiper1 {
+.swiper-container {
   width: 10rem;
-  height: 82.8vh;
-  position: fixed;
-  top: 3.066rem;
+  height: 87vh;
+  position: fixed !important;
+  top: 2.3rem;
   left: auto;
+  z-index: 97 !important;
   background: rgba(99, 99, 99, 0.6);
   display: none;
 }

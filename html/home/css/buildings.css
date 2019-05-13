@@ -101,6 +101,7 @@ a {
   display: flex;
   justify-content: space-between;
   padding-right: 0.2rem;
+  z-index: 96;
 }
 .headers > i {
   width: 1rem;
@@ -502,6 +503,7 @@ a {
 
 .footers {
   height: 1.547rem;
+  z-index: 96;
   background: white;
   display: flex;
   align-items: center;
