@@ -3,6 +3,7 @@ document.write('<link rel="stylesheet" type="text/css" href="../../css/base.css"
 document.write('<link rel="stylesheet" type="text/css" href="../../css/layouts.css"/>');
 document.write('<link rel="stylesheet" type="text/css" href="../../icon/iconfont.css"/>');
 document.write('<link rel="stylesheet" type="text/css" href="../../css/swiper-3.4.2.min.css"/>');
+document.write('<link rel="stylesheet" type="text/css" href="../../css/jquery.mloading.css"/>');
 
 
 //js

@@ -169,6 +169,7 @@ a {
 }
 
 .contents {
+  width: 10rem !important;
   position: absolute;
   top: 3.066rem;
   left: auto;
@@ -249,7 +250,7 @@ a {
   background-color: #ffb956;
 }
 
-.swiper-container {
+.swiper1 {
   width: 10rem;
   height: 87vh;
   position: fixed !important;

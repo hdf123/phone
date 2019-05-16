@@ -51,7 +51,7 @@ a {
 }
 
 /*多行隐藏*/
-.yincangs, .ul1 > .yincangs {
+.yincangs, .box > .ul1 > .yincangs, .ul1 > .yincangs {
   overflow: hidden;
   /*超出隐藏*/
   display: -webkit-box;
@@ -117,7 +117,7 @@ a {
 
 .swiper1 .swiper-slide {
   height: 6.24rem;
-  background: lime;
+  background: rgba(199, 199, 199, 0.1);
 }
 .swiper1 .swiper-pagination {
   text-align: right;
@@ -242,6 +242,23 @@ a {
   overflow: hidden;
 }
 
+.box {
+  height: 1.1rem;
+  overflow: hidden;
+}
+.box > .ul1 {
+  height: 100%;
+}
+.box > .ul1 > li {
+  height: 100%;
+  padding: 0 0.1rem 0 0.32rem;
+  font-size: 0.373rem;
+}
+.box > .ul1 > .flexk {
+  display: flex;
+  align-items: center;
+}
+
 .ul1 {
   height: 100%;
 }
@@ -339,11 +356,13 @@ a {
 }
 
 .swiper2 {
-  margin: 0.36rem 0;
-  padding-left: 0.4rem;
   overflow: hidden;
 }
-.swiper2 .act {
+.swiper2 .swiper-slide {
+  display: flex;
+  padding: 0.36rem 0 0.36rem 0.4rem;
+}
+.swiper2 .act > div {
   color: #0099ff;
 }
 
@@ -363,11 +382,24 @@ a {
 .distance_box > li {
   display: flex;
   justify-content: space-between;
-  padding: 0.26rem 0;
+  padding: 0.2rem 0;
+}
+.distance_box > li > div {
+  font-size: 0.373rem;
+}
+.distance_box > li > div:nth-child(1) {
+  display: flex;
+}
+.distance_box > li > div:nth-child(1) > div {
+  color: #999999;
+}
+.distance_box > li > div:nth-child(2) {
+  color: #999999;
 }
 .distance_box > li span {
   display: inline-block;
   max-width: 4rem;
+  color: #999999;
 }
 
 .assort {

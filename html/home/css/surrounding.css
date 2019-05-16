@@ -96,10 +96,17 @@ a {
   justify-content: center;
 }
 
+.imgks {
+  background: #eeeeee;
+}
+
 .headers {
   height: 1.173rem;
+  background: white;
+  border-bottom: 1px solid #eeeeee;
   display: flex;
   align-items: center;
+  z-index: 96;
   box-shadow: 0rem 0.013rem 0rem 0rem #e5e5e5;
 }
 .headers > i {
@@ -118,10 +125,16 @@ a {
 }
 
 .contents {
-  padding-top: 1.173rem;
+  width: 10rem !important;
+  position: absolute;
+  top: 1.173rem;
+  left: auto;
+  bottom: 0;
+  overflow: auto;
 }
 .contents .swiper1 {
   margin: 0.36rem 0;
+  width: 10rem;
   overflow: hidden;
 }
 .contents .swiper1 .swiper-slide {
@@ -143,16 +156,31 @@ a {
 }
 
 .distance_box {
+  height: 7.46rem;
   padding: 0.26rem 0.4rem;
+  overflow: hidden;
 }
 .distance_box > li {
   display: flex;
   justify-content: space-between;
-  padding: 0.26rem 0;
+  padding: 0.2rem 0;
+}
+.distance_box > li > div {
+  font-size: 0.373rem;
+}
+.distance_box > li > div:nth-child(1) {
+  display: flex;
+}
+.distance_box > li > div:nth-child(1) > div {
+  color: #999999;
+}
+.distance_box > li > div:nth-child(2) {
+  color: #999999;
 }
 .distance_box > li span {
   display: inline-block;
   max-width: 4rem;
+  color: #999999;
 }
 
 .more {
@@ -165,6 +193,83 @@ a {
 }
 .more > i {
   color: #0099ff;
+}
+
+.surrounding_title {
+  padding: 0.253rem 0.4rem;
+  margin-top: 0.4rem;
+  font-size: 0.533rem;
+}
+
+.building_box {
+  padding: 0.48rem 0.4rem 0.2rem 0.4rem;
+  display: flex;
+  border-bottom: 1px solid #E5E5E5;
+}
+.building_box > img {
+  width: 2.533rem;
+  height: 1.92rem;
+  border-radius: 0.053rem;
+}
+.building_box > div {
+  margin-left: 0.467rem;
+}
+.building_box > div > div:last-child {
+  color: #f9351a;
+  font-size: 0.373rem;
+}
+
+.building_box:last-child {
+  border: none;
+}
+
+.titls {
+  display: flex;
+  justify-content: space-between;
+}
+.titls > h3 {
+  font-size: 0.373rem;
+}
+.titls > div {
+  font-size: 0.267rem;
+  padding: 0.08rem 0.147rem;
+  border-radius: 0.053rem;
+  border: solid 0.02rem #333333;
+}
+
+.environment {
+  display: flex;
+  align-items: center;
+}
+.environment > div:nth-child(1) {
+  display: flex;
+  align-items: center;
+  height: 0.25rem;
+  border-right: 2px solid #E5E5E5;
+}
+.environment > div:nth-child(1) > div {
+  color: #999999;
+  font-size: 0.267rem;
+  margin-right: 0.12rem;
+}
+.environment > div:nth-child(2) {
+  display: flex;
+  color: #999999;
+  font-size: 0.267rem;
+  margin-left: 0.12rem;
+}
+
+.situation {
+  display: flex;
+  margin: 0.06rem 0;
+}
+.situation > div {
+  color: #999999;
+  font-size: 0.267rem;
+  padding: 0.05rem 0.133rem;
+  background-color: #f5f5f5;
+  border-radius: 0.027rem;
+  margin-right: 0.133rem;
 }
 
 /*# sourceMappingURL=surrounding.css.map */

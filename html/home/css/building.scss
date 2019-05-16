@@ -74,6 +74,7 @@
     }
 }
 .contents{
+    width:10rem !important;
     position:absolute;
     top:3.066rem;
     left:auto;
@@ -149,7 +150,7 @@
         background-color: $colord;
     }
 }
-.swiper-container{
+.swiper1{
     width:10rem;
     height:87vh;
     position:fixed !important;
