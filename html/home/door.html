@@ -9,12 +9,11 @@
 		<title>中原楼市</title>
 		<link rel="stylesheet" type="text/css" href="css/door.css"/>
 		<script src="../../js/js.js" type="text/javascript" charset="utf-8"></script>
-		<!--<script src="js/surrounding.js" type="text/javascript" charset="utf-8"></script>-->
 	</head>
 	<body>
 		<header class="headers">
 			<div>
-				<i class="iconfont">&#xe632;</i>
+				<i class="iconfont" onclick="history.go(-1)">&#xe632;</i>
 				<div>户型列表</div>
 			</div>
 			<div class="tab">
@@ -115,6 +114,9 @@
 		        console.log(1);
 		         $(".tab>div").eq(xiabiao).addClass("act").siblings().removeClass("act");
 		   }
+		})
+		$(".scra").bind("click",function(){
+			location.href="preview.html"
 		})
 		/**
 		 * 懒加载

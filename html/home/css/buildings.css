@@ -15,6 +15,11 @@ img {
   display: inline-block;
 }
 
+.imgks {
+  display: inline-block;
+  background: rgba(238, 238, 238, 0.5);
+}
+
 input {
   /*1.清除文本框获取焦点时默认的边框阴影*/
   outline: none;
@@ -44,7 +49,7 @@ a {
 }
 
 /*单行隐藏*/
-.yincang, .situation > div:nth-child(2) > div:nth-child(2) > p, .situation > div:nth-child(3) > div:nth-child(2) > p, .distance_box > li span, .wdows > div, #wdows > div {
+.yincang, .situation > div:nth-child(2) > div:nth-child(2) > p, .situation > div:nth-child(3) > div:nth-child(2) > p, .distance_box > li > div:nth-child(1) > div, .wdows > div, #wdows > div {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -235,7 +240,6 @@ a {
 .scrolls > img {
   width: 1.547rem;
   height: 0.747rem;
-  background: #eeeeee;
 }
 .scrolls > div {
   height: 1.1rem;
@@ -308,7 +312,6 @@ a {
 .door > img {
   width: 2.88rem;
   height: 3.053rem;
-  background: #eeeeee;
   margin-left: 1.3rem;
 }
 .door > div:nth-child(2) {
@@ -360,9 +363,10 @@ a {
 }
 .swiper2 .swiper-slide {
   display: flex;
+  justify-content: center;
   padding: 0.36rem 0 0.36rem 0.4rem;
 }
-.swiper2 .act > div {
+.swiper2 .act {
   color: #0099ff;
 }
 
@@ -377,7 +381,9 @@ a {
 }
 
 .distance_box {
+  max-height: 3.2rem;
   padding: 0.26rem 0.4rem;
+  overflow: hidden;
 }
 .distance_box > li {
   display: flex;
@@ -388,17 +394,24 @@ a {
   font-size: 0.373rem;
 }
 .distance_box > li > div:nth-child(1) {
-  display: flex;
+  color: #999999;
 }
 .distance_box > li > div:nth-child(1) > div {
+  display: inline-block;
+  max-width: 6.5rem;
+  color: #999999;
+}
+.distance_box > li > div:nth-child(1) > div > div {
+  display: inline-block;
+  white-space: nowrap;
+}
+.distance_box > li > div:nth-child(1) > div > div:nth-child(2) {
   color: #999999;
 }
 .distance_box > li > div:nth-child(2) {
   color: #999999;
 }
 .distance_box > li span {
-  display: inline-block;
-  max-width: 4rem;
   color: #999999;
 }
 
@@ -446,7 +459,6 @@ a {
   width: 0.96rem;
   height: 0.96rem;
   border-radius: 50%;
-  background: #eeeeee;
 }
 .comments_title > div:nth-child(1) span {
   font-size: 0.4rem;
@@ -456,9 +468,8 @@ a {
   align-items: flex-end;
 }
 .comments_title > div:nth-child(2) > div:nth-child(1) {
-  width: 1rem;
+  max-width: 1.3rem;
   height: 100%;
-  color: #f9351a;
   font-size: 0.32rem;
   display: flex;
   align-items: flex-end;
@@ -475,6 +486,9 @@ a {
 }
 .comments_title > div:nth-child(2) > div:nth-child(2) > img {
   width: 0.5rem;
+}
+.comments_title > div:nth-child(2) > .act {
+  color: #f9351a;
 }
 
 .comments_content {
@@ -496,7 +510,6 @@ a {
 .comments_img > li > img {
   width: 2.105rem;
   height: 2.105rem;
-  background: #eeeeee;
 }
 
 .review_time {
@@ -516,7 +529,6 @@ a {
 .swiper3 .swiper-slide img, .swiper4 .swiper-slide img {
   width: 4.427rem;
   height: 2.96rem;
-  background: #eeeeee;
 }
 .swiper3 .swiper-slide h4, .swiper4 .swiper-slide h4 {
   font-size: 0.4rem;
@@ -540,7 +552,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  box-shadow: 0rem -0.013rem 0.01rem 0rem #cccccc;
+  box-shadow: 0rem -0.013rem 0.01rem 0rem #e5e5e5;
 }
 .footers > input {
   width: 4.467rem;

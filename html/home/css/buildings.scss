@@ -28,7 +28,7 @@
         background:rgba(199,199,199,0.1);
     }
     .swiper-pagination{
-        text-align: right;
+        text-align:right;
         padding-right:0.5rem;
     }
 }
@@ -143,7 +143,6 @@
     >img{
         width: 1.547rem;
         height: 0.747rem;
-        background:#eeeeee;
     }
     >div{
         height: 1.1rem;
@@ -216,7 +215,6 @@
     >img{
         width: 2.88rem;
         height: 3.053rem;
-        background:#eeeeee;
         margin-left:1.3rem;
     }
     >div:nth-child(2){
@@ -261,50 +259,61 @@
     font-size: 0.48rem;
 }
 .swiper2{
-//  margin:0.36rem 0;
-//  padding-left:0.4rem;
     overflow: hidden;
     .swiper-slide{
         display: flex;
+        justify-content: center;
         padding:0.36rem 0 0.36rem 0.4rem;
     }
     .act{
-        >div{
-            color:$colorc;
-        }
+        color:$colorc;
     }
 }
 #container{
     width:10rem;
     height:5.107rem;
 }
-
+.BMap_pop,.BMap_shadow{//关闭提示框
+//  display:none;
+}
 .anchorBL{/*去除百度地图的logo*/
     display: none;
 }
 .distance_box{
+    max-height: 3.2rem;
     padding:0.26rem 0.4rem;
+    overflow: hidden;
     >li{
         display: flex;
-        justify-content: space-between;
+        justify-content:space-between;
         padding:0.2rem 0;
         >div{
             font-size: 0.373rem;
         }
         >div:nth-child(1){
-            display: flex;
+            color: #999999;
             >div{
+                display: inline-block;
+                max-width:6.5rem;
                 color: #999999;
+                @extend .yincang;
+                >div{
+                    display: inline-block;
+                    white-space: nowrap;
+                }
+                >div:nth-child(1){
+                    
+                }
+                >div:nth-child(2){
+                    color: #999999;
+                }
             }
         }
         >div:nth-child(2){
             color: #999999;
         }
         span{
-            display: inline-block;
-            max-width:4rem;
             color: #999999;
-            @extend .yincang;
         }
     }
 }
@@ -353,7 +362,6 @@
             width: 0.96rem;
             height: 0.96rem;
             border-radius:50%;
-            background:#eeeeee;
         }
         span{
             font-size: 0.4rem;
@@ -363,9 +371,8 @@
         display: flex;
         align-items:flex-end;
         >div:nth-child(1){
-            width:1rem;
+            max-width:1.3rem;
             height:100%;
-            color: #f9351a;
             font-size: 0.32rem;
             display: flex;
             align-items: flex-end;
@@ -382,6 +389,9 @@
             >img{
                 width:0.5rem;
             }
+        }
+        >.act{
+            color: #f9351a;
         }
     }
 }
@@ -401,7 +411,6 @@
         >img{
             width: 2.105rem;
             height: 2.105rem;
-            background:#eeeeee;
         }
     }
 }
@@ -420,7 +429,6 @@
         img{
             width: 4.427rem;
             height: 2.96rem;
-            background: #eeeeee;
         }
         h4{
             font-size: 0.4rem;
@@ -445,7 +453,7 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    box-shadow: 0rem -0.013rem 0.01rem 0rem #cccccc;
+    box-shadow: 0rem -0.013rem 0.01rem 0rem #e5e5e5;
     >input{
         width: 4.467rem;
         height: 0.96rem;

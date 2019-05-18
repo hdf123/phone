@@ -9,7 +9,6 @@
 		<title>中原楼市</title>
 		<link rel="stylesheet" type="text/css" href="css/buildings.css"/>
 		<script src="../../js/js.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/buildings.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<body>
 		<header class="headers">
@@ -111,58 +110,55 @@
 			<div class="swiper-container swiper2">
 			  	<div class="swiper-wrapper">
 			    	<div class="swiper-slide act">
-			    		公交
+			    		<div>公交</div>
+			    		<div>(1)</div>
 			    	</div>
 			    	<div class="swiper-slide">
-			    		教育
+			    		<div>教育</div>
+			    		<div>(2)</div>
 			    	</div>
 			    	<div class="swiper-slide">
-			    		医院
+			    		<div>医院</div>
+			    		<div>(3)</div>
 			    	</div>
 			    	<div class="swiper-slide">
-			    		银行
+			    		<div>银行</div>
+			    		<div>(4)</div>
 			    	</div>
 			    	<div class="swiper-slide">
-			    		地铁
+			    		<div>地铁</div>
+			    		<div>(5)</div>
 			    	</div>
 			    	<div class="swiper-slide">
-			    		购物
+			    		<div>购物</div>
+			    		<div>(6)</div>
 			    	</div>
 			    	<div class="swiper-slide">
-			    		休闲
+			    		<div>休闲</div>
+			    		<div>(7)</div>
 			    	</div>
 			  	</div>
 			</div>
-			
 			<div id="container"></div>
 			<ul class="distance_box">
-				<li>
-					<div>
-						<div>
-							<div class="titlek">白沙镇中心小学白沙镇中心小学12</div>
-							(<div>河南省郑州市中牟县镇河南省郑州市中牟县</div>
-						</div>
+				<!--<li>
+					<div>白沙镇中心小学
+						<div>( <span>河南省郑州市中牟县镇河南省郑州市中牟县</span>)</div>
 					</div>
 					<div>1.01km</div>
 				</li>
 				<li>
-					<div>
-						<div>
-							<div class="titlek">郑东新区白沙中学</div>
-							(<div>郑州市中牟县复兴路</div>
-						</div>
+					<div>郑东新区白沙中学
+						<div>( <span>郑州市中牟县复兴路</span>)</div>
 					</div>
 					<div>1.13km</div>
 				</li>
 				<li>
-					<div>
-						<div>
-							<div class="titlek">白沙镇实验幼儿园</div>
-							(<div>白沙镇振兴路6号</div>
-						</div>
+					<div>白沙镇实验幼儿园
+						<div>( <span>白沙镇振兴路6号</span>)</div>
 					</div>
 					<div>826m</div>
-				</li>
+				</li>-->
 			</ul>
 			<input type="button" class="assort" value="查看全部配套" />
 			<div class="review_title">
@@ -263,9 +259,138 @@
 			<input type="button" value="我要优惠" />
 		</footer>
 <script type="text/javascript">
-	for(var i=0;i<100;i++){
-//		$(".as").append(`<div>${i+1}</div>`)
-	}
+$(function(){
+	var mySwiper1 = new Swiper('.swiper1', {
+		observer:true,//修改swiper自己或子元素时，自动初始化swiper
+		observeParents:true,//修改swiper的父元素时，自动初始化swiper
+		pagination : '.swiper-pagination',
+		paginationType : 'fraction',
+	})
+	var mySwiper2 = new Swiper('.swiper2', {
+		slidesPerView :4,
+		observer:true,
+		observeParents:true,
+		onSlideChangeStart:function(swiper){
+        	var xiabiao=swiper.activeIndex;
+	   }
+	})
+	var mySwiper3 = new Swiper('.swiper3', {
+		observer:true,
+		observeParents:true,
+		slidesPerView :2.2,
+		spaceBetween: 16,
+	})
+	var mySwiper4= new Swiper('.swiper4', {
+		observer:true,
+		observeParents:true,
+		slidesPerView :2.2,
+		spaceBetween: 16,
+	})
+	/**
+	 * 更多信息
+	 */
+	$(".btn1").click(function(){
+		location.href="building_information.html";
+	})
+	/**
+	 * 全部户型
+	 */
+	$(".door_box>div:eq(0)").click(function(){
+		location.href="door.html";
+	})
+	$(".doors").bind("click",function(){
+		location.href="preview.html";
+	})
+	/**
+	 * 获取附近信息
+	 */
+	var near="公交";
+	$(".swiper2 .swiper-slide").click(function(){
+		$(this).addClass("act").siblings().removeClass("act");
+		var near=$(this).children("div:eq(0)").text();
+		map.clearOverlays();//清除地图覆盖物
+        map.addOverlay(marker);// 将标注添加到地图中
+        var locals = new BMap.LocalSearch(map ,options);
+    		locals.searchNearby(near, point,1000);
+	})
+	/**
+	 * 地图、添加标注点
+	 */
+	var map = new BMap.Map("container");
+	var point = new BMap.Point(113.775754,34.767689); 
+	map.centerAndZoom(point, 15);
+	var myIcon = new BMap.Icon("../../img/location.png", new BMap.Size(25,25),{
+			imageSize: new BMap.Size(25,25), // 引用图片实际大小
+			imageOffset:new BMap.Size(0,0)  // 图片相对视窗的偏移
+		}
+	);
+	var marker= new BMap.Marker(point,{icon:myIcon});  // 创建标注
+	map.addOverlay(marker);              // 将标注添加到地图中
+	
+	var arr1= [],arr2= [],arr3= [];
+	var options = {//获取检索到的返回结果
+		onSearchComplete: function(results){
+			console.log(results.getCurrentNumPois());
+			// 判断状态是否正确
+			if (locals.getStatus() == BMAP_STATUS_SUCCESS){
+				for (var i = 0; i < results.getCurrentNumPois(); i ++){
+//					console.log(results.getPoi(i));
+					var mar=new BMap.Marker(results.getPoi(i).point);
+                  	map.addOverlay(mar);
+					arr1.push(results.getPoi(i).title);
+					arr2.push(results.getPoi(i).address);
+					arr3.push(results.getPoi(i).point);
+					$(".distance_box").append(`<li>
+						<div>${results.getPoi(i).title}
+							<div>( <span>${results.getPoi(i).address}</span>)</div>
+						</div>
+						<div>1.01km</div>
+					</li>`);
+				}
+			}
+		}
+	};
+    var locals = new BMap.LocalSearch(map ,options);
+    locals.searchNearby(near, point,1000);
+	/**
+	 * 滚动通知
+	 */
+    var num=$(".ul1").find("li").length;
+    if (num>1) {
+        setInterval(function(){ 
+        	$('.ul1').animate({
+            	marginTop:"-1.1rem"
+        	},300,function(){
+            	$(this).css({marginTop : "0"}).find("li:first").appendTo(this);
+        	});
+    	},2000);
+    }
+    for(var i=0;i<num;i++){
+    	$(".beyond").text($(".ul1>li").eq(i).text());
+    	if($(".beyond").width() >= $(".ul1>li").eq(i).width()){
+    		$(".ul1>li").eq(i).addClass("yincangs");
+    	}else{
+    		$(".ul1>li").eq(i).addClass("flexk");
+    	}
+    }
+    /**
+     * 点评
+     */
+    $(".review_box").on("click",".praise",function(){
+    	var aa=parseInt($(this).children("div:eq(0)").text());
+    	console.log(aa);
+    	if($(this).children("div:eq(0)").is(".act")){
+    		$(this).children("div:eq(0)").removeClass("act");
+    		$(this).find("img").attr("src","../../img/aa.png");
+    		$(this).children("div:eq(0)").text(aa-1);
+    	}else{
+    		$(this).children("div:eq(0)").addClass("act");
+    		$(this).find("img").attr("src","../../img/ab.png");
+    		$(this).children("div:eq(0)").text(aa+1);
+    	}
+    })
+})
+
 </script>
 	</body>
 </html>

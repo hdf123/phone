@@ -15,6 +15,11 @@ img {
   display: inline-block;
 }
 
+.imgks {
+  display: inline-block;
+  background: rgba(238, 238, 238, 0.5);
+}
+
 input {
   /*1.清除文本框获取焦点时默认的边框阴影*/
   outline: none;
@@ -94,10 +99,6 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.imgks {
-  background: #eeeeee;
 }
 
 .headers {

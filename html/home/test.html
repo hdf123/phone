@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <title>随心所欲的三角形</title>
+    <script src="../../js/js.js" type="text/javascript" charset="utf-8"></script>
+    <style>
+		 .divRadius {
+			border:90px solid #555555;
+			border-left: 90px solid transparent;  
+			border-top: 90px solid transparent; 
+			border-bottom-right-radius:20px; 
+			content: "";  
+			width: 0;  
+			transform:rotate(45deg);
+		}
+		.dd{
+			display:inline-block;
+			margin:100px 0;
+			padding:10px 30px;
+			background: url(../../img/qipao.png) no-repeat;
+			background-size:100% 100%;
+			/*display: flex;
+			align-items: center;
+			justify-content: center;*/
+		}
+    </style>
+</head>
+<body>
+	<img src="../../img/qipao.png"/>
+	<div class="divRadius"></div>
+	<div class="dd"></div>
+	
+	
+<script type="text/javascript">
+	$(function(){
+		
+		$(".dd").append("888888888888")
+	})
+</script>
+</body>
+</html>

@@ -1,9 +1,6 @@
 @charset "UTF-8";
 @import "../../../css/base.scss";
 @import "../../../css/styles.scss";
-.imgks{
-    background:#eeeeee;
-}
 .headers{
     height: 1.173rem;
     background:white;
@@ -57,33 +54,71 @@
     display: none;
 }
 .distance_box{
-    height:7.46rem;
+    height:7.4rem;
     padding:0.26rem 0.4rem;
     overflow: hidden;
     >li{
         display: flex;
-        justify-content: space-between;
+        justify-content:space-between;
         padding:0.2rem 0;
         >div{
             font-size: 0.373rem;
         }
         >div:nth-child(1){
-            display: flex;
+            color: #999999;
             >div{
+                display: inline-block;
+                max-width:6.5rem;
                 color: #999999;
+                @extend .yincang;
+                >div{
+                    display: inline-block;
+                    white-space: nowrap;
+                }
+                >div:nth-child(1){
+                    
+                }
+                >div:nth-child(2){
+                    color: #999999;
+                }
             }
         }
         >div:nth-child(2){
             color: #999999;
         }
         span{
-            display: inline-block;
-            max-width:4rem;
             color: #999999;
-            @extend .yincang;
         }
     }
 }
+//.distance_box{
+//  height:7.46rem;
+//  padding:0.26rem 0.4rem;
+//  overflow: hidden;
+//  >li{
+//      display: flex;
+//      justify-content: space-between;
+//      padding:0.2rem 0;
+//      >div{
+//          font-size: 0.373rem;
+//      }
+//      >div:nth-child(1){
+//          display: flex;
+//          >div{
+//              color: #999999;
+//          }
+//      }
+//      >div:nth-child(2){
+//          color: #999999;
+//      }
+//      span{
+//          display: inline-block;
+//          max-width:4rem;
+//          color: #999999;
+//          @extend .yincang;
+//      }
+//  }
+//}
 .more{
     width: 9.2rem;
     height: 1.067rem;
@@ -100,9 +135,6 @@
     padding:0.253rem 0.4rem;
     margin-top:0.4rem;
     font-size: 0.533rem;
-}
-.surrounding_building{
-    
 }
 .building_box{
     padding:0.48rem 0.4rem 0.2rem 0.4rem;

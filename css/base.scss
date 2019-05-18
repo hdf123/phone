@@ -13,7 +13,10 @@
 }
 img{
     display: inline-block;
-//  background:#eeeeee;
+}
+.imgks{
+    display: inline-block;
+    background:rgba(238,238,238,0.5);
 }
 input{
     /*1.清除文本框获取焦点时默认的边框阴影*/
