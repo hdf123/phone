@@ -345,21 +345,24 @@ $(function(){
 			if (locals.getStatus() == BMAP_STATUS_SUCCESS){
 				$(".distance_box").empty();
 				for (var i = 0; i < results.getCurrentNumPois(); i ++){
-					console.log(results.getPoi(i).title);
 					
 					var pointB = new BMap.Point(results.getPoi(i).point.lng,results.getPoi(i).point.lat);
 					var juli=Math.round(map.getDistance(point,pointB));
-					console.log(juli);
+					var ms='';
+					if(juli>=1000){
+						juli=(juli/1000).toFixed(3);
+						ms=`<div>${juli}km</div>`
+					}else{
+						ms=`<div>${juli}m</div>`
+					}
 					$(".distance_box").append(`<li>
 												<div>
 													<div>
-														<p>${results.getPoi(i).title}</p>
-														<span>(</span>
-														<span>${results.getPoi(i).address}</span>
+														<div class="titlek">${results.getPoi(i).title}</div>
+														(<div>${results.getPoi(i).address}</div>
 													</div>
-													<span>)</span>
 												</div>
-												<div>${juli}m</div>
+												${ms}
 											</li>`);
 					
 				    point[i] = new window. BMap . Point(results.getPoi(i).point.lng,results.getPoi(i).point.lat); //循环生成新的地图点

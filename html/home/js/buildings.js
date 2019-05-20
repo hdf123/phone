@@ -72,8 +72,11 @@ $(function(){
 		onSearchComplete: function(results){
 			// 判断状态是否正确
 			if (locals.getStatus() == BMAP_STATUS_SUCCESS){
+				console.log(results.getNumPois());
 				$(".distance_box").empty();
 				for (var i = 0; i < results.getCurrentNumPois(); i ++){
+					
+					
 					var pointB = new BMap.Point(results.getPoi(i).point.lng,results.getPoi(i).point.lat);
 					var juli=Math.round(map.getDistance(point,pointB));
 					var ms='';
@@ -160,6 +163,12 @@ $(function(){
     		$(".ul1>li").eq(i).addClass("flexk");
     	}
     }
+    /**
+     * 查看全部点评
+     */
+    $(".review_title").click(function(){
+    	location.href="comments.html";
+    })
     /**
      * 点评
      */

@@ -1,0 +1,283 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  color: #333333;
+  list-style: none;
+  /*把此元素放置在父元素的中部。*/
+  vertical-align: middle;
+  box-sizing: border-box;
+  /*去除移动端特有的点击高亮效果*/
+  -webkit-tap-highlight-color: transparent;
+}
+
+.imgks {
+  display: inline-block;
+  background: rgba(238, 238, 238, 0.5);
+}
+
+input {
+  /*1.清除文本框获取焦点时默认的边框阴影*/
+  outline: none;
+  /*2.去除边框*/
+  border: none;
+  /*3.添加边框*/
+  border: 1px solid #ccc;
+}
+
+/* 让链接默认不显示下划线， */
+a {
+  color: #333;
+  /*指针样式*/
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+  display: inline-block;
+  /*导致鼠标在页面活动时视频延迟变卡问题解决.*/
+  blr: expression(this.onFocus=this.blur());
+}
+
+/* 清理浮动 */
+.clearfix:before, .clearfix:after {
+  display: block;
+  content: " ";
+  clear: both;
+}
+
+/*单行隐藏*/
+.yincang, .wdows > div, #wdows > div {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/*多行隐藏*/
+.yincangs {
+  overflow: hidden;
+  /*超出隐藏*/
+  display: -webkit-box;
+  /*将对象作为弹性伸缩盒子模型显示。*/
+  -webkit-box-orient: vertical;
+  /*从上到下垂直排列子元素（设置伸缩盒子的子元素排列方式）*/
+  -webkit-line-clamp: 2;
+  /*超出2行用省略号表示*/
+}
+
+/*换行*/
+.newline {
+  word-break: break-all;
+  /* 只对英文起作用，以字母作为换行依据。*/
+  word-wrap: break-word;
+  /*只对英文起作用，以单词作为换行依据。*/
+  white-space: pre-wrap;
+  /*只对中文起作用，强制换行。*/
+}
+
+/*禁止换行*/
+.ban_newline {
+  white-space: nowrap;
+}
+
+/*placeholder样式*/
+.input::-webkit-input-placeholder {
+  text-align: center;
+}
+
+/*隐藏滚动条*/
+.scroll_bar::-webkit-scrollbar {
+  width: 0 !important;
+  /*height:0 !important;*/
+  /*display: none;*/
+}
+
+/*上下左右居中*/
+.flexs, .headers .lefts, .headers .rights, .building > div:nth-child(1) > div > div, .bounced_box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.headers {
+  height: 1.173rem;
+  z-index: 96;
+  padding: 0.213rem 0;
+  background: white;
+  box-shadow: 0rem 0.013rem 0rem 0rem #e5e5e5;
+}
+.headers .lefts {
+  width: 1rem;
+  height: 100%;
+  font-size: 0.5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.headers .centers {
+  width: 7.627rem;
+  height: 100%;
+  margin: 0 auto;
+  font-size: 0.32rem;
+  background-color: #f5f5f5;
+  border-radius: 0.053rem;
+  display: flex;
+}
+.headers .centers i {
+  width: 7%;
+  height: 100%;
+  color: #7b7b7b;
+  font-size: 0.42rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.headers .centers input {
+  width: 93%;
+  height: 100%;
+  border: none;
+  padding-left: 0.1rem;
+  font-size: 0.373rem;
+  background: rgba(255, 255, 255, 0);
+}
+.headers .rights {
+  width: 1rem;
+  height: 100%;
+  font-size: 0.5rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.contents {
+  width: 10rem !important;
+  background: #F1F1F1;
+  padding: 0 0.24rem;
+  position: absolute;
+  top: 1.173rem;
+  left: auto;
+  bottom: 0;
+  overflow: auto;
+}
+
+.building_box {
+  margin-top: 0.267rem;
+  padding-bottom: 0.4rem;
+  background: white;
+  position: relative;
+}
+.building_box > img:nth-child(1) {
+  width: 9.52rem;
+  height: 3.84rem;
+}
+.building_box img:last-child {
+  width: 0.88rem;
+  position: absolute;
+  top: 0.293rem;
+  left: -0.093rem;
+}
+
+.building {
+  padding: 0 0.48rem;
+}
+.building > div:nth-child(1) {
+  padding: 0.387rem 0 0.067rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+.building > div:nth-child(1) > h5 {
+  font-size: 0.373rem;
+}
+.building > div:nth-child(1) > div {
+  display: flex;
+}
+.building > div:nth-child(1) > div > div {
+  font-size: 0.267rem;
+}
+.building > div:nth-child(1) > div > div:nth-child(1) {
+  color: #ffffff;
+  background-color: #ffb956;
+  border-radius: 0.027rem 0rem 0rem 0.027rem;
+}
+.building > div:nth-child(1) > div > div:nth-child(2) {
+  color: #ffb956;
+  border: solid 0.013rem #ffb956;
+}
+.building > div:nth-child(2) {
+  display: flex;
+  padding: 0.253rem 0;
+}
+.building > div:nth-child(2) > div:nth-child(1) {
+  color: #999999;
+  font-size: 0.32rem;
+}
+.building > div:nth-child(2) > div:nth-child(2) {
+  color: #f9351a;
+  font-size: 0.32rem;
+}
+.building > div:nth-child(3) {
+  color: #999999;
+  font-size: 0.32rem;
+  padding-bottom: 0.413rem;
+}
+.building > div:nth-child(4) {
+  display: flex;
+  justify-content: space-between;
+}
+.building > div:nth-child(4) > input {
+  width: 4.213rem;
+  height: 0.88rem;
+  border: none;
+  color: #ffffff;
+  font-size: 0.32rem;
+  background-color: #0099ff;
+  border-radius: 0.053rem;
+}
+
+.bounced_box {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 97;
+}
+
+.bounced {
+  width: 7.467rem;
+  background: white;
+  padding: 0.533rem;
+}
+.bounced > div:nth-child(1) {
+  font-size: 0.4rem;
+  text-align: center;
+  padding-bottom: 0.453rem;
+}
+.bounced > input:nth-child(2), .bounced > input:nth-child(3) {
+  width: 6.4rem;
+  height: 0.96rem;
+  color: #999999;
+  font-size: 0.32rem;
+  padding: 0 0.373rem;
+  border-radius: 0.053rem;
+  border: solid 0.027rem #333333;
+}
+.bounced > input:nth-child(3) {
+  margin-top: 0.267rem;
+}
+.bounced > div:nth-child(4) {
+  color: #999999;
+  font-size: 0.267rem;
+  margin-top: 0.267rem;
+}
+.bounced > input:nth-child(5) {
+  width: 6.4rem;
+  height: 1.2rem;
+  color: #ffffff;
+  font-size: 0.4rem;
+  border: none;
+  margin-top: 0.693rem;
+  background-color: #1a1a1a;
+  border-radius: 0.053rem;
+}
+
+/*# sourceMappingURL=purchase_preferential.css.map */

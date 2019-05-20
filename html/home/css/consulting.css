@@ -45,7 +45,7 @@ a {
 }
 
 /*单行隐藏*/
-.yincang, .wdows > div, #wdows > div {
+.yincang, .uus > li > div:nth-child(1), .wdows > div, #wdows > div {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -91,10 +91,114 @@ a {
 }
 
 /*上下左右居中*/
-.flexs {
+.flexs, .headers .lefts, .headers .centers, .headers .rights {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/*# sourceMappingURL=base.css.map */
+.headers {
+  height: 1.173rem;
+  z-index: 96;
+  background: white;
+  border-bottom: 1px solid #eeeeee;
+}
+.headers .lefts {
+  width: 1rem;
+  height: 100%;
+  font-size: 0.5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.headers .centers {
+  width: 100%;
+  height: 100%;
+  font-size: 0.48rem;
+}
+.headers .rights {
+  width: 1rem;
+  height: 100%;
+  font-size: 0.5rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.contents {
+  width: 10rem !important;
+  padding: 0 0.413rem;
+  position: fixed;
+  top: 1.173rem;
+  left: auto;
+  bottom: 0;
+  overflow: auto;
+}
+.contents > h3 {
+  padding: 0.587rem 0;
+  font-size: 0.533rem;
+}
+.contents > div:nth-child(2) {
+  display: flex;
+}
+.contents > div:nth-child(2) > img {
+  width: 1.067rem;
+  height: 1.067rem;
+  border-radius: 50%;
+}
+.contents > div:nth-child(2) > div {
+  margin-left: 0.187rem;
+}
+.contents > div:nth-child(2) > div > div:nth-child(1) {
+  font-size: 0.373rem;
+}
+.contents > div:nth-child(2) > div > div:nth-child(2) {
+  color: #999999;
+  font-size: 0.293rem;
+}
+
+.conts > p {
+  text-indent: 2em;
+  font-size: 0.4rem;
+  line-height: 0.64rem;
+  letter-spacing: 0.031rem;
+}
+.conts img {
+  width: 9.2rem;
+  height: 5.067rem;
+}
+
+.btns {
+  width: 100%;
+  height: 1rem;
+  border: none;
+  color: #999999;
+  font-size: 0.373rem;
+  margin: 0.5rem 0 0.3rem 0;
+  background: rgba(255, 255, 255, 0);
+}
+
+.recommended_title {
+  font-size: 0.533rem;
+}
+
+.uus > li {
+  height: 1.173rem;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #eeeeee;
+}
+.uus > li > div:nth-child(1) {
+  width: 80%;
+  height: 100%;
+  font-size: 0.373rem;
+  line-height: 1.173rem;
+}
+.uus > li > div:nth-child(2) {
+  height: 100%;
+  color: #999999;
+  font-size: 0.293rem;
+  line-height: 1.173rem;
+}
+
+/*# sourceMappingURL=consulting.css.map */

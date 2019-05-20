@@ -219,7 +219,7 @@ $(function(){
 	//加载数据
 	var LoadingDataFn = function() {
 	    var dom = '';
-	    for (var i = 0; i <5; i++) {
+	    for (var i = 0; i <8; i++) {
 	        dom +=`<a href="buildings.html" class="building_box">
 				<img src="" class="imgks" alt="" />
 				<div>

@@ -1,0 +1,216 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  color: #333333;
+  list-style: none;
+  /*把此元素放置在父元素的中部。*/
+  vertical-align: middle;
+  box-sizing: border-box;
+  /*去除移动端特有的点击高亮效果*/
+  -webkit-tap-highlight-color: transparent;
+}
+
+img {
+  display: inline-block;
+}
+
+.imgks {
+  display: inline-block;
+  background: rgba(238, 238, 238, 0.5);
+}
+
+input {
+  /*1.清除文本框获取焦点时默认的边框阴影*/
+  outline: none;
+  /*2.去除边框*/
+  border: none;
+  /*3.添加边框*/
+  border: 1px solid #ccc;
+}
+
+/* 让链接默认不显示下划线， */
+a {
+  color: #333;
+  /*指针样式*/
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+  display: inline-block;
+  /*导致鼠标在页面活动时视频延迟变卡问题解决.*/
+  blr: expression(this.onFocus=this.blur());
+}
+
+/* 清理浮动 */
+.clearfix:before, .clearfix:after {
+  display: block;
+  content: " ";
+  clear: both;
+}
+
+/*单行隐藏*/
+.yincang, .wdows > div, #wdows > div {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/*多行隐藏*/
+.yincangs {
+  overflow: hidden;
+  /*超出隐藏*/
+  display: -webkit-box;
+  /*将对象作为弹性伸缩盒子模型显示。*/
+  -webkit-box-orient: vertical;
+  /*从上到下垂直排列子元素（设置伸缩盒子的子元素排列方式）*/
+  -webkit-line-clamp: 2;
+  /*超出2行用省略号表示*/
+}
+
+/*换行*/
+.newline {
+  word-break: break-all;
+  /* 只对英文起作用，以字母作为换行依据。*/
+  word-wrap: break-word;
+  /*只对英文起作用，以单词作为换行依据。*/
+  white-space: pre-wrap;
+  /*只对中文起作用，强制换行。*/
+}
+
+/*禁止换行*/
+.ban_newline {
+  white-space: nowrap;
+}
+
+/*placeholder样式*/
+.input::-webkit-input-placeholder {
+  text-align: center;
+}
+
+/*隐藏滚动条*/
+.scroll_bar::-webkit-scrollbar {
+  width: 0 !important;
+  /*height:0 !important;*/
+  /*display: none;*/
+}
+
+/*上下左右居中*/
+.flexs, .headers > i, .headers > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.headers {
+  height: 1.173rem;
+  background: white;
+  border-bottom: 1px solid #eeeeee;
+  display: flex;
+  align-items: center;
+  z-index: 96;
+}
+.headers > i {
+  width: 1rem;
+  height: 100%;
+  font-size: 0.5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.headers > div {
+  width: 100%;
+  height: 100%;
+  font-size: 0.48rem;
+  font-weight: 500;
+}
+
+.contents {
+  width: 10rem !important;
+  position: absolute;
+  top: 1.173rem;
+  left: auto;
+  bottom: 0;
+}
+
+.review_box {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+.review {
+  padding-top: 0.4rem;
+}
+
+.comments_title {
+  padding: 0 0.4rem;
+  display: flex;
+  justify-content: space-between;
+}
+.comments_title > div:nth-child(1) img {
+  width: 0.96rem;
+  height: 0.96rem;
+  border-radius: 50%;
+}
+.comments_title > div:nth-child(1) span {
+  font-size: 0.4rem;
+}
+.comments_title > div:nth-child(2) {
+  display: flex;
+  align-items: flex-end;
+}
+.comments_title > div:nth-child(2) > div:nth-child(1) {
+  max-width: 1.3rem;
+  height: 100%;
+  font-size: 0.32rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding-bottom: 0.03rem;
+}
+.comments_title > div:nth-child(2) > div:nth-child(2) {
+  width: 0.7rem;
+  height: 1rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 0.1rem;
+}
+.comments_title > div:nth-child(2) > div:nth-child(2) > img {
+  width: 0.5rem;
+}
+.comments_title > div:nth-child(2) > .act {
+  color: #f9351a;
+}
+
+.comments_content {
+  padding: 0.493rem 0.4rem 0.373rem 0.4rem;
+  font-size: 0.373rem;
+}
+
+.comments_img {
+  width: 100%;
+  padding: 0 0.27rem 0.147rem 0.27rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+.comments_img > li {
+  width: 2.365rem;
+  text-align: center;
+  padding-bottom: 0.253rem;
+}
+.comments_img > li > img {
+  width: 2.105rem;
+  height: 2.105rem;
+}
+
+.comments_time {
+  width: 9.2rem;
+  color: #999999;
+  font-size: 0.32rem;
+  margin: 0 auto;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid #F3F3F3;
+}
+
+/*# sourceMappingURL=comments.css.map */

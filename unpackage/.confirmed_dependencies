@@ -1,0 +1,10 @@
+{
+	"html/home/buildings.html": {
+		"resources": [
+			"css/base.css",
+			"css/layouts.css",
+			"css/jquery.mloading.css",
+			"css/swiper-3.4.2.min.css"
+		]
+	}
+}

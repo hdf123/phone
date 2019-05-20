@@ -1,4 +1,4 @@
-﻿{
+{
     "@platforms": ["android", "iPhone", "iPad"],
     "id": "H5172CDF0",/*应用的标识，创建应用时自动生成，勿手动修改*/
     "name": "mobile",/*应用名称，程序桌面图标名称*/
@@ -135,5 +135,101 @@
                 }
             }
         }
-    }
+    },
+	"dependencies": {
+		"pages": {
+			"html/home/buildings.html": {
+				"resources": [
+					"css/base.css",
+					"css/layouts.css",
+					"css/jquery.mloading.css",
+					"css/swiper-3.4.2.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			}
+		},
+		"idle": {
+			"resources": [
+				"img/location.png",
+				"html/home/css/preview.scss",
+				"icon/iconfont.svg",
+				"html/home/css/building_information.scss",
+				"img/Back.png",
+				"css/styles.css",
+				"js/jquery.mloading.js",
+				"html/home/css/building_information.css.map",
+				"css/layouts.scss",
+				"html/home/home.html",
+				"html/home/css/door.css",
+				"html/home/css/door.css.map",
+				"html/home/a1.html",
+				"js/iscroll.js",
+				"html/home/css/building.css.map",
+				"html/home/test.html",
+				"html/home/css/home.css.map",
+				"img/latest.png",
+				"html/home/surrounding.html",
+				"html/home/building_information.html",
+				"html/home/a2.html",
+				"html/home/js/buildings.js",
+				"html/home/js/surrounding.js",
+				"html/home/css/building.scss",
+				"html/home/css/surrounding.css.map",
+				"html/home/css/home.scss",
+				"img/change.png",
+				"html/home/css/surrounding.scss",
+				"html/home/css/buildings.scss",
+				"index.html",
+				"html/home/css/preview.css.map",
+				"css/styles.css.map",
+				"img/croom.png",
+				"html/home/door.html",
+				"html/home/css/building.css",
+				"img/rebate_banners.png",
+				"js/js.js",
+				"html/home/js/home.js",
+				"html/home/building.html",
+				"icon/iconfont.ttf",
+				"html/home/css/building_information.css",
+				"img/rebate_banner.png",
+				"icon/demo.css",
+				"icon/iconfont.eot",
+				"img/aa.png",
+				"html/home/css/surrounding.css",
+				"img/cpreferential.png",
+				"icon/iconfont.js",
+				"img/qipao.png",
+				"html/home/css/preview.css",
+				"html/home/js/building.js",
+				"icon/iconfont.woff",
+				"html/home/css/buildings.css",
+				"css/base.css.map",
+				"img/cweixin.png",
+				"html/home/css/home.css",
+				"icon/iconfont.woff2",
+				"js/swiper-3.4.2.jquery.min.js",
+				"js/jquery.js",
+				"img/ab.png",
+				"css/layouts.css.map",
+				"icon/demo_index.html",
+				"img/clive.png",
+				"js/jquery.min.js",
+				"icon/iconfont.css",
+				"img/cwallet.png",
+				"html/home/preview.html",
+				"img/cooperation.png",
+				"html/home/a3.html",
+				"css/base.scss",
+				"img/cshops.png",
+				"html/home/css/buildings.css.map",
+				"html/home/css/door.scss",
+				"css/styles.scss",
+				"js/ajax.js",
+				"html/home/aa.html",
+				"js/flexible.js",
+				"img/clooking.png"
+			]
+		}
+	}
 }
