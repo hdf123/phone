@@ -47,13 +47,13 @@
     margin:0.267rem auto 0;
 }
 .card_title{
-    font-size: 0.373rem;
+    font-size:$fontsb;
     text-align: center;
     padding:0.52rem 0;
 }
 .fts{
-    color: #999999;
-    font-size: 0.32rem;
+    color:$colorb;
+    font-size:$fontsc;
 }
 .cardb{
     display: block;
@@ -64,8 +64,8 @@
 ol{
     padding-bottom:0.7rem;
     li{
-        color: #999999;
-        font-size: 0.32rem;
+        color:$colorb;
+        font-size:$fontsc;
         margin-bottom:0.347rem;
     }
 }
@@ -80,7 +80,7 @@ ol{
     height: 1.333rem;
     @extend .flexs;
     color: #ffffff;
-    font-size: 0.427rem;
+    font-size:$fontsa;
     background-color: #211b1d;
     z-index:96;
 }

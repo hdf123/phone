@@ -11,10 +11,6 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-img {
-  display: inline-block;
-}
-
 .imgks {
   display: inline-block;
   background: rgba(238, 238, 238, 0.5);
@@ -138,6 +134,7 @@ body {
 }
 
 .contents {
+  width: 10rem !important;
   position: fixed;
   top: 1.173rem;
   left: auto;

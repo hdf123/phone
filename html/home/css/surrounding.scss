@@ -62,14 +62,14 @@
         justify-content:space-between;
         padding:0.2rem 0;
         >div{
-            font-size: 0.373rem;
+            font-size:$fontsb;
         }
         >div:nth-child(1){
-            color: #999999;
+            color:$colorb;
             >div{
                 display: inline-block;
                 max-width:6.5rem;
-                color: #999999;
+                color:$colorb;
                 @extend .yincang;
                 >div{
                     display: inline-block;
@@ -79,53 +79,25 @@
                     
                 }
                 >div:nth-child(2){
-                    color: #999999;
+                    color:$colorb;
                 }
             }
         }
         >div:nth-child(2){
-            color: #999999;
+            color:$colorb;
         }
         span{
-            color: #999999;
+            color:$colorb;
         }
     }
 }
-//.distance_box{
-//  height:7.46rem;
-//  padding:0.26rem 0.4rem;
-//  overflow: hidden;
-//  >li{
-//      display: flex;
-//      justify-content: space-between;
-//      padding:0.2rem 0;
-//      >div{
-//          font-size: 0.373rem;
-//      }
-//      >div:nth-child(1){
-//          display: flex;
-//          >div{
-//              color: #999999;
-//          }
-//      }
-//      >div:nth-child(2){
-//          color: #999999;
-//      }
-//      span{
-//          display: inline-block;
-//          max-width:4rem;
-//          color: #999999;
-//          @extend .yincang;
-//      }
-//  }
-//}
 .more{
     width: 9.2rem;
     height: 1.067rem;
     border-radius: 0.053rem;
     margin:0 auto;
     color:$colorc;
-    font-size: 0.373rem;
+    font-size:$fontsb;
     @extend .flexs;
     >i{
         color:$colorc;
@@ -163,7 +135,7 @@
         font-size:$fontsb;
     }
     >div{
-        font-size: 0.267rem;
+        font-size:$fontse;
         padding:0.08rem 0.147rem;
         border-radius: 0.053rem;
         border:solid 0.02rem #333333;

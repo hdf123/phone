@@ -11,10 +11,6 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-img {
-  display: inline-block;
-}
-
 .imgks {
   display: inline-block;
   background: rgba(238, 238, 238, 0.5);
@@ -243,8 +239,8 @@ a {
   margin-right: 0.133rem;
 }
 .situation > .sell {
-  color: #ffffff;
-  background-color: #0099ff;
+  color: #0099ff;
+  background-color: rgba(0, 153, 255, 0.3);
 }
 .situation > .waiting {
   color: #ffffff;

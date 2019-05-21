@@ -11,10 +11,6 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-img {
-  display: inline-block;
-}
-
 .imgks {
   display: inline-block;
   background: rgba(238, 238, 238, 0.5);
@@ -157,7 +153,7 @@ a {
   font-size: 0.32rem;
 }
 .contents_box > div > i {
-  font-size: 0.37rem;
+  font-size: 0.373rem;
 }
 .contents_box > ul > li {
   height: 1.173rem;

@@ -29,7 +29,6 @@
         }
     }
 }
-//1.093+1.173rem=2.266
 .tab{
     display: flex;
     >div{
@@ -85,35 +84,35 @@
     >div:nth-child(1){
         display: flex;
         >h5{
-            font-size: 0.427rem;
+            font-size:$fontsa;
         }
         >div{
             color: #999999;
-            font-size: 0.293rem;
+            font-size:$fontsd;
             margin-left:0.147rem;
             border-radius: 0.053rem;
             padding:0.067rem 0.12rem 0.053rem 0.12rem;
             background:rgba(245,245,245,1);
         }
         >.statea{
-            color: #0099ff;
-            background:rgba(178,224,255,0.5);
+            color:$colorc;
+            background:$backgroundb;
         }
         >.stateb{
-            color: #ffb956;
-            background:rgba(255,234,204,0.5);
+            color:$colord;
+            background:$backgroundc;
         }
     }
     >div:nth-child(2){
-        color: #666666;
-        font-size: 0.32rem;
+        color:$colora;
+        font-size:$fontsc;
         margin:0.15rem 0;
     }
     >div:nth-child(3){
         display: flex;
         >div{
-            color: #999999;
-            font-size: 0.293rem;
+            color:$colorb;
+            font-size:$fontsd;
             border-radius: 0.053rem;
             margin-right:0.267rem;
             padding:0.067rem 0.133rem 0.053rem 0.133rem;
@@ -122,7 +121,7 @@
     }
     >div:nth-child(4){
         color: #f9351a;
-        font-size: 0.373rem;
+        font-size:$fontsb;
         margin-top:0.15rem;
     }
 }

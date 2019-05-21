@@ -151,8 +151,6 @@
 			</div>
 			
 			
-			
-			
 			<div class="tabBars_box">
 				<ul class="tabBars">
 					<li class="selecteds">
@@ -274,7 +272,24 @@
 		    $(".tabBars>li").eq(zuobiao).siblings().removeClass("selecteds");
 		    mySwiper3.slideTo(zuobiao+1,500,false);
 		})
-		
+		/**
+		 * 搜索
+		 */
+		$('.search').on('keypress', function (e){
+		    var keycode = e.keyCode;
+		　　//keycode是键码，13也是电脑物理键盘的 enter 
+		    if(keycode == '13') {
+		    	e.preventDefault();
+				alert(123)
+		    }
+		});
+		/**
+		 * 咨询
+		 */
+		//查看更多
+		$(".updates>div:eq(1)").click(function(){
+			location.href="more_consultation.html";
+		})
 		//分页
 		var page = 1, //分页码
 	    off_on = false; //分页开关

@@ -35,10 +35,11 @@ body{
         top:0;
         right:0;
         color: #ffffff;
-        font-size: 0.427rem;
+        font-size:$fontsa;
     }
 }
 .contents{
+    width:10rem !important;
     position:fixed;
     top:1.173rem;
     left:auto;
@@ -66,10 +67,10 @@ body{
     position:static !important;
     text-align:left !important;
     color: #ffffff;
-    font-size: 0.373rem;
+    font-size:$fontsb;
     >span{
         color: #ffffff;
-        font-size: 0.373rem;
+        font-size:$fontsb;
     }
 }
 .footers{
@@ -80,11 +81,11 @@ body{
     >div{
         p{
             color: #ffffff;
-            font-size: 0.427rem; 
+            font-size:$fontsa; 
         }
         div{
             color: #d8b87b;
-            font-size: 0.427rem;
+            font-size:$fontsa;
         }
     }
 }
