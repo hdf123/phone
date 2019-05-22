@@ -75,7 +75,7 @@ $(function(){
 				console.log(results.getNumPois());
 				$(".distance_box").empty();
 				for (var i = 0; i < results.getCurrentNumPois(); i ++){
-					
+					console.log(results.getPoi(i));
 					
 					var pointB = new BMap.Point(results.getPoi(i).point.lng,results.getPoi(i).point.lat);
 					var juli=Math.round(map.getDistance(point,pointB));

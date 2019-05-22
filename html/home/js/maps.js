@@ -10,7 +10,7 @@ $(function(){
 	
 	var map = new BMap.Map("allmap");
 	var point = new BMap.Point(113.775754,34.767689); 
-	map.centerAndZoom(point, 15);
+	map.centerAndZoom(point,12);
 	//给地图添加点击事件
 	function showInfo(e){
 		alert(e.point.lng + ", " + e.point.lat);

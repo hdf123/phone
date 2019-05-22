@@ -47,3 +47,57 @@ var data=[{
 	features:['品牌房企','配套成熟','绿化率高'],
 	price:'37000元/㎡'
 }]
+/**
+ * 地图标记
+ */
+var coordinates=[{
+	title: "商鼎路心怡路",
+	province: "河南省",
+	city: "郑州市",
+	point:{lat: 34.761241,lng: 113.777119}
+},{
+	title: "郑州高铁汽车枢纽站",
+	province: "河南省",
+	city: "郑州市",
+	point:{lng: 113.787367, lat: 34.767826}
+},{
+	title:"金水东路心怡路",
+	province: "河南省",
+	city: "郑州市",
+	point:{lng: 113.77547, lat: 34.775194}
+},{
+	title:"康平路康宁街",
+	province: "河南省",
+	city: "郑州市",
+	point:{lng: 113.768604, lat: 34.757379}
+},{
+	title: "郑州高铁长途汽车枢纽站",
+	province: "河南省",
+	city: "郑州市",
+	point:{lng: 113.787614, lat: 34.767582}
+},{
+	title: "东风南路公交站",
+	province: "河南省",
+	city: "郑州市",
+	point:{lng: 113.77341, lat: 34.770666}
+},{
+	title: "东风南路熊儿河路",
+	province: "河南省",
+	city: "郑州市",
+	point:{lng: 113.768269, lat: 34.781789}
+},{
+	title: "高铁汽车站",
+	province: "河南省",
+	city: "郑州市",
+	point:{lng: 113.790527, lat: 34.768235}
+},{
+	title: "熊儿河路众旺路",
+	province: "河南省",
+	city: "郑州市",
+	point:{lng: 113.763213, lat: 34.781053}
+},{
+	title: "郑州东站",
+	province: "河南省",
+	city: "郑州市",
+	point:{lng: 113.776981, lat: 34.766224}
+}]
