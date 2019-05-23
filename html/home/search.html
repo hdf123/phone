@@ -34,7 +34,17 @@
 
 <script type="text/javascript">
 	$(function(){
-	
+		$('.headers input').on('keypress', function (e){
+		    var keycode = e.keyCode;
+		    var texts=$(this).val();
+		    console.log(texts);
+		　　//keycode是键码，13也是电脑物理键盘的 enter 
+		    if(keycode == '13') {
+		    	e.preventDefault();
+		    	console.log("texts="+texts);
+				alert("你想干嘛");
+		    }
+		});
 	})
 </script>
 	</body>

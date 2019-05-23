@@ -152,6 +152,7 @@
 }
 .swiper2{
     width:91.73%;
+    height:11.52rem;
 }
 .information{
     height: 2.88rem;
@@ -210,9 +211,15 @@
 
 //嵌套
 .swiper3{
-    width:91.73%;
+    width:100%;
+    >.swiper-wrapper{
+        >.swiper-slide{
+            padding:0 0.4rem;
+        }
+    }
 }
 .swiper4,.swiper5{
+    width:100%;
     .swiper-slide{
         width: 3.653rem;
         padding-bottom:0.187rem;
@@ -298,25 +305,11 @@
     width:100%;
     padding-bottom:2.5rem;
 }
-
-.ma{
+.recommended,.BridalChamber{
     width:100%;
     height:100%;
     overflow: auto;
 }
-.ksk{
-    width:100%;
-    height:100%;
-    overflow: auto;
-    >div{
-        height:1rem;
-        font-size:0.7rem;
-        line-height:1rem;
-        border-bottom:1px solid lime;
-    }
-}
-
-
 .fixed-top {
     position: fixed;
     width: 100%;
@@ -331,21 +324,3 @@
     left:auto;
     z-index: 999;/*z-index比下方所有层级要高*/
 }
-
-
-
-
-
-
-
-
-//页脚
-//.footers{
-//  width:100%;
-//  height:1rem;
-//  background:lime;
-//  position:absolute;
-//  left:0;
-//  bottom:0;
-//  z-index:999;
-//}

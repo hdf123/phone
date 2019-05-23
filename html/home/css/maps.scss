@@ -4,6 +4,7 @@
 html,body{
     width:100%;
     height:100%;
+    overflow: hidden;
     position:relative;
 }
 .headers{
@@ -109,15 +110,13 @@ html,body{
     font-size: 0.4rem;
     background:#0099FF;
     @extend .flexs;
-    
 }
 .pulls{
     width:100%;
     background:rgba(99,0,0,0.3);
     position:absolute;
-    top:60%;
-    padding:0 0.4rem;
-    display: none;
+    top:100%;
+    padding:0 0.4rem 1rem 0.4rem;
 }
 .tels{
     width: 9.2rem;

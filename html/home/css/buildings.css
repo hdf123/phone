@@ -11,10 +11,6 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-img {
-  display: inline-block;
-}
-
 .imgks {
   display: inline-block;
   background: rgba(238, 238, 238, 0.5);
@@ -145,6 +141,7 @@ a {
 .buildings_title > div:nth-child(2) > div {
   color: #666666;
   font-size: 0.32rem;
+  margin-right: 0.133rem;
 }
 .buildings_title > div:nth-child(3) {
   display: flex;

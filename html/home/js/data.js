@@ -1,51 +1,87 @@
+/**
+ * 咨询
+ */
+var consulting=[{
+	title:"10强房企年内拿地3514亿，海外融资同比翻倍",
+	time:"2018年5月9日",
+	img:"../../img/carda.png"
+},{
+	title:"11强房企年内拿地3514亿，海外融资同比翻倍",
+	time:"2018年5月9日",
+	img:"../../img/carda.png"
+},{
+	title:"12强房企年内拿地3514亿，海外融资同比翻倍",
+	time:"2018年5月9日",
+	img:"../../img/carda.png"
+},{
+	title:"13强房企年内拿地3514亿，海外融资同比翻倍",
+	time:"2018年5月9日",
+	img:"../../img/carda.png"
+}]
+/**
+ * 楼盘
+ */
 var data=[{
-	img:'https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/b51889744910df7979a2f672434da84e.jpg?thumb=1&w=720&h=360',
+	img:'../../img/carda.png',
 	name:'郑地美景东望1',
 	region:['住宅','郑东新区'],
 	mianji:'建面107-400㎡',
 	state:"在售",
 	features:['小户型','南北通透','配套成熟'],
-	price:'售价待定'
+	price:'售价待定',
+	address:"金岱产业园区临近在建地铁4号线",
+	area:"建面71-124㎡"
+	
 },{
-	img:'https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/37dfdc929ee9a4313facb0b23ebcd721.jpg?thumb=1&w=720&h=360',
+	img:'../../img/carda.png',
 	name:'正商善水上镜2',
 	region:['郑东新区','郑东新区'],
 	mianji:'建面180-203㎡',
 	state:"待售",
 	features:['绿化率高','车位充足'],
-	price:'32000元/㎡'
+	price:'32000元/㎡',
+	address:"金岱产业园区临近在建地铁4号线",
+	area:"建面72-124㎡"
 },{
-	img:'https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/a0ff3dc30027f3b615bfe03f1d306ee5.jpg?thumb=1&w=720&h=360',
+	img:'../../img/carda.png',
 	name:'世茂云尚城3',
 	region:['住宅','管城回族区'],
 	mianji:'建面43-133㎡',
 	state:"售罄",
-	features:['小户型','绿化率高','车位充足','近地铁'],
-	price:'14000元/㎡'
+	features:['小户型','车位充足','近地铁'],
+	price:'14000元/㎡',
+	address:"金岱产业园区临近在建地铁4号线",
+	area:"建面73-124㎡"
 },{
-	img:'https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/2320573b3be643e29f5270a97e1a9c1d.jpg?thumb=1&w=720&h=360',
+	img:'../../img/carda.png',
 	name:'亚新茉莉公馆4',
 	region:['郑东新区','郑东新区'],
 	mianji:'建面130-220㎡',
 	state:"售罄",
 	features:['品牌房企','配套成熟','绿化率高'],
-	price:'37000元/㎡'
+	price:'37000元/㎡',
+	address:"金岱产业园区临近在建地铁4号线",
+	area:"建面74-124㎡"
 },{
-	img:'https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/b51889744910df7979a2f672434da84e.jpg?thumb=1&w=720&h=360',
+	img:'../../img/carda.png',
 	name:'亚新茉莉公馆5',
 	region:['郑东新区','郑东新区'],
 	mianji:'建面130-220㎡',
 	state:"售罄",
 	features:['品牌房企','配套成熟','绿化率高'],
-	price:'37000元/㎡'
+	price:'37000元/㎡',
+	address:"金岱产业园区临近在建地铁4号线",
+	area:"建面75-124㎡"
 },{
-	img:'https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/2320573b3be643e29f5270a97e1a9c1d.jpg?thumb=1&w=720&h=360',
+	img:'../../img/carda.png',
 	name:'亚新茉莉公馆6',
 	region:['郑东新区','郑东新区'],
 	mianji:'建面130-220㎡',
 	state:"售罄",
 	features:['品牌房企','配套成熟','绿化率高'],
-	price:'37000元/㎡'
+	price:'37000元/㎡',
+	address:"金岱产业园区临近在建地铁4号线",
+	area:"建面76-124㎡"
 }]
 /**
  * 地图标记
@@ -54,7 +90,7 @@ var coordinates=[{
 	title: "商鼎路心怡路",
 	province: "河南省",
 	city: "郑州市",
-	point:{lat: 34.761241,lng: 113.777119}
+	point:{lng: 113.777119,lat: 34.761241}
 },{
 	title: "郑州高铁汽车枢纽站",
 	province: "河南省",

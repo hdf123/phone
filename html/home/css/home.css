@@ -11,10 +11,6 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-img {
-  display: inline-block;
-}
-
 .imgks {
   display: inline-block;
   background: rgba(238, 238, 238, 0.5);
@@ -259,6 +255,7 @@ a {
 
 .swiper2 {
   width: 91.73%;
+  height: 11.52rem;
 }
 
 .information {
@@ -310,9 +307,15 @@ a {
 }
 
 .swiper3 {
-  width: 91.73%;
+  width: 100%;
+}
+.swiper3 > .swiper-wrapper > .swiper-slide {
+  padding: 0 0.4rem;
 }
 
+.swiper4, .swiper5 {
+  width: 100%;
+}
 .swiper4 .swiper-slide, .swiper5 .swiper-slide {
   width: 3.653rem;
   padding-bottom: 0.187rem;
@@ -402,22 +405,10 @@ a {
   padding-bottom: 2.5rem;
 }
 
-.ma {
+.recommended, .BridalChamber {
   width: 100%;
   height: 100%;
   overflow: auto;
-}
-
-.ksk {
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-}
-.ksk > div {
-  height: 1rem;
-  font-size: 0.7rem;
-  line-height: 1rem;
-  border-bottom: 1px solid lime;
 }
 
 .fixed-top {

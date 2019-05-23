@@ -1,4 +1,44 @@
 $(function(){
+	/**
+	 * 登录状态
+	 */
+	var yz_logins=JSON.parse(localStorage.getItem('yz_logins'));
+	var yz_building=JSON.parse(localStorage.getItem('yz_building'));//楼盘信息
+	if(!yz_logins){
+		location.href="home.html";
+	}
+	/**
+	 * 页面渲染
+	 */
+	var ska="",skb="",states="";
+	for(i in yz_building.region){
+		ska+=`<div>${yz_building.region[i]}</div>`;
+	}
+	for(i in yz_building.features){
+		skb+=`<div>${yz_building.features[i]}</div>`;
+	}
+	if(yz_building.state=="在售"){
+		states=`<div class="sell">在售</div>`;
+	}else if(yz_building.state=="待售"){
+		states=`<div class="waiting">待售</div>`;
+	}else{
+		states=`<div>待售</div>`;
+	}
+	$(".buildings_title").html(`<h3>${yz_building.name}</h3>
+								<div>${ska}</div>
+								<div>
+									${states}
+									${skb}
+								</div>`);
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	var mySwiper1 = new Swiper('.swiper1', {
 		observer:true,//修改swiper自己或子元素时，自动初始化swiper
 		observeParents:true,//修改swiper的父元素时，自动初始化swiper

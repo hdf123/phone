@@ -1,5 +1,12 @@
 $(function(){
 	/**
+	 * 登录状态
+	 */
+	var yz_logins=JSON.parse(localStorage.getItem('yz_logins'));//转为对象
+	if(!yz_logins){
+		location.href="home.html";
+	}
+	/**
 	 * tab切换
 	 */
 	$(".tab_title>div").click(function(){
@@ -217,31 +224,40 @@ $(function(){
 	 */
 	var page = 1,off_on = false;//page：分页码;off_on：禁止重复加载
 	//加载数据
-	var LoadingDataFn = function() {
+	var LoadingDataFn = function(){
+		console.log(data);
 	    var dom = '';
-	    for (var i = 0; i <8; i++) {
-	        dom +=`<a href="buildings.html" class="building_box">
+	    for (i in data) {
+	    	var ska="",skb="",states="";
+	    	for(j in data[i].region){
+	    		ska+=`<div>${data[i].region[j]}</div>`;
+	    	}
+	    	for(j in data[i].features){
+	    		skb+=`<div>${data[i].features[j]}</div>`;
+	    	}
+	    	if(data[i].state=="在售"){
+	    		states=`<div class="sell">在售</div>`;
+	    	}else if(data[i].state=="待售"){
+	    		states=`<div class="waiting">待售</div>`;
+	    	}else{
+	    		states=`<div>待售</div>`;
+	    	}
+	        dom +=`<div class="building_box">
 				<img src="" class="imgks" alt="" />
 				<div>
-					<h3>中岳俪景湾</h3>
-					<p>金岱产业园区临近在建地铁4号线</p>
+					<h3>${data[i].name}</h3>
+					<p>${data[i].address}</p>
 					<div class="environment">
-						<div>
-							<div>住宅</div>
-							<div>管城回族区</div>
-							<div>管南区域</div>
-						</div>
-						<div>建面73-124㎡</div>
+						<div>${ska}</div>
+						<div>${data[i].area}</div>
 					</div>
 					<div class="situation">
-						<div class="waiting">待售</div>
-						<div>小户型</div>
-						<div>车位充足</div>
-						<div>绿化率高</div>
+						${states}
+						${skb}
 					</div>
-					<div>14000元/平</div>
+					<div>${data[i].price}</div>
 				</div>
-			</a>`;
+			</div>`;
 	    }
 	  $('.contents').append(dom);
 	    off_on = true;
@@ -262,4 +278,11 @@ $(function(){
 	        }
 	    }
 	});
+	
+	
+	$(".contents").on("click",".building_box",function(){
+		localStorage.setItem('yz_building',JSON.stringify(data[$(this).index()]));//转为json字符串
+		var ss =JSON.parse(localStorage.getItem('yz_building'));//转为对象
+		location.href="buildings.html";
+	})
 })
