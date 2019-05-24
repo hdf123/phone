@@ -1,15 +1,8 @@
 $(function(){
 	/**
-	 * 登录状态
-	 */
-	var yz_logins=JSON.parse(localStorage.getItem('yz_logins'));
-	var yz_building=JSON.parse(localStorage.getItem('yz_building'));//楼盘信息
-	if(!yz_logins){
-		location.href="home.html";
-	}
-	/**
 	 * 页面渲染
 	 */
+	var yz_building=JSON.parse(localStorage.getItem('yz_building'));//转为对象
 	var ska="",skb="",states="";
 	for(i in yz_building.region){
 		ska+=`<div>${yz_building.region[i]}</div>`;
@@ -30,15 +23,6 @@ $(function(){
 									${states}
 									${skb}
 								</div>`);
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	var mySwiper1 = new Swiper('.swiper1', {
 		observer:true,//修改swiper自己或子元素时，自动初始化swiper
 		observeParents:true,//修改swiper的父元素时，自动初始化swiper
@@ -105,18 +89,13 @@ $(function(){
 	);
 	var marker= new BMap.Marker(point,{icon:myIcon});  // 创建标注
 	map.addOverlay(marker);              // 将标注添加到地图中
-	
-	
 	var arr1= [],arr2= [],arr3= [];
 	var options = {//获取检索到的返回结果
 		onSearchComplete: function(results){
 			// 判断状态是否正确
 			if (locals.getStatus() == BMAP_STATUS_SUCCESS){
-				console.log(results.getNumPois());
 				$(".distance_box").empty();
 				for (var i = 0; i < results.getCurrentNumPois(); i ++){
-					console.log(results.getPoi(i));
-					
 					var pointB = new BMap.Point(results.getPoi(i).point.lng,results.getPoi(i).point.lat);
 					var juli=Math.round(map.getDistance(point,pointB));
 					var ms='';

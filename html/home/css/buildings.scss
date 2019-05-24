@@ -318,18 +318,29 @@
         }
     }
 }
-
 .assort{
     width: 9.2rem;
     height: 1.067rem;
     background-color:$backgroundb;
     border-radius: 0.053rem;
-    display: block;
     margin:0 auto;
     color:$colorc;
     font-size: 0.373rem;
-    border:none;
+    @extend .flexs;
 }
+
+
+//.assort{
+//  width: 9.2rem;
+//  height: 1.067rem;
+//  background-color:$backgroundb;
+//  border-radius: 0.053rem;
+//  display: block;
+//  margin:0 auto;
+//  color:$colorc;
+//  font-size: 0.373rem;
+//  border:none;
+//}
 .review_title{
     width:9.2rem;
     padding:0.387rem 0 0.32rem 0;
@@ -402,16 +413,16 @@
 }
 .comments_img{
     width:100%;
-    padding:0 0.27rem 0.147rem 0.27rem;
+    padding:0 0.2135rem 0.147rem 0.2135rem;
     display: flex;
     flex-wrap: wrap;
     >li{
-        width:2.365rem;
+        width:3.066rem;
         text-align: center;
         padding-bottom:0.253rem;
         >img{
-            width: 2.105rem;
-            height: 2.105rem;
+            width: 2.693rem;
+            height: 2.693rem;
         }
     }
 }

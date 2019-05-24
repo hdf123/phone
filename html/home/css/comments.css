@@ -186,18 +186,18 @@ a {
 
 .comments_img {
   width: 100%;
-  padding: 0 0.27rem 0.147rem 0.27rem;
+  padding: 0 0.2135rem 0.147rem 0.2135rem;
   display: flex;
   flex-wrap: wrap;
 }
 .comments_img > li {
-  width: 2.365rem;
+  width: 3.066rem;
   text-align: center;
   padding-bottom: 0.253rem;
 }
 .comments_img > li > img {
-  width: 2.105rem;
-  height: 2.105rem;
+  width: 2.693rem;
+  height: 2.693rem;
 }
 
 .comments_time {

@@ -55,7 +55,8 @@ $(function(){
 	    var keycode = e.keyCode;
 	    if(keycode == '13') {
 	    	e.preventDefault();
-			alert(123)
+	    	
+			alert($(this).val())
 	    }
 	});
 	/**

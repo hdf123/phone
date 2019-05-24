@@ -1,11 +1,15 @@
 $(function(){
 	/**
-	 * 登录状态
+	 * 搜索
 	 */
-	var yz_logins=JSON.parse(localStorage.getItem('yz_logins'));//转为对象
-	if(!yz_logins){
-		location.href="home.html";
-	}
+	$('.search input').on('keypress', function (e){
+	    var keycode = e.keyCode;
+	    if(keycode == '13') {
+	    	e.preventDefault();
+	    	
+			alert($(this).val())
+	    }
+	});
 	/**
 	 * tab切换
 	 */

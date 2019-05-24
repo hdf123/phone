@@ -1,20 +1,26 @@
 $(function(){
 	$(".popup_box").hide();
+	$(".rights>i:eq(0)").click(function(){
+		location.href="search.html";
+	})
 	$(".rights>i:eq(1)").click(function(){
 		$(".popup_box").animate({"width":"100%"},300);
 		$(".popup_box").show();
 	})
+	
+	for(i in region){
+		$(".area>ul").append(`<li>${region[i].title}</li>`);
+	}
 	/**
 	 * 地图标记
 	 */
-	
 	var map = new BMap.Map("allmap");
 	var point = new BMap.Point(113.775754,34.767689); 
 	map.centerAndZoom(point,12);
 	var arr1=[],arr2=[];
-	for (var i = 0; i <coordinates.length; i ++) {
-	    var p0= coordinates[i].point.lng; 
-	    var p1 =coordinates[i].point.lat; //按照原数组的point格式将地图点坐标的经纬度分别提出来
+	for (var i = 0; i <region.length; i ++) {
+	    var p0= region[i].point.lng; 
+	    var p1 =region[i].point.lat; //按照原数组的point格式将地图点坐标的经纬度分别提出来
 	    arr2[i] = new BMap.Point(p0, p1); //循环生成新的地图点
 		// 复杂的自定义覆盖物
 	    function ComplexCustomOverlay(point){
@@ -37,7 +43,7 @@ $(function(){
 	      		"justify-content": "center",
 	      		"color":"white"
 	      	})
-	      	div.appendChild(document.createTextNode(coordinates[i].title));
+	      	div.appendChild(document.createTextNode(region[i].title));
 	      	
 	      	var ayy=document.createElement("span");
 	      	$(ayy).css({"color":"white"})
@@ -64,67 +70,59 @@ $(function(){
 	    map.addOverlay(myCompOverlay);
 	    //移动端使用touchstart，pc使用click，好坑啊，浪费了我好长时间
 		myCompOverlay.addEventListener('touchstart', function() {
-//		myCompOverlay.addEventListener('click', function() {
 			var index=$(this).index();
-			console.log(11111111111);
-			for(var i=0;i<arr1.length;i++){
-				map.removeOverlay(arr1[i]);
-			}
-			// 创建点坐标  
-			var point = new BMap.Point(arr1[index]._point.lng,arr1[index]._point.lat); 
-			// 初始化地图，设置中心点坐标和地图级别 
-			map.centerAndZoom(point,13);
-			var ayy=[
-				[113.757367,34.737826],
-				[113.787367,34.767826],
-				[113.717367,34.797826]
-			]
-			for (var i = 0; i <ayy.length; i ++) {
-				var point = new BMap.Point(ayy[i][0],ayy[i][1]);
-				var marker = new BMap.Marker(point);
-			  	map.addOverlay(marker);
-			  	$(".pulls").animate({"top":"60%"});
-			}
+			maps(index);
 		});
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	function maps(index){
+		for(var i=0;i<arr1.length;i++){
+			map.removeOverlay(arr1[i]);
+		}
+		// 创建点坐标  
+		var point = new BMap.Point(arr1[index]._point.lng,arr1[index]._point.lat); 
+		// 初始化地图，设置中心点坐标和地图级别 
+		map.centerAndZoom(point,13);
+		var marker = new BMap.Marker(point);
+		map.addOverlay(marker);
+		var ayy=[
+			[113.757367,34.737826],
+			[113.787367,34.767826],
+			[113.717367,34.797826]
+		]
+		for (var i = 0; i <ayy.length; i ++) {
+			var point = new BMap.Point(ayy[i][0],ayy[i][1]);
+			var marker = new BMap.Marker(point);
+		  	map.addOverlay(marker);
+		  	$(".pulls").animate({"top":"60%"});
+		  	
+		}
+	}
 	/**
 	 * 筛选
 	 */
+	var inds="";
 	$(".screening_box li").click(function(){
 		console.log($(this).index());
+		inds=$(this).index();
 		var _this=$(this);
 		if($(this).is(".act")){
 			_this.removeClass("act");
 		}else{
-			_this.addClass("act");
+			_this.addClass("act").siblings("li").removeClass("act");
 		}
 	})
 	$(".btn").click(function(){
 		$(".popup_box").animate({"width":"0"},300,function(){
+			maps(inds);
 			$(".popup_box").hide();
 		});
+	})
+	$(".screening_box").click(function(event){
+		event.stopPropagation();
+	})
+	$(".popup_box").click(function(){
+		$(".popup_box").hide();
 	})
 	/**
 	 * 上下拖动
