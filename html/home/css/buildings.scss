@@ -321,12 +321,14 @@
 .assort{
     width: 9.2rem;
     height: 1.067rem;
-    background-color:$backgroundb;
-    border-radius: 0.053rem;
     margin:0 auto;
     color:$colorc;
     font-size: 0.373rem;
+    outline:none;
+    border:none;
+    border-radius: 0.053rem;
     @extend .flexs;
+    background-color:$backgroundb;
 }
 
 

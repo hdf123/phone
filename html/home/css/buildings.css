@@ -415,11 +415,13 @@ a {
 .assort {
   width: 9.2rem;
   height: 1.067rem;
-  background-color: rgba(0, 153, 255, 0.3);
-  border-radius: 0.053rem;
   margin: 0 auto;
   color: #0099ff;
   font-size: 0.373rem;
+  outline: none;
+  border: none;
+  border-radius: 0.053rem;
+  background-color: rgba(0, 153, 255, 0.3);
 }
 
 .review_title {
