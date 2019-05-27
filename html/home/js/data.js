@@ -144,75 +144,90 @@ var region=[{
 	title:"二七区",
 	province: "河南省",
 	city: "郑州市",
+	nums:"23个",
 	point:{lng:113.648709, lat:34.730333}
 },{
 	title:"中原区",
 	province: "河南省",
 	city: "郑州市",
+	nums:"15个",
 	point:{lng:113.619478,lat:34.754322}
 },{
 	title: "郑东新区",
 	province: "河南省",
 	city: "郑州市",
+	nums:"3个",
 	point:{lng:113.767007, lat:34.750909}
 },{
 	title: "管城区",
 	province: "河南省",
 	city: "郑州市",
+	nums:"11个",
 	point:{lng:113.69445,lat:34.767976}
 },{
 	title: "金水区",
 	province: "河南省",
 	city: "郑州市",
+	nums:"16个",
 	point:{lng:113.668462,lat:34.802987}
 },{
 	title: "中牟县",
 	province: "河南省",
 	city: "郑州市",
+	nums:"56个",
 	point:{lng:113.982366, lat:34.723276}
 },{
 	title: "惠济区",
 	province: "河南省",
 	city: "郑州市",
+	nums:"88个",
 	point:{lng:113.621157, lat:34.873284}
 },{
 	title: "航空港区",
 	province: "河南省",
 	city: "郑州市",
+	nums:"67个",
 	point:{lng:113.835949, lat:34.563851}
 },{
 	title: "高新区",
 	province: "河南省",
 	city: "郑州市",
+	nums:"28个",
 	point:{lng:113.568393, lat:34.811359}
 },{
 	title: "经开区",
 	province: "河南省",
 	city: "郑州市",
+	nums:"31个",
 	point:{lng:113.749332, lat:34.728195}
 },{
 	title: "荥阳市",
 	province: "河南省",
 	city: "郑州市",
+	nums:"45个",
 	point:{lng:113.388271, lat:34.794048}
 },{
 	title: "新郑市",
 	province: "河南省",
 	city: "郑州市",
+	nums:"52个",
 	point:{lng:113.744135,lat:34.402005}
 },{
 	title: "上街市",
 	province: "河南省",
 	city: "郑州市",
+	nums:"56个",
 	point:{lng:113.315325,lat:34.809171}
 },{
 	title: "周边地区",
 	province: "河南省",
 	city: "郑州市",
+	nums:"71个",
 	point:{lng:113.281867,lat:34.62783}
 },{
 	title: "平原地区",
 	province: "河南省",
 	city: "郑州市",
+	nums:"19个",
 	point:{lng:113.716503,lat:34.996275}
 }]

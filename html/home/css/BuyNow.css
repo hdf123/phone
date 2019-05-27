@@ -101,7 +101,7 @@ a {
   height: 1.173rem;
   z-index: 96;
   background: white;
-  box-shadow: 0rem 0.013rem 0rem 0rem #e5e5e5;
+  border: 1px solid #e5e5e5;
 }
 .headers .lefts {
   width: 1rem;
@@ -172,6 +172,7 @@ ol li {
 .comments {
   width: 1.333rem;
   height: 1.333rem;
+  border-radius: 50%;
   position: fixed;
   right: 0.533rem;
   bottom: 4.1rem;

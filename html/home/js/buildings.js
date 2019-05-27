@@ -121,24 +121,15 @@ $(function(){
 					}
 				    point[i] = new window. BMap . Point(results.getPoi(i).point.lng,results.getPoi(i).point.lat); //循环生成新的地图点
 					// 复杂的自定义覆盖物
-				    function ComplexCustomOverlay(point, text, mouseoverText){
+				    function ComplexCustomOverlay(point, text){
 				      this._point = point;
 				      this._text = text;
-				      this._overText = mouseoverText;
 				    }
 				    ComplexCustomOverlay.prototype = new BMap.Overlay();
 				    ComplexCustomOverlay.prototype.initialize = function(map){
 				      	this._map = map;
 				      	var div = this._div = document.createElement("div");
-				      	$(div).css({
-				      		"box-sizing":"border-box",
-				      		"position":"absolute",
-				      		"display":"inline-block",
-				      		"padding":"10px 30px",
-				      		"white-space":"nowrap",
-				      		"background":"url(../../img/qipao.png) no-repeat",
-				      		"background-size":"100% 100%"
-				      	})
+				      	$(div).addClass("bubbles");
 				      	div.appendChild(document.createTextNode(this._text));
 				      map.getPanes().labelPane.appendChild(div);
 				      return div;
@@ -149,7 +140,7 @@ $(function(){
 				      this._div.style.left = pixel.x - 90 + "px";
 				      this._div.style.top  = pixel.y - 40 + "px";
 				    }
-				    var myCompOverlay = new ComplexCustomOverlay(point[i],results.getPoi(i).title,results.getPoi(i).title);
+				    var myCompOverlay = new ComplexCustomOverlay(point[i],results.getPoi(i).title);
 				    map.addOverlay(myCompOverlay);
 				}
 			}

@@ -566,4 +566,14 @@ a {
   background-color: #0099ff;
 }
 
+.bubbles {
+  box-sizing: border-box;
+  position: absolute;
+  display: inline-block;
+  padding: 10px 30px;
+  white-space: nowrap;
+  background: url(../../../img/bubbles.png) no-repeat;
+  background-size: 100% 100%;
+}
+
 /*# sourceMappingURL=buildings.css.map */
