@@ -45,7 +45,7 @@ a {
 }
 
 /*单行隐藏*/
-.yincang, .distance_box > li > div:nth-child(1) > div, .wdows > div, #wdows > div {
+.yincang, .distance_box > li > div:nth-child(1) > div, .titls > h3, .wdows > div, #wdows > div {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -229,9 +229,12 @@ a {
 
 .titls {
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 .titls > h3 {
+  width: 4rem;
+  height: 100%;
   font-size: 0.373rem;
 }
 .titls > div {

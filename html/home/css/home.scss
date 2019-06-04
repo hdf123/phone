@@ -163,7 +163,12 @@
     >div{
         >div{
             width: 6.053rem;
+            max-height:1.63rem;
             font-size:$fontsb;
+            overflow: hidden;/*超出隐藏*/
+            display: -webkit-box;/*将对象作为弹性伸缩盒子模型显示。*/
+            -webkit-box-orient: vertical;/*从上到下垂直排列子元素（设置伸缩盒子的子元素排列方式）*/
+            -webkit-line-clamp:3;/*超出2行用省略号表示*/
         }
         >p{
             color:$colorb;
@@ -172,8 +177,8 @@
         }
     }
     >img{
-        width: 2.52rem;
-        height: 1.92rem;
+        max-width: 2.52rem;
+        max-height: 1.92rem;
         border-radius: 0.053rem;
     }
 }
@@ -229,14 +234,17 @@
             border-radius: 0.053rem;
         }
         >p:nth-child(2){
+            width:100%;
+            height:0.687rem;
             font-size:$fontsb;
-            margin:0.187rem 0 0 0.32rem;
+            padding:0.187rem 0 0 0.32rem;
+            @extend .yincang;
         }
         >p:nth-child(3){
             color:$colorb;
             font-size:$fontse;
             line-height:0.5rem;
-            margin:0 0 0 0.32rem;
+            padding-left:0.32rem;
         }
     }
 }
@@ -251,9 +259,14 @@
         border-radius: 0.053rem;
     }
     >div{
+        width:6.214rem;
+        overflow: hidden;
         margin-left:0.453rem;
         >div:nth-child(1){
+            max-width:100%;
+            max-height:0.5rem;
             font-size:$fontsb;
+            @extend .yincang;
         }
         >div:nth-child(4){
             color: #f9351a;

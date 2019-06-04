@@ -45,7 +45,7 @@ a {
 }
 
 /*单行隐藏*/
-.yincang, .wdows > div, #wdows > div {
+.yincang, .building_box > div > h3, .wdows > div, #wdows > div {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -185,9 +185,12 @@ a {
   border-radius: 0.053rem;
 }
 .building_box > div {
+  width: 6.2rem;
   margin-left: 0.467rem;
 }
 .building_box > div > h3 {
+  max-width: 100%;
+  max-height: 0.5rem;
   font-size: 0.373rem;
 }
 .building_box > div > p {

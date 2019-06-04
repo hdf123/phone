@@ -91,7 +91,7 @@ a {
 }
 
 /*上下左右居中*/
-.flexs, .headers .lefts, .headers .rights, .building > div:nth-child(1) > div > div, .bounced_box {
+.flexs, .headers .lefts, .headers .rights, .building > div:nth-child(1) > h5, .building > div:nth-child(1) > div > div, .bounced_box {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -191,6 +191,7 @@ a {
 }
 .building > div:nth-child(1) > div > div {
   font-size: 0.267rem;
+  padding: 0.093rem;
 }
 .building > div:nth-child(1) > div > div:nth-child(1) {
   color: #ffffff;

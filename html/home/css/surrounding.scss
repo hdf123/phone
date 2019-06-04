@@ -130,9 +130,13 @@
 }
 .titls{
     display: flex;
+    align-items: center;
     justify-content: space-between;
     >h3{
+        width:4rem;
+        height:100%;
         font-size:$fontsb;
+        @extend .yincang;
     }
     >div{
         font-size:$fontse;

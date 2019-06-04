@@ -33,12 +33,14 @@ $(function(){
 	      	this._map = map;
 	      	var div = this._div = document.createElement("div");
 	      	$(div).addClass("markks");
-	      	div.appendChild(document.createTextNode(region[i].title));
+	      	
+	      	var divs=document.createElement("div");
+	      	divs.appendChild(document.createTextNode(region[i].title));
 	      	
 	      	var ayy=document.createElement("span");
-	      	$(ayy).css({"color":"white"})
 	      	ayy.appendChild(document.createTextNode(this._texts));
 	      	
+	      	div.appendChild(divs);
 	      	div.appendChild(ayy);
 	      	map.getPanes().labelPane.appendChild(div);
 	      	return div;
@@ -61,7 +63,6 @@ $(function(){
 	    //移动端使用touchstart，pc使用click，好坑啊，浪费了我好长时间
 		myCompOverlay.addEventListener('touchstart', function() {
 			var index=$(this).index();
-			console.log(index);
 			maps(index);
 			$(".screening_box li").eq(index).addClass("act").siblings("li").removeClass("act");
 		});
@@ -139,7 +140,6 @@ $(function(){
 	 */
 	var inds="";
 	$(".screening_box li").click(function(){
-		console.log($(this).index());
 		inds=$(this).index();
 		var _this=$(this);
 		if($(this).is(".act")){
@@ -148,6 +148,7 @@ $(function(){
 			_this.addClass("act").siblings("li").removeClass("act");
 		}
 	})
+	
 	$(".btn").click(function(){
 		$(".popup_box").animate({"width":"0"},300,function(){
 			maps(inds);

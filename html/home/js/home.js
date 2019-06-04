@@ -95,17 +95,6 @@ $(function(){
 				<p>${sk}</p>
 			</div>`;
 	}
-//	for(i in sw1){
-//		var sk="";
-//		for(j in sw1[i].environment){
-//			sk+=sw1[i].environment[j]+" ";
-//		}
-//		sws+=`<div class="swiper-slide">
-//				<img src=${sw1[i].img} class="imgks" alt="" />
-//				<p>${sw1[i].title}</p>
-//				<p>${sk}</p>
-//			</div>`;
-//	}
 	$(".swiper4 .swiper-wrapper").append(sws);
 	$(".swiper5 .swiper-wrapper").append(sws);
 	var mySwiper4 = new Swiper('.swiper4', {
@@ -156,7 +145,7 @@ $(function(){
 										<div>${data[i].name}</div>
 										<div class="region">
 											<div>${aa}</div>
-											<div>${data[i].mianji}</div>
+											<div>${data[i].area}</div>
 										</div>
 										<div class="features">
 											${as}

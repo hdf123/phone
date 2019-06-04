@@ -88,9 +88,13 @@
         border-radius: 0.053rem;
     }
     >div{
+        width:6.2rem;
         margin-left:0.467rem;
         >h3{
+            max-width:100%;
+            max-height:0.5rem;
             font-size:$fontsb;
+            @extend .yincang;
         }
         >p{
             color:$colora;

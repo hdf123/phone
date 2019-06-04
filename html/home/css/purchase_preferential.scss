@@ -86,12 +86,14 @@
         justify-content: space-between;
         >h5{
             font-size:$fontsb;
+            @extend .flexs;
         }
         >div{
             display: flex;
             >div{
                 font-size:$fontse;
                 @extend .flexs;
+                padding:0.093rem;
             }
             >div:nth-child(1){
                 color: #ffffff;

@@ -45,7 +45,7 @@ a {
 }
 
 /*单行隐藏*/
-.yincang, .wdows > div, #wdows > div {
+.yincang, .swiper4 .swiper-slide > p:nth-child(2), .swiper5 .swiper-slide > p:nth-child(2), .buildings > div > div:nth-child(1), .wdows > div, #wdows > div {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -267,7 +267,16 @@ a {
 }
 .information > div > div {
   width: 6.053rem;
+  max-height: 1.63rem;
   font-size: 0.373rem;
+  overflow: hidden;
+  /*超出隐藏*/
+  display: -webkit-box;
+  /*将对象作为弹性伸缩盒子模型显示。*/
+  -webkit-box-orient: vertical;
+  /*从上到下垂直排列子元素（设置伸缩盒子的子元素排列方式）*/
+  -webkit-line-clamp: 3;
+  /*超出2行用省略号表示*/
 }
 .information > div > p {
   color: #999999;
@@ -275,8 +284,8 @@ a {
   margin-top: 0.153rem;
 }
 .information > img {
-  width: 2.52rem;
-  height: 1.92rem;
+  max-width: 2.52rem;
+  max-height: 1.92rem;
   border-radius: 0.053rem;
 }
 
@@ -326,14 +335,16 @@ a {
   border-radius: 0.053rem;
 }
 .swiper4 .swiper-slide > p:nth-child(2), .swiper5 .swiper-slide > p:nth-child(2) {
+  width: 100%;
+  height: 0.687rem;
   font-size: 0.373rem;
-  margin: 0.187rem 0 0 0.32rem;
+  padding: 0.187rem 0 0 0.32rem;
 }
 .swiper4 .swiper-slide > p:nth-child(3), .swiper5 .swiper-slide > p:nth-child(3) {
   color: #999999;
   font-size: 0.267rem;
   line-height: 0.5rem;
-  margin: 0 0 0 0.32rem;
+  padding-left: 0.32rem;
 }
 
 .buildings {
@@ -347,9 +358,13 @@ a {
   border-radius: 0.053rem;
 }
 .buildings > div {
+  width: 6.214rem;
+  overflow: hidden;
   margin-left: 0.453rem;
 }
 .buildings > div > div:nth-child(1) {
+  max-width: 100%;
+  max-height: 0.5rem;
   font-size: 0.373rem;
 }
 .buildings > div > div:nth-child(4) {

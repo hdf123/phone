@@ -45,7 +45,7 @@ a {
 }
 
 /*单行隐藏*/
-.yincang, .wdows > div, #wdows > div {
+.yincang, .comments_title > div:nth-child(1) span, .wdows > div, #wdows > div {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -149,7 +149,12 @@ a {
   border-radius: 50%;
 }
 .comments_title > div:nth-child(1) span {
+  display: inline-block;
+  width: 4rem;
+  height: 100%;
   font-size: 0.4rem;
+  line-height: 0.96rem;
+  margin-left: 0.267rem;
 }
 .comments_title > div:nth-child(2) {
   display: flex;

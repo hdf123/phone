@@ -126,11 +126,11 @@ $(function(){
 	var LoadingDataFn = function() {
 	    var dom = '';
 	    for (var i = 0; i <10; i++) {
-	        dom +=`<a href="" class="building_box">
+	        dom +=`<a href="buildings.html" class="building_box">
 					<img src="" class="imgks" alt="" />
 					<div>
 						<div class="titls">
-							<h3>${i+1}中岳俪景湾</h3>
+							<h3>${i+1}中岳俪景湾中岳俪景湾中岳俪景湾</h3>
 							<div>住宅</div>
 						</div>
 						<div class="environment">

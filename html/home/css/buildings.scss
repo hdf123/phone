@@ -38,7 +38,10 @@
     padding:0.52rem 0 0.373rem 0;
     border-bottom:0.013rem solid #e5e5e5;
     >h3{
+        width:100%;
+        height:0.7rem;
         font-size: 0.533rem;
+        @extend .yincang;
     }
     >div:nth-child(2){
         display: flex;
@@ -330,19 +333,6 @@
     @extend .flexs;
     background-color:$backgroundb;
 }
-
-
-//.assort{
-//  width: 9.2rem;
-//  height: 1.067rem;
-//  background-color:$backgroundb;
-//  border-radius: 0.053rem;
-//  display: block;
-//  margin:0 auto;
-//  color:$colorc;
-//  font-size: 0.373rem;
-//  border:none;
-//}
 .review_title{
     width:9.2rem;
     padding:0.387rem 0 0.32rem 0;
@@ -368,6 +358,7 @@
     padding:0.4rem 0;
 }
 .comments_title{
+    height: 0.96rem;
     padding:0 0.4rem;
     display: flex;
     justify-content: space-between;
@@ -378,10 +369,17 @@
             border-radius:50%;
         }
         span{
+            display: inline-block;
+            width:4rem;
+            height:100%;
             font-size: 0.4rem;
+            line-height:0.96rem;
+            margin-left:0.267rem;
+            @extend .yincang;
         }
     }
     >div:nth-child(2){
+        height:100%;
         display: flex;
         align-items:flex-end;
         >div:nth-child(1){
@@ -391,7 +389,7 @@
             display: flex;
             align-items: flex-end;
             justify-content: flex-end;
-            padding-bottom:0.03rem;
+            padding-bottom:0.13rem;
         }
         >div:nth-child(2){
             width:0.7rem;
@@ -399,7 +397,7 @@
             display: flex;
             align-items: flex-end;
             justify-content: center;
-            padding-bottom:0.1rem;
+            padding-bottom:0.2rem;
             >img{
                 width:0.5rem;
             }
@@ -445,8 +443,11 @@
             height: 2.96rem;
         }
         h4{
+            width:100%;
+            height:0.5rem;
             font-size: 0.4rem;
             margin-top:0.307rem;
+            @extend .yincang;
         }
         div:nth-child(3){
             color:$colorb;
