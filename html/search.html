@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=yes"/>
+		<title>中原楼市</title>
+		<link rel="stylesheet" type="text/css" href="css/search.css"/>
+		<script src="../js/js.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<header class="headers">
+			<div>
+				<i class="iconfont">&#xe647;</i>
+				<input type="text" placeholder=" 输入楼盘名或地址" />
+			</div>
+			<div onclick="history.back(-1)">取消</div>
+			<!--<div onclick="history.go(-1)">取消</div>-->
+		</header>
+		<section class="contents">
+			<!--<div class="contents_box">
+				<div>
+					<div>搜索历史</div>
+					<i class="iconfont removek">&#xe646;</i>
+				</div>
+				<ul>
+					<li>亚新美好天境</li>
+					<li>瀚海尔湾</li>
+				</ul>
+			</div>-->
+			<div class="without">
+				<div>
+					<i class="iconfont">&#xe641;</i>
+					<p>没有任何搜索历史</p>
+				</div>
+			</div>
+		</section>
+<script type="text/javascript">
+	$(function(){
+		var yz_record=JSON.parse(localStorage.getItem('yz_record'));//转为对象
+    	if(yz_record==null){
+    		var yz_record=[];
+    	}else{
+    		console.log(yz_record[0]);
+    		$(".without").hide();
+    		var ss="";
+    		for(i in yz_record){
+    			ss+=`<li>${yz_record[i]}</li>`;
+    		}
+    		$(".contents").append(`<div class="contents_box">
+									<div>
+										<div>搜索历史</div>
+										<i class="iconfont removek">&#xe646;</i>
+									</div>
+									<ul>${ss}</ul>
+								</div>`)
+    	}
+    	$(".contents").on("click",".removek",function(){
+    		$(".contents_box").hide();
+    		localStorage.removeItem("yz_record");
+    		$(".without").show();
+    	})
+		$('.headers input').on('keypress', function (e){
+		    var keycode = e.keyCode;
+		    var texts=$(this).val();
+		    console.log(texts);
+		　　//keycode是键码，13也是电脑物理键盘的 enter 
+		    if(keycode == '13') {
+		    	e.preventDefault();
+		    	console.log("texts="+texts);
+		    	yz_record.push(texts)
+
+				localStorage.setItem('yz_record',JSON.stringify(yz_record));
+		    }
+		});
+	})
+</script>
+	</body>
+</html>

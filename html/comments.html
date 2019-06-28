@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=yes"/>
+		<title>中原楼市</title>
+		<link rel="stylesheet" type="text/css" href="css/comments.css"/>
+		<script src="../js/js.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<header class="headers">
+			<i class="iconfont" onclick="history.go(-1)">&#xe632;</i>
+			<div>全部评论</div>
+		</header>
+		<section class="contents">
+			<div class="review_box">
+				<div class="review"> 
+					<div class="comments_title">
+						<div>
+							<img src="" class="imgks" alt="" />
+							<span>138****6687</span>
+						</div>
+						<div class="praise">
+							<div>8</div>
+							<div>
+								<img src="../img/aa.png" class="imgks" alt="" />
+							</div>
+						</div>
+					</div>
+					<div class="comments_content">
+						户型设计合理，地理位置得天独厚，服务态度很好，周边配套齐全，性价比高。
+					</div>
+					<div class="comments_time">2019年2月16日</div>
+				</div>
+				
+				<div class="review"> 
+					<div class="comments_title">
+						<div>
+							<img src="" class="imgks" alt="" />
+							<span>138****6687</span>
+						</div>
+						<div class="praise">
+							<div class="act">6</div>
+							<div>
+								<img src="../img/ab.png" class="imgks" alt="" />
+							</div>
+						</div>
+					</div>
+					<div class="comments_content">
+						户型设计合理，地理位置得天独厚，服务态度很好，周边配套齐全，性价比高。
+					</div>
+					<ul class="comments_img">
+						<li><img src="" class="imgks" alt="" /></li>
+						<li><img src="" class="imgks" alt="" /></li>
+						<li><img src="" class="imgks" alt="" /></li>
+						<li><img src="" class="imgks" alt="" /></li>
+						<li><img src="" class="imgks" alt="" /></li>
+						<li><img src="" class="imgks" alt="" /></li>
+					</ul>
+					<div class="comments_time">2019年2月16日</div>
+				</div>
+				
+				<div class="review"> 
+					<div class="comments_title">
+						<div>
+							<img src="" class="imgks" alt="" />
+							<span>138****6687</span>
+						</div>
+						<div class="praise">
+							<div class="act">6</div>
+							<div>
+								<img src="../img/ab.png" class="imgks" alt="" />
+							</div>
+						</div>
+					</div>
+					<div class="comments_content">
+						户型设计合理，地理位置得天独厚，服务态度很好，周边配套齐全，性价比高。
+					</div>
+					<ul class="comments_img">
+						<li><img src="" class="imgks" alt="" /></li>
+						<li><img src="" class="imgks" alt="" /></li>
+						<li><img src="" class="imgks" alt="" /></li>
+						<li><img src="" class="imgks" alt="" /></li>
+						<li><img src="" class="imgks" alt="" /></li>
+						<li><img src="" class="imgks" alt="" /></li>
+					</ul>
+					<div class="comments_time">2019年2月16日</div>
+				</div>
+				
+			</div>
+		</section>
+		
+
+<script type="text/javascript">
+	$(function(){
+	    /**
+	     * 点评
+	     */
+	    $(".review_box").on("click",".praise",function(){
+	    	var muns=parseInt($(this).children("div:eq(0)").text());
+	    	if($(this).children("div:eq(0)").is(".act")){
+	    		$(this).children("div:eq(0)").removeClass("act");
+	    		$(this).find("img").attr("src","../img/aa.png");
+	    		$(this).children("div:eq(0)").text(muns-1);
+	    	}else{
+	    		$(this).children("div:eq(0)").addClass("act");
+	    		$(this).find("img").attr("src","../img/ab.png");
+	    		$(this).children("div:eq(0)").text(muns+1);
+	    	}
+	    })
+		/**
+		 * 懒加载
+		 */
+		var page = 1,off_on = false;
+		//加载数据
+		var LoadingDataFn = function() {
+		    var dom = '';
+		    for (var i = 0; i < 100; i++) {
+		        dom +=`<div>${i+1}</div>`;
+		    }
+//		    $('.contents>div').append(dom);
+		    off_on = true;
+		};
+		//初始化， 第一次加载
+		$(document).ready(function() {
+		    LoadingDataFn();
+		});
+		$('.contents>div').scroll(function() {
+		    //当时滚动条离底部60px时开始加载下一页的内容
+		    if (($(this)[0].scrollTop + $(this).height() + 60) >= $(this)[0].scrollHeight) {
+		        if (off_on) {
+		            off_on = false;
+		            page++;
+		            console.log("第"+page+"页");
+		            LoadingDataFn();
+		        }
+		    }
+		});
+	})
+</script>
+	</body>
+</html>

@@ -1,0 +1,650 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  color: #333333;
+  list-style: none;
+  /*把此元素放置在父元素的中部。*/
+  vertical-align: middle;
+  box-sizing: border-box;
+  /*去除移动端特有的点击高亮效果*/
+  -webkit-tap-highlight-color: transparent;
+}
+
+.imgks {
+  display: inline-block;
+  background: rgba(238, 238, 238, 0.5);
+}
+
+input {
+  /*1.清除文本框获取焦点时默认的边框阴影*/
+  outline: none;
+  /*2.去除边框*/
+  border: none;
+  /*3.添加边框*/
+  border: 1px solid #ccc;
+}
+
+/* 让链接默认不显示下划线， */
+a {
+  color: #333;
+  /*指针样式*/
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+  display: inline-block;
+  /*导致鼠标在页面活动时视频延迟变卡问题解决.*/
+  blr: expression(this.onFocus=this.blur());
+}
+
+/* 清理浮动 */
+.clearfix:before, .clearfix:after {
+  display: block;
+  content: " ";
+  clear: both;
+}
+
+/*单行隐藏*/
+.yincang, .buildings_title > h3, .situation > div:nth-child(2) > div:nth-child(2) > p, .situation > div:nth-child(3) > div:nth-child(2) > p, .distance_box > li > div:nth-child(1) > div, .comments_title > div:nth-child(1) span, .swiper3 .swiper-slide h4, .swiper4 .swiper-slide h4, .wdows > div, #wdows > div {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/*多行隐藏*/
+.yincangs, .box > .ul1 > .yincangs, .ul1 > .yincangs {
+  overflow: hidden;
+  /*超出隐藏*/
+  display: -webkit-box;
+  /*将对象作为弹性伸缩盒子模型显示。*/
+  -webkit-box-orient: vertical;
+  /*从上到下垂直排列子元素（设置伸缩盒子的子元素排列方式）*/
+  -webkit-line-clamp: 2;
+  /*超出2行用省略号表示*/
+}
+
+/*换行*/
+.newline {
+  word-break: break-all;
+  /* 只对英文起作用，以字母作为换行依据。*/
+  word-wrap: break-word;
+  /*只对英文起作用，以单词作为换行依据。*/
+  white-space: pre-wrap;
+  /*只对中文起作用，强制换行。*/
+}
+
+/*禁止换行*/
+.ban_newline {
+  white-space: nowrap;
+}
+
+/*placeholder样式*/
+.input::-webkit-input-placeholder {
+  text-align: center;
+}
+
+/*隐藏滚动条*/
+.scroll_bar::-webkit-scrollbar {
+  width: 0 !important;
+  /*height:0 !important;*/
+  /*display: none;*/
+}
+
+/*上下左右居中*/
+.flexs, .headers > i, .headersk > div:nth-child(1) > i, .mortgage_tab > li, .assort {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.headers {
+  height: 1rem;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 0.2rem;
+  z-index: 96;
+}
+.headers > i {
+  width: 1rem;
+  height: 100%;
+}
+.headers > i:nth-child(2) {
+  font-size: 0.52rem;
+}
+
+.headersk {
+  width: 100%;
+  background: white;
+  z-index: 96;
+  position: fixed;
+  top: 0;
+  opacity: 0;
+}
+.headersk > div:nth-child(1) {
+  position: relative;
+  height: 1rem;
+}
+.headersk > div:nth-child(1) > i {
+  width: 1rem;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+.headersk > div:nth-child(1) > i:nth-child(1) {
+  left: 0;
+}
+.headersk > div:nth-child(1) > i:nth-child(3) {
+  right: 0;
+}
+.headersk > div:nth-child(1) .conters {
+  width: 100%;
+  font-size: 0.48rem;
+  text-align: center;
+  line-height: 1rem;
+}
+
+.mortgage_tab {
+  display: flex;
+  background: white;
+  position: relative;
+}
+.mortgage_tab > li {
+  width: 100%;
+  height: 1.2rem;
+  color: #666666;
+  font-size: 0.4rem;
+}
+.mortgage_tab > div {
+  position: absolute;
+  left: 12.5%;
+  bottom: 0.16rem;
+  display: inline-block;
+  width: 8%;
+  border-bottom: 0.04rem solid #5facfb;
+}
+
+.contents {
+  position: absolute;
+  top: 0;
+  left: auto;
+  bottom: 1.547rem;
+  overflow: auto;
+}
+
+.swiper1 .swiper-slide {
+  height: 6.24rem;
+  background: rgba(199, 199, 199, 0.1);
+}
+.swiper1 .swiper-pagination {
+  text-align: right;
+  padding-right: 0.5rem;
+}
+
+.buildings_title {
+  width: 8.827rem;
+  margin: 0 auto;
+  padding: 0.52rem 0 0.373rem 0;
+  border-bottom: 0.013rem solid #e5e5e5;
+}
+.buildings_title > h3 {
+  width: 100%;
+  height: 0.7rem;
+  font-size: 0.533rem;
+}
+.buildings_title > div:nth-child(2) {
+  display: flex;
+  margin: 0.25rem 0;
+}
+.buildings_title > div:nth-child(2) > div {
+  color: #666666;
+  font-size: 0.32rem;
+  margin-right: 0.133rem;
+}
+.buildings_title > div:nth-child(3) {
+  display: flex;
+}
+.buildings_title > div:nth-child(3) > div {
+  color: #999999;
+  font-size: 0.267rem;
+  background-color: #f5f5f5;
+  border-radius: 0.027rem;
+  margin-right: 0.267rem;
+  padding: 0.08rem 0.107rem;
+}
+.buildings_title > div:nth-child(3) > .sell {
+  /*在售*/
+  color: #ffffff;
+  background-color: #0099ff;
+}
+.buildings_title > div:nth-child(3) > .waiting {
+  /*待售*/
+  color: #ffffff;
+  background-color: #ffb956;
+}
+
+.situation {
+  width: 8.84rem;
+  margin: 0 auto;
+  padding-top: 0.373rem;
+}
+.situation > div {
+  display: flex;
+  align-items: center;
+}
+.situation > div > div:nth-child(1) {
+  color: #999999;
+  font-size: 0.4rem;
+}
+.situation > div:nth-child(1) > div:nth-child(2) {
+  color: #f9351a;
+  font-size: 0.4rem;
+}
+.situation > div:nth-child(2) > div:nth-child(2), .situation > div:nth-child(3) > div:nth-child(2) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.situation > div:nth-child(2) > div:nth-child(2) > p, .situation > div:nth-child(3) > div:nth-child(2) > p {
+  font-size: 0.4rem;
+}
+.situation > div:nth-child(2) > div:nth-child(2) > i, .situation > div:nth-child(3) > div:nth-child(2) > i {
+  color: #999999;
+  font-size: 0.55rem;
+}
+.situation > div:nth-child(2) {
+  margin: 0.32rem 0;
+}
+.situation > div:nth-child(2) > div:nth-child(1) {
+  width: 24%;
+}
+.situation > div:nth-child(2) > div:nth-child(2) {
+  width: 76%;
+}
+.situation > div:nth-child(3) {
+  margin: 0.12rem 0 0.413rem 0;
+}
+.situation > div:nth-child(3) > div:nth-child(1) {
+  width: 16%;
+}
+.situation > div:nth-child(3) > div:nth-child(2) {
+  width: 84%;
+}
+
+.btn1 {
+  width: 8.827rem;
+  height: 1.067rem;
+  display: block;
+  margin: 0 auto;
+  color: #0099ff;
+  font-size: 0.373rem;
+  background-color: rgba(0, 153, 255, 0.3);
+  border-radius: 0.053rem;
+  border: none;
+}
+
+.scrolls {
+  width: 9.52rem;
+  height: 1.333rem;
+  margin: 0.533rem auto 0.56rem;
+  box-shadow: 0rem 0.013rem 0.08rem 0rem rgba(153, 153, 153, 0.2);
+  border-radius: 0.027rem;
+  display: flex;
+  align-items: center;
+}
+.scrolls > div:nth-child(1) {
+  padding: 0.213rem 0.147rem;
+  color: #ffffff;
+  font-size: 0.32rem;
+  white-space: nowrap;
+  background: url(../../img/latests.png);
+  background-size: 100% 100%;
+}
+.scrolls > div:nth-child(2) {
+  width: 7.6rem;
+  height: 1.1rem;
+  overflow: hidden;
+}
+
+.box {
+  height: 1.1rem;
+  overflow: hidden;
+}
+.box > .ul1 {
+  height: 100%;
+}
+.box > .ul1 > li {
+  height: 100%;
+  padding: 0 0.1rem 0 0.32rem;
+  font-size: 0.373rem;
+}
+.box > .ul1 > .flexk {
+  display: flex;
+  align-items: center;
+}
+
+.ul1 {
+  height: 100%;
+}
+.ul1 > li {
+  height: 100%;
+  padding: 0 0.1rem 0 0.32rem;
+  font-size: 0.373rem;
+}
+.ul1 > .flexk {
+  display: flex;
+  align-items: center;
+}
+
+.beyond {
+  display: none;
+}
+
+.door_box {
+  width: 9.2rem;
+  margin: 0 auto;
+}
+.door_box > div:nth-child(1) {
+  padding: 0.387rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.door_box > div:nth-child(1) > h3 {
+  font-size: 0.48rem;
+}
+.door_box > div:nth-child(1) > div {
+  color: #999999;
+  font-size: 0.32rem;
+}
+.door_box > div:nth-child(1) > div > i {
+  color: #999999;
+}
+
+.doors {
+  display: flex;
+  justify-content: space-between;
+}
+
+.door {
+  width: 4.18rem;
+}
+.door > img {
+  width: 2.88rem;
+  height: 3.053rem;
+  margin-left: 1.3rem;
+}
+.door > div:nth-child(2) {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.533rem;
+}
+.door > div:nth-child(2) > h3 {
+  font-size: 0.4rem;
+}
+.door > div:nth-child(2) > div {
+  color: #999999;
+  font-size: 0.267rem;
+  background-color: #f5f5f5;
+  border-radius: 0.027rem;
+  margin-right: 0.267rem;
+  padding: 0.055rem 0.12rem;
+}
+.door > div:nth-child(2) > .sell {
+  /*在售*/
+  color: #0099ff;
+  background-color: rgba(0, 153, 255, 0.3);
+}
+.door > div:nth-child(2) > .waiting {
+  /*待售*/
+  color: #ffb956;
+  background-color: rgba(255, 185, 86, 0.3);
+}
+.door > div:nth-child(3) {
+  display: flex;
+  margin: 0.253rem 0;
+}
+.door > div:nth-child(3) > div {
+  margin-right: 0.2rem;
+}
+.door > div:nth-child(4) {
+  color: #f9351a;
+  font-size: 0.4rem;
+}
+
+.surrounding_title {
+  margin-top: 0.854rem;
+  padding: 0.093rem 0.4rem;
+  font-size: 0.48rem;
+}
+
+.swiper2 {
+  overflow: hidden;
+}
+.swiper2 .swiper-slide {
+  display: flex;
+  justify-content: center;
+  padding: 0.36rem 0 0.36rem 0.4rem;
+}
+.swiper2 .act {
+  color: #0099ff;
+}
+
+#container {
+  width: 10rem;
+  height: 5.107rem;
+}
+
+.anchorBL {
+  /*去除百度地图的logo*/
+  display: none;
+}
+
+.distance_box {
+  max-height: 3.2rem;
+  padding: 0.26rem 0.4rem;
+  overflow: hidden;
+}
+.distance_box > li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.2rem 0;
+}
+.distance_box > li > div {
+  font-size: 0.373rem;
+}
+.distance_box > li > div:nth-child(1) {
+  color: #999999;
+}
+.distance_box > li > div:nth-child(1) > div {
+  display: inline-block;
+  max-width: 6.5rem;
+  color: #999999;
+}
+.distance_box > li > div:nth-child(1) > div > div {
+  display: inline-block;
+  white-space: nowrap;
+}
+.distance_box > li > div:nth-child(1) > div > div:nth-child(2) {
+  color: #999999;
+}
+.distance_box > li > div:nth-child(2) {
+  color: #999999;
+}
+.distance_box > li span {
+  color: #999999;
+}
+
+.assort {
+  width: 9.2rem;
+  height: 1.067rem;
+  margin: 0 auto;
+  color: #0099ff;
+  font-size: 0.373rem;
+  outline: none;
+  border: none;
+  border-radius: 0.053rem;
+  background-color: rgba(0, 153, 255, 0.3);
+}
+
+.review_title {
+  width: 9.2rem;
+  padding: 0.387rem 0 0.32rem 0;
+  margin: 0.58rem auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.review_title > h3 {
+  font-size: 0.48rem;
+}
+.review_title > div {
+  color: #999999;
+  font-size: 0.32rem;
+}
+.review_title > div > i {
+  color: #999999;
+}
+
+.review {
+  padding: 0.4rem 0;
+}
+
+.comments_title {
+  height: 0.96rem;
+  padding: 0 0.4rem;
+  display: flex;
+  justify-content: space-between;
+}
+.comments_title > div:nth-child(1) img {
+  width: 0.96rem;
+  height: 0.96rem;
+  border-radius: 50%;
+}
+.comments_title > div:nth-child(1) span {
+  display: inline-block;
+  width: 4rem;
+  height: 100%;
+  font-size: 0.4rem;
+  line-height: 0.96rem;
+  margin-left: 0.267rem;
+}
+.comments_title > div:nth-child(2) {
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+.comments_title > div:nth-child(2) > div:nth-child(1) {
+  max-width: 1.3rem;
+  height: 100%;
+  font-size: 0.32rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding-bottom: 0.13rem;
+}
+.comments_title > div:nth-child(2) > div:nth-child(2) {
+  width: 0.7rem;
+  height: 1rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 0.2rem;
+}
+.comments_title > div:nth-child(2) > div:nth-child(2) > img {
+  width: 0.5rem;
+}
+.comments_title > div:nth-child(2) > .act {
+  color: #f9351a;
+}
+
+.comments_content {
+  padding: 0.493rem 0.4rem 0.373rem 0.4rem;
+  font-size: 0.373rem;
+}
+
+.comments_img {
+  width: 100%;
+  padding: 0 0.2135rem 0.147rem 0.2135rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+.comments_img > li {
+  width: 3.066rem;
+  text-align: center;
+  padding-bottom: 0.253rem;
+}
+.comments_img > li > img {
+  width: 2.693rem;
+  height: 2.693rem;
+}
+
+.comments_time {
+  color: #999999;
+  font-size: 0.32rem;
+  padding: 0 0.4rem;
+}
+
+.recommended {
+  padding: 0.95rem 0.4rem 0.52rem 0.4rem;
+  font-size: 0.48rem;
+}
+
+.swiper3, .swiper4 {
+  margin-left: 0.4rem !important;
+}
+.swiper3 .swiper-slide img, .swiper4 .swiper-slide img {
+  width: 4.427rem;
+  height: 2.96rem;
+}
+.swiper3 .swiper-slide h4, .swiper4 .swiper-slide h4 {
+  width: 100%;
+  height: 0.5rem;
+  font-size: 0.4rem;
+  margin-top: 0.307rem;
+}
+.swiper3 .swiper-slide div:nth-child(3), .swiper4 .swiper-slide div:nth-child(3) {
+  color: #999999;
+  font-size: 0.32rem;
+  margin: 0.2rem 0;
+}
+.swiper3 .swiper-slide div:nth-child(4), .swiper4 .swiper-slide div:nth-child(4) {
+  color: #f9351a;
+  font-size: 0.373rem;
+  margin-top: 0.067rem;
+}
+
+.footers {
+  height: 1.547rem;
+  z-index: 96;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 0rem -0.013rem 0.01rem 0rem #e5e5e5;
+}
+.footers > input {
+  width: 4.467rem;
+  height: 0.96rem;
+  color: #ffffff;
+  font-size: 0.4rem;
+  border: none;
+  border-radius: 0.053rem;
+}
+.footers > input:nth-child(1) {
+  background-color: #f9351a;
+}
+.footers > input:nth-child(2) {
+  background-color: #0099ff;
+}
+
+.bubbles {
+  box-sizing: border-box;
+  position: absolute;
+  display: inline-block;
+  padding: 10px 30px;
+  white-space: nowrap;
+  background: url(../../img/bubbles.png) no-repeat;
+  background-size: 100% 100%;
+}
+
+/*# sourceMappingURL=buildings.css.map */

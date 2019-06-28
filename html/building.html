@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=yes"/>
+		<title>中原楼市</title>
+		<link rel="stylesheet" type="text/css" href="css/building.css"/>
+		<script src="../js/js.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/data.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/building.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<header class="headers">
+			<div class="search">
+				<i class="iconfont" onclick="history.go(-1)">&#xe632;</i>
+				<input type="text" class="iconfont" placeholder="&#xe647; 输入楼盘名/区域" value=""/>
+				<i class="iconfont icon-location"></i>
+			</div>
+			<div class="choose">
+				<div class="tab_title">
+					<div>
+						区域<i class="iconfont">&#xe627;</i>
+					</div>
+					<div>
+						价格<i class="iconfont">&#xe627;</i>
+					</div>
+					<div>
+						户型<i class="iconfont">&#xe627;</i>
+					</div>
+					<div>
+						筛选<i class="iconfont">&#xe627;</i>
+					</div>
+				</div>
+				<div class="quick">
+					<div>在售</div>
+					<div>品质楼盘</div>
+					<div>热门楼盘</div>
+					<div>优惠楼盘</div>
+				</div>
+			</div>
+		</header>
+		<section class="contents">
+			<!--<div href="buildings.html" class="building_box">
+				<img src="" class="imgks" alt="" />
+				<div>
+					<h3>中岳俪景湾</h3>
+					<p>金岱产业园区临近在建地铁4号线</p>
+					<div class="environment">
+						<div>
+							<div>住宅</div>
+							<div>管城回族区</div>
+							<div>管南区域</div>
+						</div>
+						<div>建面73-124㎡</div>
+					</div>
+					<div class="situation">
+						<div class="waiting">待售</div>
+						<div>小户型</div>
+						<div>车位充足</div>
+						<div>绿化率高</div>
+					</div>
+					<div>14000元/平</div>
+				</div>
+			</div>
+			<div href="buildings.html" class="building_box">
+				<img src="" class="imgks" alt="" />
+				<div>
+					<h3>中岳俪景湾</h3>
+					<p>金岱产业园区临近在建地铁4号线</p>
+					<div class="environment">
+						<div>
+							<div>住宅</div>
+							<div>管城回族区</div>
+							<div>管南区域</div>
+						</div>
+						<div>建面73-124㎡</div>
+					</div>
+					<div class="situation">
+						<div class="sell">在售</div>
+						<div>小户型</div>
+						<div>车位充足</div>
+						<div>绿化率高</div>
+					</div>
+					<div>14000元/平</div>
+				</div>
+			</div>
+			<div href="buildings.html" class="building_box">
+				<img src="" class="imgks" alt="" />
+				<div>
+					<h3>中岳俪景湾</h3>
+					<p>金岱产业园区临近在建地铁4号线</p>
+					<div class="environment">
+						<div>
+							<div>住宅</div>
+							<div>管城回族区</div>
+							<div>管南区域</div>
+						</div>
+						<div>建面73-124㎡</div>
+					</div>
+					<div class="situation">
+						<div class="">售罄</div>
+						<div>小户型</div>
+						<div>车位充足</div>
+						<div>绿化率高</div>
+					</div>
+					<div>14000元/平</div>
+				</div>
+			</div>-->
+		</section>
+		
+		
+		<div class="swiper-container swiper1">
+		  <div class="swiper-wrapper">
+		    <div class="swiper-slide tab_con1">
+				<div class="ch1">
+					<label class="region_limit"><span class="act">不限</span></label>
+					<label><span>金水区</span><input type="checkbox" name="region" value="001" /></label>
+					<label><span>二七区</span><input type="checkbox" name="region" value="002" /></label>
+					<label><span>中原区</span><input type="checkbox" name="region" value="003" /></label>
+					<label><span>郑东新区</span><input type="checkbox" name="region" value="004" /></label>
+					<label><span>管城区</span><input type="checkbox" name="region" value="005" /></label>
+					<label><span>惠济区</span><input type="checkbox" name="region" value="006" /></label>
+					<label><span>上街区</span><input type="checkbox" name="region" value="007" /></label>
+				</div>
+				<div class="btn1">
+					<input type="button" value="确定" />
+				</div>
+		    </div>
+		    <div class="swiper-slide tab_con2">
+				<div class="ch2">
+					<label class="price_limit"><span class="act">不限</span></label>
+					<label><span>8000元/㎡以下</span><input type="checkbox" name="price" value="001" /></label>
+					<label><span>8000-10000元/㎡</span><input type="checkbox" name="price" value="002" /></label>
+					<label><span>10000-12000元/㎡</span><input type="checkbox" name="price" value="003" /></label>
+					<label><span>12000-15000元/㎡</span><input type="checkbox" name="price" value="004" /></label>
+					<label><span>15000元-18000元/㎡</span><input type="checkbox" name="price" value="005" /></label>
+					<label><span>18000元-20000元/㎡</span><input type="checkbox" name="price" value="006" /></label>
+					<label><span>20000元-25000元/㎡</span><input type="checkbox" name="price" value="007" /></label>
+				</div>
+				<div class="btn2">
+					<input type="button" value="确定" />
+				</div>
+		    </div>
+		    <div class="swiper-slide tab_con3">
+				<div class="ch3">
+					<label class="door_limit"><span class="act">不限</span></label>
+					<label><span>一室</span><input type="checkbox" name="door" value="001" /></label>
+					<label><span>二室</span><input type="checkbox" name="door" value="002" /></label>
+					<label><span>三室</span><input type="checkbox" name="door" value="003" /></label>
+					<label><span>四室</span><input type="checkbox" name="door" value="004" /></label>
+					<label><span>五室以上</span><input type="checkbox" name="door" value="005" /></label>
+				</div>
+				<div class="btn3">
+					<input type="button" value="确定" />
+				</div>
+		    </div>
+		    <div class="swiper-slide tab_con4">
+		    	<div class="ch4">
+		    		<div class="conditions">
+		    			<div>面积 (㎡)</div>
+		    			<div class="cond conditions_area">
+		    				<div>
+		    					<div>50㎡以下</div>
+		    				</div>
+		    				<div>
+		    					<div>50-70㎡</div>
+		    				</div>
+		    				<div>
+		    					<div>70-90㎡</div>
+		    				</div>
+		    				<div>
+		    					<div>90-110㎡</div>
+		    				</div>
+		    				<div>
+		    					<div>110-130㎡</div>
+		    				</div>
+		    				<div>
+		    					<div>130-150㎡</div>
+		    				</div>
+		    				<div>
+		    					<div>150-200㎡</div>
+		    				</div>
+		    				<div>
+		    					<div>200㎡以上</div>
+		    				</div>
+		    				<p></p>
+		    			</div>
+		    		</div>
+		    		<div class="conditions">
+		    			<div>物业类型</div>
+		    			<div class="cond conditions_property">
+		    				<div>
+		    					<div>住宅</div>
+		    				</div>
+		    				<div>
+		    					<div>别墅</div>
+		    				</div>
+		    				<div>
+		    					<div>商住</div>
+		    				</div>
+		    				<div>
+		    					<div>商铺</div>
+		    				</div>
+		    				<div>
+		    					<div>写字楼</div>
+		    				</div>
+		    				<p></p>
+		    			</div>
+		    		</div>
+		    		<div class="conditions">
+		    			<div>楼盘特色</div>
+		    			<div class="cond conditions_features">
+		    				<div>
+		    					<div>品质楼盘</div>
+		    				</div>
+		    				<div>
+		    					<div>优惠楼盘</div>
+		    				</div>
+		    				<div>
+		    					<div>近地铁</div>
+		    				</div>
+		    				<div>
+		    					<div>小户型</div>
+		    				</div>
+		    				<div>
+		    					<div>热门楼盘</div>
+		    				</div>
+		    				<div>
+		    					<div>现房</div>
+		    				</div>
+		    				<div>
+		    					<div>低密度</div>
+		    				</div>
+		    				<div>
+		    					<div>花园洋房</div>
+		    				</div>
+		    				<p></p>
+		    			</div>
+		    		</div>
+		    		<div class="conditions">
+		    			<div>售卖状态</div>
+		    			<div class="cond conditions_state">
+		    				<div>
+		    					<div>在售</div>
+		    				</div>
+		    				<div>
+		    					<div>待售</div>
+		    				</div>
+		    				<div>
+		    					<div>售罄</div>
+		    				</div>
+		    				<p></p>
+		    			</div>
+		    		</div>
+		    	</div>
+				<div class="btn4">
+					<input type="button" value="清空" />
+					<input type="button" value="确定" />
+				</div>
+		    </div>
+		  </div>
+		</div>
+	</body>
+</html>

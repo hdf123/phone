@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=yes"/>
+		<title>中原楼市</title>
+		<link rel="stylesheet" type="text/css" href="css/review.css"/>
+		<script src="../js/js.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/review.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<header class="headers">
+			<div class="lefts" onclick="history.go(-1)">取消</div>
+			<div class="centers">楼盘点评</div>
+			<div class="rights">发表</div>
+		</header>
+		<section class="contents">
+			<div class="review_box">
+				<textarea class="puba" placeholder="来吧，畅所欲言吧..." maxlength="200" value="" ></textarea>
+				<div></div>
+			</div>
+			<div class="image_box">
+				<!--<div class="imgs">
+					<img src="" class="imgas" alt="" />
+					<img src="../../img/delete.png" class="deletes" alt="" />
+				</div>-->
+				<div class="images">
+	                <label>
+	                	<i class="iconfont">&#xe7cf;</i>
+	                    <input type="file" class="imgFile" id="studyPhoto1" accept="image/*" multiple >
+	                </label>
+	            </div>
+			</div>
+		</section>
+		
+
+<script type="text/javascript">
+	for(var i=0;i<100;i++){
+//		$(".contents").append(`<div>${i+1}</div>`);
+	}
+</script>
+	</body>
+</html>
