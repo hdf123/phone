@@ -21,7 +21,7 @@
 			<div class="swiper-container swiper1">
 			  	<div class="swiper-wrapper">
 			    	<div class="swiper-slide">
-			    		<img src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/b51889744910df7979a2f672434da84e.jpg?thumb=1&w=720&h=360" class="imgks" alt="" />
+			    		<img src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/b51889744910df7979a2f672434da84e.jpg?thumb=1&w=720&h=360" alt="" />
 			    	</div>
 			    	<div class="swiper-slide">slider2</div>
 			    	<div class="swiper-slide">slider3</div>
@@ -37,14 +37,21 @@
 
 <script type="text/javascript">
 	$(function(){
+		var yz_photo=JSON.parse(localStorage.getItem('yz_photo'));
+		console.log(yz_photo);
+		if(yz_photo==null){
+			yz_photo=0;
+		}
+		console.log(yz_photo);
 		var mySwiper = new Swiper('.swiper1', {
 			observer:true,//修改swiper自己或子元素时，自动初始化swiper
 			observeParents:true,//修改swiper的父元素时，自动初始化swiper
+			initialSlide :yz_photo,//初始化索引
 			pagination : '.swiper-pagination',
 			paginationType : 'fraction'
 		})
 		$(".rights").click(function(){
-			location.href="door.html"
+			location.href="photo.html"
 		})
 	})
 </script>

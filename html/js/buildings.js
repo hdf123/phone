@@ -42,64 +42,97 @@ $(function(){
 		observeParents:true,
 		slidesPerView :2.2,
 		spaceBetween: 16,
+		onClick: function(swiper) {
+			var ind=swiper.clickedSlide.attributes["ind"].nodeValue;
+			console.log(ind);
+			localStorage.setItem('yz_building',JSON.stringify(data[ind]));
+//	    	location.href="buildings.html";
+		} 
 	})
 	var mySwiper4= new Swiper('.swiper4', {
 		observer:true,
 		observeParents:true,
 		slidesPerView :2.2,
 		spaceBetween: 16,
+		onClick: function(swiper) {
+			var ind=swiper.clickedSlide.attributes["ind"].nodeValue;
+			console.log(ind);
+			localStorage.setItem('yz_building',JSON.stringify(data[ind]));
+//	    	location.href="buildings.html";
+		} 
 	})
 //选项卡切换
 	var tabIndex = 0;
 	var tabBar = function() {
 		var aTab = $('.mortgage_tab>li');
-		var oLine = $('.mortgage_tab>div');
 		aTab.on('click', function() {
-			tabIndex = $(this).index();
-			var mm=12.5+(100/3*tabIndex);
+			var tabIndex=$(this).index();
+			var mm=8.5+(100/4*tabIndex);
+			var oLine = $('.mortgage_tab>div');
 			oLine.animate({ 'left': mm + '%' }, 300, function() {
-				
+				console.log(tabIndex);
+				if(tabIndex==0){
+					$(".contents").scrollTop(0)
+				}else if(tabIndex==1){
+					$(".contents").scrollTop(790)
+				}else if(tabIndex==2){
+					$(".contents").scrollTop(810)
+				}else{
+					$(".contents").scrollTop(1277)
+				}
 			});
+
 		})
 	}
 	tabBar();
 	/**
 	 * 滚动显示
 	 */
-	
+	console.log("基础信息------------"+$(".swiper1").position().top);
+	console.log("户型------------"+$(".door_box").position().top);
+	console.log("周边------------"+$(".surrounding_title").position().top);
+	console.log("点评------------"+$(".review_title").position().top);
+	$(".headersk").hide();
 	$(".contents").scroll(function(){
+		$(".headersk").show();
 		console.log($(".contents").scrollTop());
-		if($(".contents").scrollTop()>0&&$(".contents").scrollTop()<300){
-			$(".headers").animate({opacity: '0'});
-			$(".headersk").animate({opacity: '0.1'},300);
-		}else if($(".contents").scrollTop()>300){
-			$(".headersk").stop(true,true);
-			$(".headersk").animate({opacity: '1'},300);
+		var sk=$(".contents").scrollTop();
+		if(sk<530){
+			tabIndex=0;
+			var mm=8.5+(100/4*tabIndex);
+			var oLine = $('.mortgage_tab>div');
+			oLine.stop(true,true).animate({ 'left': mm + '%' }, 300)
+		}else if(sk>530&&sk<810){
+			tabIndex=1;
+			var mm=8.5+(100/4*tabIndex);
+			var oLine = $('.mortgage_tab>div');
+			oLine.stop(true,true).animate({ 'left': mm + '%' }, 300)
+		}else if(sk>810&&sk<1270){
+			tabIndex=2;
+			var mm=8.5+(100/4*tabIndex);
+			var oLine = $('.mortgage_tab>div');
+			oLine.stop(true,true).animate({ 'left': mm + '%' }, 300)
+		}else if(sk>1270){
+			tabIndex=3;
+			var mm=8.5+(100/4*tabIndex);
+			var oLine = $('.mortgage_tab>div');
+			oLine.stop(true,true).animate({ 'left': mm + '%' }, 300)
 		}
-		if($(".contents").scrollTop()<=300&&$(".contents").scrollTop()>0){
-			$(".headersk").animate({opacity: '0.1'});
-			
-		}
-		if($(".contents").scrollTop()<=0){
-			console.log("-----");
-			$(".headersk").stop().animate({opacity:'0'},function(){
-				console.log("-----");
-				$(".headers").animate({opacity: '1'});
+		
+		
+		if($(".contents").scrollTop()>1){
+			$(".headers").hide();
+			$(".headersk").stop(true,true).animate({opacity:$(".contents").scrollTop()/150});
+		}else{
+			$(".headersk").animate({opacity:$(".contents").scrollTop()/150},function(){
+				$(".headersk").hide();
 			});
+			$(".headers").show();
 		}
 	})
-//	$(".contents").scroll(function(){
-//		console.log($(".contents").scrollTop());
-//		if($(".contents").scrollTop()>0&&$(".contents").scrollTop()<300) $(".headers").stop(true,true).animate({opacity: '0'},1000,function(){
-//			$(".headersk").stop(true,true).animate({opacity: '0.1'});
-//		});
-//		else if($(".contents").scrollTop()>300) $(".headersk").stop(true,true).animate({opacity: '1'});
-//		if($(".contents").scrollTop()<=0){
-//			$(".headersk").stop(true,true).animate({opacity:'0'},300,function(){
-//				$(".headers").stop(true,true).animate({opacity: '1'});
-//			});
-//		}
-//	})
+	$(".conters").click(function(){
+		alert(111)
+	})
 	/**
 	 * 更多信息
 	 */

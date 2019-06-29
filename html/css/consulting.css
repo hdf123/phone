@@ -11,8 +11,8 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-.imgks {
-  display: inline-block;
+img {
+  display: block;
   background: rgba(238, 238, 238, 0.5);
 }
 

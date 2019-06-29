@@ -128,7 +128,7 @@ $(function(){
 	    var dom = '';
 	    for (var i = 0; i <10; i++) {
 	        dom +=`<div class="building_box">
-					<img src="" class="imgks" alt="" />
+					<img src="" alt="" />
 					<div>
 						<div class="titls">
 							<h3>${i+1}中岳俪景湾中岳俪景湾中岳俪景湾</h3>

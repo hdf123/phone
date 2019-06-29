@@ -14,7 +14,7 @@ $(function(){
 	$("body").mLoading("show");
 	setTimeout(function() {
         $("body").mLoading("hide");
-    },300)
+    },500)
 	$(document).ajaxStop(function(){
 		console.log("所有 AJAX 请求已完成");
 		setTimeout(function() {
@@ -65,13 +65,18 @@ $(function(){
 	/**
 	 * 搜索
 	 */
+	$('.search').click(function (){
+		location.href="search.html"
+	});
+	/*
 	$('.search').on('keypress', function (e){
 	    var keycode = e.keyCode;
 	    if(keycode == '13') {
 	    	e.preventDefault();
-			alert($(this).val())
+	    	location.href="search.html"
 	    }
 	});
+	*/
 	/**
 	 * 咨询
 	 */
@@ -82,7 +87,7 @@ $(function(){
 								<div>${consulting[i].title}</div>
 								<p>${consulting[i].time}</p>
 							</div>
-							<img src=${consulting[i].img} class="imgks" alt="" />
+							<img src=${consulting[i].img} alt="" />
 						</div>`;
 	}
 	$(".consulting").append(dom);
@@ -99,7 +104,7 @@ $(function(){
 		});
 		setTimeout(function() {
 	        $("body").mLoading("hide");
-	    }, 3000)
+	    }, 1000)
 	})
 	//查看更多
 	$(".updates>div:eq(1)").click(function(){
@@ -115,8 +120,8 @@ $(function(){
 		for(j in sw1[i].region){
 			sk+=sw1[i].region[j]+" ";
 		}
-		sws+=`<div class="swiper-slide">
-				<img src=${sw1[i].img} class="imgks" alt="" />
+		sws+=`<div class="swiper-slide" ind=${i}>
+				<img src=${sw1[i].img} alt="" />
 				<p>${sw1[i].name}</p>
 				<p>${sk}</p>
 			</div>`;
@@ -128,6 +133,11 @@ $(function(){
     	spaceBetween :10,
 		observer:true,
     	observeParents:true,
+		onClick: function(swiper) {
+			var ind=swiper.clickedSlide.attributes["ind"].nodeValue;
+			localStorage.setItem('yz_building',JSON.stringify(data[ind]));
+	    	location.href="buildings.html";
+		} 
 	})
 	var mySwiper5 = new Swiper('.swiper5', {
 		slidesPerView :2.6,
@@ -166,7 +176,7 @@ $(function(){
 				as=`<div class="state">${data[i].state}</div>`;
 			}
 			dom+=`<div class="buildings">
-									<img src=${data[i].img} class="imgks" alt="" />
+									<img src=${data[i].img} alt="" />
 									<div>
 										<div>${data[i].name}</div>
 										<div class="region">

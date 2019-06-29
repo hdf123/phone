@@ -20,7 +20,7 @@
     }
 }
 .headersk{
-    width:100%;
+    width:10rem;
     background:white;
     z-index:96;
     position: fixed;
@@ -63,7 +63,7 @@
     }
     >div{
         position: absolute;
-        left:12.5%;
+        left:8.5%;//记得修改js中的位置
         bottom: 0.16rem;
         display: inline-block;
         width:8%;
@@ -71,6 +71,7 @@
     }
 }
 .contents{
+    max-width:10rem;
 //  padding-bottom:1.547rem;
     position: absolute;
     top:0;
@@ -188,7 +189,7 @@
     margin:0 auto;
     color:$colorc;
     font-size:$fontsb;
-    background-color:$backgroundb;
+    background-color: #f9f9f9;
     border-radius: 0.053rem;
     border:none;
 }

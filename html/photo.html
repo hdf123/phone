@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=yes"/>
+		<title>中原楼市</title>
+		<link rel="stylesheet" type="text/css" href="css/photo.css"/>
+		<script src="../js/js.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<header class="headers">
+			<i class="iconfont" onclick="history.go(-1)">&#xe632;</i>
+			<div>楼盘相册</div>
+		</header>
+		<section class="contents">
+			<ul class="lists">
+				<li>
+					<p>4室2厅2卫 建面184㎡ 朝南 在售</p>
+					<img src="" alt="" />
+				</li>
+				<li>
+					<p>4室2厅2卫 建面184㎡ 朝南 在售</p>
+					<img src="" alt="" />
+				</li>
+				<li>
+					<p>人，总希望在精神上寻求满足、享受快乐，在心灵上放松自己。人，需要不断整理心情，让自己轻松向往。 这个世界童真最幸福。随着年龄的增长有了追求、有了追求烦恼就多，人生的经历就是从烦恼中开始、在烦恼中度过、再到消 除烦恼的过程。</p>
+					<img src="" alt="" />
+				</li>
+				<li>
+					<p>人，总希望在精神上寻求满足、享受快乐，在心灵上放松自己。人，需要不断整理心情，让自己轻松向往。 这个世界童真最幸福。随着年龄的增长有了追求、有了追求烦恼就多，人生的经历就是从烦恼中开始、在烦恼中度过、再到消 除烦恼的过程。</p>
+					<img src="" alt="" />
+				</li>
+				<li>
+					<p>人，总希望在精神上寻求满足、享受快乐，在心灵上放松自己。人，需要不断整理心情，让自己轻松向往。 这个世界童真最幸福。随着年龄的增长有了追求、有了追求烦恼就多，人生的经历就是从烦恼中开始、在烦恼中度过、再到消 除烦恼的过程。</p>
+					<img src="" alt="" />
+				</li>
+				<li>
+					<p>人，总希望在精神上寻求满足、享受快乐，在心灵上放松自己。人，需要不断整理心情，让自己轻松向往。 这个世界童真最幸福。随着年龄的增长有了追求、有了追求烦恼就多，人生的经历就是从烦恼中开始、在烦恼中度过、再到消 除烦恼的过程。</p>
+					<img src="" alt="" />
+				</li>
+				<li>
+					<p>4室2厅2卫 建面184㎡ 朝南 在售</p>
+					<img src="" alt="" />
+				</li>
+			</ul>
+		</section>
+<script src="js/photo.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	$(function(){
+		$(".lists>li").click(function(){
+			localStorage.setItem('yz_photo',JSON.stringify($(this).index()));
+			location.href="preview.html";
+		})
+	})
+</script>
+	</body>
+</html>

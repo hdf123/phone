@@ -247,7 +247,7 @@ $(function(){
 	    		states=`<div>待售</div>`;
 	    	}
 	        dom +=`<div class="building_box">
-				<img src=${data[i].img} class="imgks" alt="" />
+				<img src=${data[i].img} alt="" />
 				<div>
 					<h3>${data[i].name}</h3>
 					<p>${data[i].address}</p>
