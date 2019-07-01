@@ -516,6 +516,9 @@ a {
   display: flex;
   justify-content: space-between;
 }
+.comments_title > div:nth-child(1) {
+  display: flex;
+}
 .comments_title > div:nth-child(1) img {
   width: 0.96rem;
   height: 0.96rem;
