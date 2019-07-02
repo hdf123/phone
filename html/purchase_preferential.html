@@ -14,76 +14,86 @@
 		<header class="headers">
 			<i class="iconfont lefts" onclick="history.go(-1)">&#xe632;</i>
 			<div class="centers">
-				<i class="iconfont">&#xe647;</i>
+				<i class="iconfont">&#xe641;</i>
 				<input type="text" class="search" placeholder=" 输入楼盘名或地址" />
 			</div>
 			<i class="iconfont rights">&#xe630;</i>
 		</header>
 		<section class="contents">
-			<div class="building_box">
-				<img src="" alt="" />
-				<div class="building">
-					<div>
-						<h5>亚星盛世</h5>
+			<ul class="building_box">
+				<li >
+					<div class="building_title">
+						<div>
+							<img src="" alt="" />
+							<div>
+								<h3>雅居乐天域</h3>
+								<div>优惠：三千抵两万</div>
+							</div>
+						</div>
 						<div>
 							<div>158人</div>
 							<div>已报名</div>
 						</div>
 					</div>
-					<div>
-						<div>优惠：</div>
-						<div>三千抵两万</div>
+					<p class="introduce">建面105-165m²/郑州市中州大道与祥和路交汇处</p>
+					<div class="images">
+						<img src="" alt="" />
+						<img src="../img/zhidings.png" alt="" />
 					</div>
-					<div>建面78-154m²/二七-嵩山南路和长江路交汇处</div>
-					<div>
-						<input type="button" class="btna" value="联系客服" />
-						<input type="button" class="btnb" value="我要报名" />
+					<div class="contact">
+						<img src="../img/information.png" alt="" />
+						<img src="../img/phone.png" alt="" />
 					</div>
-				</div>
-				<img src="../img/zhiding.png" alt="" />
-			</div>
-			<div class="building_box">
-				<img src="" alt="" />
-				<div class="building">
-					<div>
-						<h5>亚星盛世</h5>
+				</li>
+				<li >
+					<div class="building_title">
+						<div>
+							<img src="" alt="" />
+							<div>
+								<h3>雅居乐天域</h3>
+								<div>优惠：三千抵两万</div>
+							</div>
+						</div>
 						<div>
 							<div>158人</div>
 							<div>已报名</div>
 						</div>
 					</div>
-					<div>
-						<div>优惠：</div>
-						<div>三千抵两万</div>
+					<p class="introduce">建面105-165m²/郑州市中州大道与祥和路交汇处</p>
+					<div class="images">
+						<img src="" alt="" />
+						<img src="../img/zhidings.png" alt="" />
 					</div>
-					<div>建面78-154m²/二七-嵩山南路和长江路交汇处</div>
-					<div>
-						<input type="button" value="联系客服" />
-						<input type="button" value="我要报名" />
+					<div class="contact">
+						<img src="../img/phone.png" alt="" />
+						<img src="../img/information.png" alt="" />
 					</div>
-				</div>
-			</div>
-			<div class="building_box">
-				<img src="" alt="" />
-				<div class="building">
-					<div>
-						<h5>亚星盛世</h5>
+				</li>
+				<li >
+					<div class="building_title">
+						<div>
+							<img src="" alt="" />
+							<div>
+								<h3>雅居乐天域</h3>
+								<div>优惠：三千抵两万</div>
+							</div>
+						</div>
 						<div>
 							<div>158人</div>
 							<div>已报名</div>
 						</div>
 					</div>
-					<div>
-						<div>优惠：</div>
-						<div>三千抵两万</div>
+					<p class="introduce">建面105-165m²/郑州市中州大道与祥和路交汇处</p>
+					<div class="images">
+						<img src="" alt="" />
+						<img src="../img/zhidings.png" alt="" />
 					</div>
-					<div>建面78-154m²/二七-嵩山南路和长江路交汇处</div>
-					<div>
-						<input type="button" value="联系客服" />
-						<input type="button" value="我要报名" />
+					<div class="contact">
+						<img src="../img/phone.png" alt="" />
+						<img src="../img/information.png" alt="" />
 					</div>
-				</div>
-			</div>
+				</li>
+			</ul>
 		</section>
 		<div class="bounced_box">
 			<div class="bounced">
@@ -103,7 +113,7 @@
 		$('.search').click(function (){
 			location.href="search.html"
 		});
-		$(".btnb").click(function(){
+		$(".contact>img:eq(1)").click(function(){
 			$(".bounced_box").show();
 		})
 		$(".bounced_box").hide();
@@ -125,10 +135,10 @@
 		//加载数据
 		var LoadingDataFn = function() {
 		    var dom = '';
-		    for (var i = 0; i < 100; i++) {
+		    for (var i = 0; i <50; i++) {
 		        dom +=`<div>${i+1}</div>`;
 		    }
-		    //$('.contents').append(dom);
+		    $('.contents').append(dom);
 		    off_on = true;
 		};
 		//初始化， 第一次加载

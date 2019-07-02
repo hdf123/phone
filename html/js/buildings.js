@@ -46,7 +46,7 @@ $(function(){
 			var ind=swiper.clickedSlide.attributes["ind"].nodeValue;
 			console.log(ind);
 			localStorage.setItem('yz_building',JSON.stringify(data[ind]));
-//	    	location.href="buildings.html";
+	    	location.href="buildings.html";
 		} 
 	})
 	var mySwiper4= new Swiper('.swiper4', {
@@ -58,7 +58,7 @@ $(function(){
 			var ind=swiper.clickedSlide.attributes["ind"].nodeValue;
 			console.log(ind);
 			localStorage.setItem('yz_building',JSON.stringify(data[ind]));
-//	    	location.href="buildings.html";
+	    	location.href="buildings.html";
 		} 
 	})
 //选项卡切换

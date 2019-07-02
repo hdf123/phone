@@ -135,8 +135,6 @@ $(function(){
     	observeParents:true,
 		onClick: function(swiper) {
 			var ind=swiper.clickedSlide.attributes["ind"].nodeValue;
-			localStorage.setItem('yz_building',JSON.stringify(data[ind]));
-	    	location.href="buildings.html";
 		} 
 	})
 	var mySwiper5 = new Swiper('.swiper5', {
