@@ -217,10 +217,10 @@ a {
   width: auto;
   left: initial;
   right: 0.293rem;
-  background: red;
   text-align: right;
   padding: 0.05rem 0.15rem;
   border-radius: 0.2rem;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 .swiper6 .swiper-pagination-fraction .swiper-pagination-current {
   color: white;
