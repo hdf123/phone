@@ -11,10 +11,10 @@ $(function(){
 	/**
 	 * 加载动画
 	 */
-	$("body").mLoading("show");
-	setTimeout(function() {
-        $("body").mLoading("hide");
-    },500)
+//	$("body").mLoading("show");
+//	setTimeout(function() {
+//      $("body").mLoading("hide");
+//  },500)
 	$(document).ajaxStop(function(){
 		console.log("所有 AJAX 请求已完成");
 		setTimeout(function() {
@@ -33,12 +33,20 @@ $(function(){
 	var mySwiper2=new Swiper(".swiper2",{
 		loop:true,//循环
 		observer:true,
+		initialSlide :2,//初始化索引
     	observeParents:true,
 		onSlideChangeStart:function(swiper){//swiper3中使用
 	        var xiabiao=swiper.realIndex;//循环状态下获取下标
 	        $(".tabBar>li").eq(xiabiao).addClass("selecteds");
 	        $(".tabBar>li").eq(xiabiao).siblings().removeClass("selecteds");
 	   }
+	})
+	var mySwiper6 = new Swiper('.swiper6', {
+		observer:true,//修改swiper自己或子元素时，自动初始化swiper
+		observeParents:true,//修改swiper的父元素时，自动初始化swiper
+		pagination : '.swiper-pagination',
+		paginationType : 'fraction',
+    	
 	})
 	$(".tabBar>li").click(function(){
 	    var zuobiao=$(this).index();
@@ -68,34 +76,36 @@ $(function(){
 	$('.search').click(function (){
 		location.href="search.html"
 	});
-	/*
-	$('.search').on('keypress', function (e){
-	    var keycode = e.keyCode;
-	    if(keycode == '13') {
-	    	e.preventDefault();
-	    	location.href="search.html"
-	    }
-	});
-	*/
 	/**
 	 * 咨询
 	 */
 	var dom="";
 	for(i in consulting){
-		dom+=`<div class="information">
-							<div>
-								<div>${consulting[i].title}</div>
-								<p>${consulting[i].time}</p>
-							</div>
-							<img src=${consulting[i].img} alt="" />
-						</div>`;
+		dom+=`<a class="information" href="consulting.html?ind=正弘形城1号院洋房在售${i+1}号院高层优惠升级中">
+				<div>
+					<div>${consulting[i].title}</div>
+					<p>${consulting[i].time}</p>
+				</div>
+				<img src=${consulting[i].img} alt="" />
+			</a>`;
 	}
 	$(".consulting").append(dom);
 	$(".alerts").append(dom);
-	$(".preferentialk").append(dom);
     $(".swiper2").on("click",".information",function(){
     	localStorage.setItem('yz_consulting',JSON.stringify(1));
-    	location.href="consulting.html";
+    })
+    //最新优惠
+    for(var i=0;i<10;i++){
+    	$(".preferentialk").append(`<a href="consulting.html?ind=正弘形城1号院洋房在售${i+1}号院高层优惠升级中">
+							<div>正弘形城1号院洋房在售${i+1}号院高层优惠升级中</div>
+							<div>
+								<span>07-21</span>
+								<i class="iconfont">&#xe642;</i>
+							</div>
+						</a>`);
+    }
+    $(".swiper2").on("click",".preferentialk>a",function(){
+    	localStorage.setItem('yz_consulting',JSON.stringify(1));
     })
 	//刷新
 	$(".updates>div:eq(0)").click(function(){

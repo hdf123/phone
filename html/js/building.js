@@ -246,7 +246,7 @@ $(function(){
 	    	}else{
 	    		states=`<div>待售</div>`;
 	    	}
-	        dom +=`<div class="building_box">
+	        dom +=`<a href="javascript:;" class="building_box">
 				<img src=${data[i].img} alt="" />
 				<div>
 					<h3>${data[i].name}</h3>
@@ -261,7 +261,7 @@ $(function(){
 					</div>
 					<div>${data[i].price}</div>
 				</div>
-			</div>`;
+			</a>`;
 	    }
 	  $('.contents').append(dom);
 	    off_on = true;

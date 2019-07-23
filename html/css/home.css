@@ -45,7 +45,7 @@ a {
 }
 
 /*单行隐藏*/
-.yincang, .swiper4 .swiper-slide > p:nth-child(2), .swiper5 .swiper-slide > p:nth-child(2), .buildings > div > div:nth-child(1), .wdows > div, #wdows > div {
+.yincang, .preferentialk > a > div:nth-child(1), .swiper4 .swiper-slide > p:nth-child(2), .swiper5 .swiper-slide > p:nth-child(2), .buildings > div > div:nth-child(1), .wdows > div, #wdows > div {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -107,8 +107,9 @@ a {
   width: 100%;
   height: 0.853rem;
   padding: 0 0.16rem;
+  font-size: 0.32rem;
   background-color: #ffffff;
-  border-radius: 0.107rem;
+  border-radius: 0.053rem;
 }
 
 .search::-webkit-input-placeholder {
@@ -176,7 +177,7 @@ a {
   justify-content: space-between;
   padding: 0.533rem 0.4rem;
 }
-.nows > div {
+.nows > a {
   box-sizing: border-box;
   width: 44.67%;
   height: 1.813rem;
@@ -187,32 +188,47 @@ a {
   display: flex;
   justify-content: space-between;
 }
-.nows > div > div {
+.nows > a > div {
   margin-top: 0.08rem;
 }
-.nows > div > div > p:nth-child(1) {
+.nows > a > div > p:nth-child(1) {
   font-size: 0.373rem;
 }
-.nows > div > div > p:nth-child(2) {
+.nows > a > div > p:nth-child(2) {
   color: #999999;
   font-size: 0.32rem;
   margin-top: 0.14rem;
 }
-.nows > div > img {
+.nows > a > img {
   width: 1.2rem;
   height: 1.2rem;
   border-radius: 50%;
 }
 
-.preferential {
+.swiper6 {
   width: 92%;
-  border-radius: 0.053rem;
-  overflow: hidden;
-  margin: 0 auto;
+  height: 2rem;
 }
-.preferential > img {
+.swiper6 .swiper-slide > img {
   width: 100%;
   height: 100%;
+}
+.swiper6 .swiper-pagination-fraction {
+  width: auto;
+  left: initial;
+  right: 0.293rem;
+  background: red;
+  text-align: right;
+  padding: 0.05rem 0.15rem;
+  border-radius: 0.2rem;
+}
+.swiper6 .swiper-pagination-fraction .swiper-pagination-current {
+  color: white;
+  font-size: 0.293rem;
+}
+.swiper6 .swiper-pagination-fraction .swiper-pagination-total {
+  color: white;
+  font-size: 0.24rem;
 }
 
 .tabBars_box {
@@ -246,7 +262,7 @@ a {
   color: #0099ff;
 }
 .selecteds > div {
-  width: 35%;
+  width: 0.4rem;
   height: 0.053rem;
   background-color: #0099ff;
   border-radius: 0.027rem;
@@ -256,6 +272,31 @@ a {
 .swiper2 {
   width: 91.73%;
   height: 11.52rem;
+}
+
+.preferentialk > a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.318rem 0;
+  border-bottom: 1px solid #f5f5f5;
+}
+.preferentialk > a > div:nth-child(1) {
+  width: 6.5rem;
+  font-size: 0.373rem;
+}
+.preferentialk > a > div:nth-child(2) {
+  display: flex;
+  align-items: center;
+}
+.preferentialk > a > div:nth-child(2) > span {
+  color: #999999;
+  font-size: 0.32rem;
+  margin-right: 0.1rem;
+}
+.preferentialk > a > div:nth-child(2) > i {
+  color: #999999;
+  font-size: 0.32rem;
 }
 
 .information {
