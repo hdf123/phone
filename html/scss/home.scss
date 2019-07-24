@@ -1,10 +1,9 @@
 @charset "UTF-8";
-@import "../../css/base.scss";
-@import "../../css/styles.scss";
+@import "../../css/base";
 .headers{
     height:1.153rem;
     padding:0.16rem 0.48rem;
-    background-color:$colorc;
+    background-color:#0099ff;
     z-index:99;
     &>input{
         width:100%;
@@ -43,6 +42,9 @@
             height:100%;
         }
     }
+    .swiper-pagination-bullet-active{
+            background:white;
+    }
 }
 
 .menu{
@@ -65,8 +67,8 @@
         }
         >span{
             margin-top:0.187rem;
-            color:$colora;
-            font-size:$fontsc;
+            color:#666666;
+            font-size:0.32rem;
         }
     }
 }
@@ -80,7 +82,7 @@
         box-sizing:border-box;
         width:44.67%;
         height: 1.813rem;
-        background-color: $colore;
+        background-color: #f5f5f5;
         border-radius: 0.053rem;
         margin-bottom:0.213rem;
         padding:0.307rem 0.387rem;
@@ -89,11 +91,11 @@
         >div{
             margin-top:0.08rem;
             >p:nth-child(1){
-                font-size:$fontsb;
+                font-size:0.373rem;
             }
             >p:nth-child(2){
-                color:$colorb;
-                font-size:$fontsc;
+                color:#999999;
+                font-size:0.32rem;
                 margin-top:0.14rem;
             }
         }
@@ -104,16 +106,6 @@
         }
     }
 }
-//.preferential{
-//  width:92%;
-//  border-radius: 0.053rem;
-//  overflow: hidden;
-//  margin:0 auto;
-//  >img{
-//      width:100%;
-//      height:100%;
-//  }
-//}
 .swiper6{
     width:92%;
     height:2rem;
@@ -124,16 +116,18 @@
         }
     }
     .swiper-pagination-fraction{
+        color:white;
         width:auto;
         left:initial;
-        right:0.293rem;
+        right:0.133rem;
+        bottom:0.133rem;
         text-align: right;
         padding:0.05rem 0.15rem;
-        border-radius:0.2rem;
-        background-color: rgba(0,0,0,0.4);
+        border-radius:0.5rem;
+        background-color: rgba(0,0,0,0.1);
         .swiper-pagination-current{
             color:white;
-            font-size:0.293rem;
+            font-size:0.32rem;
         }
         .swiper-pagination-total{
             color:white;
@@ -162,19 +156,19 @@
         flex-direction: column;
         justify-content: space-between;
         >p{
-            font-size:$fontsa;
+            font-size:0.427rem;
             text-align: center;
         }
     }
 }
 .selecteds{
     >p{
-        color:$colorc;
+        color:#0099ff;
     }
     >div{
         width:0.4rem;
         height: 0.053rem;
-        background-color:$colorc;
+        background-color:#0099ff;
         border-radius: 0.027rem;
         margin:0 auto;
     }
@@ -223,15 +217,15 @@
         >div{
             width: 6.053rem;
             max-height:1.63rem;
-            font-size:$fontsb;
+            font-size:0.373rem;
             overflow: hidden;/*超出隐藏*/
             display: -webkit-box;/*将对象作为弹性伸缩盒子模型显示。*/
             -webkit-box-orient: vertical;/*从上到下垂直排列子元素（设置伸缩盒子的子元素排列方式）*/
             -webkit-line-clamp:3;/*超出2行用省略号表示*/
         }
         >p{
-            color:$colorb;
-            font-size:$fontsd;
+            color:#999999;
+            font-size:0.293rem;
             margin-top:0.153rem;
         }
     }
@@ -245,20 +239,20 @@
 .updates{
     width: 92%;
     height: 1.2rem;
-    background-color: $colore;
+    background-color: #f5f5f5;
     border-radius: 0.053rem;
     display: flex;
     margin:0.5rem auto 0;
     >div{
         width:50%;
         height:100%;
-        color:$colorc;
-        font-size:$fontsb;
+        color:#0099ff;
+        font-size:0.373rem;
         @extend .flexs;
     }
     >div:nth-child(1){
         >i{
-            color:$colorc;
+            color:#0099ff;
             font-size:0.3rem;
             padding-top:0.1rem;
             margin-left:0.1rem;
@@ -266,7 +260,7 @@
     }
     >div:nth-child(2){
         >i{
-            color:$colorc;
+            color:#0099ff;
             font-size:0.4rem;
             padding-top:0.05rem;
         }
@@ -287,7 +281,7 @@
     .swiper-slide{
         width: 3.653rem;
         padding-bottom:0.187rem;
-        background:$colore;
+        background:#f5f5f5;
         >img{
             width:100%;
             border-radius: 0.053rem;
@@ -295,13 +289,13 @@
         >p:nth-child(2){
             width:100%;
             height:0.687rem;
-            font-size:$fontsb;
+            font-size:0.373rem;
             padding:0.187rem 0 0 0.32rem;
             @extend .yincang;
         }
         >p:nth-child(3){
-            color:$colorb;
-            font-size:$fontse;
+            color:#999999;
+            font-size:0.267rem;
             line-height:0.5rem;
             padding-left:0.32rem;
         }
@@ -324,12 +318,12 @@
         >div:nth-child(1){
             max-width:100%;
             max-height:0.5rem;
-            font-size:$fontsb;
+            font-size:0.373rem;
             @extend .yincang;
         }
         >div:nth-child(4){
             color: #f9351a;
-            font-size:$fontsb;
+            font-size:0.373rem;
             margin-top:0.05rem;
         }
     }

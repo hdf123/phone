@@ -24,7 +24,7 @@ $(function(){
 	$(".swiper3>.swiper-wrapper>.swiper-slide").css({"height":bodyHeight});
 	var mySwiper1 = new Swiper('.swiper1', {
 		loop : true,
-		autoplay: 2000,//可选选项，自动滑动
+//		autoplay: 2000,//可选选项，自动滑动
 		pagination : '.swiper-pagination',
 		observer:true,//修改swiper自己或子元素时，自动初始化swiper
     	observeParents:true,//修改swiper的父元素时，自动初始化swiper

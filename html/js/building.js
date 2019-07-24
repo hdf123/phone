@@ -6,7 +6,6 @@ $(function(){
 	    var keycode = e.keyCode;
 	    if(keycode == '13') {
 	    	e.preventDefault();
-	    	
 			alert($(this).val())
 	    }
 	});
@@ -38,14 +37,17 @@ $(function(){
 	$(".ch1>label").bind("click",function(e){
 		var _this=$(this);
 		noLimit(e,_this,$(".region_limit"),"region",1);
+		e.stopPropagation();
 	}); 
 	$(".ch2>label").bind("click",function(e){
 		var _this=$(this);
 		noLimit(e,_this,$(".price_limit"),"price",2);
+		e.stopPropagation();
 	});
 	$(".ch3>label").bind("click",function(e){
 		var _this=$(this);
 		noLimit(e,_this,$(".door_limit"),"door",3);
+		e.stopPropagation();
 	}); 
 	function noLimit(e,_this,limit,names,nums){
 	    if(e.target.tagName!="INPUT") return;
@@ -222,6 +224,16 @@ $(function(){
 			}
 		}
 		results();
+	})
+	/**
+	 * 取消
+	 */
+	$(".swiper1 .swiper-wrapper").click(function(event){
+		$(".swiper1").css({"display":"none"});
+		event.stopPropagation();
+	})
+	$(".search").click(function(){
+		$(".swiper1").css({"display":"none"});
 	})
 	/**
 	 * 分页

@@ -143,6 +143,9 @@ a {
   width: 100%;
   height: 100%;
 }
+.swiper1 .swiper-pagination-bullet-active {
+  background: white;
+}
 
 .menu {
   width: 100%;
@@ -214,17 +217,19 @@ a {
   height: 100%;
 }
 .swiper6 .swiper-pagination-fraction {
+  color: white;
   width: auto;
   left: initial;
-  right: 0.293rem;
+  right: 0.133rem;
+  bottom: 0.133rem;
   text-align: right;
   padding: 0.05rem 0.15rem;
-  border-radius: 0.2rem;
-  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 .swiper6 .swiper-pagination-fraction .swiper-pagination-current {
   color: white;
-  font-size: 0.293rem;
+  font-size: 0.32rem;
 }
 .swiper6 .swiper-pagination-fraction .swiper-pagination-total {
   color: white;

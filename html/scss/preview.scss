@@ -1,6 +1,5 @@
 @charset "UTF-8";
 @import "../../css/base.scss";
-@import "../../css/styles.scss";
 body{
     background-color: #000000;
 }
@@ -35,7 +34,7 @@ body{
         top:0;
         right:0;
         color: #ffffff;
-        font-size:$fontsa;
+        font-size:0.427rem;
     }
 }
 .contents{
@@ -67,10 +66,10 @@ body{
     position:static !important;
     text-align:left !important;
     color: #ffffff;
-    font-size:$fontsb;
+    font-size:0.373rem;
     >span{
         color: #ffffff;
-        font-size:$fontsb;
+        font-size:0.373rem;
     }
 }
 .footers{
@@ -81,11 +80,11 @@ body{
     >div{
         p{
             color: #ffffff;
-            font-size:$fontsa; 
+            font-size:0.427rem; 
         }
         div{
             color: #d8b87b;
-            font-size:$fontsa;
+            font-size:0.427rem;
         }
     }
 }

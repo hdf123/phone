@@ -1,6 +1,5 @@
 @charset "UTF-8";
 @import "../../css/base.scss";
-@import "../../css/styles.scss";
 .headers{
     height:3.066rem;
     background:white;
@@ -9,16 +8,16 @@
 .search{
     height: 1.173rem;
     padding:0.213rem 0;
-    >i{
+    >a{
         display: inline-block;
         font-size:0.5rem;
         text-align: center;
     }
-    >i:nth-child(1){
+    >a:nth-child(1){
         width:1.173rem;
         color:#a1a1a1;
     }
-    >i:nth-child(3){
+    >a:nth-child(3){
         width:1.333rem;
         color:#a1a1a1;
     }
@@ -26,8 +25,8 @@
         width: 7.304rem;
         height: 0.747rem;
         padding:0 0.32rem;
-        font-size:$fontsc;
-        background-color:$colore;
+        font-size:0.32rem;
+        background-color:#f5f5f5;
         border-radius: 0.053rem;
         border:none;
     }
@@ -58,15 +57,15 @@
         >div{
             width: 2.133rem;
             height: 0.667rem;
-            color:$colorb;
-            font-size:$fontsc;
-            background-color:$colore;
+            color:#999999;
+            font-size:0.32rem;
+            background-color:#f5f5f5;
             border-radius: 0.027rem;
             @extend .flexs;
         }
         >.act{
-            color:$colorc;
-            background: $backgroundb;
+            color:#0099ff;
+            background: rgba(0,153,255,0.3);
         }
     }
 }
@@ -93,17 +92,17 @@
         >h3{
             max-width:100%;
             max-height:0.5rem;
-            font-size:$fontsb;
+            font-size:0.373rem;
             @extend .yincang;
         }
         >p{
-            color:$colora;
-            font-size:$fontse;
+            color:#666666;
+            font-size:0.267rem;
             line-height:0.5rem;
         }
         >div:last-child{
             color: #f9351a;
-            font-size:$fontsb;
+            font-size:0.373rem;
         }
     }
 }
@@ -119,15 +118,15 @@
         height:0.25rem;
         border-right:2px solid #E5E5E5;
         >div{
-            color:$colorb;
-            font-size:$fontse;
+            color:#999999;
+            font-size:0.267rem;
             margin-right:0.12rem;
         }
     }
     >div:nth-child(2){
         display: flex;
-        color:$colorb;
-        font-size:$fontse;
+        color:#999999;
+        font-size:0.267rem;
         margin-left:0.12rem;
     }
 }
@@ -135,20 +134,20 @@
     display: flex;
     margin:0.06rem 0;
     >div{
-        color:$colorb;
-        font-size:$fontse;
+        color:#999999;
+        font-size:0.267rem;
         padding:0.05rem 0.133rem;
-        background-color: $colore;
+        background-color: #f5f5f5;
         border-radius: 0.027rem;
         margin-right:0.133rem;
     }
     >.sell{
-        color:$colorc;
-        background-color:$backgroundb;
+        color:#0099ff;
+        background-color:rgba(0,153,255,0.3);
     }
     >.waiting{
         color: #ffffff;
-        background-color: $colord;
+        background-color: #ffb956;
     }
 }
 .swiper1{
@@ -195,7 +194,7 @@
         justify-content: space-between;
         border-bottom:1px solid #eeeeee;
         >.act{
-            color:$colorc;
+            color:#0099ff;
         }
     }
 }
@@ -209,7 +208,7 @@
     >input{
         width: 9.2rem;
         height: 0.96rem;
-        background-color: $colorc;
+        background-color: #0099ff;
         color: #ffffff;
         font-size: 0.4rem;
         border:none;
@@ -228,19 +227,19 @@
         border-radius: 0.053rem;
     }
     >input:nth-child(1){
-        color: $colorb;
+        color: #999999;
         background:white;
     }
     >input:nth-child(2){
         color: #ffffff;
-        background-color:$colorc;
+        background-color:#0099ff;
     }
 }
 .conditions{
     >div:nth-child(1){
         margin:0.533rem 0 0.387rem 0;
         padding:0 0.2rem;
-        font-size:$fontsa;
+        font-size:0.427rem;
     }
 }
 .cond{
@@ -255,14 +254,14 @@
             width: 1.973rem;
             height: 0.613rem;
             color: #999999;
-            font-size:$fontsc;
-            background-color: $colore;
+            font-size:0.32rem;
+            background-color: #f5f5f5;
             border-radius: 0.053rem;
             @extend .flexs;
         }
         >.act{
-            color:$colorc;
-            background: $backgroundb;
+            color:#0099ff;
+            background: rgba(0,153,255,0.3);
         }
     }
     >p{

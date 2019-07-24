@@ -1,7 +1,5 @@
 @charset "UTF-8";
 @import "../../css/base.scss";
-@import "../../css/styles.scss";
-
 .headers{
     height: 1.173rem;
     z-index:96;
@@ -48,13 +46,13 @@
     margin:0.267rem auto 0;
 }
 .card_title{
-    font-size:$fontsb;
+    font-size:0.373rem;
     text-align: center;
     padding:0.52rem 0;
 }
 .fts{
-    color:$colorb;
-    font-size:$fontsc;
+    color:#999999;
+    font-size:0.32rem;
 }
 .cardb{
     display: block;
@@ -65,8 +63,8 @@
 ol{
     padding-bottom:0.7rem;
     li{
-        color:$colorb;
-        font-size:$fontsc;
+        color:#999999;
+        font-size:0.32rem;
         margin-bottom:0.347rem;
     }
 }
@@ -82,7 +80,7 @@ ol{
     height: 1.333rem;
     @extend .flexs;
     color: #ffffff;
-    font-size:$fontsa;
+    font-size:0.427rem;
     background-color: #211b1d;
     z-index:96;
 }

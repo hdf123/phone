@@ -1,21 +1,20 @@
 @charset "UTF-8";
 @import "../../css/base.scss";
-@import "../../css/styles.scss";
 .headers{
     height:1rem;
     display: flex;
     justify-content: space-between;
     padding-right:0.2rem;
     z-index:96;
-    >i{
+    >a{
         width:1rem;
         height:100%;
         @extend .flexs;
     }
-    >i:nth-child(1){
+    >a:nth-child(1){
         
     }
-    >i:nth-child(2){
+    >a:nth-child(2){
         font-size:0.52rem;
     }
 }
@@ -29,17 +28,17 @@
     >div:nth-child(1){
         position: relative;
         height:1rem;
-        >i{
+        >a{
             width:1rem;
             height:100%;
             position: absolute;
             top: 0;
             @extend .flexs;
         }
-        >i:nth-child(1){
+        >a:nth-child(1){
             left: 0; 
         }
-        >i:nth-child(3){
+        >a:nth-child(3){
             right: 0; 
         }
         .conters{
@@ -97,14 +96,14 @@
     >h3{
         width:100%;
         height:0.7rem;
-        font-size: 0.533rem;
+        font-size:0.533rem;
         @extend .yincang;
     }
     >div:nth-child(2){
         display: flex;
         margin:0.25rem 0;
         >div{
-            color:$colora;
+            color:#666666;
             font-size: 0.32rem;
             margin-right:0.133rem;
         }
@@ -112,20 +111,20 @@
     >div:nth-child(3){
         display: flex;
         >div{
-            color:$colorb;
-            font-size:$fontse;
-            background-color: $colore;
+            color:#999999;
+            font-size:0.267rem;
+            background-color: #f5f5f5;
             border-radius: 0.027rem;
             margin-right:0.267rem;
             padding:0.08rem 0.107rem;
         }
         >.sell{/*在售*/
             color: #ffffff;
-            background-color:$colorc;
+            background-color:#0099ff;
         }
         >.waiting{/*待售*/
             color: #ffffff;
-            background-color: $colord;
+            background-color: #ffb956;
         }
     }
 }
@@ -137,7 +136,7 @@
         display: flex;
         align-items: center;
         >div:nth-child(1){
-            color:$colorb;
+            color:#999999;
             font-size: 0.4rem;
         }
 
@@ -158,7 +157,7 @@
                 @extend .yincang;
             }
             >i{
-                color:$colorb;
+                color:#999999;
                 font-size:0.55rem;
             }
         }
@@ -187,11 +186,12 @@
     height: 1.067rem;
     display:block;
     margin:0 auto;
-    color:$colorc;
-    font-size:$fontsb;
+    color:#0099ff;
+    text-align: center;
+    font-size:0.373rem;
+    line-height:1.067rem;
     background-color: #f9f9f9;
     border-radius: 0.053rem;
-    border:none;
 }
 .scrolls{
     width: 9.52rem;
@@ -264,10 +264,10 @@
             font-size: 0.48rem;
         }
         >div{
-            color:$colorb;
+            color:#999999;
             font-size: 0.32rem;
             >i{
-                color:$colorb;
+                color:#999999;
             }
         }
     }
@@ -291,20 +291,20 @@
             font-size: 0.4rem;
         }
         >div{
-            color:$colorb;
-            font-size:$fontse;
-            background-color: $colore;
+            color:#999999;
+            font-size:0.267rem;
+            background-color: #f5f5f5;
             border-radius: 0.027rem;
             margin-right:0.267rem;
             padding:0.055rem 0.12rem;
         }
         >.sell{/*在售*/
-            color:$colorc;
-            background-color:$backgroundb;
+            color:#0099ff;
+            background-color:rgba(0,153,255,0.3);
         }
         >.waiting{/*待售*/
-            color:$colord;
-            background-color:$backgroundc;
+            color:#ffb956;
+            background-color:rgba(255,185,86,0.3);
         }
     }
     >div:nth-child(3){
@@ -332,7 +332,7 @@
         padding:0.36rem 0 0.36rem 0.4rem;
     }
     .act{
-        color:$colorc;
+        color:#0099ff;
     }
 }
 #container{
@@ -387,13 +387,13 @@
     width: 9.2rem;
     height: 1.067rem;
     margin:0 auto;
-    color:$colorc;
+    color:#0099ff;
     font-size: 0.373rem;
     outline:none;
     border:none;
     border-radius: 0.053rem;
     @extend .flexs;
-    background-color:$backgroundb;
+    background-color:rgba(0,153,255,0.3);
 }
 .review_title{
     width:9.2rem;
@@ -406,10 +406,10 @@
         font-size: 0.48rem;
     }
     >div{
-        color:$colorb;
+        color:#999999;
         font-size: 0.32rem;
         >i{
-            color: $colorb;
+            color: #999999;
         }
     }
 }
@@ -490,7 +490,7 @@
     }
 }
 .comments_time{
-    color:$colorb;
+    color:#999999;
     font-size: 0.32rem;
     padding:0 0.4rem;
 }
@@ -513,7 +513,7 @@
             @extend .yincang;
         }
         div:nth-child(3){
-            color:$colorb;
+            color:#999999;
             font-size: 0.32rem;
             margin:0.2rem 0;
         }
@@ -545,7 +545,7 @@
         background-color: #f9351a;
     }
     >input:nth-child(2){
-        background-color:$colorc;
+        background-color:#0099ff;
     }
 }
 .bubbles{

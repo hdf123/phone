@@ -1,6 +1,5 @@
 @charset "UTF-8";
 @import "../../css/base.scss";
-@import "../../css/styles.scss";
 .headers{
     height: 1.173rem;
     z-index:96;
@@ -19,7 +18,7 @@
         padding:0 0.307rem;
         border:none;
         font-size:0.373rem;
-        background-color:$colore;
+        background-color:#f5f5f5;
         border-radius: 0.053rem;
     }
 }
@@ -47,11 +46,11 @@
         flex-direction: column;
         justify-content: space-between;
         >div{
-            font-size:$fontsb;
+            font-size:0.373rem;
         }
         >p{
-            color:$colorb;
-            font-size:$fontsd;
+            color:#999999;
+            font-size:0.293rem;
         }
     }
     >img{
@@ -64,15 +63,15 @@
     padding:0.413rem 0 0.427rem 0;
     border-bottom:1px solid #eeeeee;
     >div:nth-child(1){
-        font-size:$fontsb; 
+        font-size:0.373rem; 
     }
     >div:nth-child(2){
-        color:$colora;
-        font-size:$fontsc;
+        color:#666666;
+        font-size:0.32rem;
         margin:0.307rem 0 0.387rem 0;
     }
     >p{
-       color:$colorb;
-       font-size:$fontsd;
+       color:#999999;
+       font-size:0.293rem;
     }
 }

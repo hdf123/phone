@@ -100,8 +100,8 @@ html,body{
             @extend .yincang;
         }
         .act{
-            color:$colorc;
-            background:$backgroundb;
+            color:#0099ff;
+            background:rgba(0,153,255,0.3);
         }
     }
 }

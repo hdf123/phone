@@ -91,7 +91,7 @@ a {
 }
 
 /*上下左右居中*/
-.flexs, .headers > i, .headersk > div:nth-child(1) > i, .mortgage_tab > li, .assort {
+.flexs, .headers > a, .headersk > div:nth-child(1) > a, .mortgage_tab > li, .assort {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -104,11 +104,11 @@ a {
   padding-right: 0.2rem;
   z-index: 96;
 }
-.headers > i {
+.headers > a {
   width: 1rem;
   height: 100%;
 }
-.headers > i:nth-child(2) {
+.headers > a:nth-child(2) {
   font-size: 0.52rem;
 }
 
@@ -124,16 +124,16 @@ a {
   position: relative;
   height: 1rem;
 }
-.headersk > div:nth-child(1) > i {
+.headersk > div:nth-child(1) > a {
   width: 1rem;
   height: 100%;
   position: absolute;
   top: 0;
 }
-.headersk > div:nth-child(1) > i:nth-child(1) {
+.headersk > div:nth-child(1) > a:nth-child(1) {
   left: 0;
 }
-.headersk > div:nth-child(1) > i:nth-child(3) {
+.headersk > div:nth-child(1) > a:nth-child(3) {
   right: 0;
 }
 .headersk > div:nth-child(1) .conters {
@@ -277,10 +277,11 @@ a {
   display: block;
   margin: 0 auto;
   color: #0099ff;
+  text-align: center;
   font-size: 0.373rem;
+  line-height: 1.067rem;
   background-color: #f9f9f9;
   border-radius: 0.053rem;
-  border: none;
 }
 
 .scrolls {

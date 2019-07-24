@@ -107,16 +107,16 @@ a {
   height: 1.173rem;
   padding: 0.213rem 0;
 }
-.search > i {
+.search > a {
   display: inline-block;
   font-size: 0.5rem;
   text-align: center;
 }
-.search > i:nth-child(1) {
+.search > a:nth-child(1) {
   width: 1.173rem;
   color: #a1a1a1;
 }
-.search > i:nth-child(3) {
+.search > a:nth-child(3) {
   width: 1.333rem;
   color: #a1a1a1;
 }
