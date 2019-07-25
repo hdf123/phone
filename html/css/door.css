@@ -91,7 +91,7 @@ a {
 }
 
 /*上下左右居中*/
-.flexs, .headers > div:nth-child(1) > i, .headers > div:nth-child(1) > div {
+.flexs, .headers > div:nth-child(1) > a, .headers > div:nth-child(1) > div {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -109,8 +109,8 @@ a {
   border-bottom: 1px solid #eeeeee;
   position: relative;
 }
-.headers > div:nth-child(1) > i {
-  width: 1rem;
+.headers > div:nth-child(1) > a {
+  width: 1.173rem;
   height: 100%;
   font-size: 0.5rem;
   position: absolute;

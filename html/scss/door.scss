@@ -10,8 +10,8 @@
         align-items: center;
         border-bottom:1px solid #eeeeee;
         position:relative;
-        &>i{
-            width:1rem;
+        >a{
+            width:1.173rem;
             height:100%;
             font-size:0.5rem;
             @extend .flexs;

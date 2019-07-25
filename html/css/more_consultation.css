@@ -91,7 +91,7 @@ a {
 }
 
 /*上下左右居中*/
-.flexs, .headers > i {
+.flexs, .headers > a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -105,7 +105,7 @@ a {
   background: white;
   border-bottom: 1px solid #eeeeee;
 }
-.headers > i {
+.headers > a {
   width: 1.173rem;
   height: 100%;
 }

@@ -33,7 +33,7 @@ $(function(){
 	var mySwiper2=new Swiper(".swiper2",{
 		loop:true,//循环
 		observer:true,
-		initialSlide :2,//初始化索引
+//		initialSlide :2,//初始化索引
     	observeParents:true,
 		onSlideChangeStart:function(swiper){//swiper3中使用
 	        var xiabiao=swiper.realIndex;//循环状态下获取下标
