@@ -80,7 +80,7 @@
     padding:0.533rem 0.4rem;
     >a{
         box-sizing:border-box;
-        width:44.67%;
+        width:4.467rem;
         height: 1.813rem;
         background-color: #f5f5f5;
         border-radius: 0.053rem;
@@ -251,18 +251,15 @@
         @extend .flexs;
     }
     >div:nth-child(1){
-        >i{
-            color:#0099ff;
-            font-size:0.3rem;
-            padding-top:0.1rem;
-            margin-left:0.1rem;
+        img{
+            width:0.3rem;
+            margin-left:0.15rem;
         }
     }
     >div:nth-child(2){
-        >i{
-            color:#0099ff;
-            font-size:0.4rem;
-            padding-top:0.05rem;
+        img{
+            width:0.2rem;
+            margin-left:0.15rem;
         }
     }
 }

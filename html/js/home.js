@@ -8,6 +8,7 @@ $(function(){
 	var bodyHeight=$(window).height();
 	var khk=bodyHeight-(headers+tabBark);
 	$(".swiper3").css({"height":khk});
+	var pagea=1,pageb=1,pagec=1;//行业资讯、地产快讯、最新优惠
 	/**
 	 * 加载动画
 	 */
@@ -30,19 +31,21 @@ $(function(){
     	observeParents:true,//修改swiper的父元素时，自动初始化swiper
     	
 	})
+	var message=0;
 	var mySwiper2=new Swiper(".swiper2",{
 		loop:true,//循环
 		observer:true,
-//		initialSlide :2,//初始化索引
+		//initialSlide :2,//初始化索引
     	observeParents:true,
 		onSlideChangeStart:function(swiper){//swiper3中使用
 	        var xiabiao=swiper.realIndex;//循环状态下获取下标
+	        message=xiabiao;
 	        $(".tabBar>li").eq(xiabiao).addClass("selecteds");
 	        $(".tabBar>li").eq(xiabiao).siblings().removeClass("selecteds");
 	   }
 	})
 	var mySwiper6 = new Swiper('.swiper6', {
-//		loop : true,
+		//loop : true,
 		observer:true,//修改swiper自己或子元素时，自动初始化swiper
 		observeParents:true,//修改swiper的父元素时，自动初始化swiper
 		pagination : '.swiper-pagination',
@@ -50,23 +53,29 @@ $(function(){
     	
 	})
 	$(".tabBar>li").click(function(){
-	    var zuobiao=$(this).index();
-	    $(".tabBar>li").eq(zuobiao).addClass("selecteds");
-	    $(".tabBar>li").eq(zuobiao).siblings().removeClass("selecteds");
-	    mySwiper2.slideTo(zuobiao+1,500,false);
+	    var xiabiao=$(this).index();
+	    message=xiabiao;
+	    $(".tabBar>li").eq(xiabiao).addClass("selecteds");
+	    $(".tabBar>li").eq(xiabiao).siblings().removeClass("selecteds");
+	    mySwiper2.slideTo(xiabiao+1,500,false);
+	    
 	})
+	var tuijian=0;//标识推荐、新房展示位置
 	var mySwiper3=new Swiper(".swiper3",{
 		loop:true,//循环
 		observer:true,
     	observeParents:true,
 		onSlideChangeStart:function(swiper){
 	        var xiabiao=swiper.realIndex;
+	        tuijian=xiabiao;
 	        $(".tabBars>li").eq(xiabiao).addClass("selecteds");
 	        $(".tabBars>li").eq(xiabiao).siblings().removeClass("selecteds");
 	   }
 	})
 	$(".tabBars>li").click(function(){
 	    var zuobiao=$(this).index();
+	    tuijian=zuobiao;
+	    console.log(tuijian);
 	    $(".tabBars>li").eq(zuobiao).addClass("selecteds");
 	    $(".tabBars>li").eq(zuobiao).siblings().removeClass("selecteds");
 	    mySwiper3.slideTo(zuobiao+1,500,false);
@@ -108,8 +117,24 @@ $(function(){
     $(".swiper2").on("click",".preferentialk>a",function(){
     	localStorage.setItem('yz_consulting',JSON.stringify(1));
     })
-	//刷新
+	/**
+	 * 刷新
+	 */
 	$(".updates>div:eq(0)").click(function(){
+		if(message==0){
+			pagea+=1
+			console.log("讯息下标:"+message);//讯息下标
+			console.log("页数:"+pagea);//讯息下标
+		}else if(message==1){
+			pageb+=1
+			console.log("讯息下标:"+message);//讯息下标
+			console.log("页数:"+pageb);//讯息下标
+		}else if(message==2){
+			pagec+=1
+			console.log("讯息下标:"+message);//讯息下标
+			console.log("页数:"+pagec);//讯息下标
+		}
+
 		$("body").mLoading({
             text:"内容加载中，请稍后~",
 		});
@@ -209,7 +234,7 @@ $(function(){
 	    off_on = true;
 	    //off():移除box1上的所有点击事件，防止触发两次
 	    $(".swiper3").off('click').on("click",".buildings",function(){
-	    	localStorage.setItem('yz_building',JSON.stringify(data[$(this).index()]));//转为json字符串
+	    	localStorage.setItem('yz_building',JSON.stringify(data[$(this).index()]));
 	    	location.href="buildings.html";
 	    })
 	};

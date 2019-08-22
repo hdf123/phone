@@ -182,7 +182,7 @@ a {
 }
 .nows > a {
   box-sizing: border-box;
-  width: 44.67%;
+  width: 4.467rem;
   height: 1.813rem;
   background-color: #f5f5f5;
   border-radius: 0.053rem;
@@ -349,16 +349,13 @@ a {
   color: #0099ff;
   font-size: 0.373rem;
 }
-.updates > div:nth-child(1) > i {
-  color: #0099ff;
-  font-size: 0.3rem;
-  padding-top: 0.1rem;
-  margin-left: 0.1rem;
+.updates > div:nth-child(1) img {
+  width: 0.3rem;
+  margin-left: 0.15rem;
 }
-.updates > div:nth-child(2) > i {
-  color: #0099ff;
-  font-size: 0.4rem;
-  padding-top: 0.05rem;
+.updates > div:nth-child(2) img {
+  width: 0.2rem;
+  margin-left: 0.15rem;
 }
 
 .swiper3 {
@@ -490,3 +487,5 @@ a {
   z-index: 999;
   /*z-index比下方所有层级要高*/
 }
+
+/*# sourceMappingURL=home.css.map */

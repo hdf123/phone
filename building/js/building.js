@@ -46,20 +46,10 @@ $(function(){
 	}); 
 	$(".ch2>label").bind("click",function(e){
 		var _this=$(this);
-		if(_this.find("input").is(':checked')){
-			_this.find("img").attr("src","../img/optionsd.png");
-		}else{
-			_this.find("img").attr("src","../img/options.png");
-		}
 		noLimit(e,_this,$(".price_limit"),"price",2);
 	});
 	$(".ch3>label").bind("click",function(e){
 		var _this=$(this);
-		if(_this.find("input").is(':checked')){
-			_this.find("img").attr("src","../img/optionsd.png");
-		}else{
-			_this.find("img").attr("src","../img/options.png");
-		}
 		noLimit(e,_this,$(".door_limit"),"door",3);
 	}); 
 	function noLimit(e,_this,limit,names,nums){
@@ -177,6 +167,8 @@ $(function(){
 	})
 	$(".loading_box").hide();
 	function results(){
+		$(".loading_box").show();
+		$('.loadings').shCircleLoader();
 		var area=$(".conditions_area>div");//面积
 		var property=$(".conditions_property>div");//物业类型
 		var features=$(".conditions_features>div");//楼盘特色
@@ -194,6 +186,10 @@ $(function(){
 			}
 		}
 		$(".swiper1").css({"display":"none"});
+		setTimeout(function(){
+			$(".loading_box").hide();
+			$('.loadings').shCircleLoader('destroy');
+		}, 1000);
 		console.log(arr1);//选择的区域
 		console.log(arr2);//价格
 		console.log(arr3);//户型
@@ -299,7 +295,7 @@ $(function(){
 	
 	
 	$(".contents").on("click",".building_box",function(){
-		localStorage.setItem('yz_building', JSON.stringify(data[$(this).index()]));
+		localStorage.setItem('call_building', JSON.stringify(data[$(this).index()]));
 		location.href="buildings.html";
 	})
 })
