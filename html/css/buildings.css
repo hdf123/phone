@@ -91,7 +91,7 @@ a {
 }
 
 /*上下左右居中*/
-.flexs, .headers > a, .headersk > div:nth-child(1) > a, .mortgage_tab > li, .assort {
+.flexs, .headers > a, .headersk > div:nth-child(1) > a, .mortgage_tab > li, .assort, .footers > a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -481,8 +481,6 @@ a {
   margin: 0 auto;
   color: #0099ff;
   font-size: 0.373rem;
-  outline: none;
-  border: none;
   border-radius: 0.053rem;
   background-color: rgba(0, 153, 255, 0.3);
 }
@@ -626,18 +624,17 @@ a {
   justify-content: space-around;
   box-shadow: 0rem -0.013rem 0.01rem 0rem #e5e5e5;
 }
-.footers > input {
+.footers > a {
   width: 4.467rem;
   height: 0.96rem;
   color: #ffffff;
   font-size: 0.4rem;
-  border: none;
   border-radius: 0.053rem;
 }
-.footers > input:nth-child(1) {
+.footers > a:nth-child(1) {
   background-color: #f9351a;
 }
-.footers > input:nth-child(2) {
+.footers > a:nth-child(2) {
   background-color: #0099ff;
 }
 
@@ -650,3 +647,5 @@ a {
   background: url(../../img/bubbles.png) no-repeat;
   background-size: 100% 100%;
 }
+
+/*# sourceMappingURL=buildings.css.map */

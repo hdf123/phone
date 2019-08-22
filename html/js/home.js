@@ -123,16 +123,16 @@ $(function(){
 	$(".updates>div:eq(0)").click(function(){
 		if(message==0){
 			pagea+=1
-			console.log("讯息下标:"+message);//讯息下标
-			console.log("页数:"+pagea);//讯息下标
+			console.log("行业资讯:"+message);
+			console.log("页数:"+pagea);
 		}else if(message==1){
 			pageb+=1
-			console.log("讯息下标:"+message);//讯息下标
-			console.log("页数:"+pageb);//讯息下标
+			console.log("地产快讯:"+message);
+			console.log("页数:"+pageb);
 		}else if(message==2){
 			pagec+=1
-			console.log("讯息下标:"+message);//讯息下标
-			console.log("页数:"+pagec);//讯息下标
+			console.log("最新优惠:"+message);
+			console.log("页数:"+pagec);
 		}
 
 		$("body").mLoading({
@@ -144,7 +144,11 @@ $(function(){
 	})
 	//查看更多
 	$(".updates>div:eq(1)").click(function(){
-		location.href="more_consultation.html";
+		if(message==2){
+			location.href="preferential.html?index="+message;
+		}else{
+			location.href="more_consultation.html?index="+message;
+		}
 	})
 	/**
 	 * 楼盘

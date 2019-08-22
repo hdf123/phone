@@ -7,7 +7,7 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 		<meta name="format-detection" content="telephone=yes"/>
 		<title>中原楼市</title>
-		<link rel="stylesheet" type="text/css" href="css/more_consultation.css"/>
+		<link rel="stylesheet" type="text/css" href="css/message.css"/>
 		<script src="../js/js.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<body>
@@ -49,20 +49,16 @@
 <script type="text/javascript">
 $(function(){
 	$(".contents li").click(function(){
-		//location.href="consulting.html";
+//		location.href="consulting.html";
 	})
-	state(getRequest().index);
+	state(1)
 	$(".tabBar>li").click(function(){
 	    var xiabiao=$(this).index();
 	    state(xiabiao)
 	})
 	function state(xiabiao){
-		if(xiabiao==2){
-			location.href="preferential.html?index="+xiabiao;
-		}
 	    $(".tabBar>li").eq(xiabiao).addClass("selecteds");
 	    $(".tabBar>li").eq(xiabiao).siblings().removeClass("selecteds");
-	    
 	}
 })
 </script>

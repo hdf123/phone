@@ -233,9 +233,6 @@ $(function(){
     var locals = new BMap.LocalSearch(map ,options);
     locals.searchNearby(near, point,2000);
     
-	$(".assort:eq(0)").click(function(){
-		location.href="surrounding.html"
-	})
 	/**
 	 * 最新动态
 	 */
@@ -258,8 +255,7 @@ $(function(){
     	}
     }
     $(".ul1>li").click(function(){
-    	localStorage.setItem('yz_consulting',JSON.stringify(2));
-    	location.href="consulting.html";
+    	location.href="dynamic.html";
     })
     /**
      * 查看全部点评

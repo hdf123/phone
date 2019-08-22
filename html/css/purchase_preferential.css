@@ -280,13 +280,17 @@ a {
   font-size: 0.267rem;
   margin-top: 0.267rem;
 }
-.bounced > input:nth-child(5) {
+
+.btns {
   width: 6.4rem;
   height: 1.2rem;
   color: #ffffff;
   font-size: 0.4rem;
-  border: none;
+  text-align: center;
+  line-height: 1.2rem;
   margin-top: 0.693rem;
   background-color: #1a1a1a;
   border-radius: 0.053rem;
 }
+
+/*# sourceMappingURL=purchase_preferential.css.map */

@@ -49,13 +49,15 @@
     		for(i in yz_record){
     			ss+=`<li>${yz_record[i]}</li>`;
     		}
-    		$(".contents").append(`<div class="contents_box">
-									<div>
-										<div>搜索历史</div>
-										<i class="iconfont removek">&#xe646;</i>
-									</div>
-									<ul>${ss}</ul>
-								</div>`)
+    		$(".contents").append('<div class="contents_box">'
+									+'<div>'
+										+'<div>搜索历史</div>'
+										+'<i class="iconfont removek">&#xe646;</i>'
+									+'</div>'
+									+'<ul>'+ss+'</ul>'
+								+'</div>')
+    		
+    		
     	}
     	$(".contents").on("click",".removek",function(){
     		$(".contents_box").hide();

@@ -388,8 +388,6 @@
     margin:0 auto;
     color:#0099ff;
     font-size: 0.373rem;
-    outline:none;
-    border:none;
     border-radius: 0.053rem;
     @extend .flexs;
     background-color:rgba(0,153,255,0.3);
@@ -532,18 +530,18 @@
     align-items: center;
     justify-content: space-around;
     box-shadow: 0rem -0.013rem 0.01rem 0rem #e5e5e5;
-    >input{
+    >a{
         width: 4.467rem;
         height: 0.96rem;
         color: #ffffff;
         font-size: 0.4rem;
-        border:none;
+        @extend .flexs;
         border-radius: 0.053rem;
     }
-    >input:nth-child(1){
+    >a:nth-child(1){
         background-color: #f9351a;
     }
-    >input:nth-child(2){
+    >a:nth-child(2){
         background-color:#0099ff;
     }
 }
