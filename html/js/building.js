@@ -37,17 +37,24 @@ $(function(){
 	$(".ch1>label").bind("click",function(e){
 		var _this=$(this);
 		if(_this.find("input").is(':checked')){
-			_this.find("img").attr("src","../img/optionsd.png");
+			$("[name=region]:checkbox").prop("checked", false);
+			_this.find("input").prop('checked',true);
+			_this.siblings().find("span").removeClass("act");
+			_this.siblings().find("img").attr("src","../img/options.png");//取消
+			_this.find("img").attr("src","../img/optionsd.png");//选中
 		}else{
 			_this.find("img").attr("src","../img/options.png");
 		}
-		
 		noLimit(e,_this,$(".region_limit"),"region",1);
 	}); 
 	$(".ch2>label").bind("click",function(e){
 		var _this=$(this);
 		if(_this.find("input").is(':checked')){
-			_this.find("img").attr("src","../img/optionsd.png");
+			$("[name=price]:checkbox").prop("checked", false);
+			_this.find("input").prop('checked',true);
+			_this.siblings().find("span").removeClass("act");
+			_this.siblings().find("img").attr("src","../img/options.png");//取消
+			_this.find("img").attr("src","../img/optionsd.png");//选中
 		}else{
 			_this.find("img").attr("src","../img/options.png");
 		}
@@ -56,7 +63,11 @@ $(function(){
 	$(".ch3>label").bind("click",function(e){
 		var _this=$(this);
 		if(_this.find("input").is(':checked')){
-			_this.find("img").attr("src","../img/optionsd.png");
+			$("[name=door]:checkbox").prop("checked", false);
+			_this.find("input").prop('checked',true);
+			_this.siblings().find("span").removeClass("act");
+			_this.siblings().find("img").attr("src","../img/options.png");//取消
+			_this.find("img").attr("src","../img/optionsd.png");//选中
 		}else{
 			_this.find("img").attr("src","../img/options.png");
 		}
@@ -92,13 +103,23 @@ $(function(){
 			});
 	   	}
 	}
-	$(".region_limit").bind("click",function(e){
+	$(".region_limit").bind("click",function(e){//区域不限
 		var _this=$(this);
+		$(".ch1").find("img").siblings("span").removeClass("act");
+		$(".ch1").find("img").attr("src","../img/options.png");
 		limit(_this,"region",arr1);
 	})
 	$(".price_limit").bind("click",function(e){
 		var _this=$(this);
+		$(".ch2").find("img").siblings("span").removeClass("act");
+		$(".ch2").find("img").attr("src","../img/options.png");
 		limit(_this,"price",arr2);
+	})
+	$(".door_limit").bind("click",function(e){
+		var _this=$(this);
+		$(".ch3").find("img").siblings("span").removeClass("act");
+		$(".ch3").find("img").attr("src","../img/options.png");
+		limit(_this,"door",arr3);
 	})
 	function limit(_this,names,arr){
 		$("[name="+names+"]:checkbox").prop("checked", false);
@@ -138,6 +159,7 @@ $(function(){
 	function choose(_this){
 		if(_this.children("div").is(".act")){
 			_this.children("div").removeClass("act");
+			/*
 			if(!$(".conditions_state>div:eq(0)>div").is(".act")){
 				$(".quick>div").eq(0).removeClass("act");
 			}
@@ -150,8 +172,11 @@ $(function(){
 			if(!$(".conditions_features>div:eq(1)>div").is(".act")){
 				$(".quick>div").eq(3).removeClass("act");
 			}
+			*/
 		}else{
 			_this.children("div").addClass("act");
+			_this.siblings("div").children("div").removeClass("act");
+			/*
 			if($(".conditions_state>div:eq(0)>div").is(".act")){
 				$(".quick>div").eq(0).addClass("act");
 			}
@@ -164,6 +189,7 @@ $(function(){
 			if($(".conditions_features>div:eq(1)>div").is(".act")){
 				$(".quick>div").eq(3).addClass("act");
 			}
+			*/
 		}
 	}
 	/**
@@ -189,7 +215,7 @@ $(function(){
 		function confirm(arr,xx,ad){
 			for(var i=0;i<arr.length;i++){
 				if($("."+xx+">div:eq("+i+")>div").is(".act")){
-					ad.push($("."+xx+">div:eq("+i+")>div").html());
+					ad.push($("."+xx+">div:eq("+i+")>div").attr("ids"));
 				}
 			}
 		}
@@ -206,6 +232,7 @@ $(function(){
 	/**
 	 * 快捷选项
 	 */
+	/*
 	$(".quick>div").click(function(){
 		if($(this).is(".act")){
 			$(this).removeClass("act");
@@ -238,6 +265,7 @@ $(function(){
 		}
 		results();
 	})
+	*/
 	/**
 	 * 分页
 	 */
@@ -249,33 +277,32 @@ $(function(){
 	    for (i in data) {
 	    	var ska="",skb="",states="";
 	    	for(j in data[i].region){
-	    		ska+=`<div>${data[i].region[j]}</div>`;
+	    		ska+='<div>'+data[i].region[j]+'</div>';
 	    	}
 	    	for(j in data[i].features){
-	    		skb+=`<div>${data[i].features[j]}</div>`;
+	    		skb+='<div>'+data[i].features[j]+'</div>';
 	    	}
 	    	if(data[i].state=="在售"){
-	    		states=`<div class="sell">在售</div>`;
+	    		states='<div class="sell">在售</div>';
 	    	}else if(data[i].state=="待售"){
-	    		states=`<div class="waiting">待售</div>`;
+	    		states='<div class="waiting">待售</div>';
 	    	}else{
-	    		states=`<div>售罄</div>`;
+	    		states='<div>售罄</div>';
 	    	}
-	        dom +=`<div class="building_box">
-						<img src=${data[i].img} alt="" />
-						<div>
-							<h3>${data[i].name}</h3>
-							<div class="price">${data[i].price}</div>
-							<div class="environment">
-								<div>${ska}</div>
-								<div>${data[i].area}</div>
-							</div>
-							<div class="situation">
-								${states}
-								${skb}
-							</div>
-						</div>
-					</div>`;
+	        dom +='<div class="building_box">'
+						+'<img src='+data[i].img+' alt="" />'
+						+'<div>'
+							+'<h3>'+data[i].name+'</h3>'
+							+'<div class="price">'+data[i].price+'</div>'
+							+'<div class="environment">'
+								+'<div>'+ska+'</div>'
+								+'<div>'+data[i].area+'</div>'
+							+'</div>'
+							+'<div class="situation">'
+								+states+skb
+							+'</div>'
+						+'</div>'
+					+'</div>';
 	    }
 	  	$('.contents').append(dom);
 	    off_on = true;

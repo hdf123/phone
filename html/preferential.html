@@ -11,6 +11,7 @@
 		<script src="../js/js.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<body>
+		<!--最新优惠(暂不用)-->
 		<header class="headers">
 			<a class="iconfont" href="javascript:history.go(-1);">&#xe632;</a>
 			<input type="text" class="iconfont search" placeholder="&#xe641; 最新优惠一网打尽" />
@@ -30,18 +31,18 @@
 					<div></div>
 				</li>
 			</ul>
-			<div class="preferentialk">
-				
-			</div>
+			<div class="preferentialk"></div>
 		</section>
 		
 		
 <script type="text/javascript">
 $(function(){
+	var nn=getRequest().index;
 	state(getRequest().index);
 	$(".tabBar>li").click(function(){
 	    var xiabiao=$(this).index();
-	    state(xiabiao)
+	    nn=xiabiao;
+	    state(xiabiao);
 	})
 	function state(xiabiao){
 		if(xiabiao!=2){
@@ -52,14 +53,20 @@ $(function(){
 	}
     //最新优惠
     for(var i=0;i<20;i++){
-    	$(".preferentialk").append(`<a href="javascript:;">
-							<div>正弘形城1号院洋房在售${i+1}号院高层优惠升级中</div>
-							<div>
-								<span>07-21</span>
-								<i class="iconfont">&#xe642;</i>
-							</div>
-						</a>`);
+    	$(".preferentialk").append('<a href="consulting.html?state='+nn+'&ind=正弘形城1号院洋房在售'+(i+1)+'号院高层优惠升级中">'
+							+'<div>正弘形城1号院洋房在售'+(i+1)+'号院高层优惠升级中</div>'
+							+'<div>'
+								+'<span>07-21</span>'
+								+'<i class="iconfont">&#xe642;</i>'
+							+'</div>'
+						+'</a>');
     }
+	/**
+	 * 搜索
+	 */
+	$('.search').click(function (){
+		location.href="query.html";
+	});
 })
 </script>
 	</body>

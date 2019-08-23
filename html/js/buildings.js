@@ -5,24 +5,23 @@ $(function(){
 	var yz_building=JSON.parse(localStorage.getItem('yz_building'));//转为对象
 	var ska="",skb="",states="";
 	for(i in yz_building.region){
-		ska+=`<div>${yz_building.region[i]}</div>`;
+		ska+='<div>'+yz_building.region[i]+'</div>';
 	}
 	for(i in yz_building.features){
-		skb+=`<div>${yz_building.features[i]}</div>`;
+		skb+='<div>'+yz_building.features[i]+'</div>';
 	}
 	if(yz_building.state=="在售"){
-		states=`<div class="sell">在售</div>`;
+		states='<div class="sell">在售</div>';
 	}else if(yz_building.state=="待售"){
-		states=`<div class="waiting">待售</div>`;
+		states='<div class="waiting">待售</div>';
 	}else{
-		states=`<div>待售</div>`;
+		states='<div>待售</div>';
 	}
-	$(".buildings_title").html(`<h3>${yz_building.name}</h3>
-								<div>${ska}</div>
-								<div>
-									${states}
-									${skb}
-								</div>`);
+	$(".buildings_title").html('<h3>'+yz_building.name+'</h3>'
+								+'<div>'+ska+'</div>'
+								+'<div>'
+									+states+skb
+								+'</div>');
 	var mySwiper1 = new Swiper('.swiper1', {
 		observer:true,//修改swiper自己或子元素时，自动初始化swiper
 		observeParents:true,//修改swiper的父元素时，自动初始化swiper
@@ -185,19 +184,19 @@ $(function(){
 					var ms='';
 					if(juli>=1000){
 						juli=(juli/1000).toFixed(3);
-						ms=`<div>${juli}km</div>`
+						ms='<div>'+juli+'km</div>'
 					}else{
-						ms=`<div>${juli}m</div>`
+						ms='<div>'+juli+'m</div>'
 					}
-					$(".distance_box").append(`<li>
-												<div>
-													<div>
-														<div class="titlek">${results.getPoi(i).title}</div>
-														(<div>${results.getPoi(i).address}</div>
-													</div>
-												</div>
-												${ms}
-											</li>`);
+					$(".distance_box").append('<li>'
+												+'<div>'
+													+'<div>'
+														+'<div class="titlek">'+results.getPoi(i).title+'</div>'
+														+'(<div>'+results.getPoi(i).address+'</div>'
+													+'</div>'
+												+'</div>'
+												+ms
+											+'</li>');
 					var aa=$(".titlek").eq(i).width();
 					var as=$(".titlek").parent().parent().width();
 					if(aa<=as-20){

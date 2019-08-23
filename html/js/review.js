@@ -47,10 +47,10 @@ $(function(){
 		   	        	var index=i;
 		   	            var reader = new FileReader();
 		   	            reader.onload = function (e) {
-		   	            	$(".images").before(`<div class="imgs">
-									<img src=${e.target.result} class="imgas" alt="" />
-									<img src="../../img/delete.png" class="deletes" alt="" />
-								</div>`);
+		   	            	$(".images").before('<div class="imgs">'
+									+'<img src='+e.target.result+' class="imgas" alt="" />'
+									+'<img src="../../img/delete.png" class="deletes" alt="" />'
+								+'</div>');
 							numks();
 		   	            }
 		   	            reader.readAsDataURL($(this)[0].files[i]);

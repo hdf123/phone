@@ -89,30 +89,38 @@ $(function(){
 	/**
 	 * 咨询
 	 */
-	var dom="";
+	var dom="",dom1="";
 	for(i in consulting){
-		dom+=`<a class="information" href="consulting.html?ind=正弘形城1号院洋房在售${i+1}号院高层优惠升级中">
-				<div>
-					<div>${consulting[i].title}</div>
-					<p>${consulting[i].time}</p>
-				</div>
-				<img src=${consulting[i].img} alt="" />
-			</a>`;
+		dom+='<a class="information" href="consulting.html?state=0&ind=正弘形城1号院洋房在售'+i+'号院高层优惠升级中">'
+				+'<div>'
+					+'<div>'+consulting[i].title+'</div>'
+					+'<p>'+consulting[i].time+'</p>'
+				+'</div>'
+				+'<img src='+consulting[i].img+' alt="" />'
+			+'</a>';
+		dom1+='<a class="information" href="consulting.html?state=1&ind=正弘形城1号院洋房在售'+i+'号院高层优惠升级中">'
+				+'<div>'
+					+'<div>'+consulting[i].title+'</div>'
+					+'<p>'+consulting[i].time+'</p>'
+				+'</div>'
+				+'<img src='+consulting[i].img+' alt="" />'
+			+'</a>';
 	}
 	$(".consulting").append(dom);
-	$(".alerts").append(dom);
+	$(".alerts").append(dom1);
     $(".swiper2").on("click",".information",function(){
-    	localStorage.setItem('yz_consulting',JSON.stringify(1));
+    	console.log(message);
+    	localStorage.setItem('yz_consulting',JSON.stringify(message));
     })
     //最新优惠
-    for(var i=0;i<10;i++){
-    	$(".preferentialk").append(`<a href="consulting.html?ind=正弘形城1号院洋房在售${i+1}号院高层优惠升级中">
-							<div>正弘形城1号院洋房在售${i+1}号院高层优惠升级中</div>
-							<div>
-								<span>07-21</span>
-								<i class="iconfont">&#xe642;</i>
-							</div>
-						</a>`);
+    for(var i=0;i<20;i++){
+    	$(".preferentialk").append('<a href="consulting.html?state=2&ind=正弘形城1号院洋房在售'+(i+1)+'号院高层优惠升级中">'
+							+'<div>正弘形城1号院洋房在售'+(i+1)+'号院高层优惠升级中</div>'
+							+'<div>'
+								+'<span>07-21</span>'
+								+'<i class="iconfont">&#xe642;</i>'
+							+'</div>'
+						+'</a>');
     }
     $(".swiper2").on("click",".preferentialk>a",function(){
     	localStorage.setItem('yz_consulting',JSON.stringify(1));
@@ -144,11 +152,7 @@ $(function(){
 	})
 	//查看更多
 	$(".updates>div:eq(1)").click(function(){
-		if(message==2){
-			location.href="preferential.html?index="+message;
-		}else{
-			location.href="more_consultation.html?index="+message;
-		}
+		location.href="more_consultation.html?index="+message;
 	})
 	/**
 	 * 楼盘
@@ -160,11 +164,11 @@ $(function(){
 		for(j in sw1[i].region){
 			sk+=sw1[i].region[j]+" ";
 		}
-		sws+=`<div class="swiper-slide" ind=${i}>
-				<img src=${sw1[i].img} alt="" />
-				<p>${sw1[i].name}</p>
-				<p>${sk}</p>
-			</div>`;
+		sws+='<div class="swiper-slide" ind='+i+'>'
+				+'<img src='+sw1[i].img+' alt="" />'
+				+'<p>'+sw1[i].name+'</p>'
+				+'<p>'+sk+'</p>'
+			+'</div>';
 	}
 	$(".swiper4 .swiper-wrapper").append(sws);
 	$(".swiper5 .swiper-wrapper").append(sws);
@@ -201,34 +205,34 @@ $(function(){
 			var aa='',as='',region=data[i].region;
 			for(j in region){
 				if(j==region.length-1){
-					aa+=`${region[j]}`;
+					aa+=region[j];
 				}else{
-					aa+=`${region[j]}&nbsp;`;
+					aa+=region[j]+'&nbsp;';
 				}
 			}
 			if(data[i].state=="在售"){
-				as=`<div class="state statea">${data[i].state}</div>`;
+				as='<div class="state statea">'+data[i].state+'</div>';
 			}else if(data[i].state=="待售"){
-				as=`<div class="state stateb">${data[i].state}</div>`;
+				as='<div class="state stateb">'+data[i].state+'</div>';
 			}else{
-				as=`<div class="state">${data[i].state}</div>`;
+				as='<div class="state">'+data[i].state+'</div>';
 			}
-			dom+=`<div class="buildings">
-									<img src=${data[i].img} alt="" />
-									<div>
-										<div>${data[i].name}</div>
-										<div class="region">
-											<div>${aa}</div>
-											<div>${data[i].area}</div>
-										</div>
-										<div class="features">
-											${as}
-											<div>南北通透</div>
-											<div>配套成熟</div>
-										</div>
-										<div>售价待定</div>
-									</div>
-								</div>`;
+			dom+='<div class="buildings">'
+									+'<img src='+data[i].img+' alt="" />'
+									+'<div>'
+										+'<div>'+data[i].name+'</div>'
+										+'<div class="region">'
+											+'<div>'+aa+'</div>'
+											+'<div>'+data[i].area+'</div>'
+										+'</div>'
+										+'<div class="features">'
+											+as
+											+'<div>南北通透</div>'
+											+'<div>配套成熟</div>'
+										+'</div>'
+										+'<div>售价待定</div>'
+									+'</div>'
+								+'</div>';
 	    }
 	    if(ars==1){
 	    	$(".box1").append(dom);

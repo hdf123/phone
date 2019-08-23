@@ -91,14 +91,14 @@ a {
 }
 
 /*上下左右居中*/
-.flexs, .search > a, .choose > div:nth-child(2) > div, .tab_title > div, .btn1 > div, .btn2 > div, .btn3 > div, .btn4 > div, .cond > div > div {
+.flexs, .search > a, .tab_title > div, .btn1 > div, .btn2 > div, .btn3 > div, .btn4 > div, .cond > div > div {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .headers {
-  height: 3.066rem;
+  height: 2.1rem;
   background: white;
   z-index: 96;
 }
@@ -125,25 +125,6 @@ a {
   border: none;
 }
 
-.choose > div:nth-child(2) {
-  padding: 0.08rem 0.4rem 0.16rem 0.4rem;
-  display: flex;
-  justify-content: space-between;
-  background: white;
-}
-.choose > div:nth-child(2) > div {
-  width: 2.133rem;
-  height: 0.667rem;
-  color: #999999;
-  font-size: 0.32rem;
-  background-color: #f5f5f5;
-  border-radius: 0.027rem;
-}
-.choose > div:nth-child(2) > .act {
-  color: #0099ff;
-  background: rgba(0, 153, 255, 0.3);
-}
-
 .tab_title {
   display: flex;
   padding: 0.32rem 0;
@@ -166,7 +147,7 @@ a {
   width: 10rem !important;
   padding: 0 0.4rem;
   position: absolute;
-  top: 3.066rem;
+  top: 2.1rem;
   left: auto;
   bottom: 0;
   overflow: auto;

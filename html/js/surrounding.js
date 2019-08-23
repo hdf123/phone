@@ -47,19 +47,19 @@ $(function(){
 					var ms='';
 					if(juli>=1000){
 						juli=(juli/1000).toFixed(3);
-						ms=`<div>${juli}km</div>`
+						ms='<div>'+juli+'km</div>'
 					}else{
-						ms=`<div>${juli}m</div>`
+						ms='<div>'+juli+'m</div>'
 					}
-					$(".distance_box").append(`<li>
-												<div>
-													<div>
-														<div class="titlek">${results.getPoi(i).title}</div>
-														(<div>${results.getPoi(i).address}</div>
-													</div>
-												</div>
-												${ms}
-											</li>`);
+					$(".distance_box").append('<li>'
+												+'<div>'
+													+'<div>'
+														+'<div class="titlek">'+results.getPoi(i).title+'</div>'
+														+'(<div>'+results.getPoi(i).address+'</div>'
+													+'</div>'
+												+'</div>'
+												+ms
+											+'</li>');
 					var aa=$(".titlek").eq(i).width();
 					var as=$(".titlek").parent().parent().width();
 					if(aa<=as-20){
@@ -127,29 +127,29 @@ $(function(){
 	var LoadingDataFn = function() {
 	    var dom = '';
 	    for (var i = 0; i <10; i++) {
-	        dom +=`<div class="building_box">
-					<img src="" alt="" />
-					<div>
-						<div class="titls">
-							<h3>${i+1}中岳俪景湾中岳俪景湾中岳俪景湾</h3>
-							<div>住宅</div>
-						</div>
-						<div class="environment">
-							<div>
-								<div>住宅</div>
-								<div>管城回族区</div>
-								<div>管南区域</div>
-							</div>
-							<div>建面73-124㎡</div>
-						</div>
-						<div class="situation">
-							<div>小户型</div>
-							<div>车位充足</div>
-							<div>绿化率高</div>
-						</div>
-						<div>14000元/平</div>
-					</div>
-				</div>`;
+	        dom +='<div class="building_box">'
+					+'<img src="" alt="" />'
+					+'<div>'
+						+'<div class="titls">'
+							+'<h3>'+(i+1)+'中岳俪景湾中岳俪景湾中岳俪景湾</h3>'
+							+'<div>住宅</div>'
+						+'</div>'
+						+'<div class="environment">'
+							+'<div>'
+								+'<div>住宅</div>'
+								+'<div>管城回族区</div>'
+								+'<div>管南区域</div>'
+							+'</div>'
+							+'<div>建面73-124㎡</div>'
+						+'</div>'
+						+'<div class="situation">'
+							+'<div>小户型</div>'
+							+'<div>车位充足</div>'
+							+'<div>绿化率高</div>'
+						+'</div>'
+						+'<div>14000元/平</div>'
+					+'</div>'
+				+'</div>';
 	    }
 	  	$('.surrounding_building').append(dom);
 	  	$(".surrounding_building").on("click",".building_box",function(){
