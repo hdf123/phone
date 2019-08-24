@@ -369,10 +369,21 @@ a {
 .door {
   width: 4.18rem;
 }
-.door > img {
-  width: 2.88rem;
-  height: 3.053rem;
-  margin-left: 1.3rem;
+.door > div:nth-child(1) {
+  width: 4.293rem;
+  height: 3.573rem;
+  position: relative;
+  border: 1px solid #E5E5E5;
+}
+.door > div:nth-child(1) > img {
+  max-width: 100%;
+  max-height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
 }
 .door > div:nth-child(2) {
   display: flex;
