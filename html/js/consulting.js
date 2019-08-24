@@ -7,7 +7,9 @@ $(function(){
 		$(".centers").html("最新优惠");
 	}
 	console.log(getRequest());
-	$(".contents>h3").html(getRequest().ind);
+	
+	$(".contents>h3:eq(0)").html(getRequest().ind);
+	
 	$(".uus li").click(function(){
 		location.reload();
 	})

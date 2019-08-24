@@ -116,7 +116,7 @@ $(function(){
 		}else{
 			$(this).find(".iconfont").removeClass("icon-shang-copy");
 			$(this).find(".iconfont").addClass("icon-shang");
-			$(".distance_box").css({"height":"7.4rem"});
+			$(".distance_box").css({"height":"7rem"});
 		}
 	})
 	/**

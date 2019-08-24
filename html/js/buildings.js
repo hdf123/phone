@@ -87,31 +87,26 @@ $(function(){
 	/**
 	 * 滚动显示
 	 */
-	console.log("基础信息------------"+$(".swiper1").position().top);
-	console.log("户型------------"+$(".door_box").position().top);
-	console.log("周边------------"+$(".surrounding_title").position().top);
-	console.log("点评------------"+$(".review_title").position().top);
 	$(".headersk").hide();
 	$(".contents").scroll(function(){
 		$(".headersk").show();
-		console.log($(".contents").scrollTop());
 		var sk=$(".contents").scrollTop();
-		if(sk<530){
+		if(sk<530){//基础信息
 			tabIndex=0;
 			var mm=8.5+(100/4*tabIndex);
 			var oLine = $('.mortgage_tab>div');
 			oLine.stop(true,true).animate({ 'left': mm + '%' }, 300)
-		}else if(sk>530&&sk<810){
+		}else if(sk>530&&sk<810){//户型
 			tabIndex=1;
 			var mm=8.5+(100/4*tabIndex);
 			var oLine = $('.mortgage_tab>div');
 			oLine.stop(true,true).animate({ 'left': mm + '%' }, 300)
-		}else if(sk>810&&sk<1270){
+		}else if(sk>810&&sk<1270){//周边
 			tabIndex=2;
 			var mm=8.5+(100/4*tabIndex);
 			var oLine = $('.mortgage_tab>div');
 			oLine.stop(true,true).animate({ 'left': mm + '%' }, 300)
-		}else if(sk>1270){
+		}else if(sk>1270){//点评
 			tabIndex=3;
 			var mm=8.5+(100/4*tabIndex);
 			var oLine = $('.mortgage_tab>div');

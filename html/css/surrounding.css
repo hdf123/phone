@@ -91,7 +91,7 @@ a {
 }
 
 /*上下左右居中*/
-.flexs, .headers .lefts, .headers .centers, .more {
+.flexs, .headers .lefts, .headers .centers, .more, .titls > div {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -134,6 +134,7 @@ a {
   overflow: hidden;
 }
 .contents .swiper1 .swiper-slide {
+  font-size: 0.373rem;
   text-align: center;
 }
 .contents .swiper1 .act {
@@ -152,7 +153,7 @@ a {
 }
 
 .distance_box {
-  height: 7.4rem;
+  height: 7rem;
   padding: 0.26rem 0.4rem;
   overflow: hidden;
 }
@@ -171,10 +172,12 @@ a {
   display: inline-block;
   max-width: 6.5rem;
   color: #999999;
+  font-size: 0.373rem;
 }
 .distance_box > li > div:nth-child(1) > div > div {
   display: inline-block;
   white-space: nowrap;
+  font-size: 0.373rem;
 }
 .distance_box > li > div:nth-child(1) > div > div:nth-child(2) {
   color: #999999;
@@ -237,8 +240,9 @@ a {
   font-size: 0.373rem;
 }
 .titls > div {
+  width: 0.8rem;
+  height: 0.427rem;
   font-size: 0.267rem;
-  padding: 0.08rem 0.147rem;
   border-radius: 0.053rem;
   border: solid 0.02rem #333333;
 }
@@ -287,3 +291,5 @@ a {
   background: url(../../img/bubbles.png) no-repeat;
   background-size: 100% 100%;
 }
+
+/*# sourceMappingURL=surrounding.css.map */

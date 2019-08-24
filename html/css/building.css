@@ -191,7 +191,7 @@ a {
   display: flex;
   align-items: center;
   height: 0.25rem;
-  border-right: 2px solid #E5E5E5;
+  border-right: 0.027rem solid #E5E5E5;
 }
 .environment > div:nth-child(1) > div {
   color: #999999;

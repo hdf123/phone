@@ -36,6 +36,7 @@
         width:10rem;
         overflow: hidden;
         .swiper-slide{
+            font-size: 0.373rem;
             text-align: center;
         }
         .act{
@@ -52,7 +53,7 @@
     display: none;
 }
 .distance_box{
-    height:7.4rem;
+    height:7rem;
     padding:0.26rem 0.4rem;
     overflow: hidden;
     >li{
@@ -68,13 +69,12 @@
                 display: inline-block;
                 max-width:6.5rem;
                 color:#999999;
+                font-size: 0.373rem;
                 @extend .yincang;
                 >div{
                     display: inline-block;
                     white-space: nowrap;
-                }
-                >div:nth-child(1){
-                    
+                    font-size: 0.373rem;
                 }
                 >div:nth-child(2){
                     color:#999999;
@@ -137,8 +137,10 @@
         @extend .yincang;
     }
     >div{
+        width: 0.8rem;
+        height: 0.427rem;
         font-size:0.267rem;
-        padding:0.08rem 0.147rem;
+        @extend .flexs;
         border-radius: 0.053rem;
         border:solid 0.02rem #333333;
     }
