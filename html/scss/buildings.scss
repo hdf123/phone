@@ -189,7 +189,7 @@
     text-align: center;
     font-size:0.373rem;
     line-height:1.067rem;
-    background-color: #f9f9f9;
+    background-color: #F2FAFF;
     border-radius: 0.053rem;
 }
 .scrolls{
@@ -401,7 +401,7 @@
     font-size: 0.373rem;
     border-radius: 0.053rem;
     @extend .flexs;
-    background-color:rgba(0,153,255,0.3);
+    background-color:#F2FAFF;
 }
 .review_title{
     width:9.2rem;
@@ -488,12 +488,13 @@
     display: flex;
     flex-wrap: wrap;
     >li{
-        width:3.066rem;
+        width:calc(100% / 3);
         text-align: center;
         padding-bottom:0.253rem;
         >img{
             width: 2.693rem;
             height: 2.693rem;
+            margin:0 auto;
         }
     }
 }

@@ -279,7 +279,7 @@ a {
   text-align: center;
   font-size: 0.373rem;
   line-height: 1.067rem;
-  background-color: #f9f9f9;
+  background-color: #F2FAFF;
   border-radius: 0.053rem;
 }
 
@@ -496,7 +496,7 @@ a {
   color: #0099ff;
   font-size: 0.373rem;
   border-radius: 0.053rem;
-  background-color: rgba(0, 153, 255, 0.3);
+  background-color: #F2FAFF;
 }
 
 .review_title {
@@ -585,13 +585,14 @@ a {
   flex-wrap: wrap;
 }
 .comments_img > li {
-  width: 3.066rem;
+  width: calc(100% / 3);
   text-align: center;
   padding-bottom: 0.253rem;
 }
 .comments_img > li > img {
   width: 2.693rem;
   height: 2.693rem;
+  margin: 0 auto;
 }
 
 .comments_time {
