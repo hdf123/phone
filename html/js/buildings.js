@@ -228,7 +228,6 @@ $(function(){
 	};
     var locals = new BMap.LocalSearch(map ,options);
     locals.searchNearby(near, point,2000);
-    
 	/**
 	 * 最新动态
 	 */
@@ -266,11 +265,11 @@ $(function(){
     	var muns=parseInt($(this).children("div:eq(0)").text());
     	if($(this).children("div:eq(0)").is(".act")){
     		$(this).children("div:eq(0)").removeClass("act");
-    		$(this).find("img").attr("src","../../img/aa.png");
+    		$(this).find("img").attr("src","../img/aa.png");
     		$(this).children("div:eq(0)").text(muns-1);
     	}else{
     		$(this).children("div:eq(0)").addClass("act");
-    		$(this).find("img").attr("src","../../img/ab.png");
+    		$(this).find("img").attr("src","../img/ab.png");
     		$(this).children("div:eq(0)").text(muns+1);
     	}
     })
