@@ -145,13 +145,17 @@ body {
   background: white;
 }
 .swiper1 .swiper-slide {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
 }
 .swiper1 img {
-  width: 70%;
-  max-height: 90%;
+  max-width: 80%;
+  max-height: 80%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
 }
 
 .swiper1-pagination {
@@ -183,3 +187,5 @@ body {
   color: #d8b87b;
   font-size: 0.427rem;
 }
+
+/*# sourceMappingURL=preview.css.map */

@@ -171,9 +171,21 @@ a {
   padding: 0.44rem;
   border-bottom: 1px solid #eeeeee;
 }
-.door_box > img {
+
+.imgks {
   width: 2.933rem;
   height: 2.32rem;
+  position: relative;
+}
+.imgks > img {
+  max-width: 100%;
+  max-height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
 }
 
 .door_child {
@@ -222,3 +234,5 @@ a {
   font-size: 0.373rem;
   margin-top: 0.15rem;
 }
+
+/*# sourceMappingURL=door.css.map */
