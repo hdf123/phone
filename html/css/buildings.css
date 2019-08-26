@@ -341,11 +341,12 @@ a {
 }
 
 .door_box {
-  width: 9.2rem;
+  width: 10rem;
+  padding-left: 0.4rem;
   margin: 0 auto;
 }
 .door_box > div:nth-child(1) {
-  padding: 0.387rem 0;
+  padding: 0.387rem 0.4rem 0.387rem 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -361,9 +362,59 @@ a {
   color: #999999;
 }
 
-.doors {
+.swiper5 .swiper-slide {
+  width: 4.18rem;
+}
+.swiper5 .swiper-slide > div:nth-child(1) {
+  width: 4.293rem;
+  height: 3.573rem;
+  position: relative;
+}
+.swiper5 .swiper-slide > div:nth-child(1) > img {
+  max-width: 100%;
+  max-height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+.swiper5 .swiper-slide > div:nth-child(2) {
   display: flex;
-  justify-content: space-between;
+  margin-top: 0.533rem;
+}
+.swiper5 .swiper-slide > div:nth-child(2) > h3 {
+  font-size: 0.4rem;
+}
+.swiper5 .swiper-slide > div:nth-child(2) > div {
+  color: #999999;
+  font-size: 0.267rem;
+  background-color: #f5f5f5;
+  border-radius: 0.027rem;
+  margin-left: 0.267rem;
+  padding: 0.055rem 0.12rem;
+}
+.swiper5 .swiper-slide > div:nth-child(2) > .sell {
+  /*在售*/
+  color: #0099ff;
+  background-color: rgba(0, 153, 255, 0.3);
+}
+.swiper5 .swiper-slide > div:nth-child(2) > .waiting {
+  /*待售*/
+  color: #ffb956;
+  background-color: rgba(255, 185, 86, 0.3);
+}
+.swiper5 .swiper-slide > div:nth-child(3) {
+  display: flex;
+  margin: 0.253rem 0;
+}
+.swiper5 .swiper-slide > div:nth-child(3) > div {
+  margin-right: 0.2rem;
+}
+.swiper5 .swiper-slide > div:nth-child(4) {
+  color: #f9351a;
+  font-size: 0.4rem;
 }
 
 .door {
@@ -387,7 +438,6 @@ a {
 }
 .door > div:nth-child(2) {
   display: flex;
-  justify-content: space-between;
   margin-top: 0.533rem;
 }
 .door > div:nth-child(2) > h3 {
@@ -398,7 +448,7 @@ a {
   font-size: 0.267rem;
   background-color: #f5f5f5;
   border-radius: 0.027rem;
-  margin-right: 0.267rem;
+  margin-left: 0.267rem;
   padding: 0.055rem 0.12rem;
 }
 .door > div:nth-child(2) > .sell {

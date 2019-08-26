@@ -60,6 +60,12 @@ $(function(){
 	    	location.href="buildings.html";
 		} 
 	})
+	var mySwiper5 = new Swiper('.swiper5', {
+		slidesPerView :2.2,
+    	spaceBetween :20,
+		observer:true,
+    	observeParents:true,
+	})
 //选项卡切换
 	var tabIndex = 0;
 	var tabBar = function() {

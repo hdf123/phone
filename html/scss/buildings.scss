@@ -252,10 +252,11 @@
     display: none;
 }
 .door_box{
-    width:9.2rem;
+    width:10rem;
+    padding-left:0.4rem;
     margin:0 auto;
     >div:nth-child(1){
-        padding:0.387rem 0;
+        padding:0.387rem 0.4rem 0.387rem 0;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -271,10 +272,68 @@
         }
     }
 }
-.doors{
-    display: flex;
-    justify-content: space-between;
+.swiper5{
+    .swiper-slide{
+        width:4.18rem;
+        >div:nth-child(1){
+            width: 4.293rem;
+            height: 3.573rem;
+            position:relative;
+            >img{
+                max-width:100%;
+                max-height: 100%;
+                position:absolute;
+                top:0;
+                left:0;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+            }
+        }
+        >div:nth-child(2){
+            display: flex;
+            margin-top:0.533rem;
+            >h3{
+                font-size: 0.4rem;
+            }
+            >div{
+                color:#999999;
+                font-size:0.267rem;
+                background-color: #f5f5f5;
+                border-radius: 0.027rem;
+                margin-left:0.267rem;
+                padding:0.055rem 0.12rem;
+            }
+            >.sell{/*在售*/
+                color:#0099ff;
+                background-color:rgba(0,153,255,0.3);
+            }
+            >.waiting{/*待售*/
+                color:#ffb956;
+                background-color:rgba(255,185,86,0.3);
+            }
+        }
+        >div:nth-child(3){
+            display: flex;
+            margin:0.253rem 0;
+            >div{
+                margin-right:0.2rem;
+            }
+        }
+        >div:nth-child(4){
+            color: #f9351a;
+            font-size: 0.4rem;
+        } 
+    }
 }
+
+
+
+//.doors{
+//  display: flex;
+//  justify-content: space-between;
+//  padding-right:0.35rem;
+//}
 .door{
     width:4.18rem;
     >div:nth-child(1){
@@ -295,7 +354,6 @@
     }
     >div:nth-child(2){
         display: flex;
-        justify-content: space-between;
         margin-top:0.533rem;
         >h3{
             font-size: 0.4rem;
@@ -305,7 +363,7 @@
             font-size:0.267rem;
             background-color: #f5f5f5;
             border-radius: 0.027rem;
-            margin-right:0.267rem;
+            margin-left:0.267rem;
             padding:0.055rem 0.12rem;
         }
         >.sell{/*在售*/
