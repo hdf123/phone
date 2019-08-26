@@ -6,5 +6,10 @@
 			"css/jquery.mloading.css",
 			"css/swiper-3.4.2.min.css"
 		]
+	},
+	"html/maps.html": {
+		"refer": [
+			"html/home.html"
+		]
 	}
 }

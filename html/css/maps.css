@@ -172,6 +172,8 @@ html, body {
   height: 100%;
   overflow: auto;
   background: white;
+  position: relative;
+  top: -1px;
 }
 
 .options {
