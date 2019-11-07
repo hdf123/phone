@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+<style>
+	.box{
+		display: flex;
+	}
+	.aa{
+		max-width:400px;
+		display: flex;
+		background:rgba(55,55,55,1);
+	}
+	.aa>div:nth-child(1){
+		white-space: nowrap;
+	}
+	.aa>div:nth-child(2){
+		overflow: hidden;
+	    text-overflow: ellipsis;
+	    white-space: nowrap;
+	}
+</style>
+	<body>
+		<div class="box">
+			<div class="aa">
+				<div>白沙镇中心小学白沙镇中心小学12</div>
+				(<div>河南省郑州市中牟县镇河南省郑州市中牟县</div>)
+			</div>
+			<div>555</div>
+		</div>
+	</body>
+</html>

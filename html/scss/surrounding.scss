@@ -70,13 +70,13 @@
                 max-width:6.5rem;
                 color:#999999;
                 font-size: 0.373rem;
-                @extend .yincang;
-                >div{
-                    display: inline-block;
+                display: flex;
+                >div:nth-child(1){
                     white-space: nowrap;
                     font-size: 0.373rem;
                 }
                 >div:nth-child(2){
+                    @extend .yincang;
                     color:#999999;
                 }
             }

@@ -289,7 +289,7 @@ $(function(){
 	    	}else{
 	    		states='<div>售罄</div>';
 	    	}
-	        dom +='<div class="building_box">'
+	        dom +='<a class="building_box" href="buildings.html">'
 						+'<img src='+data[i].img+' alt="" />'
 						+'<div>'
 							+'<h3>'+data[i].name+'</h3>'
@@ -302,7 +302,7 @@ $(function(){
 								+states+skb
 							+'</div>'
 						+'</div>'
-					+'</div>';
+					+'</a>';
 	    }
 	  	$('.contents').append(dom);
 	    off_on = true;
@@ -323,10 +323,4 @@ $(function(){
 	        }
 	    }
 	});
-	
-	
-	$(".contents").on("click",".building_box",function(){
-		localStorage.setItem('yz_building', JSON.stringify(data[$(this).index()]));
-		location.href="buildings.html";
-	})
 })

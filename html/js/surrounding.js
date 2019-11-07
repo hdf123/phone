@@ -51,20 +51,16 @@ $(function(){
 					}else{
 						ms='<div>'+juli+'m</div>'
 					}
+					console.log(results.getPoi(i).address);
 					$(".distance_box").append('<li>'
 												+'<div>'
 													+'<div>'
 														+'<div class="titlek">'+results.getPoi(i).title+'</div>'
-														+'(<div>'+results.getPoi(i).address+'</div>'
+														+'(<div>'+results.getPoi(i).address+'</div>)'
 													+'</div>'
 												+'</div>'
 												+ms
 											+'</li>');
-					var aa=$(".titlek").eq(i).width();
-					var as=$(".titlek").parent().parent().width();
-					if(aa<=as-20){
-						$(".titlek").eq(i).parent().parent().append(")");
-					}
 				    point[i] = new window. BMap . Point(results.getPoi(i).point.lng,results.getPoi(i).point.lat); //循环生成新的地图点
 					// 复杂的自定义覆盖物
 				    function ComplexCustomOverlay(point, text, mouseoverText){
