@@ -2,7 +2,7 @@ $(function(){
 	/**
 	 * 页面渲染
 	 */
-	var yz_building=data[3];//转为对象
+	var yz_building=data[2];//转为对象
 	var ska="",skb="",states="";
 	for(i in yz_building.region){
 		ska+='<div>'+yz_building.region[i]+'</div>';
