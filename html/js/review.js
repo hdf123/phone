@@ -26,7 +26,7 @@ $(function(){
 	/**
 	 * 发表
 	 */
-	$(".rights").on("click",function(){
+	$(".rights").on("touch",function(){
 //	$(".rights").click(function(){
 		if(len==0){
 			return alert("发表内容不可为空1");
