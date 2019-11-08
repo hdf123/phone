@@ -1,19 +1,26 @@
 $(function(){
 	var mySwiper1 = new Swiper('.swiper1', {
 		slidesPerView :4,
+  		centeredSlidesBounds: true,
+  
 		onSlideChangeStart:function(swiper){//swiper3中使用
         	var xiabiao=swiper.activeIndex;
+        	console.log(xiabiao);
 	   }
 	})
-//	$(".swiper1 .swiper-slide").click(function(){
-//		$(this).addClass("act").siblings().removeClass("act");
-//	})
 	/**
 	 * 获取附近信息
 	 */
-	var near="公交";
+	var near="教育";
 	$(".swiper1 .swiper-slide").click(function(){
 		$(this).addClass("act").siblings().removeClass("act");
+		var ind=$(this).index()-1;
+		console.log(ind);
+		if(ind>0){
+			mySwiper1.slideTo(ind, 100, false);
+		}else if(ind==0){
+			mySwiper1.slideTo(ind, 100, false);
+		}
 		var near=$(this).text();
 		map.clearOverlays();//清除地图覆盖物
         map.addOverlay(marker);// 将标注添加到地图中
@@ -51,7 +58,6 @@ $(function(){
 					}else{
 						ms='<div>'+juli+'m</div>'
 					}
-					console.log(results.getPoi(i).address);
 					$(".distance_box").append('<li>'
 												+'<div>'
 													+'<div>'

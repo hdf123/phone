@@ -84,15 +84,16 @@ $(function(){
 		oLine.animate({ 'left': mm + '%' }, 300, function() {
 			console.log(tabIndex);
 			if(tabIndex==0){
-				$(".contents").scrollTop(0)
+				$(".contents").scrollTop(0);
 			}else if(tabIndex==1){
-				$(".contents").scrollTop(580)
+				$(".contents").scrollTop(510);
 			}else if(tabIndex==2){
-				$(".contents").scrollTop(910)
+				$(".contents").scrollTop(810);
 			}else{
-				$(".contents").scrollTop(1420)
+				$(".contents").scrollTop(1270);
 			}
 		});
+		
 
 	})
 	/**
@@ -102,22 +103,23 @@ $(function(){
 	$(".contents").scroll(function(){
 		$(".headersk").show();
 		var sk=$(".contents").scrollTop();
-		if(sk<530){//基础信息
+		console.log(sk);
+		if(sk<450){//基础信息
 			tabIndex=0;
 			var mm=8.5+(100/4*tabIndex);
 			var oLine = $('.mortgage_tab>div');
 			oLine.stop(true,true).animate({ 'left': mm + '%' }, 300)
-		}else if(sk>580&&sk<910){//户型
+		}else if(sk>450&&sk<750){//户型
 			tabIndex=1;
 			var mm=8.5+(100/4*tabIndex);
 			var oLine = $('.mortgage_tab>div');
 			oLine.stop(true,true).animate({ 'left': mm + '%' }, 300)
-		}else if(sk>910&&sk<1420){//周边
+		}else if(sk>750&&sk<1210){//周边
 			tabIndex=2;
 			var mm=8.5+(100/4*tabIndex);
 			var oLine = $('.mortgage_tab>div');
 			oLine.stop(true,true).animate({ 'left': mm + '%' }, 300)
-		}else if(sk>1420){//点评
+		}else if(sk>1270){//点评
 			tabIndex=3;
 			var mm=8.5+(100/4*tabIndex);
 			var oLine = $('.mortgage_tab>div');
@@ -147,9 +149,15 @@ $(function(){
 	/**
 	 * 获取附近信息
 	 */
-	var near="公交";
+	var near="教育";
 	$(".swiper2 .swiper-slide").click(function(){
 		$(this).addClass("act").siblings().removeClass("act");
+		var ind=$(this).index()-1;
+		if(ind>0){
+			mySwiper2.slideTo(ind, 100, false);
+		}else if(ind==0){
+			mySwiper2.slideTo(ind, 100, false);
+		}
 		var near=$(this).text();
 		map.clearOverlays();//清除地图覆盖物
         map.addOverlay(marker);// 将标注添加到地图中
