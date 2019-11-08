@@ -26,13 +26,14 @@ $(function(){
 	/**
 	 * 发表
 	 */
-	$(".rights").on("touch",function(){
+//	$(".rights").on("touch",function(){
 //	$(".rights").click(function(){
+	function func(){
 		if(len==0){
 			return alert("发表内容不可为空1");
 		}else{
 			alert("提交成功1")
 		}
 		console.log($(".puba").val());
-	})
+	}
 })
