@@ -26,11 +26,12 @@ $(function(){
 	/**
 	 * 发表
 	 */
+//	$(document).on('click','.rights',function(){
 	$(".rights").click(function(){
-		if($(".puba").val()!=""){
-			return alert("发表内容不可为空");
+		if($(".puba").val()==""){
+			alert("发表内容不可为空1");
 		}else{
-			alert("提交成功")
+			alert("提交成功1")
 		}
 		console.log($(".puba").val());
 	})
