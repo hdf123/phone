@@ -29,9 +29,9 @@ $(function(){
 	$(".rights").bind("click",function(){
 //	$(".rights").click(function(){
 		if(len==0){
-			return alert("发表内容不可为空");
+			return alert("发表内容不可为空1");
 		}else{
-			alert("提交成功")
+			alert("提交成功1")
 		}
 		console.log($(".puba").val());
 	})
