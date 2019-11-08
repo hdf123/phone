@@ -26,8 +26,8 @@ $(function(){
 	/**
 	 * 发表
 	 */
-	$(document).on('click','.rights',function(){
-//	$(".rights").click(function(){
+//	$(document).on('click','.rights',function(){
+	$(".rights").click(function(){
 		if(len==0){
 			return alert("发表内容不可为空2");
 		}else{
