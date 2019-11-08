@@ -30,9 +30,9 @@ $(function(){
 	$(".rights").click(function(){
 		if(len==0){
 //		if($(".puba").val()==""){
-			alert("发表内容不可为空2");
+			alert("发表内容不可为空3");
 		}else{
-			alert("提交成功2")
+			alert("提交成功3")
 		}
 		console.log($(".puba").val());
 	})
