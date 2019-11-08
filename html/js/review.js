@@ -7,7 +7,7 @@ $(function(){
 		location.href="home.html";
 	}
 	//输入数量限制
-	var len=0,total=200,states=false;
+	var len=0,total=200;
 	$(".review_box>div").html(len+'/'+total);
 	$('.puba').on('input propertychange', function (e){
 	    var texts=$(this).val();
@@ -27,7 +27,7 @@ $(function(){
 	 * 发表
 	 */
 	$(".rights").click(function(){
-		if(!states){
+		if(len==0){
 			return alert("发表内容不可为空");
 		}else{
 			alert("提交成功")
