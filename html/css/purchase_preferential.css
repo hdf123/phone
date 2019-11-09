@@ -91,7 +91,7 @@ a {
 }
 
 /*上下左右居中*/
-.flexs, .headers .lefts, .headers .rights, .building_title > div:nth-child(2) > div, .bounced_box {
+.flexs, .headers .lefts, .headers .rights, .building_title > div:nth-child(2) > div {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -235,11 +235,11 @@ a {
   justify-content: flex-end;
   padding: 0.267rem 0;
 }
-.contact > img {
+.contact img {
   width: 0.747rem;
   height: 0.747rem;
 }
-.contact > img:nth-child(1) {
+.contact a {
   margin-right: 0.667rem;
 }
 
@@ -251,12 +251,20 @@ a {
   right: 0;
   bottom: 0;
   z-index: 97;
+  display: none;
 }
 
 .bounced {
   width: 7.467rem;
+  height: 7.5rem;
   background: white;
   padding: 0.533rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
 }
 .bounced > div:nth-child(1) {
   font-size: 0.4rem;

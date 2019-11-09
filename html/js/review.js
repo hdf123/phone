@@ -26,10 +26,8 @@ $(function(){
 	/**
 	 * 发表
 	 */
-//	$(document).on('click','.rights',function(){
 	$(".rights").click(function(){
 		if(len==0){
-//		if($(".puba").val()==""){
 			alert("发表内容不可为空3");
 		}else{
 			alert("提交成功3")

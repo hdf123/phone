@@ -5,10 +5,9 @@ $(function(){
 	$('.search').click(function (){
 		location.href="search.html"
 	});
-	$(".contact>img:eq(1)").click(function(){
+	$(".contents").on("click",".contact>img",function(){
 		$(".bounced_box").show();
 	})
-	$(".bounced_box").hide();
 	$(".btns").click(function(){
 		console.log($(".name").val());
 		console.log($(".phone").val());

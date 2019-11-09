@@ -625,20 +625,59 @@
 }
 
 
+.bounced_box{
+    background:rgba(0,0,0,0.5);
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index:97;
+    display:none;
+}
+.bounced{
+    width: 7.467rem;
+    height:7.5rem;
+    background:white;
+    padding:0.533rem;
+    position:absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom:0;
+    margin:auto;
+    >div:nth-child(1){
+        font-size: 0.4rem;
+        text-align: center;
+        padding-bottom:0.453rem;
+    }
+    >input:nth-child(2),>input:nth-child(3){
+        width: 6.4rem;
+        height: 0.96rem;
+        color:#999999;
+        font-size:0.32rem;
+        padding:0 0.373rem;
+        border-radius: 0.053rem;
+        border: solid 0.027rem #333333;
+    }
+    >input:nth-child(3){
+        margin-top:0.267rem;
+    }
+    >div:nth-child(4){
+        color:#999999;
+        font-size:0.267rem;
+        margin-top:0.267rem;
+    }
+}
+.btns{
+    width: 6.4rem;
+    height: 1.2rem;
+    color: #ffffff;
+    font-size: 0.4rem;
+    text-align: center;
+    line-height:1.2rem;
+    margin-top:0.693rem;
+    background-color: #1a1a1a;
+    border-radius: 0.053rem; 
+}
 
-
-
-
-
-
-
-
-
-
-
-//.as{
-//  >div{
-//      height:1rem;
-//      @extend .flexs;
-//  }
-//}

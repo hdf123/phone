@@ -134,11 +134,11 @@
     display: flex;
     justify-content: flex-end;
     padding:0.267rem 0;
-    >img{
+    img{
         width: 0.747rem;
         height: 0.747rem;
     }
-    >img:nth-child(1){
+    a{
         margin-right:0.667rem;
     }
 }
@@ -150,12 +150,19 @@
     right:0;
     bottom:0;
     z-index:97;
-    @extend .flexs;
+    display:none;
 }
 .bounced{
     width: 7.467rem;
+    height:7.5rem;
     background:white;
     padding:0.533rem;
+    position:absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom:0;
+    margin:auto;
     >div:nth-child(1){
         font-size: 0.4rem;
         text-align: center;

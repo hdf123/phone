@@ -276,4 +276,23 @@ $(function(){
     		$(this).children("div:eq(0)").text(muns+1);
     	}
     })
+    /**
+     * 联系客服、我要优惠
+     */
+    $(".footers>a:eq(1)").click(function(){
+    	$(".bounced_box").show();
+    })
+	$(".btns").click(function(){
+		console.log($(".name").val());
+		console.log($(".phone").val());
+		$(".bounced_box").hide();
+		alert("我们已收到您的信息，会及时与您联系");
+	})
+	$(".bounced_box").click(function(event){
+		$(this).hide();
+		event.stopPropagation();
+	})
+	$(".bounced").click(function(event){
+		event.stopPropagation();
+	})
 })
