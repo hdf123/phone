@@ -20,7 +20,6 @@ $(function(){
 	$(".bounced").click(function(event){
 		event.stopPropagation();
 	})
-	
 	/**
 	 * 懒加载
 	 */

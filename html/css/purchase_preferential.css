@@ -91,7 +91,7 @@ a {
 }
 
 /*上下左右居中*/
-.flexs, .headers .lefts, .headers .rights, .building_title > div:nth-child(2) > div {
+.flexs, .headers .lefts, .headers .rights, .building_title .nums > div {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -191,20 +191,20 @@ a {
   font-size: 0.32rem;
   font-weight: 600;
 }
-.building_title > div:nth-child(2) {
+.building_title .nums {
   display: flex;
   height: 0.55rem;
 }
-.building_title > div:nth-child(2) > div {
+.building_title .nums > div {
   font-size: 0.267rem;
   padding: 0.093rem;
 }
-.building_title > div:nth-child(2) > div:nth-child(1) {
+.building_title .nums > div:nth-child(1) {
   color: #ffffff;
   background-color: #cccccc;
   border-radius: 0.027rem 0rem 0rem 0.027rem;
 }
-.building_title > div:nth-child(2) > div:nth-child(2) {
+.building_title .nums > div:nth-child(2) {
   color: #cccccc;
   border: solid 0.013rem #cccccc;
 }
