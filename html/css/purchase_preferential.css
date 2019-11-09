@@ -166,7 +166,6 @@ a {
 
 .building_title {
   display: flex;
-  align-items: center;
   justify-content: space-between;
 }
 .building_title > div:nth-child(1) {
@@ -201,11 +200,12 @@ a {
 }
 .building_title .nums > div:nth-child(1) {
   color: #ffffff;
-  background-color: #cccccc;
+  background-color: #FF6D66;
   border-radius: 0.027rem 0rem 0rem 0.027rem;
 }
 .building_title .nums > div:nth-child(2) {
-  color: #cccccc;
+  color: #ffffff;
+  background-color: #cccccc;
   border: solid 0.013rem #cccccc;
 }
 
