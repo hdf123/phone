@@ -49,7 +49,7 @@ $(function(){
 		   	            reader.onload = function (e) {
 		   	            	$(".images").before('<div class="imgs">'
 									+'<img src='+e.target.result+' class="imgas" alt="" />'
-									+'<img src="../../img/delete.png" class="deletes" alt="" />'
+									+'<img src="../img/delete.png" class="deletes" alt="" />'
 								+'</div>');
 							numks();
 		   	            }
