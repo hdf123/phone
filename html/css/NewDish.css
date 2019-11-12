@@ -161,10 +161,12 @@ a {
 }
 
 .contents {
+  max-width: 10rem;
   padding-top: 1.173rem;
   position: absolute;
   top: 0;
   left: auto;
+  right: auto;
   bottom: 0;
   overflow: auto;
 }
@@ -320,9 +322,11 @@ a {
 }
 
 .posits {
+  max-width: 10rem;
   position: fixed;
   top: 1.173rem;
-  left: 0;
+  left: auto;
+  right: auto;
   z-index: 999;
 }
 
