@@ -333,6 +333,7 @@ $(function(){
 		var sctop=$(".contents").scrollTop();
 		console.log("sctop---"+sctop);
 		console.log("lens---"+lens);
+		$("#txtLogin").val(sctop+"-----"+lens);
 		if(sctop>lens){
 			$(".tab_title").addClass("posits");
 		}else{
