@@ -331,8 +331,6 @@ $(function(){
 	});
 	function funcc(){
 		var sctop=$(".contents").scrollTop();
-		console.log("sctop---"+sctop);
-		console.log("lens---"+lens);
 		$("#txtLogin").val(sctop+"-----"+(lens-1));
 		if(sctop>lens-1){
 			$(".tab_title").addClass("posits");
