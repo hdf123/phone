@@ -286,24 +286,26 @@
 .swiper1{
     .tab_con1,.tab_con2,.tab_con3{
         height:9.347rem;
-        background:white;
     }
 }
 .swiper1 .tab_con4{
     height:100%;
-    background:white;
 }
 .ch4{
     width:100%;
-    height:calc(100% - 1.547rem);
+    height:calc(100% - 2.547rem);
     padding:0 0.2rem;
     overflow-x: auto;
+    background:white;
 }
 .ch1,.ch2,.ch3{
     width:100%;
-    height:7.7rem;
+    height:auto;
+    max-height:7rem;
+//  height:7.7rem;
     padding-left:0.387rem;
     overflow-x: auto;
+    background:white;
     >label{
         width:100%;
         height:1.2rem;
@@ -333,6 +335,7 @@
     align-items: center;
     justify-content:center;
     border-top:1px solid #eeeeee;
+    background:white;
     >div{
         width: 9.2rem;
         height: 0.96rem;
@@ -348,6 +351,7 @@
     align-items: center;
     justify-content: space-around;
     border-top:1px solid #eeeeee;
+    background:white;
     >div{
         width: 4.467rem;
         height: 0.96rem;
