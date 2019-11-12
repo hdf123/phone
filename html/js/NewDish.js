@@ -1,7 +1,7 @@
 $(function(){
 	var distance=$(".tab_box").offset().top;
 	var heights=$(".tab_box").outerHeight(true);
-	var lens=distance-heights;
+	var lens=distance-heights-1;
 	/**
 	 * 搜索
 	 */
@@ -22,6 +22,7 @@ $(function(){
 	    $(".tab_title>div").eq(zuobiao).siblings().removeClass("act");
 	    mySwiper1.slideTo(zuobiao,500,false);
 	    $(".contents").scrollTop(lens);
+	    funcc();
 	})
 	var mySwiper1= new Swiper('.swiper1', {
 //		initialSlide :3,//初始显示
@@ -316,13 +317,7 @@ $(function(){
 	    LoadingDataFn();
 	});
 	$('.contents').scroll(function() {
-		var sctop=$(".contents").scrollTop();
-		console.log(sctop);
-		if(sctop>lens){
-			$(".tab_title").addClass("posits");
-		}else{
-			$(".tab_title").removeClass("posits");
-		}
+		funcc();
 	    //当时滚动条离底部60px时开始加载下一页的内容
 	    if (($(this)[0].scrollTop + $(this).height() + 60) >= $(this)[0].scrollHeight) {
 	        //这里用 [ off_on ] 来控制是否加载 （这样就解决了 当上页的条件满足时，一下子加载多次的问题啦）
@@ -334,4 +329,14 @@ $(function(){
 	        }
 	    }
 	});
+	function funcc(){
+		var sctop=$(".contents").scrollTop();
+		console.log("sctop---"+sctop);
+		console.log("lens---"+lens);
+		if(sctop>lens){
+			$(".tab_title").addClass("posits");
+		}else{
+			$(".tab_title").removeClass("posits");
+		}
+	}
 })
