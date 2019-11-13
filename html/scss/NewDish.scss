@@ -170,7 +170,7 @@
 .building_box{
     padding:0.48rem 0 0.2rem 0;
     display: flex;
-    border-bottom:1px solid #E5E5E5;
+    border-bottom:0.013rem solid #E5E5E5;
     >img{
         width: 2.533rem;
         height: 1.92rem;
@@ -217,12 +217,21 @@
         font-size: 0.373rem;
         >i{
             color:#a1a1a1;
+            -webkit-transition: transform .25s linear;
+            -moz-transition: transform .25s linear;
+            -o-transition: transform .25s linear;
+            transition: transform .25s linear;
         }
     }
     .act{
         color: #0099ff;
         >i{
             color: #0099ff;
+            transform: rotate(180deg);
+            -webkit-transition: transform .25s linear;
+            -moz-transition: transform .25s linear;
+            -o-transition: transform .25s linear;
+            transition: transform .25s linear;
         }
     }
 }

@@ -38,7 +38,7 @@ $(function(){
 	/**
 	 * 条件选择
 	 */
-	var arr1=[],arr2=[],arr3=[],arrs1=[],arrs2=[],arrs3=[],arrs4=[];
+	var arr1=[],arr2=[],arr3=[],arrs1=[],arrs2=[],arrs3=[],arrs4=[],arrs5=[];
 	$(".ch1>label").bind("click",function(e){
 		var _this=$(this);
 		if(_this.find("input").is(':checked')){
@@ -161,6 +161,10 @@ $(function(){
 		var _this=$(this);
 		choose(_this);
 	})
+	$(".conditions_times>div").click(function(){//开盘时间
+		var _this=$(this);
+		choose(_this);
+	})
 	function choose(_this){
 		if(_this.children("div").is(".act")){
 			_this.children("div").removeClass("act");
@@ -212,11 +216,13 @@ $(function(){
 		var property=$(".conditions_property>div");//物业类型
 		var features=$(".conditions_features>div");//楼盘特色
 		var state=$(".conditions_state>div");//售卖状态
-		arrs1=[],arrs2=[],arrs3=[],arrs4=[];
+		var times=$(".conditions_times>div");//开盘时间
+		arrs1=[],arrs2=[],arrs3=[],arrs4=[],arrs5=[];
 		confirm(area,"conditions_area",arrs1);
-		confirm(area,"conditions_property",arrs2);
-		confirm(area,"conditions_features",arrs3);
-		confirm(area,"conditions_state",arrs4);
+		confirm(property,"conditions_property",arrs2);
+		confirm(features,"conditions_features",arrs3);
+		confirm(state,"conditions_state",arrs4);
+		confirm(times,"conditions_times",arrs5);
 		function confirm(arr,xx,ad){
 			for(var i=0;i<arr.length;i++){
 				if($("."+xx+">div:eq("+i+")>div").is(".act")){
@@ -233,6 +239,7 @@ $(function(){
 		console.log(arrs2);//物业类型
 		console.log(arrs3);//楼盘特色
 		console.log(arrs4);//售卖状态
+		console.log(arrs5);//开盘时间
 	}
 	/**
 	 * 快捷选项
