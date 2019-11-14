@@ -1,0 +1,208 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  color: #333333;
+  list-style: none;
+  /*把此元素放置在父元素的中部。*/
+  vertical-align: middle;
+  box-sizing: border-box;
+  /*去除移动端特有的点击高亮效果*/
+  -webkit-tap-highlight-color: transparent;
+}
+
+img {
+  display: block;
+  background: rgba(238, 238, 238, 0.5);
+}
+
+input {
+  /*1.清除文本框获取焦点时默认的边框阴影*/
+  outline: none;
+  /*2.去除边框*/
+  border: none;
+  /*3.添加边框*/
+  border: 1px solid #ccc;
+}
+
+/* 让链接默认不显示下划线， */
+a {
+  color: #333;
+  /*指针样式*/
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+  display: inline-block;
+  /*导致鼠标在页面活动时视频延迟变卡问题解决.*/
+  blr: expression(this.onFocus=this.blur());
+}
+
+/* 清理浮动 */
+.clearfix:before, .clearfix:after {
+  display: block;
+  content: " ";
+  clear: both;
+}
+
+/*单行隐藏*/
+.yincang, .wdows > div, #wdows > div {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/*多行隐藏*/
+.yincangs {
+  overflow: hidden;
+  /*超出隐藏*/
+  display: -webkit-box;
+  /*将对象作为弹性伸缩盒子模型显示。*/
+  -webkit-box-orient: vertical;
+  /*从上到下垂直排列子元素（设置伸缩盒子的子元素排列方式）*/
+  -webkit-line-clamp: 2;
+  /*超出2行用省略号表示*/
+}
+
+/*换行*/
+.newline {
+  word-break: break-all;
+  /* 只对英文起作用，以字母作为换行依据。*/
+  word-wrap: break-word;
+  /*只对英文起作用，以单词作为换行依据。*/
+  white-space: pre-wrap;
+  /*只对中文起作用，强制换行。*/
+}
+
+/*禁止换行*/
+.ban_newline {
+  white-space: nowrap;
+}
+
+/*placeholder样式*/
+.input::-webkit-input-placeholder {
+  text-align: center;
+}
+
+/*隐藏滚动条*/
+.scroll_bar::-webkit-scrollbar {
+  width: 0 !important;
+  /*height:0 !important;*/
+  /*display: none;*/
+}
+
+/*上下左右居中1.0*/
+.flexs, .headers .lefts, .headers .centers {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*上下左右居中1.1*/
+.juzhong, .headers .rights > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.headers {
+  height: 1.173rem;
+  z-index: 96;
+  background: white;
+  border: 1px solid #e5e5e5;
+}
+.headers .lefts {
+  width: 1rem;
+  height: 100%;
+  font-size: 0.5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.headers .centers {
+  height: 100%;
+  font-size: 0.48rem;
+}
+.headers .rights {
+  width: 1.173rem;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.headers .rights > img {
+  width: 0.48rem;
+}
+
+.contents {
+  width: 10rem !important;
+  position: absolute;
+  top: 1.173rem;
+  left: auto;
+  bottom: 0;
+  background: #F6F6F6;
+  overflow: auto;
+}
+
+.banners {
+  width: 10rem;
+  height: 4.333rem;
+}
+
+.brand_box {
+  padding: 0 0.4rem;
+}
+.brand_box > li {
+  padding: 0.267rem;
+  margin-top: 0.267rem;
+  background-color: #ffffff;
+  box-shadow: 0rem 0.027rem 0.24rem 0rem rgba(0, 0, 0, 0.05);
+  border-radius: 0.107rem;
+}
+.brand_box > li > img {
+  width: 8.667rem;
+  height: 5.013rem;
+}
+.brand_box > li > div:nth-child(2) {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.413rem 0 0.173rem;
+}
+.brand_box > li > div:nth-child(2) h4 {
+  font-size: 0.48rem;
+}
+.brand_box > li > div:nth-child(2) div {
+  color: #f9351a;
+  font-size: 0.48rem;
+}
+
+.mats {
+  padding: 0.2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.mats ul {
+  display: flex;
+}
+.mats ul li {
+  height: 0.293rem;
+  font-size: 0.373rem;
+  display: flex;
+  align-items: center;
+}
+.mats ul li:first-child {
+  padding-right: 0.12rem;
+  border-right: 0.027rem solid #333333;
+}
+.mats ul li:last-child {
+  padding-left: 0.12rem;
+}
+.mats > div {
+  color: #999999;
+  font-size: 0.373rem;
+}
+
+/*# sourceMappingURL=brand.css.map */

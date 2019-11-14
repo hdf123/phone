@@ -1,0 +1,282 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  color: #333333;
+  list-style: none;
+  /*把此元素放置在父元素的中部。*/
+  vertical-align: middle;
+  box-sizing: border-box;
+  /*去除移动端特有的点击高亮效果*/
+  -webkit-tap-highlight-color: transparent;
+}
+
+img {
+  display: block;
+  background: rgba(238, 238, 238, 0.5);
+}
+
+input {
+  /*1.清除文本框获取焦点时默认的边框阴影*/
+  outline: none;
+  /*2.去除边框*/
+  border: none;
+  /*3.添加边框*/
+  border: 1px solid #ccc;
+}
+
+/* 让链接默认不显示下划线， */
+a {
+  color: #333;
+  /*指针样式*/
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+  display: inline-block;
+  /*导致鼠标在页面活动时视频延迟变卡问题解决.*/
+  blr: expression(this.onFocus=this.blur());
+}
+
+/* 清理浮动 */
+.clearfix:before, .clearfix:after {
+  display: block;
+  content: " ";
+  clear: both;
+}
+
+/*单行隐藏*/
+.yincang, .area > ul li:nth-child(1) > span, .building_box > div:nth-child(2) > h4, .wdows > div, #wdows > div {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/*多行隐藏*/
+.yincangs {
+  overflow: hidden;
+  /*超出隐藏*/
+  display: -webkit-box;
+  /*将对象作为弹性伸缩盒子模型显示。*/
+  -webkit-box-orient: vertical;
+  /*从上到下垂直排列子元素（设置伸缩盒子的子元素排列方式）*/
+  -webkit-line-clamp: 2;
+  /*超出2行用省略号表示*/
+}
+
+/*换行*/
+.newline {
+  word-break: break-all;
+  /* 只对英文起作用，以字母作为换行依据。*/
+  word-wrap: break-word;
+  /*只对英文起作用，以单词作为换行依据。*/
+  white-space: pre-wrap;
+  /*只对中文起作用，强制换行。*/
+}
+
+/*禁止换行*/
+.ban_newline {
+  white-space: nowrap;
+}
+
+/*placeholder样式*/
+.input::-webkit-input-placeholder {
+  text-align: center;
+}
+
+/*隐藏滚动条*/
+.scroll_bar::-webkit-scrollbar {
+  width: 0 !important;
+  /*height:0 !important;*/
+  /*display: none;*/
+}
+
+/*上下左右居中1.0*/
+.flexs, .headers > a, .list_tab > li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*上下左右居中1.1*/
+.juzhong {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.headers {
+  height: 7.067rem;
+  z-index: 96;
+  background-color: #0099ff;
+}
+.headers > a {
+  width: 1.173rem;
+  height: 1.173rem;
+  color: white;
+  font-size: 0.5rem;
+  position: absolute;
+  top: 0;
+}
+.headers .lefts {
+  left: 0;
+}
+.headers .rights {
+  right: 0;
+}
+.headers > p {
+  color: #ffffff;
+  font-size: 0.32rem;
+  padding: 0.253rem 0.56rem 0;
+}
+
+.contents {
+  width: 10rem !important;
+  position: absolute;
+  top: 7.067rem;
+  left: auto;
+  bottom: 0;
+  overflow: auto;
+  padding: 0 0.24rem;
+  background: #F7F7F7;
+}
+
+.area {
+  margin-top: 1.587rem;
+  padding: 0 0.613rem;
+  display: flex;
+  justify-content: space-between;
+}
+.area > ul {
+  padding: 0.15rem 0;
+}
+.area > ul li:nth-child(1) {
+  display: inline-block;
+  padding: 0.16rem 0.307rem;
+  background-color: #ffffff;
+  border-radius: 0.6rem;
+}
+.area > ul li:nth-child(1) > span {
+  max-width: 4rem;
+  display: inline-block;
+  font-size: 0.32rem;
+}
+.area > ul li:nth-child(1) > i {
+  font-size: 0.3rem;
+}
+.area > ul li:nth-child(2) {
+  color: #ffffff;
+  font-size: 0.907rem;
+  font-weight: normal;
+  margin-top: 0.1rem;
+}
+.area > img {
+  width: 1.813rem;
+  background: none;
+}
+
+.list_tab {
+  display: flex;
+  background: #F7F7F7;
+  border-radius: 0.32rem 0.32rem 0rem 0rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.list_tab > li {
+  width: 100%;
+  padding: 0.547rem 0 0.587rem;
+  color: #666666;
+  font-size: 0.4rem;
+}
+.list_tab > div {
+  position: absolute;
+  left: 10%;
+  bottom: 0.267rem;
+  display: inline-block;
+  width: 0.533rem;
+  height: 0.053rem;
+  background-color: #0099ff;
+  border-radius: 0.027rem;
+}
+.list_tab .act {
+  color: #333333;
+  font-weight: 600;
+}
+
+.building_box {
+  background-color: #ffffff;
+  margin-bottom: 0.267rem;
+  padding: 0.373rem 0.333rem 0.4rem;
+  box-shadow: 0rem 0.027rem 0.213rem 0rem rgba(0, 0, 0, 0.05);
+  border-radius: 0.107rem;
+  display: flex;
+}
+.building_box > div:nth-child(1) {
+  position: relative;
+}
+.building_box > div:nth-child(1) > img {
+  width: 2.4rem;
+  height: 1.813rem;
+  border-radius: 0.053rem;
+}
+.building_box > div:nth-child(1) > div {
+  width: 0.453rem;
+  height: 0.533rem;
+  position: absolute;
+  top: 0;
+  left: 0.133rem;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  color: #ffffff;
+  font-size: 0.32rem;
+  text-align: center;
+  line-height: 0.533rem;
+}
+.building_box > div:nth-child(1) > .befores {
+  background-image: url(../../img/rankings.png);
+}
+.building_box > div:nth-child(1) > .lead {
+  background-image: url(../../img/ranking.png);
+}
+.building_box > div:nth-child(2) {
+  margin-left: 0.19rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.building_box > div:nth-child(2) > h4 {
+  width: 5rem;
+  font-size: 0.373rem;
+  padding-left: 0.13rem;
+}
+.building_box > div:nth-child(2) > ul {
+  display: flex;
+}
+.building_box > div:nth-child(2) > ul li {
+  height: 0.213rem;
+  color: #999999;
+  font-size: 0.267rem;
+  padding: 0 0.13rem;
+  display: flex;
+  align-items: center;
+  border-right: 1px solid #e5e5e5;
+}
+.building_box > div:nth-child(2) > ul li:last-child {
+  border: none;
+}
+.building_box > div:nth-child(2) > p:nth-child(3) {
+  padding-left: 0.13rem;
+  color: #999999;
+  font-size: 0.267rem;
+}
+.building_box > div:nth-child(2) > p:nth-child(4) {
+  padding-left: 0.13rem;
+  color: #f9351a;
+  font-size: 0.32rem;
+}
+
+/*# sourceMappingURL=heat.css.map */

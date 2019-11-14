@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=yes"/>
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/brand.css"/>
+		<link rel="stylesheet" type="text/css" href="css/jquery.range.css"/>
+		<script src="../js/js.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.range.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<header class="headers">
+			<a class="iconfont lefts" href="javascript:history.go(-1);">&#xe632;</a>
+			<div class="centers">恒大品牌馆</div>
+			<a class="rights" href="javascript:;">
+				<img src="../img/xinxi.png" alt="" />
+			</a>
+		</header>
+		<section class="contents">
+			<img class="banners" src="" alt="" />
+			<ul class="brand_box">
+				<!--<li>
+					<img src="../img/cardb.png" alt="" />
+					<div>
+						<h4>恒大悦龙台</h4>
+						<div>140万</div>
+					</div>
+					<div class="mats">
+						<ul>
+							<li>郑东区 郑东</li>
+							<li>建面79-168㎡</li>
+						</ul>
+						<div>14607元/平</div>
+					</div>
+				</li>-->
+			</ul>
+		</section>
+		
+
+<script type="text/javascript">
+$(function(){
+	/**
+	 * 分页
+	 */
+	var page = 1,off_on = false;//page：分页码;off_on：禁止重复加载
+	//加载数据
+	var LoadingDataFn = function(){
+		for(var i=0;i<6;i++){
+			$(".brand_box").append(`<li>
+					<img src="" alt="" />
+					<div>
+						<h4>恒大悦龙台</h4>
+						<div>140万</div>
+					</div>
+					<div class="mats">
+						<ul>
+							<li>郑东区 郑东</li>
+							<li>建面79-168㎡</li>
+						</ul>
+						<div>14607元/平</div>
+					</div>
+				</li>`);
+		}
+	    off_on = true;
+	};
+	//初始化， 第一次加载
+	$(document).ready(function() {
+	    LoadingDataFn();
+	});
+	$('.contents').scroll(function() {
+	    //当时滚动条离底部60px时开始加载下一页的内容
+	    if (($(this)[0].scrollTop + $(this).height() + 60) >= $(this)[0].scrollHeight) {
+	        //这里用 [ off_on ] 来控制是否加载 （这样就解决了 当上页的条件满足时，一下子加载多次的问题啦）
+	        if (off_on) {
+	              off_on = false;
+	              page++;
+	              console.log("第"+page+"页");
+	              LoadingDataFn();  //调用执行上面的加载方法
+	        }
+	    }
+	});
+})
+</script>
+	</body>
+</html>

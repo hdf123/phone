@@ -10,6 +10,7 @@
 		<link rel="stylesheet" type="text/css" href="css/looking.css"/>
 		<link rel="stylesheet" type="text/css" href="css/jquery.range.css"/>
 		<script src="../js/js.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/data.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/jquery.range.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<body>
@@ -95,18 +96,16 @@ $(function(){
 	/**
 	 * 省市联动
 	 */
-	var sk=["二七区", "中原区", "郑东新区", "管城区", "金水区", "经济开发区", "高新技术开发区", "新郑市", "巩义市", "荥阳市", "中牟县", "新密市", "登封市", "惠济区", "上街区"];
-	for(var i=0;i<sk.length;i++){
-		$(".regions").append("<li>"+sk[i]+"</li>");
+	for(var i=0;i<regs.length;i++){
+		$(".regions").append("<li>"+regs[i]+"</li>");
 	}
 	$(".region").click(function(){
 		$(".region_box").css({"display":"block"});
 	})
 	$(".regions>li").click(function(event){
-		var sk=$(this).html();
-		console.log(sk);
+		var val=$(this).html();
 		$(this).css("color","#0099ff").siblings().css("color","#333333");
-		$(".region>div").html(sk);
+		$(".region>div").html(val);
 		event.stopPropagation();
 		$(".region_box").hide();
 	})

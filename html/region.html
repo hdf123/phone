@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=yes"/>
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/region.css"/>
+		<link rel="stylesheet" type="text/css" href="css/jquery.range.css"/>
+		<script src="../js/js.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/data.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.range.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<header class="headers">
+			<a class="iconfont lefts" href="javascript:history.go(-1);">&#xe632;</a>
+		</header>
+		<section class="contents">
+			<div class="act">全部</div>
+		</section>
+		
+	
+<script type="text/javascript">
+$(function(){
+	for(i in regs){
+		$(".contents").append("<div>"+regs[i]+"</div>");
+	}
+	$(".contents div").click(function(){
+		$(this).addClass("act").siblings().removeClass("act");
+		console.log($(this).html());
+		location.href="heat.html?region="+$(this).html();
+	})
+})
+</script>
+	</body>
+</html>
