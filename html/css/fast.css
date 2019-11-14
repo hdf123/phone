@@ -190,6 +190,7 @@ a {
 .building_box > div > .price {
   color: #f9351a;
   font-size: 0.373rem;
+  font-family: PingFang-SC-Bold;
   margin: 0.1rem 0 0.05rem 0;
 }
 

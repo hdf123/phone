@@ -31,7 +31,8 @@
     >h3{
         padding:0 0.4rem;
         font-size: 0.48rem;
-        margin:0.693rem 0 0.427rem 0;
+//      margin-top:0.693rem;
+        margin:0.693rem 0 0.027rem 0;
     }
 }
 /**
@@ -72,7 +73,7 @@
  */
 .region{
     width:9rem;
-    margin:0 auto;
+    margin:0.133rem auto 0;
     padding:0.267rem 0;
     display: flex;
     justify-content: space-between;
@@ -137,10 +138,11 @@
 }
 .phone{
     width:9rem;
-    height:1rem;
+    padding:0.307rem 0;
     display: block;
-    margin:0 auto;
+    margin:0.12rem auto 0;
     border:none;
+    font-size: 0.32rem;
     border-bottom:0.013rem solid #e5e5e5;
 }
 .footers{

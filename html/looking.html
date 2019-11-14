@@ -106,7 +106,7 @@ $(function(){
 		var sk=$(this).html();
 		console.log(sk);
 		$(this).css("color","#0099ff").siblings().css("color","#333333");
-		$(".region>div").html("郑州市 "+sk);
+		$(".region>div").html(sk);
 		event.stopPropagation();
 		$(".region_box").hide();
 	})
