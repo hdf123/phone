@@ -10,7 +10,6 @@ $(function(){
 		});
 	})
 	if(getRequest().region==undefined||getRequest().region==null){
-		console.log(44444444444);
 		$(".region span").html("区域");
 	}else{
 		$(".region span").html(getRequest().region);

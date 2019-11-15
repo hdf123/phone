@@ -133,10 +133,13 @@ a {
   left: auto;
   bottom: 0;
   background: #F5F5F5;
-  padding: 0.213rem 0.267rem;
+  padding: 0 0.267rem;
   overflow: auto;
 }
 
+.area_box {
+  margin-top: 0.213rem;
+}
 .area_box > div:nth-child(1) {
   width: 9.467rem;
   height: 2.133rem;

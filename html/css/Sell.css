@@ -1,0 +1,247 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  color: #333333;
+  list-style: none;
+  /*把此元素放置在父元素的中部。*/
+  vertical-align: middle;
+  box-sizing: border-box;
+  /*去除移动端特有的点击高亮效果*/
+  -webkit-tap-highlight-color: transparent;
+}
+
+img {
+  display: block;
+  background: rgba(238, 238, 238, 0.5);
+}
+
+input {
+  /*1.清除文本框获取焦点时默认的边框阴影*/
+  outline: none;
+  /*2.去除边框*/
+  border: none;
+  /*3.添加边框*/
+  border: 1px solid #ccc;
+}
+
+/* 让链接默认不显示下划线， */
+a {
+  color: #333;
+  /*指针样式*/
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+  display: inline-block;
+  /*导致鼠标在页面活动时视频延迟变卡问题解决.*/
+  blr: expression(this.onFocus=this.blur());
+}
+
+/* 清理浮动 */
+.clearfix:before, .clearfix:after {
+  display: block;
+  content: " ";
+  clear: both;
+}
+
+/*单行隐藏*/
+.yincang, .wdows > div, #wdows > div {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/*多行隐藏*/
+.yincangs {
+  overflow: hidden;
+  /*超出隐藏*/
+  display: -webkit-box;
+  /*将对象作为弹性伸缩盒子模型显示。*/
+  -webkit-box-orient: vertical;
+  /*从上到下垂直排列子元素（设置伸缩盒子的子元素排列方式）*/
+  -webkit-line-clamp: 2;
+  /*超出2行用省略号表示*/
+}
+
+/*换行*/
+.newline {
+  word-break: break-all;
+  /* 只对英文起作用，以字母作为换行依据。*/
+  word-wrap: break-word;
+  /*只对英文起作用，以单词作为换行依据。*/
+  white-space: pre-wrap;
+  /*只对中文起作用，强制换行。*/
+}
+
+/*禁止换行*/
+.ban_newline {
+  white-space: nowrap;
+}
+
+/*placeholder样式*/
+.input::-webkit-input-placeholder {
+  text-align: center;
+}
+
+/*隐藏滚动条*/
+.scroll_bar::-webkit-scrollbar {
+  width: 0 !important;
+  /*height:0 !important;*/
+  /*display: none;*/
+}
+
+/*上下左右居中1.0*/
+.flexs, .headers .lefts, .headers .centers, .list_tab > li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*上下左右居中1.1*/
+.juzhong {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.headers {
+  height: 1.173rem;
+  z-index: 96;
+  background: white;
+  border: 1px solid #e5e5e5;
+}
+.headers .lefts {
+  width: 1rem;
+  height: 100%;
+  font-size: 0.5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.headers .centers {
+  height: 100%;
+  font-size: 0.48rem;
+}
+
+.contents {
+  width: 10rem !important;
+  position: absolute;
+  top: 1.173rem;
+  left: auto;
+  bottom: 0;
+}
+
+.banners img {
+  width: 10rem;
+  height: 2.4rem;
+}
+
+.list_tab {
+  display: flex;
+  border-radius: 0.32rem 0.32rem 0rem 0rem;
+  position: relative;
+}
+.list_tab > li {
+  width: 100%;
+  padding: 0.427rem 0;
+  color: #666666;
+  font-size: 0.4rem;
+}
+.list_tab > div {
+  position: absolute;
+  left: 8.5%;
+  bottom: 0.307rem;
+  display: inline-block;
+  width: 0.32rem;
+  height: 0.04rem;
+  background-color: #0099ff;
+  border-radius: 0.027rem;
+}
+.list_tab .act {
+  color: #0099ff;
+}
+
+.building_box {
+  padding-left: 0.48rem;
+  position: absolute;
+  top: 3.78rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+}
+
+.building {
+  padding: 0.48rem 0.48rem 0.48rem 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+.building > div:nth-child(1) {
+  display: flex;
+  justify-content: space-between;
+}
+.building > div:nth-child(1) > div:nth-child(2) {
+  color: #f9351a;
+  font-size: 0.373rem;
+  display: flex;
+  align-items: center;
+}
+.building > img {
+  width: 9.04rem;
+  height: 4.347rem;
+  margin-top: 0.4rem;
+}
+
+.building_title {
+  display: flex;
+}
+.building_title > img {
+  width: 0.987rem;
+  height: 0.987rem;
+  border-radius: 50%;
+}
+.building_title > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 0.2rem;
+}
+.building_title > div > div {
+  display: flex;
+}
+.building_title > div > div > div {
+  font-size: 0.373rem;
+}
+.building_title > div > div > ul {
+  display: flex;
+  align-items: center;
+  margin-left: 0.24rem;
+}
+.building_title > div > div > ul li {
+  margin-right: 0.36rem;
+}
+.building_title > div > ul {
+  display: flex;
+}
+.building_title > div > ul li {
+  height: 0.213rem;
+  color: #999999;
+  font-size: 0.267rem;
+  display: flex;
+  align-items: center;
+}
+.building_title > div > ul li span {
+  color: #999999;
+  font-size: 0.267rem;
+}
+.building_title > div > ul li:first-child {
+  padding-right: 0.12rem;
+  border-right: 0.027rem solid #e5e5e5;
+}
+.building_title > div > ul li:last-child {
+  padding-left: 0.12rem;
+}
+
+/*# sourceMappingURL=Sell.css.map */

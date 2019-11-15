@@ -1,0 +1,151 @@
+@charset "UTF-8";
+@import "../../css/base.scss";
+.headers{
+    height: 1.173rem;
+    z-index:96;
+    background: white;
+    border:1px solid #e5e5e5;
+    .lefts{
+        width:1rem;
+        height:100%;
+        font-size:0.5rem;
+        position:absolute;
+        top:0;
+        left:0;
+        @extend .flexs;
+    }
+    .centers{
+        height:100%;
+        font-size: 0.48rem;
+        @extend .flexs;
+    }
+}
+.contents{
+    width:10rem !important;
+    position:absolute;
+    top:1.173rem;
+    left:auto;
+    bottom:0;
+}
+.banners{
+    img{
+        width: 10rem;
+        height: 2.4rem;
+    }
+}
+.list_tab{
+    display: flex;
+    border-radius: 0.32rem 0.32rem 0rem 0rem;
+    position:relative;
+    >li{
+        width:100%;
+        padding:0.427rem 0;
+        @extend .flexs;
+        color: #666666;
+        font-size: 0.4rem;
+    }
+    >div{
+        position: absolute;
+        left:8.5%;
+        bottom: 0.307rem;
+        display: inline-block;
+        width: 0.32rem;
+        height: 0.04rem;
+        background-color: #0099ff;
+        border-radius: 0.027rem;
+    }
+    .act{
+        color: #0099ff;
+    }
+}
+.building_box{
+    padding-left:0.48rem;
+    position:absolute;
+    top:3.78rem;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+}
+.building{
+    padding:0.48rem 0.48rem 0.48rem 0;
+    >div:nth-child(1){
+        display: flex;
+        justify-content: space-between;
+        >div:nth-child(2){
+            color: #f9351a;
+            font-size: 0.373rem;
+            display: flex;
+            align-items: center;
+        }
+    }
+    >img{
+        width: 9.04rem;
+        height: 4.347rem;
+        margin-top:0.4rem;
+    }
+    border-bottom:1px solid #e5e5e5;
+}
+.building_title{
+    display: flex;
+    >img{
+        width: 0.987rem;
+        height: 0.987rem;
+        border-radius:50%;
+    }
+    >div{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-left:0.2rem;
+        >div{
+            display: flex;
+            >div{
+                font-size: 0.373rem;
+            }
+            >ul{
+                display: flex;
+                align-items: center;
+                margin-left:0.24rem;
+                li{
+                    margin-right:0.36rem;
+                }
+            }
+        }
+        >ul{
+            display: flex;
+            li{
+                height: 0.213rem;
+                color: #999999;
+                font-size: 0.267rem;
+                display: flex;
+                align-items: center;
+                span{
+                    color: #999999;
+                    font-size: 0.267rem;
+                }
+            }
+            li:first-child{
+                padding-right:0.12rem;
+                border-right:0.027rem solid #e5e5e5;
+            }
+            li:last-child{
+                padding-left:0.12rem;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
