@@ -255,6 +255,7 @@ a {
 }
 .building_box > div:nth-child(2) > ul {
   display: flex;
+  align-items: center;
 }
 .building_box > div:nth-child(2) > ul li {
   height: 0.213rem;
@@ -262,7 +263,7 @@ a {
   font-size: 0.267rem;
   padding: 0 0.13rem;
   display: flex;
-  align-items: center;
+  line-height: 0.213rem;
   border-right: 1px solid #e5e5e5;
 }
 .building_box > div:nth-child(2) > ul li:last-child {

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=yes"/>
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/affordable.css"/>
+		<link rel="stylesheet" type="text/css" href="css/jquery.range.css"/>
+		<script src="../js/js.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/data.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.range.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<header class="headers">
+			<a class="iconfont lefts" href="javascript:history.go(-1);">&#xe632;</a>
+			<div class="centers">最新优惠房</div>
+		</header>
+		<section class="contents">
+			<div class="area_box">
+				<div>
+					<div>高新区</div>
+				</div>
+				<ul class="address">
+					<li>
+						<img src="" alt="" />
+						<div class="conditiona">
+							<div>福晟谦祥钱隆城</div>
+							<ul>
+								<li>住宅</li>
+								<li>在售</li>
+							</ul>
+						</div>
+						<div class="conditionb">
+							<span>14500元/平</span>
+							<span>建面 88-142㎡/高新-石佛</span>
+						</div>
+						<div class="btns">
+							<a href="tel:15137102387##">电话咨询</a>
+							<a href="javascript:;">联系客服</a>
+						</div>
+					</li>
+					<li>
+						<img src="" alt="" />
+						<div class="conditiona">
+							<div>福晟谦祥钱隆城</div>
+							<ul>
+								<li>住宅</li>
+								<li>在售</li>
+							</ul>
+						</div>
+						<div class="conditionb">
+							<span>14500元/平</span>
+							<span>建面 88-142㎡/高新-石佛</span>
+						</div>
+						<div class="btns">
+							<a href="tel:15137102387##">电话咨询</a>
+							<a href="javascript:;">联系客服</a>
+						</div>
+					</li>
+				</ul>
+				<div class="recommended_box">
+					<h4>推荐楼盘</h4>
+					<div class="recommended">
+						
+					</div>
+				</div>
+			</div>
+		</section>
+		
+
+<script type="text/javascript">
+$(function(){
+    var dom = '';
+    for (var i=0;i<3;i++) {
+//  for (i in data) {
+    	var ska="",skb="",states="";
+    	for(j in data[i].region){
+    		ska+='<div>'+data[i].region[j]+'</div>';
+    	}
+    	for(j in data[i].features){
+    		skb+='<div>'+data[i].features[j]+'</div>';
+    	}
+    	if(data[i].state=="在售"){
+    		states='<div class="sell">在售</div>';
+    	}else if(data[i].state=="待售"){
+    		states='<div class="waiting">待售</div>';
+    	}else{
+    		states='<div>售罄</div>';
+    	}
+        dom +='<a class="building_box" href="buildings.html">'
+					+'<img src='+data[i].img+' alt="" />'
+					+'<div>'
+						+'<h3>'+data[i].name+'</h3>'
+						+'<div class="price">'+data[i].price+'</div>'
+						+'<div class="environment">'
+							+'<div>'+ska+'</div>'
+							+'<div>'+data[i].area+'</div>'
+						+'</div>'
+						+'<div class="situation">'
+							+states+skb
+						+'</div>'
+					+'</div>'
+				+'</a>';
+    }
+  	$('.recommended').append(dom);
+})
+</script>
+	</body>
+</html>

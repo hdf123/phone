@@ -1,0 +1,298 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  color: #333333;
+  list-style: none;
+  /*把此元素放置在父元素的中部。*/
+  vertical-align: middle;
+  box-sizing: border-box;
+  /*去除移动端特有的点击高亮效果*/
+  -webkit-tap-highlight-color: transparent;
+}
+
+img {
+  display: block;
+  background: rgba(238, 238, 238, 0.5);
+}
+
+input {
+  /*1.清除文本框获取焦点时默认的边框阴影*/
+  outline: none;
+  /*2.去除边框*/
+  border: none;
+  /*3.添加边框*/
+  border: 1px solid #ccc;
+}
+
+/* 让链接默认不显示下划线， */
+a {
+  color: #333;
+  /*指针样式*/
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+  display: inline-block;
+  /*导致鼠标在页面活动时视频延迟变卡问题解决.*/
+  blr: expression(this.onFocus=this.blur());
+}
+
+/* 清理浮动 */
+.clearfix:before, .clearfix:after {
+  display: block;
+  content: " ";
+  clear: both;
+}
+
+/*单行隐藏*/
+.yincang, .building_box > div > h3, .wdows > div, #wdows > div {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/*多行隐藏*/
+.yincangs {
+  overflow: hidden;
+  /*超出隐藏*/
+  display: -webkit-box;
+  /*将对象作为弹性伸缩盒子模型显示。*/
+  -webkit-box-orient: vertical;
+  /*从上到下垂直排列子元素（设置伸缩盒子的子元素排列方式）*/
+  -webkit-line-clamp: 2;
+  /*超出2行用省略号表示*/
+}
+
+/*换行*/
+.newline {
+  word-break: break-all;
+  /* 只对英文起作用，以字母作为换行依据。*/
+  word-wrap: break-word;
+  /*只对英文起作用，以单词作为换行依据。*/
+  white-space: pre-wrap;
+  /*只对中文起作用，强制换行。*/
+}
+
+/*禁止换行*/
+.ban_newline {
+  white-space: nowrap;
+}
+
+/*placeholder样式*/
+.input::-webkit-input-placeholder {
+  text-align: center;
+}
+
+/*隐藏滚动条*/
+.scroll_bar::-webkit-scrollbar {
+  width: 0 !important;
+  /*height:0 !important;*/
+  /*display: none;*/
+}
+
+/*上下左右居中1.0*/
+.flexs, .headers .lefts, .headers .centers, .area_box > div:nth-child(1), .area_box > div:nth-child(1) > div, .btns > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*上下左右居中1.1*/
+.juzhong {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.headers {
+  height: 1.173rem;
+  z-index: 96;
+  background: white;
+  border: 1px solid #e5e5e5;
+}
+.headers .lefts {
+  width: 1rem;
+  height: 100%;
+  font-size: 0.5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.headers .centers {
+  height: 100%;
+  font-size: 0.48rem;
+}
+
+.contents {
+  width: 10rem !important;
+  position: absolute;
+  top: 1.173rem;
+  left: auto;
+  bottom: 0;
+  background: #F5F5F5;
+  padding: 0.213rem 0.267rem;
+  overflow: auto;
+}
+
+.area_box > div:nth-child(1) {
+  width: 9.467rem;
+  height: 2.133rem;
+  background-color: #ffffff;
+}
+.area_box > div:nth-child(1) > div {
+  width: 3.28rem;
+  height: 1.067rem;
+  color: #ffffff;
+  font-size: 0.48rem;
+  background-image: linear-gradient(45deg, #0099ff 0%, #56b9fb 100%);
+  border-radius: 0.667rem 0rem 0.667rem 0rem;
+}
+
+.address > li {
+  margin-top: 0.213rem;
+  padding-bottom: 0.387rem;
+  background-color: #ffffff;
+}
+.address > li img {
+  width: 9.467rem;
+  height: 2.907rem;
+  border-radius: 0.053rem 0.053rem 0rem 0rem;
+}
+
+.conditiona {
+  padding: 0.32rem 0.347rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+.conditiona > div {
+  font-size: 0.373rem;
+}
+.conditiona > ul {
+  display: flex;
+}
+.conditiona > ul > li {
+  margin-left: 0.187rem;
+  padding: 0.05rem 0.1rem;
+  border-radius: 0.027rem;
+  border: solid 0.013rem #e5e5e5;
+}
+
+.conditionb {
+  display: flex;
+  align-items: center;
+  padding: 0.227rem 0.347rem 0.267rem;
+}
+.conditionb > span:nth-child(1) {
+  color: #ff3c4d;
+  font-size: 0.32rem;
+}
+.conditionb > span:nth-child(2) {
+  color: #666666;
+  font-size: 0.293rem;
+  margin-left: 0.267rem;
+}
+
+.btns {
+  padding: 0 0.347rem;
+  display: flex;
+  justify-content: space-between;
+}
+.btns > a {
+  width: 4.32rem;
+  height: 0.88rem;
+  color: #ffffff;
+  font-size: 0.32rem;
+  border-radius: 0.053rem;
+}
+.btns > a:first-child {
+  background-color: #0099ff;
+}
+.btns > a:last-child {
+  background-color: #ff3c4d;
+}
+
+.recommended_box {
+  padding: 0.48rem 0.32rem 0;
+  background: #ffffff;
+}
+.recommended_box > h4 {
+  font-size: 0.48rem;
+}
+
+.building_box {
+  padding: 0.48rem 0 0.2rem 0;
+  display: flex;
+  border-bottom: 1px solid #E5E5E5;
+}
+.building_box > img {
+  width: 2.533rem;
+  height: 1.92rem;
+  border-radius: 0.053rem;
+}
+.building_box > div {
+  width: 6.2rem;
+  margin-left: 0.467rem;
+}
+.building_box > div > h3 {
+  max-width: 100%;
+  max-height: 0.5rem;
+  font-size: 0.373rem;
+}
+.building_box > div > .price {
+  color: #f9351a;
+  font-size: 0.373rem;
+  margin: 0.1rem 0 0.05rem 0;
+}
+
+.building_box:last-child {
+  border: none;
+}
+
+.environment {
+  display: flex;
+  align-items: center;
+  margin: 0.05rem 0 0.1rem 0;
+}
+.environment > div:nth-child(1) {
+  display: flex;
+  align-items: center;
+  height: 0.25rem;
+  border-right: 0.027rem solid #E5E5E5;
+}
+.environment > div:nth-child(1) > div {
+  color: #999999;
+  font-size: 0.267rem;
+  margin-right: 0.12rem;
+}
+.environment > div:nth-child(2) {
+  display: flex;
+  color: #999999;
+  font-size: 0.267rem;
+  margin-left: 0.12rem;
+}
+
+.situation {
+  display: flex;
+  margin: 0.06rem 0;
+}
+.situation > div {
+  color: #999999;
+  font-size: 0.267rem;
+  padding: 0.05rem 0.133rem;
+  background-color: #f5f5f5;
+  border-radius: 0.027rem;
+  margin-right: 0.133rem;
+}
+.situation > .sell {
+  color: #0099ff;
+  background-color: rgba(0, 153, 255, 0.3);
+}
+.situation > .waiting {
+  color: #ffffff;
+  background-color: #ffb956;
+}
+
+/*# sourceMappingURL=affordable.css.map */

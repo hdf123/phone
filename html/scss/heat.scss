@@ -146,13 +146,14 @@
         }
         >ul{
             display: flex;
+            align-items: center;
             li{
                 height:0.213rem;
                 color: #999999;
                 font-size: 0.267rem;
                 padding:0 0.13rem;
                 display: flex;
-                align-items: center;
+                line-height:0.213rem;
                 border-right:1px solid #e5e5e5;
             }
             li:last-child{
