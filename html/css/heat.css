@@ -1,5 +1,5 @@
 /*
-Error: Invalid CSS after "...014@qq.com 一直回车": expected "{", was ""
+Error: Invalid CSS after "...thbts/phone.git": expected "{", was ""
         on line 174 of heat.scss
 
 169:             color: #f9351a;
@@ -7,7 +7,7 @@ Error: Invalid CSS after "...014@qq.com 一直回车": expected "{", was ""
 171:         }
 172:     }
 173: }
-174: ssh-keygen -t rsa -C 1205552014@qq.com 一直回车
+174: git remote add origin git@gitee.com:thbts/phone.git
 
 Backtrace:
 heat.scss:174
@@ -34,4 +34,4 @@ C:/Ruby26-x64/bin/sass:23:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Invalid CSS after \"...014@qq.com 一直回车\": expected \"{\", was \"\"\A         on line 174 of heat.scss\A \A 169:             color: #f9351a;\A 170:             font-size: 0.32rem;\A 171:         }\A 172:     }\A 173: }\A 174: ssh-keygen -t rsa -C 1205552014@qq.com 一直回车"; }
+  content: "Error: Invalid CSS after \"...thbts/phone.git\": expected \"{\", was \"\"\A         on line 174 of heat.scss\A \A 169:             color: #f9351a;\A 170:             font-size: 0.32rem;\A 171:         }\A 172:     }\A 173: }\A 174: git remote add origin git@gitee.com:thbts/phone.git"; }
