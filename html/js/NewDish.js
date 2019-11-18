@@ -168,37 +168,9 @@ $(function(){
 	function choose(_this){
 		if(_this.children("div").is(".act")){
 			_this.children("div").removeClass("act");
-			/*
-			if(!$(".conditions_state>div:eq(0)>div").is(".act")){
-				$(".quick>div").eq(0).removeClass("act");
-			}
-			if(!$(".conditions_features>div:eq(0)>div").is(".act")){
-				$(".quick>div").eq(1).removeClass("act");
-			}
-			if(!$(".conditions_features>div:eq(4)>div").is(".act")){
-				$(".quick>div").eq(2).removeClass("act");
-			}
-			if(!$(".conditions_features>div:eq(1)>div").is(".act")){
-				$(".quick>div").eq(3).removeClass("act");
-			}
-			*/
 		}else{
 			_this.children("div").addClass("act");
 			_this.siblings("div").children("div").removeClass("act");
-			/*
-			if($(".conditions_state>div:eq(0)>div").is(".act")){
-				$(".quick>div").eq(0).addClass("act");
-			}
-			if($(".conditions_features>div:eq(0)>div").is(".act")){
-				$(".quick>div").eq(1).addClass("act");
-			}
-			if($(".conditions_features>div:eq(4)>div").is(".act")){
-				$(".quick>div:eq(2)").addClass("act");
-			}
-			if($(".conditions_features>div:eq(1)>div").is(".act")){
-				$(".quick>div").eq(3).addClass("act");
-			}
-			*/
 		}
 	}
 	/**
@@ -241,43 +213,9 @@ $(function(){
 		console.log(arrs4);//售卖状态
 		console.log(arrs5);//开盘时间
 	}
-	/**
-	 * 快捷选项
-	 */
-	/*
-	$(".quick>div").click(function(){
-		if($(this).is(".act")){
-			$(this).removeClass("act");
-			if(!$(".quick>div").eq(0).is(".act")){
-				$(".conditions_state>div:eq(0)>div").removeClass("act");
-			}
-			if(!$(".quick>div").eq(1).is(".act")){
-				$(".conditions_features>div:eq(0)>div").removeClass("act");
-			}
-			if(!$(".quick>div").eq(2).is(".act")){
-				$(".conditions_features>div:eq(4)>div").removeClass("act");
-			}
-			if(!$(".quick>div").eq(3).is(".act")){
-				$(".conditions_features>div:eq(1)>div").removeClass("act");
-			}
-		}else{
-			$(this).addClass("act");
-			if($(".quick>div").eq(0).is(".act")){
-				$(".conditions_state>div:eq(0)>div").addClass("act");
-			}
-			if($(".quick>div").eq(1).is(".act")){
-				$(".conditions_features>div:eq(0)>div").addClass("act");
-			}
-			if($(".quick>div").eq(2).is(".act")){
-				$(".conditions_features>div:eq(4)>div").addClass("act");
-			}
-			if($(".quick>div").eq(3).is(".act")){
-				$(".conditions_features>div:eq(1)>div").addClass("act");
-			}
-		}
-		results();
+	$(".swiper1").click(function(){
+		$(".swiper1").css({"display":"none"});
 	})
-	*/
 	/**
 	 * 分页
 	 */
