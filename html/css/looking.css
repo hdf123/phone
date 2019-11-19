@@ -293,7 +293,7 @@ a {
 .winbox > div h4 {
   font-size: 0.587rem;
 }
-.winbox > div p {
+.winbox > div p > a {
   font-size: 0.4rem;
   line-height: 0.533rem;
   padding: 0.68rem 0 0.653rem 0;
