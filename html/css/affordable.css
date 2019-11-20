@@ -219,6 +219,7 @@ a {
 }
 
 .recommended_box {
+  margin-top: 0.213rem;
   padding: 0.48rem 0.32rem 0;
   background: #ffffff;
 }

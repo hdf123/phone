@@ -68,6 +68,7 @@
 		</div>
 		<div class="winbox">
 			<div>
+				<i class="iconfont">&#xe65b;</i>
 				<h4>提交成功</h4>
 				<p><a href="tel:0371-552 55555">已收到您的购房需求，我们会第一时间与您联系，详情请咨询购房服务中心热线：0371-552 55555</a></p>
 				<a class="btn" href="fast.html">确定</a>
@@ -140,6 +141,9 @@ $(function(){
 	})
 	$(".winbox>div").click(function(event){
 		event.stopPropagation();
+	})
+	$(".winbox i").click(function(event){
+		$(".winbox").hide();
 	})
 	$(".btn").click(function(){
 		$(".winbox").hide();

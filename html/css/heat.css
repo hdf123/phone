@@ -129,7 +129,7 @@ a {
 .headers > p {
   color: #ffffff;
   font-size: 0.32rem;
-  padding: 0.253rem 0.56rem 0;
+  padding: 0 0.56rem;
 }
 
 .contents {
@@ -144,7 +144,7 @@ a {
 }
 
 .area {
-  margin-top: 1.587rem;
+  margin-top: 1.387rem;
   padding: 0 0.613rem;
   display: flex;
   justify-content: space-between;
@@ -172,7 +172,7 @@ a {
   font-weight: normal;
   margin-top: 0.1rem;
 }
-.area > img {
+.area > div > img {
   width: 1.813rem;
   background: none;
 }

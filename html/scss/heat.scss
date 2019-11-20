@@ -22,7 +22,7 @@
     >p{
         color: #ffffff;
         font-size: 0.32rem;
-        padding:0.253rem 0.56rem 0;
+        padding:0 0.56rem;
     }
 }
 .contents{
@@ -36,7 +36,7 @@
     background: #F7F7F7;
 }
 .area{
-    margin-top:1.587rem;
+    margin-top:1.387rem;
     padding:0 0.613rem;
     display: flex;
     justify-content: space-between;
@@ -64,9 +64,11 @@
             margin-top:0.1rem;
         }
     }
-    >img{
-        width: 1.813rem;
-        background:none;
+    >div{
+        >img{
+            width: 1.813rem;
+            background:none;
+        }
     }
 }
 .list_tab{
