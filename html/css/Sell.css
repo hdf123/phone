@@ -185,6 +185,7 @@ a {
 .building > div:nth-child(1) > div:nth-child(2) {
   color: #f9351a;
   font-size: 0.373rem;
+  font-family: PingFang-SC-Medium;
   display: flex;
   align-items: center;
 }

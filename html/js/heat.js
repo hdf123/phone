@@ -6,7 +6,7 @@ $(function(){
 		inds = $(this).index();
 		var mm=10+(100/4*inds);
 		$('.list_tab>div').animate({ 'left': mm + '%' }, 300, function() {
-			funk(inds);
+			funk(inds,0);
 		});
 	})
 	if(getRequest().region==undefined||getRequest().region==null){
@@ -20,7 +20,7 @@ $(function(){
 	var page = 1,off_on = false;//page：分页码;off_on：禁止重复加载
 	//加载数据
 	var LoadingDataFn = function(){
-		funk(inds);
+		funk(inds,1);
 	    off_on = true;
 	};
 	//初始化， 第一次加载
@@ -41,9 +41,9 @@ $(function(){
 	});
 	
 	
-	function funk(ind){
+	function funk(ind,sta){
 		console.log(ind);
-		var ksk='';
+		var ksk='',ks='';
 		for(i in data){
 			if(i<3){
 				ksk='<div class="lead">'+(Number(i)+1)+'</div>';
@@ -52,13 +52,13 @@ $(function(){
 			}else{
 				ksk='';
 			}
-			$(".contents").append('<a class="building_box" href="javascript:;">'
+			ks+='<a class="building_box" href="javascript:;">'
 									+'<div>'
 										+'<img src='+data[i].img+' alt="" />'
 										+ksk
 									+'</div>'
 									+'<div>'
-										+'<h4>'+data[i].name+'</h4>'
+										+'<h4>'+ind+data[i].name+'</h4>'
 										+'<ul>'
 											+'<li>'+data[i].region[1]+'</li>'
 											+'<li>'+data[i].area+'</li>'
@@ -66,7 +66,12 @@ $(function(){
 										+'<p>热门指数: '+data[i].heat+'</p>'
 										+'<p>'+data[i].price+'</p>'
 									+'</div>'
-								+'</a>');
+								+'</a>';
+		}
+		if(sta==0){
+			$(".contents").html(ks);
+		}else{
+			$(".contents").append(ks);
 		}
 	}
 })

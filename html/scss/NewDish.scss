@@ -217,10 +217,10 @@
         font-size: 0.373rem;
         >i{
             color:#a1a1a1;
-            -webkit-transition: transform .25s linear;
-            -moz-transition: transform .25s linear;
-            -o-transition: transform .25s linear;
-            transition: transform .25s linear;
+//          -webkit-transition: transform .25s linear;
+//          -moz-transition: transform .25s linear;
+//          -o-transition: transform .25s linear;
+//          transition: transform .25s linear;
         }
     }
     .act{
@@ -228,10 +228,10 @@
         >i{
             color: #0099ff;
             transform: rotate(180deg);
-            -webkit-transition: transform .25s linear;
-            -moz-transition: transform .25s linear;
-            -o-transition: transform .25s linear;
-            transition: transform .25s linear;
+//          -webkit-transition: transform .25s linear;
+//          -moz-transition: transform .25s linear;
+//          -o-transition: transform .25s linear;
+//          transition: transform .25s linear;
         }
     }
 }
@@ -297,7 +297,8 @@
 }
 .swiper1{
     .tab_con1,.tab_con2,.tab_con3{
-        height:9.347rem;
+        height:auto;
+//      height:9.347rem;
     }
 }
 .swiper1 .tab_con4{

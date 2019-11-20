@@ -315,10 +315,6 @@ a {
 }
 .tab_title > div > i {
   color: #a1a1a1;
-  -webkit-transition: transform .25s linear;
-  -moz-transition: transform .25s linear;
-  -o-transition: transform .25s linear;
-  transition: transform .25s linear;
 }
 .tab_title .act {
   color: #0099ff;
@@ -326,10 +322,6 @@ a {
 .tab_title .act > i {
   color: #0099ff;
   transform: rotate(180deg);
-  -webkit-transition: transform .25s linear;
-  -moz-transition: transform .25s linear;
-  -o-transition: transform .25s linear;
-  transition: transform .25s linear;
 }
 
 .posits {
@@ -397,7 +389,7 @@ a {
 }
 
 .swiper1 .tab_con1, .swiper1 .tab_con2, .swiper1 .tab_con3 {
-  height: 9.347rem;
+  height: auto;
 }
 
 .swiper1 .tab_con4 {

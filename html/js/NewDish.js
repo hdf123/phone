@@ -12,10 +12,17 @@ $(function(){
 			alert($(this).val())
 	    }
 	});
+	$(".menu>a").click(function(){
+		console.log($(this).index());
+		if($(this).index()<4){
+			$(".contents").scrollTop(lens);
+			funcc();
+		}
+	})
 	/**
 	 * tab切换
 	 */
-	$(".tab_title>div").click(function(){
+	$(".tab_title>div").click(function(e){
 		$(".swiper1").css({"display":"block"});
 	    var zuobiao=$(this).index();
 	    $(".tab_title>div").eq(zuobiao).addClass("act");
@@ -23,6 +30,7 @@ $(function(){
 	    mySwiper1.slideTo(zuobiao,500,false);
 	    $(".contents").scrollTop(lens);
 	    funcc();
+	    e.stopPropagation();
 	})
 	var mySwiper1= new Swiper('.swiper1', {
 //		initialSlide :3,//初始显示
@@ -213,8 +221,12 @@ $(function(){
 		console.log(arrs4);//售卖状态
 		console.log(arrs5);//开盘时间
 	}
-	$(".swiper1").click(function(){
+	 $(document).bind("click", function(){
 		$(".swiper1").css({"display":"none"});
+		$(".tab_title>div").removeClass("act");
+	})
+	 $(".swiper1 .swiper-slide>div").bind("click", function(e){
+		e.stopPropagation();
 	})
 	/**
 	 * 分页
@@ -243,7 +255,6 @@ $(function(){
 						+'<img src='+data[i].img+' alt="" />'
 						+'<div>'
 							+'<h3>'+data[i].name+'</h3>'
-							+'<div class="price">'+data[i].price+'</div>'
 							+'<div class="environment">'
 								+'<div>'+ska+'</div>'
 								+'<div>'+data[i].area+'</div>'
@@ -251,6 +262,7 @@ $(function(){
 							+'<div class="situation">'
 								+states+skb
 							+'</div>'
+							+'<div class="price">'+data[i].price+'</div>'
 						+'</div>'
 					+'</a>';
 	    }

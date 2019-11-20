@@ -189,8 +189,9 @@ a {
   padding: 0.227rem 0.347rem 0.267rem;
 }
 .conditionb > span:nth-child(1) {
-  color: #ff3c4d;
+  color: #f9351a;
   font-size: 0.32rem;
+  font-family: PingFang-SC-Medium;
 }
 .conditionb > span:nth-child(2) {
   color: #666666;
@@ -214,7 +215,7 @@ a {
   background-color: #0099ff;
 }
 .btns > a:last-child {
-  background-color: #ff3c4d;
+  background-color: #f9351a;
 }
 
 .recommended_box {
@@ -247,6 +248,7 @@ a {
 .building_box > div > .price {
   color: #f9351a;
   font-size: 0.373rem;
+  font-family: PingFang-SC-Medium;
   margin: 0.1rem 0 0.05rem 0;
 }
 
