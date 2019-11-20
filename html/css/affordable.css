@@ -168,6 +168,7 @@ a {
 .conditiona {
   padding: 0.32rem 0.347rem 0;
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 .conditiona > div {
