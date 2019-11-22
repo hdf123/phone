@@ -13,7 +13,7 @@
 
 img {
   display: block;
-  background: rgba(238, 238, 238, 0.5);
+  background: rgba(238, 238, 238, 0);
 }
 
 input {
@@ -23,6 +23,9 @@ input {
   border: none;
   /*3.添加边框*/
   border: 1px solid #ccc;
+  /*4.清除ios默认圆角*/
+  -webkit-appearance: none;
+  border-radius: 0;
 }
 
 /* 让链接默认不显示下划线， */
