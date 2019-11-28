@@ -166,10 +166,12 @@ a {
   top: 1.173rem;
   left: auto;
   bottom: 0;
-  overflow: auto;
 }
 
 .building_box {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
   padding-left: 0.4rem;
 }
 .building_box > li {
