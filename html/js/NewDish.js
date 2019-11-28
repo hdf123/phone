@@ -1,6 +1,6 @@
 $(function(){
 	var distance=$(".tab_box").offset().top;
-	var heights=$(".tab_box").outerHeight(true);
+	var heights=$(".headers").outerHeight(true);
 	var lens=distance-heights;
 	/**
 	 * 搜索
