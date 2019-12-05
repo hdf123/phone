@@ -7,10 +7,6 @@ $(function(){
 		$(".popup_box").animate({"width":"100%"},300);
 		$(".popup_box").show();
 	})
-	
-	for(i in region){
-		$(".area>ul").append('<li>'+region[i].title+'</li>');
-	}
 	/**
 	 * 地图标记
 	 */
@@ -19,8 +15,9 @@ $(function(){
 	map.centerAndZoom(point,12);
 	var arr1=[],arr2=[];
 	
-	for (var i = 0; i <region.length; i ++) {
-	    var p0= region[i].point.lng; 
+	for (var i = 0; i <region.length; i ++){
+		$(".area>ul").append('<li>'+region[i].title+'</li>');
+	    var p0= region[i].point.lng;
 	    var p1 =region[i].point.lat; //按照原数组的point格式将地图点坐标的经纬度分别提出来
 	    arr2[i] = new BMap.Point(p0, p1); //循环生成新的地图点
 		// 复杂的自定义覆盖物
@@ -34,14 +31,17 @@ $(function(){
 	      	var div = this._div = document.createElement("div");
 	      	$(div).addClass("markks");
 	      	
+	      	var as=document.createElement("a");
+			as.setAttribute('href', "");
 	      	var divs=document.createElement("div");
 	      	divs.appendChild(document.createTextNode(region[i].title));
 	      	
-	      	var ayy=document.createElement("span");
-	      	ayy.appendChild(document.createTextNode(this._texts));
+	      	var spns=document.createElement("span");
+	      	spns.appendChild(document.createTextNode(this._texts));
 	      	
-	      	div.appendChild(divs);
-	      	div.appendChild(ayy);
+	      	as.appendChild(divs);
+	      	as.appendChild(spns);
+	      	div.appendChild(as);
 	      	map.getPanes().labelPane.appendChild(div);
 	      	return div;
 	    }
@@ -61,13 +61,15 @@ $(function(){
 	    arr1.push(myCompOverlay);
 	    map.addOverlay(myCompOverlay);
 	    //移动端使用touchstart，pc使用click，好坑啊，浪费了我好长时间
-		myCompOverlay.addEventListener('touchstart', function() {
+		myCompOverlay.addEventListener('touchstart',function(){
 			var index=$(this).index();
+			console.log(index);
 			maps(index);
 			$(".screening_box li").eq(index).addClass("act").siblings("li").removeClass("act");
 		});
 	}
 	function maps(index){
+		console.log(index);
 		map.clearOverlays();
 		for(var i=0;i<arr1.length;i++){
 			map.removeOverlay(arr1[i]);
@@ -90,7 +92,7 @@ $(function(){
 			[113.775767,34.735826,"九号"],
 			[113.786867,34.726826,"十号"],
 			[113.798967,34.717826,"十一号"],
-			[113.709067,34.700826,"十二号"],
+			[113.709067,34.700826,"十二号"]
 		]
 		for (var i = 0; i <ayy.length; i ++) {
 			point[i] = new window. BMap . Point(ayy[i][0],ayy[i][1]); //循环生成新的地图点
@@ -151,6 +153,7 @@ $(function(){
 	
 	$(".btn").click(function(){
 		$(".popup_box").animate({"width":"0"},300,function(){
+			console.log(inds);
 			maps(inds);
 			$(".popup_box").hide();
 			$(".pulls").animate({"top":"100%"});
