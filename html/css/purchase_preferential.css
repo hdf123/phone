@@ -48,7 +48,7 @@ a {
 }
 
 /*单行隐藏*/
-.yincang, .wdows > div, #wdows > div {
+.yincang, .building_title > div:nth-child(1) > div > div, .introduce, .wdows > div, #wdows > div {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -184,6 +184,7 @@ a {
   justify-content: space-between;
 }
 .building_title > div:nth-child(1) {
+  max-width: 6rem;
   display: flex;
 }
 .building_title > div:nth-child(1) > img {
@@ -192,6 +193,7 @@ a {
   border-radius: 50%;
 }
 .building_title > div:nth-child(1) > div {
+  max-width: 4.8rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -201,6 +203,7 @@ a {
   font-size: 0.4rem;
 }
 .building_title > div:nth-child(1) > div > div {
+  width: 100%;
   color: #f9351a;
   font-size: 0.32rem;
   font-weight: 600;
@@ -225,6 +228,7 @@ a {
 }
 
 .introduce {
+  max-width: 9.2rem;
   color: #999999;
   font-size: 0.32rem;
   padding: 0.2rem 0 0.2rem 1.2rem;
@@ -314,6 +318,23 @@ a {
   margin-top: 0.693rem;
   background-color: #1a1a1a;
   border-radius: 0.053rem;
+}
+
+.share_box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+  z-index: 98;
+}
+.share_box > img {
+  width: 5.6rem;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 /*# sourceMappingURL=purchase_preferential.css.map */

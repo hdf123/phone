@@ -177,10 +177,14 @@ $(function(){
     	spaceBetween :10,
 		observer:true,
     	observeParents:true,
+    	initialSlide:0,
 		onClick: function(swiper) {
 			var ind=swiper.clickedSlide.attributes["ind"].nodeValue;
 		} 
 	})
+	setTimeout(() => {
+      	$('.swiper4 .swiper-wrapper')[0].style.transform = 'translate3d(0px, 0px, 0px)';
+    }, 50)
 	var mySwiper5 = new Swiper('.swiper5', {
 		slidesPerView :2.6,
 		observer:true,

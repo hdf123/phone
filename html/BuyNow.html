@@ -12,7 +12,12 @@
 	</head>
 	<body>
 		<header class="headers">
-			<a class="iconfont lefts" href="javascript:history.go(-1);">&#xe632;</a>
+			<div class="lefts">
+				<a class="iconfont" href="javascript:history.go(-1);">&#xe632;</a>
+				<a href="home.html">
+					<img src="../img/home.png" alt="" />
+				</a>
+			</div>
 			<div class="centers">返金卡</div>
 			<i class="iconfont rights">&#xe630;</i>
 		</header>
@@ -36,7 +41,9 @@
 			<img src="../img/ask.png" class="comments" alt="" />
 		</section>
 		<footer class="footers">立即购买（￥300元）</footer>
-
+		<div class="share_box">
+			<img src="../img/guide.png" alt="" />
+		</div>
 <script type="text/javascript">
 	$(function(){
 		var contH = $(".comments").height();
@@ -64,6 +71,15 @@
 					"top": moveY + sY - startY,
 				})
 			},
+		})
+		/**
+		 * 分享
+		 */
+		$(".rights").click(function(){
+			$(".share_box").css("display","block");
+		})
+		$(".share_box").click(function(){
+			$(this).css("display","none");
 		})
 	})
 </script>

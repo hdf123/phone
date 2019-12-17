@@ -94,7 +94,7 @@ a {
 }
 
 /*上下左右居中1.0*/
-.flexs, .headers .lefts, .headers .centers, .headers .rights, .footers {
+.flexs, .headers .centers, .headers .rights, .footers {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -117,12 +117,20 @@ a {
   border: 1px solid #e5e5e5;
 }
 .headers .lefts {
-  width: 1rem;
   height: 100%;
-  font-size: 0.5rem;
   position: absolute;
   top: 0;
   left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.headers .lefts > a:first-child {
+  font-size: 0.5rem;
+}
+.headers .lefts img {
+  width: 0.6rem;
+  margin-left: 0.587rem;
 }
 .headers .centers {
   height: 100%;
@@ -207,6 +215,23 @@ ol li {
   font-size: 0.427rem;
   background-color: #211b1d;
   z-index: 96;
+}
+
+.share_box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+  z-index: 98;
+}
+.share_box > img {
+  width: 5.6rem;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 /*# sourceMappingURL=BuyNow.css.map */

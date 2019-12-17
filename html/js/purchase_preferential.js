@@ -21,6 +21,15 @@ $(function(){
 		event.stopPropagation();
 	})
 	/**
+	 * 分享
+	 */
+	$(".rights").click(function(){
+		$(".share_box").css("display","block");
+	})
+	$(".share_box").click(function(){
+		$(this).css("display","none");
+	})
+	/**
 	 * 懒加载
 	 */
 	var page = 1,off_on = false;
