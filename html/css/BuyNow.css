@@ -94,7 +94,7 @@ a {
 }
 
 /*上下左右居中1.0*/
-.flexs, .headers .centers, .headers .rights, .footers {
+.flexs, .headers a, .headers i, .headers .centers, .float1, .float2, .footers {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -116,32 +116,21 @@ a {
   background: white;
   border: 1px solid #e5e5e5;
 }
-.headers .lefts {
+.headers a, .headers i {
+  width: 1rem;
   height: 100%;
   position: absolute;
   top: 0;
-  left: 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.headers .lefts > a:first-child {
   font-size: 0.5rem;
 }
-.headers .lefts img {
-  width: 0.6rem;
-  margin-left: 0.587rem;
+.headers .lefts {
+  left: 0;
 }
 .headers .centers {
   height: 100%;
   font-size: 0.48rem;
 }
 .headers .rights {
-  width: 1rem;
-  height: 100%;
-  font-size: 0.5rem;
-  position: absolute;
-  top: 0;
   right: 0;
 }
 
@@ -200,38 +189,31 @@ ol li {
   margin-bottom: 0.347rem;
 }
 
-.comments {
+.float1, .float2 {
   width: 1.333rem;
   height: 1.333rem;
-  border-radius: 50%;
   position: fixed;
   right: 0.533rem;
-  bottom: 3.1rem;
+  bottom: 4.96rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0rem 0.027rem 0.24rem 0rem rgba(51, 51, 51, 0.4);
+}
+.float1 img, .float2 img {
+  width: 0.6rem;
+  height: 0.6rem;
+}
+
+.float2 {
+  bottom: 2.88rem;
 }
 
 .footers {
   height: 1.333rem;
-  color: #ffffff;
+  color: #F0F0EF;
   font-size: 0.427rem;
   background-color: #211b1d;
   z-index: 96;
-}
-
-.share_box {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.6);
-  display: none;
-  z-index: 98;
-}
-.share_box > img {
-  width: 5.6rem;
-  position: absolute;
-  top: 0;
-  right: 0;
 }
 
 /*# sourceMappingURL=BuyNow.css.map */

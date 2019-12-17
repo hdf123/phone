@@ -18,16 +18,27 @@
 			<a class="iconfont lefts" href="javascript:history.go(-1);">&#xe632;</a>
 		</header>
 		<section class="contents">
-			<div class="act">全部</div>
+			<ul>
+				<li class="act">全部</li>
+			</ul>
+			<!--<div class="act">全部</div>-->
+			<!--浮标-->
+			<div class="floata">
+				<img src="../img/home.png" alt="" />
+			</div>
 		</section>
 		
 	
 <script type="text/javascript">
 $(function(){
+	/**
+	 * 拖动
+	 */
+	floats($(".floata"),2);	
 	for(i in regs){
-		$(".contents").append("<div>"+regs[i]+"</div>");
+		$(".contents>ul").append("<li>"+regs[i]+"</li>");
 	}
-	$(".contents div").click(function(){
+	$(".contents li").click(function(){
 		$(this).addClass("act").siblings().removeClass("act");
 		console.log($(this).html());
 		location.href="heat.html?region="+$(this).html();

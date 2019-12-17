@@ -32,11 +32,19 @@
 				</li>
 			</ul>
 			<div class="preferentialk"></div>
+			<!--浮标-->
+			<div class="floata">
+				<img src="../img/home.png" alt="" />
+			</div>
 		</section>
 		
 		
 <script type="text/javascript">
 $(function(){
+	/**
+	 * 拖动
+	 */
+	floats($(".floata"),2);	
 	var nn=getRequest().index;
 	state(getRequest().index);
 	$(".tabBar>li").click(function(){

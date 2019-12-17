@@ -38,6 +38,10 @@
 					</div>
 				</li>-->
 			</ul>
+			<!--浮标-->
+			<div class="floata">
+				<img src="../img/home.png" alt="" />
+			</div>
 		</section>
 		
 
@@ -47,6 +51,12 @@ $(function(){
 	 * 分页
 	 */
 	var page = 1,off_on = false;//page：分页码;off_on：禁止重复加载
+	
+	/**
+	 * 拖动
+	 */
+	floats($(".floata"),2);
+	
 	//加载数据
 	var LoadingDataFn = function(){
 		for(var i=0;i<6;i++){

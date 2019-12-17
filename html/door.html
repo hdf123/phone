@@ -67,100 +67,108 @@
 			    	<div class="swiper-slide">slider5</div>
 			  	</div>
 			</div>
+			<!--浮标-->
+			<div class="floata">
+				<img src="../img/home.png" alt="" />
+			</div>
 		</section>
 		
 
 <script type="text/javascript">
-	$(function(){
-		$(".tab>div").click(function(){
-			var zuobiao=$(this).index();
-			console.log(zuobiao);
-			$(this).addClass("act").siblings().removeClass("act");
-			mySwiper1.slideTo(zuobiao+1,500,false);
-		})
-		var mySwiper1 = new Swiper('.swiper1', {
-			loop:true,//循环
-			observer:true,//修改swiper自己或子元素时，自动初始化swiper
-			observeParents:true,//修改swiper的父元素时，自动初始化swiper
-			onSlideChangeStart:function(swiper){//swiper3中使用
-		        var xiabiao=swiper.realIndex;//循环状态下获取下标
-		        $(".tab>div").eq(xiabiao).addClass("act").siblings().removeClass("act");
-		   }
-		})
-		$(".scra").bind("click",function(){
-			location.href="preview.html"
-		})
-		function funa(){
-			var dom='';
-			for(var i=0;i<6;i++){
-				dom+='<div class="door_box">'
-				    			+'<div class="imgks">'
-					    			+'<img src="../img/carda.png" alt="" />'
-				    			+'</div>'
-				    			+'<div class="door_child">'
-				    				+'<div>'
-				    					+'<h5>'+(i+1)+'室2厅2卫</h5>'
-				    					+'<div>售罄</div>'
-				    				+'</div>'
-				    				+'<div>建面 117.4㎡  朝向南</div>'
-				    				+'<div>'
-				    					+'<div>南北通透</div>'
-				    					+'<div>景观阳台</div>'
-				    				+'</div>'
-				    				+'<div>约375万/套</div>'
-				    			+'</div>'
-							+'</div>';
-			}
-			$('.scra').append(dom);
-			$('.one').append(dom);
-		}
-		/**
-		 * 全部加载
-		 */
-		var page = 1,page1 = 1,page2 = 1,page3 = 1,page4 = 1;
-		var off_on = false,off_on1 = false,off_on2 = false,off_on4 = false,off_on4 = false;
-		//加载数据
-		var LoadingDataFn = function() {
-			funa();
-			console.log(111);
-		    off_on = true;
-		};
-		//初始化， 第一次加载
-		$(document).ready(function() {
-		    LoadingDataFn();
-		    LoadingDataFn1();
-		});
-		$('.scra').scroll(function() {
-		    //当时滚动条离底部60px时开始加载下一页的内容
-		    if (($(this)[0].scrollTop + $(this).height() + 60) >= $(this)[0].scrollHeight) {
-		        if (off_on) {
-		            off_on = false;
-		            page++;
-		            console.log("第"+page+"页");
-		            LoadingDataFn();
-		        }
-		    }
-		});
-		/**
-		 * 一室加载
-		 */
-		//加载数据
-		var LoadingDataFn1 = function() {
-			funa();
-		    off_on1 = true;
-		};
-		$('.one').scroll(function() {
-		    //当时滚动条离底部60px时开始加载下一页的内容
-		    if (($(this)[0].scrollTop + $(this).height() + 60) >= $(this)[0].scrollHeight) {
-		        if (off_on1) {
-		            off_on1 = false;
-		            page1++;
-		            console.log("第"+page1+"页");
-		            LoadingDataFn1();
-		        }
-		    }
-		});
+$(function(){
+	/**
+	 * 拖动
+	 */
+	floats($(".floata"),2);
+	$(".tab>div").click(function(){
+		var zuobiao=$(this).index();
+		console.log(zuobiao);
+		$(this).addClass("act").siblings().removeClass("act");
+		mySwiper1.slideTo(zuobiao+1,500,false);
 	})
+	var mySwiper1 = new Swiper('.swiper1', {
+		loop:true,//循环
+		observer:true,//修改swiper自己或子元素时，自动初始化swiper
+		observeParents:true,//修改swiper的父元素时，自动初始化swiper
+		onSlideChangeStart:function(swiper){//swiper3中使用
+	        var xiabiao=swiper.realIndex;//循环状态下获取下标
+	        $(".tab>div").eq(xiabiao).addClass("act").siblings().removeClass("act");
+	   }
+	})
+	$(".scra").bind("click",function(){
+		location.href="preview.html"
+	})
+	function funa(){
+		var dom='';
+		for(var i=0;i<6;i++){
+			dom+='<div class="door_box">'
+			    			+'<div class="imgks">'
+				    			+'<img src="../img/carda.png" alt="" />'
+			    			+'</div>'
+			    			+'<div class="door_child">'
+			    				+'<div>'
+			    					+'<h5>'+(i+1)+'室2厅2卫</h5>'
+			    					+'<div>售罄</div>'
+			    				+'</div>'
+			    				+'<div>建面 117.4㎡  朝向南</div>'
+			    				+'<div>'
+			    					+'<div>南北通透</div>'
+			    					+'<div>景观阳台</div>'
+			    				+'</div>'
+			    				+'<div>约375万/套</div>'
+			    			+'</div>'
+						+'</div>';
+		}
+		$('.scra').append(dom);
+		$('.one').append(dom);
+	}
+	/**
+	 * 全部加载
+	 */
+	var page = 1,page1 = 1,page2 = 1,page3 = 1,page4 = 1;
+	var off_on = false,off_on1 = false,off_on2 = false,off_on4 = false,off_on4 = false;
+	//加载数据
+	var LoadingDataFn = function() {
+		funa();
+		console.log(111);
+	    off_on = true;
+	};
+	//初始化， 第一次加载
+	$(document).ready(function() {
+	    LoadingDataFn();
+	    LoadingDataFn1();
+	});
+	$('.scra').scroll(function() {
+	    //当时滚动条离底部60px时开始加载下一页的内容
+	    if (($(this)[0].scrollTop + $(this).height() + 60) >= $(this)[0].scrollHeight) {
+	        if (off_on) {
+	            off_on = false;
+	            page++;
+	            console.log("第"+page+"页");
+	            LoadingDataFn();
+	        }
+	    }
+	});
+	/**
+	 * 一室加载
+	 */
+	//加载数据
+	var LoadingDataFn1 = function() {
+		funa();
+	    off_on1 = true;
+	};
+	$('.one').scroll(function() {
+	    //当时滚动条离底部60px时开始加载下一页的内容
+	    if (($(this)[0].scrollTop + $(this).height() + 60) >= $(this)[0].scrollHeight) {
+	        if (off_on1) {
+	            off_on1 = false;
+	            page1++;
+	            console.log("第"+page1+"页");
+	            LoadingDataFn1();
+	        }
+	    }
+	});
+})
 </script>
 	</body>
 </html>

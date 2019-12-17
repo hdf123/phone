@@ -1,5 +1,13 @@
 $(function(){
-	$(".box>li").eq(getRequest().index).css("display","block");
+	/**
+	 * 拖动
+	 */
+	floats($(".floata"),2);
+	var inds=getRequest().index;
+	if(inds==undefined){
+		inds=0;
+	}
+	$(".box>li").eq(inds).css("display","block");
 	$(".tabBar>li").click(function(){
 	    var xiabiao=$(this).index();
 	    $(".box>li").eq(xiabiao).css("display","block").siblings().css("display","none");

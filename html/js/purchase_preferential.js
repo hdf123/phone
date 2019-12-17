@@ -1,5 +1,9 @@
 $(function(){
 	/**
+	 * 拖动
+	 */
+	floats($(".floata"),2);	
+	/**
 	 * 搜索
 	 */
 	$('.search').click(function (){

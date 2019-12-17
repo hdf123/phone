@@ -31,6 +31,10 @@
 			    	</div>
 			  	</div>
 			</div>
+			<!--浮标-->
+			<div class="floata">
+				<img src="../img/home.png" alt="" />
+			</div>
 		</section>
 		<footer class="footers">
 			<div>
@@ -40,24 +44,28 @@
 		</footer>
 
 <script type="text/javascript">
-	$(function(){
-		var yz_photo=JSON.parse(localStorage.getItem('yz_photo'));
-		console.log(yz_photo);
-		if(yz_photo==null){
-			yz_photo=0;
-		}
-		console.log(yz_photo);
-		var mySwiper = new Swiper('.swiper1', {
-			observer:true,//修改swiper自己或子元素时，自动初始化swiper
-			observeParents:true,//修改swiper的父元素时，自动初始化swiper
-			initialSlide :yz_photo,//初始化索引
-			pagination : '.swiper-pagination',
-			paginationType : 'fraction'
-		})
-		$(".rights").click(function(){
-			location.href="photo.html"
-		})
+$(function(){
+	/**
+	 * 拖动
+	 */
+	floats($(".floata"),2);	
+	var yz_photo=JSON.parse(localStorage.getItem('yz_photo'));
+	console.log(yz_photo);
+	if(yz_photo==null){
+		yz_photo=0;
+	}
+	console.log(yz_photo);
+	var mySwiper = new Swiper('.swiper1', {
+		observer:true,//修改swiper自己或子元素时，自动初始化swiper
+		observeParents:true,//修改swiper的父元素时，自动初始化swiper
+		initialSlide :yz_photo,//初始化索引
+		pagination : '.swiper-pagination',
+		paginationType : 'fraction'
 	})
+	$(".rights").click(function(){
+		location.href="photo.html"
+	})
+})
 </script>
 	</body>
 </html>

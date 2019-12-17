@@ -27,7 +27,6 @@
     left:auto;
     bottom:1.067rem;
     overflow: auto;
-    padding-bottom:0.8rem;
     >h3{
         padding:0 0.4rem;
         font-size: 0.48rem;
@@ -136,15 +135,19 @@
     }
 }
 .phone{
-    width:9rem;
-    padding:0.307rem 0;
-    display: block;
-    margin:0.12rem auto 0;
-    border:none;
-    font-size: 0.32rem;
-    border-bottom:0.013rem solid #e5e5e5;
+    padding-bottom:0.8rem;
+    >input{
+        width:9rem;
+        padding:0.307rem 0;
+        display: block;
+        margin:0.12rem auto 0;
+        border:none;
+        font-size: 0.32rem;
+        border-bottom:0.013rem solid #e5e5e5;
+    }
 }
 .footers{
+    height: 1.067rem;
     >div{
         width: 9.04rem;
         height: 1.067rem;

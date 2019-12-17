@@ -136,7 +136,6 @@ a {
   left: auto;
   bottom: 1.067rem;
   overflow: auto;
-  padding-bottom: 0.8rem;
 }
 .contents > h3 {
   padding: 0 0.4rem;
@@ -251,6 +250,9 @@ a {
 }
 
 .phone {
+  padding-bottom: 0.8rem;
+}
+.phone > input {
   width: 9rem;
   padding: 0.307rem 0;
   display: block;
@@ -260,6 +262,9 @@ a {
   border-bottom: 0.013rem solid #e5e5e5;
 }
 
+.footers {
+  height: 1.067rem;
+}
 .footers > div {
   width: 9.04rem;
   height: 1.067rem;

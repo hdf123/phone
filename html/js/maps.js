@@ -1,4 +1,8 @@
 $(function(){
+	/**
+	 * 拖动
+	 */
+	floats($(".floata"),2);
 	$(".popup_box").hide();
 	$(".rights>i:eq(0)").click(function(){
 		location.href="search.html";

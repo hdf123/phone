@@ -48,7 +48,7 @@ a {
 }
 
 /*单行隐藏*/
-.yincang, .building_box > div > h3, .wdows > div, #wdows > div {
+.yincang, .building_box > div > h3, .situation, .wdows > div, #wdows > div {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;

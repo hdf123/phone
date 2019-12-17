@@ -1,5 +1,11 @@
 $(function(){
 	/**
+	 * 拖动
+	 */
+	floats($(".floata"),0);
+//	分享
+	share($(".share"));
+	/**
 	 * 页面渲染
 	 */
 	var yz_building=data[2];//转为对象
@@ -93,8 +99,6 @@ $(function(){
 				$(".contents").scrollTop(1270);
 			}
 		});
-		
-
 	})
 	/**
 	 * 滚动显示
@@ -103,7 +107,6 @@ $(function(){
 	$(".contents").scroll(function(){
 		$(".headersk").show();
 		var sk=$(".contents").scrollTop();
-		console.log(sk);
 		if(sk<450){//基础信息
 			tabIndex=0;
 			var mm=8.5+(100/4*tabIndex);

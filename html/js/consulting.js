@@ -1,4 +1,9 @@
 $(function(){
+	/**
+	 * 拖动
+	 */
+	floats($(".floata"),2);
+	
 	if(getRequest().state==0){
 		$(".centers").html("行业资讯");
 	}else if(getRequest().state==1){
@@ -50,4 +55,14 @@ $(function(){
 		localStorage.setItem('yz_building',JSON.stringify(data[$(this).index()]));//转为json字符串
 		location.href="buildings.html";
 	})
+	
+	var mySwiper6 = new Swiper('.swiper6', {
+		//loop : true,
+		observer:true,//修改swiper自己或子元素时，自动初始化swiper
+		observeParents:true,//修改swiper的父元素时，自动初始化swiper
+		pagination : '.swiper-pagination',
+		paginationType : 'fraction',
+    	
+	})
+	
 })

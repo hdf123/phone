@@ -163,10 +163,72 @@ function popups(contents,address){//contents：内容；address：地址
 	},function () {   
 	});*/
 
-
-
-
-
+/**
+ * 拖动的图标
+ */
+	function floats(floats,state){//名称，0禁止移动，1自由移动，2上下移动，3左右移动
+		var contW = floats.width();
+		var contH = floats.height();
+		var startX, startY, sX, sY, moveX, moveY;
+		floats.css("height",contH+"px");
+		var winW = $(".contents").width();
+		var winH = $(".contents").height();
+		var headers = $(".headers").height();
+		var footers = $(".footers").height();
+		floats.on({ //绑定事件
+			touchstart: function(e) {
+				e.preventDefault()
+				startX = e.originalEvent.targetTouches[0].pageX; //获取点击点的X坐标
+				startY = e.originalEvent.targetTouches[0].pageY; //获取点击点的Y坐标
+				sX = $(this).offset().left;//相对于当前窗口X轴的偏移量
+				sY = $(this).offset().top; //相对于当前窗口Y轴的偏移量
+				leftX = startX - sX;//鼠标所能移动的最左端是当前鼠标距div左边距的位置
+				rightX = winW - contW + leftX;//鼠标所能移动的最右端是当前窗口距离减去鼠标距div最右端位置
+				topY = startY - sY + headers; //鼠标所能移动最上端是当前鼠标距div上边距的位置
+				bottomY = winH - contH + topY; //鼠标所能移动最下端是当前窗口距离减去鼠标距div最下端位置                
+			},
+			touchmove: function(e) {
+				switch(state){
+					case 1:moveX = e.originalEvent.targetTouches[0].pageX;//移动过程中X轴的坐标
+						moveY = e.originalEvent.targetTouches[0].pageY; //移动过程中Y轴的坐标
+						break;
+					case 2:moveY = e.originalEvent.targetTouches[0].pageY;
+						break;
+					case 3:moveX = e.originalEvent.targetTouches[0].pageX;
+						break;
+					default:return false;
+				}
+				
+				if(moveX < leftX) {
+					moveX = leftX;
+				}
+				if(moveX > rightX) {
+					moveX = rightX;
+				}
+				if(moveY < topY) {
+					moveY = topY;
+				}
+				if(moveY > bottomY) {
+					moveY = bottomY;
+				}
+				$(this).css({
+					"left": moveX + sX - startX,
+					"top": moveY + sY - startY,
+				})
+			},
+		})
+	}
+/**
+ * 分享
+ */
+	function share(share){
+		share.click(function(){
+			$(".share_box").css("display","block");
+		})
+		$(".share_box").click(function(){
+			$(this).css("display","none");
+		})
+	}
 
 
 

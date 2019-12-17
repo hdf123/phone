@@ -10,6 +10,10 @@ $(function(){
 	    }
 	});
 	/**
+	 * 拖动
+	 */
+	floats($(".floata"),2);	
+	/**
 	 * tab切换
 	 */
 	$(".tab_title>div").click(function(){

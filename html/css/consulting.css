@@ -170,6 +170,35 @@ a {
   font-size: 0.293rem;
 }
 
+.swiper6 {
+  width: 100%;
+  height: 2.88rem;
+  margin: 0.1rem 0;
+}
+.swiper6 .swiper-slide > img {
+  width: 100%;
+  height: 100%;
+}
+.swiper6 .swiper-pagination-fraction {
+  color: white;
+  width: auto;
+  left: initial;
+  right: 0.133rem;
+  bottom: 0.133rem;
+  text-align: right;
+  padding: 0.05rem 0.15rem;
+  border-radius: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.swiper6 .swiper-pagination-fraction .swiper-pagination-current {
+  color: white;
+  font-size: 0.32rem;
+}
+.swiper6 .swiper-pagination-fraction .swiper-pagination-total {
+  color: white;
+  font-size: 0.24rem;
+}
+
 .conts > p {
   text-indent: 2em;
   font-size: 0.4rem;

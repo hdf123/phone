@@ -50,8 +50,13 @@
 		    	<li>优质物业</li>
 		    </ul>
 		    <h3>您的联系方式？(必填)</h3>
-		    <input type="number" class="phone" placeholder="请输入您的手机号" value="" />
-		    
+		    <div class="phone">
+			    <input type="number" placeholder="请输入您的手机号" value="" />
+		    </div>
+			<!--浮标-->
+			<div class="floata">
+				<img src="../img/home.png" alt="" />
+			</div>
 		</section>
 		<footer class="footers">
 			<div>立即找房</div>
@@ -77,6 +82,10 @@
 
 <script type="text/javascript">
 $(function(){
+	/**
+	 * 拖动
+	 */
+	floats($(".floata"),2);
 	/**
 	 * 预算
 	 */
@@ -132,7 +141,7 @@ $(function(){
 		console.log($(".door_box .act").html());//户型
 		console.log($(".region div").html());//意向区域
 		console.log($(".requirements .act").html());//要求
-		console.log($(".phone").val());//联系方式
+		console.log($(".phone>input").val());//联系方式
 		$(".winbox").css("display","block");
 		
 	})
