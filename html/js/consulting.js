@@ -3,6 +3,8 @@ $(function(){
 	 * 拖动
 	 */
 	floats($(".floata"),2);
+//	分享
+	share($(".rights"));
 	
 	if(getRequest().state==0){
 		$(".centers").html("行业资讯");

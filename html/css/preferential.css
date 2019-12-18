@@ -133,10 +133,7 @@ a {
 }
 
 .contents {
-  width: 10rem !important;
-  position: fixed;
   top: 1.173rem;
-  left: auto;
   bottom: 0;
 }
 .contents > ul:nth-child(2) {

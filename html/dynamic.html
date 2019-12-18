@@ -153,6 +153,15 @@
 			<img src="" alt="" />
 		</footer>
 		
+		<!--右上角分享-->
+		<div class="share_box">
+			<img src="../img/guide.png" alt="" />
+			<!--<div class="ben_s">我知道了</div>-->
+		</div>
+		
+		
+		
+		
 <script src="js/data.js" type="text/javascript" charset="utf-8"></script>	
 <script type="text/javascript">
 $(function(){
@@ -160,6 +169,8 @@ $(function(){
 	 * 拖动
 	 */
 	floats($(".floata"),2);
+//	分享
+	share($(".rights"));
 	$(".contents>h3").html(getRequest().ind)
 	$(".uus li").click(function(){
 		location.reload();

@@ -130,10 +130,7 @@ a {
 }
 
 .contents {
-  width: 10rem !important;
-  position: absolute;
   top: 1.173rem;
-  left: auto;
   bottom: 0;
   background: #F5F5F5;
   padding: 0 0.267rem;

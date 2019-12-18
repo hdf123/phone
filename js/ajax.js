@@ -170,11 +170,11 @@ function popups(contents,address){//contents：内容；address：地址
 		var contW = floats.width();
 		var contH = floats.height();
 		var startX, startY, sX, sY, moveX, moveY;
-		floats.css("height",contH+"px");
 		var winW = $(".contents").width();
 		var winH = $(".contents").height();
 		var headers = $(".headers").height();
 		var footers = $(".footers").height();
+		console.log(headers);
 		floats.on({ //绑定事件
 			touchstart: function(e) {
 				e.preventDefault()

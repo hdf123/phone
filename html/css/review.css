@@ -113,7 +113,6 @@ a {
 .headers {
   height: 1.173rem;
   z-index: 96;
-  padding: 0.213rem 0;
   background: white;
   border-bottom: 1px solid #eeeeee;
 }
@@ -140,7 +139,9 @@ a {
 }
 
 .contents {
-  padding-top: 1.173rem;
+  top: 1.173rem;
+  bottom: 0;
+  overflow: auto;
 }
 
 .review_box {

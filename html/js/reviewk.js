@@ -6,6 +6,10 @@ $(function(){
 	if(!yz_logins){
 		location.href="home.html";
 	}
+	/**
+	 * 拖动
+	 */
+	floats($(".floata"),2);
 	//输入数量限制
 	var len=0,total=200;
 	$(".review_box>div").html(len+'/'+total);

@@ -136,10 +136,7 @@ a {
 }
 
 .contents {
-  width: 10rem !important;
-  position: absolute;
   top: 7.067rem;
-  left: auto;
   bottom: 0;
   overflow: auto;
   padding: 0 0.24rem;

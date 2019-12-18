@@ -146,15 +146,12 @@ body {
 }
 
 .contents {
-  width: 10rem !important;
-  position: fixed;
   top: 1.173rem;
-  left: auto;
-  bottom: 3rem;
+  bottom: 0;
 }
 
 .swiper1 {
-  height: calc(100% - 1.333rem);
+  height: calc(100% - 1.333rem - 3rem);
   background: white;
 }
 .swiper1 .swiper-slide {
@@ -186,17 +183,17 @@ body {
   font-size: 0.373rem;
 }
 
-.footers {
+.foots {
   height: 3rem;
   padding-left: 0.4rem;
   display: flex;
   align-items: center;
 }
-.footers > div p {
+.foots > div p {
   color: #ffffff;
   font-size: 0.427rem;
 }
-.footers > div div {
+.foots > div div {
   color: #d8b87b;
   font-size: 0.427rem;
 }

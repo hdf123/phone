@@ -1,4 +1,5 @@
 $(function(){
+	$(".search").focus();
 	/**
 	 * 拖动
 	 */
@@ -8,12 +9,6 @@ $(function(){
 		inds=0;
 	}
 	$(".box>li").eq(inds).css("display","block");
-	$(".tabBar>li").click(function(){
-	    var xiabiao=$(this).index();
-	    $(".box>li").eq(xiabiao).css("display","block").siblings().css("display","none");
-	    $(".tabBar>li").eq(xiabiao).addClass("selecteds");
-	    $(".tabBar>li").eq(xiabiao).siblings().removeClass("selecteds");
-	})
 	function fun1(xiabiao){
 		for(var i=0;i<3;i++){
 			$(".industry").append('<a class="imgas" href="consulting.html?state='+xiabiao+'&ind=正弘形城1号院洋房在售'+i+'号院高层优惠升级中">'
@@ -57,6 +52,21 @@ $(function(){
 									+'</a>');
 	    }
 	}
+	/**
+	 * 搜索
+	 */
+	$('.search').on('keypress', function (e){
+	    var keycode = e.keyCode;
+	    var texts=$(this).val();
+	　　//keycode是键码，13也是电脑物理键盘的 enter 
+	    if(keycode == '13') {
+	    	e.preventDefault();
+	    	$('.search').blur();
+	    	console.log("texts="+texts);
+	    	//根据搜索返回结果定义类型并渲染到页面
+	    	$(".box>li").eq(2).css("display","block").siblings().css("display","none");
+	    }
+	});
     /**
      * 上拉加载
      */

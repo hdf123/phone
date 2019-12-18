@@ -94,7 +94,7 @@ a {
 }
 
 /*上下左右居中1.0*/
-.flexs, .headers > a {
+.flexs, .headers > a:first-child {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -118,12 +118,12 @@ a {
   background: white;
   border-bottom: 1px solid #eeeeee;
 }
-.headers > a {
+.headers > a:first-child {
   width: 1rem;
   height: 100%;
   font-size: 0.5rem;
 }
-.headers > input {
+.headers input {
   width: 8.427rem;
   height: 0.747rem;
   padding: 0 0.307rem;
@@ -134,10 +134,7 @@ a {
 }
 
 .contents {
-  width: 10rem !important;
-  position: fixed;
   top: 1.173rem;
-  left: auto;
   bottom: 0;
 }
 

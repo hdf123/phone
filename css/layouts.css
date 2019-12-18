@@ -15,7 +15,9 @@ body {
 }
 
 .contents {
-  width: 100%;
+  width: 10rem !important;
+  position: absolute;
+  left: auto;
 }
 
 .footers {

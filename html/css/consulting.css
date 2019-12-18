@@ -139,11 +139,8 @@ a {
 }
 
 .contents {
-  width: 10rem !important;
   padding: 0 0.413rem;
-  position: fixed;
   top: 1.173rem;
-  left: auto;
   bottom: 1.587rem;
   overflow: auto;
 }

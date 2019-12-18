@@ -138,9 +138,7 @@ body {
 }
 
 .contents {
-  position: absolute;
   top: 1.173rem;
-  left: 0;
   bottom: 0;
   overflow: auto;
 }

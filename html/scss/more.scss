@@ -7,13 +7,13 @@
     align-items: center;
     background: white;
     border-bottom:1px solid #eeeeee;
-    >a:first-child{
+    >a{
         width:1rem;
         height:100%;
         font-size:0.5rem;
         @extend .flexs;
     }
-    input{
+    >input{
         width: 8.427rem;
         height: 0.747rem;
         padding:0 0.307rem;
@@ -36,38 +36,6 @@
         padding:0 0.4rem 1rem;
         display: none;
         overflow: auto;
-    }
-}
-.tabBar{
-    width:100%;
-    height:1rem;
-    list-style:none;
-    padding:0.2rem 0 0.1rem 0;
-    display: flex;
-    justify-content: space-between;
-    z-index:999;
-    >li{
-        width:100%;
-        height:100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        >p{
-            font-size:0.427rem;
-            text-align: center;
-        }
-    }
-}
-.selecteds{
-    >p{
-        color:#0099ff;
-    }
-    >div{
-        width:0.4rem;
-        height: 0.053rem;
-        background-color:#0099ff;
-        border-radius: 0.027rem;
-        margin:0 auto;
     }
 }
 .imgas{

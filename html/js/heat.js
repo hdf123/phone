@@ -3,6 +3,8 @@ $(function(){
 	 * 拖动
 	 */
 	floats($(".floata"),2);
+//	分享
+	share($(".rights"));
 //选项卡切换
 	var inds=0;
 	$('.list_tab>li').on('click', function() {

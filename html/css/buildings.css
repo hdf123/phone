@@ -176,10 +176,8 @@ a {
 }
 
 .contents {
-  max-width: 10rem;
   position: absolute;
   top: 0;
-  left: auto;
   bottom: 1.547rem;
   overflow: auto;
 }

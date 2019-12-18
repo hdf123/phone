@@ -1,14 +1,17 @@
 $(function(){
 	/**
-	 * 拖动
-	 */
-	floats($(".floata"),2);	
-	/**
 	 * 搜索
 	 */
 	$('.search').click(function (){
 		location.href="search.html"
 	});
+	/**
+	 * 拖动
+	 */
+	floats($(".floata"),2);	
+//	分享
+	share($(".rights"));
+	
 	$(".contents").on("click",".contact>img",function(){
 		$(".bounced_box").show();
 	})
@@ -23,15 +26,6 @@ $(function(){
 	})
 	$(".bounced").click(function(event){
 		event.stopPropagation();
-	})
-	/**
-	 * 分享
-	 */
-	$(".rights").click(function(){
-		$(".share_box").css("display","block");
-	})
-	$(".share_box").click(function(){
-		$(this).css("display","none");
 	})
 	/**
 	 * 懒加载
