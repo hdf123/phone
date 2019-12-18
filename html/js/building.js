@@ -13,6 +13,9 @@ $(function(){
 	 * 拖动
 	 */
 	floats($(".floata"),2);	
+	$(".floata").click(function(){
+		console.log(111111);
+	})
 	/**
 	 * tab切换
 	 */

@@ -176,7 +176,6 @@ a {
 }
 
 .contents {
-  position: absolute;
   top: 0;
   bottom: 1.547rem;
   overflow: auto;

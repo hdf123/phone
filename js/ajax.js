@@ -177,7 +177,7 @@ function popups(contents,address){//contents：内容；address：地址
 		console.log(headers);
 		floats.on({ //绑定事件
 			touchstart: function(e) {
-				e.preventDefault()
+//				e.preventDefault();//阻止点击事件和a链接
 				startX = e.originalEvent.targetTouches[0].pageX; //获取点击点的X坐标
 				startY = e.originalEvent.targetTouches[0].pageY; //获取点击点的Y坐标
 				sX = $(this).offset().left;//相对于当前窗口X轴的偏移量
