@@ -33,11 +33,11 @@
 				<li>4、购房服务电话：0371-552 55555；</li>
 				<li>5、本卡最终解释权归中原楼市网所有；</li>
 			</ol>
-			<!--跳转首页-->
-			<a class="float1" href="home.html">
+			<!--浮标-->
+			<a class="floata masa" href="home.html">
 				<img src="../img/home.png" alt="" />
 			</a>
-			<div class="float2">
+			<div class="floata masb">
 				<img src="../img/a2.png" alt="" />
 			</div>
 		</section>
@@ -53,7 +53,8 @@
 <script type="text/javascript">
 $(function(){
 //	拖动
-	floats($(".float1"),1);
+	floats($(".masa"),0);//名称，0禁止移动，1自由移动，2上下移动，3左右移动
+	floats($(".masb"),0);
 //	分享
 	share($(".rights"));
 })

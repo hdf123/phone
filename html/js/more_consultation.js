@@ -7,13 +7,18 @@ $(function(){
 	if(inds==undefined){
 		inds=0;
 	}
-	$(".box>li").eq(inds).css("display","block");
-	$(".tabBar>li").click(function(){
-	    var xiabiao=$(this).index();
-	    $(".box>li").eq(xiabiao).css("display","block").siblings().css("display","none");
-	    $(".tabBar>li").eq(xiabiao).addClass("selecteds");
-	    $(".tabBar>li").eq(xiabiao).siblings().removeClass("selecteds");
+	tabs(inds);
+	$('.tabBar>li').on('click', function() {
+		var inds = $(this).index();
+		tabs(inds);
 	})
+	function tabs(inds){
+		$(".tabBar>li").eq(inds).addClass("act").siblings().removeClass("act");
+		var mm=14.5+(100/3*inds);
+		$('.tabBar>div').animate({ 'left': mm + '%' }, 300, function() {
+			$(".box>li").eq(inds).css("display","block").siblings().css("display","none");
+		});
+	}
 	function fun1(xiabiao){
 		for(var i=0;i<3;i++){
 			$(".industry").append('<a class="imgas" href="consulting.html?state='+xiabiao+'&ind=正弘形城1号院洋房在售'+i+'号院高层优惠升级中">'

@@ -94,7 +94,7 @@ a {
 }
 
 /*上下左右居中1.0*/
-.flexs, .headers a, .headers i, .headers .centers, .float1, .float2, .footers {
+.flexs, .headers a, .headers i, .headers .centers, .footers {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -135,7 +135,6 @@ a {
 }
 
 .contents {
-  padding: 0 0.4rem;
   top: 1.173rem;
   bottom: 1.333rem;
   overflow: auto;
@@ -168,6 +167,7 @@ a {
 .fts {
   color: #999999;
   font-size: 0.32rem;
+  padding: 0 0.4rem;
 }
 
 .cardb {
@@ -178,7 +178,7 @@ a {
 }
 
 ol {
-  padding-bottom: 0.7rem;
+  padding: 0 0.4rem 0.7rem 0.4rem;
 }
 ol li {
   color: #999999;
@@ -186,23 +186,8 @@ ol li {
   margin-bottom: 0.347rem;
 }
 
-.float1, .float2 {
-  width: 1.333rem;
-  height: 1.333rem;
-  position: fixed;
-  right: 0.533rem;
-  bottom: 4.96rem;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.5);
-  box-shadow: 0rem 0.027rem 0.24rem 0rem rgba(51, 51, 51, 0.4);
-}
-.float1 img, .float2 img {
-  width: 0.6rem;
-  height: 0.6rem;
-}
-
-.float2 {
-  bottom: 2.88rem;
+.masa {
+  bottom: 4.96rem !important;
 }
 
 .footers {

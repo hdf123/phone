@@ -174,7 +174,6 @@ function popups(contents,address){//contents：内容；address：地址
 		var winH = $(".contents").height();
 		var headers = $(".headers").height();
 		var footers = $(".footers").height();
-		console.log(headers);
 		floats.on({ //绑定事件
 			touchstart: function(e) {
 //				e.preventDefault();//阻止点击事件和a链接
